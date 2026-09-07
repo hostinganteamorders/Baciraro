@@ -347,11 +347,12 @@ export default function DialogBudayaPage() {
               desc={t("dialogBudaya.detail.tamuUndanganDesc")}
               ratioClass="aspect-video"
               srcs={[
-                "/Dialog Budaya/foto bersama dengan narasumber dan tamu undangan2.jpeg",
-                "/Dialog Budaya/foto bersama dengan narasumber dan tamu undangan 3.jpeg",
-                "/Dialog Budaya/foto bersama dengan narasumber dan tamu undangan 4.jpeg",
-                "/Dialog Budaya/foto bersama dengan narasumber dan tamu undangan 5.jpeg",
-                "/Dialog Budaya/foto bersama dengan narasumber dan tamu undangan 6.jpeg",
+                "/Dialog Budaya/foto bersama dengan narasumber.webp",
+                "/Dialog Budaya/foto bersama dengan narasumber 2.webp",
+                "/Dialog Budaya/foto bersama dengan narasumber 3.webp",
+                "/Dialog Budaya/foto bersama dengan narasumber 4.webp",
+                "/Dialog Budaya/foto bersama dengan narasumber 5.webp",
+                "/Dialog Budaya/foto bersama dengan narasumber 6.webp",
               ]}
             />
 
