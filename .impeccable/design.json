@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-25T13:22:00Z",
+  "title": "Design System: Baciraro Sustainability Platform",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Sunset Coral",
+        "canonical": "oklch(69.85% 0.203 16.5)",
+        "tonalRamp": [
+          "oklch(15% 0.05 16.5)",
+          "oklch(25% 0.08 16.5)",
+          "oklch(40% 0.12 16.5)",
+          "oklch(55% 0.16 16.5)",
+          "oklch(69.85% 0.203 16.5)",
+          "oklch(80% 0.15 16.5)",
+          "oklch(90% 0.08 16.5)",
+          "oklch(95% 0.04 16.5)"
+        ]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Midnight Black",
+        "canonical": "oklch(0% 0 0)",
+        "tonalRamp": [
+          "oklch(5% 0 0)",
+          "oklch(12% 0 0)",
+          "oklch(22% 0 0)",
+          "oklch(35% 0 0)",
+          "oklch(50% 0 0)",
+          "oklch(68% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "neutral-muted-bg": {
+        "role": "neutral",
+        "displayName": "Deep Forest Charcoal",
+        "canonical": "oklch(6.4% 0.006 142)",
+        "tonalRamp": [
+          "oklch(3% 0.003 142)",
+          "oklch(6.4% 0.006 142)",
+          "oklch(12% 0.008 142)",
+          "oklch(22% 0.01 142)",
+          "oklch(40% 0.012 142)",
+          "oklch(60% 0.01 142)",
+          "oklch(80% 0.008 142)",
+          "oklch(95% 0.005 142)"
+        ]
+      },
+      "neutral-text": {
+        "role": "neutral",
+        "displayName": "Warm Alabaster White",
+        "canonical": "oklch(98% 0.002 286)",
+        "tonalRamp": [
+          "oklch(15% 0.001 286)",
+          "oklch(30% 0.002 286)",
+          "oklch(48% 0.002 286)",
+          "oklch(65% 0.002 286)",
+          "oklch(80% 0.002 286)",
+          "oklch(90% 0.002 286)",
+          "oklch(95% 0.002 286)",
+          "oklch(98% 0.002 286)"
+        ]
+      },
+      "neutral-muted-text": {
+        "role": "neutral",
+        "displayName": "Zinc Silver Grey",
+        "canonical": "oklch(69.8% 0.003 286)",
+        "tonalRamp": [
+          "oklch(15% 0.001 286)",
+          "oklch(28% 0.002 286)",
+          "oklch(42% 0.003 286)",
+          "oklch(56% 0.003 286)",
+          "oklch(69.8% 0.003 286)",
+          "oklch(80% 0.002 286)",
+          "oklch(90% 0.002 286)",
+          "oklch(96% 0.001 286)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (Instrument Serif)",
+        "purpose": "Judul besar hero, kutipan editorial miring, atau penegas visual utama."
+      },
+      "body": {
+        "displayName": "Body (Almarai)",
+        "purpose": "Semua teks paragraf deskripsi dan informasi data terstruktur."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tonal-glow",
+        "value": "radial-gradient(circle at center, rgba(16,185,129,0.15), transparent 70%)",
+        "purpose": "Pendaran cahaya lembut di belakang komponen kaca."
+      }
+    ],
+    "motion": [
+      {
+        "name": "exponential-ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Kurva perlambatan natural eksponensial (springEase) untuk transisi keadaan."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Tombol primer solid Warm Alabaster untuk aksi utama.",
+      "html": "<button class=\"ds-btn-primary\">Jelajahi Ekosistem</button>",
+      "css": ".ds-btn-primary { background: #ffffff; color: #000000; padding: 14px 24px; font-size: 14px; font-weight: 600; border-radius: 9999px; border: none; cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); display: inline-flex; align-items: center; justify-content: center; text-align: center; } .ds-btn-primary:hover { background: #f4f4f5; transform: scale(1.02); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Tombol sekunder transparan untuk aksi alternatif.",
+      "html": "<button class=\"ds-btn-ghost\">Lihat CEO</button>",
+      "css": ".ds-btn-ghost { background: rgba(255,255,255,0.05); color: #ffffff; padding: 14px 24px; font-size: 14px; font-weight: 600; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); display: inline-flex; align-items: center; justify-content: center; text-align: center; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); } .ds-btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }"
+    },
+    {
+      "name": "Section Label",
+      "kind": "chip",
+      "description": "Indikator label kecil kategori atau penegas section.",
+      "html": "<div class=\"ds-section-label\"><span class=\"ds-dot\"></span>Ekosistem Pengelolaan Sampah</div>",
+      "css": ".ds-section-label { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); padding: 8px 16px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.28em; color: #34d399; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); } .ds-dot { height: 8px; width: 8px; border-radius: 50%; background: #34d399; display: inline-block; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; } @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }"
+    },
+    {
+      "name": "Ecosystem Card",
+      "kind": "card",
+      "description": "Kartu transparan ekosistem dengan grain taktil.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-glow\"></div><div class=\"ds-card-noise\"></div><div class=\"ds-card-content\"><div class=\"ds-card-icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg></div><h3 class=\"ds-card-title\">Yayasan Tana Nyiur Lestari</h3><p class=\"ds-card-desc\">Lembaga edukasi lingkungan dengan program Bank Sampah, BLANTE Sampah, dan DropBox.</p></div></div>",
+      "css": ".ds-card { position: relative; border-radius: 32px; border: 1px solid rgba(255,255,255,0.05); background: rgba(12,15,12,0.6); padding: 32px; overflow: hidden; display: flex; flex-direction: column; width: 320px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-4px); } .ds-card-glow { position: absolute; top: -100px; left: -100px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%); pointer-events: none; } .ds-card-noise { position: absolute; inset: 0; opacity: 0.05; pointer-events: none; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23noise)' opacity='0.85'/%3E%3C/svg%3E\"); } .ds-card-content { position: relative; z-index: 1; } .ds-card-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.03); margin-bottom: 24px; } .ds-card-title { font-size: 20px; font-weight: 500; color: #ffffff; margin: 0 0 12px 0; font-family: 'Almarai', sans-serif; } .ds-card-desc { font-size: 14px; line-height: 1.6; color: #a1a1aa; margin: 0; font-family: 'Almarai', sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Green Observatory",
+    "overview": "\"The Green Observatory\" adalah metafora ruang gelap premium masa depan yang dirancang untuk memvisualisasikan ekologi sirkular dan aksi lingkungan secara modern, presisi, dan meyakinkan. Mengabaikan pendekatan konvensional \"hijau mentah\", sistem ini membingkai kepedulian lingkungan dalam nuansa midnight gelap pekat dengan pendaran hijau emerald tipis dan aksen sunset coral (#f87171). Desain ini mencerminkan pertemuan yang indah antara kearifan lokal Minahasa dengan rekayasa digital presisi tinggi dari ORDERS.",
+    "keyCharacteristics": [
+      "Midnight Ekologis: Latar belakang hitam pekat pekat dengan gradasi hijau hutan mendalam yang menyimbolkan alam misterius yang berwibawa.",
+      "Grainy Tactility: Tekstur kertas/pasir mikro (.bg-noise dan .noise-overlay) untuk memberikan kedalaman taktil fisik yang mewah.",
+      "Razor Sharp Data Lines: Pembatas garis transparan super tipis (1px border-white/5) untuk memberikan kesan akurasi digital tinggi.",
+      "Grounded Editorial Pairing: Perpaduan huruf serif miring yang anggun dengan huruf sans-serif geometris yang bersih dan kokoh."
+    ],
+    "rules": [
+      {
+        "name": "The 10% Accent Rule",
+        "body": "Penggunaan Sunset Coral (#f87171) sebagai aksen wajib dibatasi maksimal 10% dari luas visual layar mana pun. Rarity adalah kunci keanggunan.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tinted Neutral Rule",
+        "body": "Tidak boleh ada warna abu-abu atau hitam netral murni di luar Midnight Black. Semua warna permukaan menengah (cards/borders) wajib dicampur dengan chroma tipis hijau hutan (oklch chroma 0.005–0.01) agar terkesan bernyawa.",
+        "section": "colors"
+      },
+      {
+        "name": "The Editorial Slope Rule",
+        "body": "Setiap judul halaman utama wajib memiliki setidaknya satu baris kata miring (italicized serif) dari Instrument Serif untuk melunakkan ketegasan sans-serif di sekelilingnya.",
+        "section": "typography"
+      },
+      {
+        "name": "The Glass Surface Rule",
+        "body": "Kedalaman dimensi dibentuk menggunakan kontainer semi-transparan bg-zinc-900/20 dengan filter backdrop-blur-sm` dan garis tepi tipis border-white/5`.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Ambient Spot Rule",
+        "body": "Efek melayang direpresentasikan oleh gradien lingkaran radial lembut (radial-gradient) di latar belakang yang memberikan ilusi pendaran cahaya lembut di belakang komponen kaca.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do gunakan pembatas garis 1px semi-transparan (border-white/5) untuk menegaskan pemisahan data di atas latar belakang hitam.",
+      "Do batasi panjang paragraf agar tidak melebihi 75 karakter per baris (max-w-3xl atau max-w-2xl).",
+      "Do sisipkan partikel grain (.bg-noise) secara halus di area latar belakang besar agar tidak terlihat hampa secara visual.",
+      "Do pastikan tombol interaktif memiliki kurva perlambatan natural eksponensial saat kursor diarahkan (ease-out transition)."
+    ],
+    "donts": [
+      "Don't gunakan gambar daun hijau mentah atau ikon daur ulang generik/klise yang terkesan murahan dan tidak profesional.",
+      "Don't gunakan bayangan gelap hitam pekat (heavy shadows) yang kaku di atas komponen kartu; gunakan tonal layering dan border-white/5 sebagai gantinya.",
+      "Don't gunakan gradasi warna teks multi-warna (gradient text) untuk judul utama; pertahankan solid Warm Alabaster White untuk keanggunan.",
+      "Don't letakkan aksen border kiri/kanan berwarna tebal (side-stripe accents) pada kartu atau kontainer informasi.",
+      "Don't biarkan Orders terlihat lebih mendominasi daripada Baciraro di halaman utama; Orders harus diposisikan secara konsisten sebagai infrastruktur penggerak di balik layar."
+    ]
+  }
+}

@@ -1,0 +1,1807 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "produk": "Products",
+    "seniman": "Artists",
+    "trackRecord": "Track Record",
+    "leadership": "Leadership",
+    "creativeStudio": "Creative Studio",
+    "creative": "Baciraro Creative",
+    "contact": "Contact",
+    "daftarMasuk": "Sign Up / Log In",
+    "admin": "Admin",
+    "keluar": "Log Out",
+    "profil": "Profile",
+    "riwayatPoin": "Points History",
+    "storePoin": "Points Store",
+    "totalPoin": "Total Points",
+    "toggleMenu": "Toggle menu"
+  },
+  "header": {
+    "sustainability": "Sustainability Platform",
+    "subtitle": "Circular Economy Ecosystem Hub",
+    "mobileCreativeStudio": "Creative Studio",
+    "mobileProfilPoin": "Profile & Points",
+    "brandName": "Baciraro"
+  },
+  "hero": {
+    "ekosistem": "Circular Economy Ecosystem",
+    "tagline": "Sustainability",
+    "deskripsi": "An integrated waste management ecosystem connecting education, recycling, community empowerment, creative programs, and digital tracking to create measurable environmental impact.",
+    "mulaiKolaborasi": "Start CSR Collaboration",
+    "jelajahiEkosistem": "Explore Ecosystem",
+    "stats": {
+      "sampah": "Tons of Waste Managed",
+      "komunitas": "Active Communities",
+      "proyek": "Digital Projects"
+    },
+    "features": {
+      "endToEnd": "Circular Economy End-to-End",
+      "digital": "Digital Monitoring System",
+      "creative": "Creative Product Innovation",
+      "community": "Community Empowerment"
+    },
+    "featureStats": {
+      "endToEnd": "6 entities",
+      "digital": "100% transparent",
+      "creative": "40+ creations",
+      "community": "80+ communities"
+    }
+  },
+  "ecosystem": {
+    "label": "CIRCULAR ECOSYSTEM",
+    "title": "One vision,",
+    "titleItalic": "six entities.",
+    "subtitle": "Baciraro is more than products — it's a circular ecosystem connecting six entities from upstream to downstream.",
+    "entities": {
+      "tnl": {
+        "name": "Tana Nyiur Lestari",
+        "role": "Education & Empowerment"
+      },
+      "trc": {
+        "name": "Trash Recycle Center",
+        "role": "Collection & Processing"
+      },
+      "elmast": {
+        "name": "ELMAST Greenovasi",
+        "role": "Organic Technology"
+      },
+      "orders": {
+        "name": "ORDERS",
+        "role": "Digital & Data"
+      },
+      "creative": {
+        "name": "Baciraro Creative",
+        "role": "Creative Recycling Products"
+      },
+      "retail": {
+        "name": "Baciraro Retail",
+        "role": "Distribution & Sales"
+      }
+    },
+    "cta": "Learn About the Ecosystem"
+  },
+  "flow": {
+    "title": "From waste",
+    "titleItalic": "to impact.",
+    "subtitle": "An integrated workflow from upstream to downstream — each stage involves community and technology.",
+    "steps": {
+      "pilah": {
+        "label": "01",
+        "title": "Sorting",
+        "desc": "Waste is sorted at source by communities and partner waste banks."
+      },
+      "olah": {
+        "label": "02",
+        "title": "Processing",
+        "desc": "Materials are processed into raw materials ready for production at TRC and ELMAST."
+      },
+      "kreatif": {
+        "label": "03",
+        "title": "Creative Products",
+        "desc": "Raw materials are transformed into valuable products by Baciraro Creative."
+      },
+      "distribusi": {
+        "label": "04",
+        "title": "Distribution",
+        "desc": "Products are distributed through Baciraro Retail and partners."
+      },
+      "track": {
+        "label": "05",
+        "title": "Digital Tracking",
+        "desc": "ORDERS records every step — transparent and measurable."
+      }
+    }
+  },
+  "showcase": {
+    "label": "SELECTED WORKS",
+    "title": "Creativity from",
+    "titleItalic": "waste.",
+    "subtitle": "A collection of recycled products blending aesthetics, functionality, and environmental impact.",
+    "cta": "Explore All Products"
+  },
+  "impact": {
+    "label": "MEASURED IMPACT",
+    "title": "Data that",
+    "titleItalic": "speaks.",
+    "subtitle": "Every number represents real work on the ground — from upstream to downstream.",
+    "metrics": {
+      "sampah": "Waste Managed",
+      "komunitas": "Active Communities",
+      "produk": "Creative Products",
+      "proyek": "Digital Projects",
+      "reduksi": "Landfill Reduction",
+      "mitra": "Collaboration Partners"
+    },
+    "metricsUnits": {
+      "ton": "ton",
+      "komunitas": "communities",
+      "karya": "products",
+      "proyek": "projects",
+      "persen": "percent",
+      "mitra": "partners"
+    },
+    "dashboard": {
+      "title": "Central Impact Dashboard",
+      "desc": "Real-time monitoring for stakeholders and CSR partners"
+    }
+  },
+  "points": {
+    "label": "POINTS LEADERBOARD",
+    "title": "Appreciating",
+    "titleItalic": "contributors.",
+    "subtitle": "{poin} points have been distributed to Baciraro loyal customers.",
+    "loading": "Loading data...",
+    "poin": "Points",
+    "earnedPrefix": "+{poin} Points successfully added!",
+    "earned": "+{poin} Points",
+    "youHave": "Points: {poin}"
+  },
+  "pointsStore": {
+    "label": "REDEEM POINTS",
+    "title": "Points Store",
+    "desc": "Redeem your points for rewards from Baciraro. Earn points by scanning the QR code on every product.",
+    "poinSaya": "My Points",
+    "perluMasuk": "Sign in to redeem your points for rewards.",
+    "masukDaftar": "Sign In / Register",
+    "memuat": "Loading rewards...",
+    "kosong": "No rewards available yet.",
+    "tukarPoin": "Redeem Points",
+    "menukarkan": "Redeeming...",
+    "poinKurang": "Not Enough Points",
+    "redemptionFailed": "Failed to redeem points. Try again.",
+    "suksesTitle": "Redemption Successful!",
+    "suksesDesc": "Your reward \"{title}\" has been redeemed. We will contact you shortly.",
+    "selesai": "Done",
+    "kembaliAkun": "Back to account"
+  },
+  "compost": {
+    "label": "Compost Tracker",
+    "memuat": "Loading compost data...",
+    "tidakDitemukan": "Compost code not found",
+    "kembali": "Back to Track Record",
+    "sisaWaktu": "Estimated Harvest",
+    "hari": "days left",
+    "jenisKompos": "Type",
+    "tanggal": "Composting Period",
+    "bahan": "Organic Material",
+    "catatan": "Notes"
+  },
+  "reviews": {
+    "label": "What They Say"
+  },
+  "services": {
+    "label": "SERVICES & PARTNERSHIPS",
+    "title": "Designed for",
+    "titleItalic": "collaboration.",
+    "subtitle": "Baciraro can be tailored for operational needs, community empowerment, and digital transformation at the organizational level.",
+    "perusahaan": {
+      "title": "For Companies",
+      "points": [
+        "Measurable waste management CSR programs",
+        "Impact reporting & digital dashboard",
+        "Souvenirs & plaques from recycled materials"
+      ],
+      "quote": "Collaboration with Baciraro helps us realize measurable and impactful CSR programs.",
+      "caseStudy": {
+        "partner": "BNI 46 Manado",
+        "result": "50+ tons of waste managed through the waste bank CSR program",
+        "badge": "Certified CSR"
+      }
+    },
+    "pemerintah": {
+      "title": "For Government",
+      "points": [
+        "Strengthening regional waste services",
+        "Education & digital system mentoring",
+        "Participatory waste mapping"
+      ],
+      "quote": "Baciraro's participatory approach is very suitable for coastal community empowerment programs.",
+      "caseStudy": {
+        "partner": "MMAF & MOTCE",
+        "result": "Environmental education program in 5 coastal tourism villages",
+        "badge": "Strategic Partnership"
+      }
+    },
+    "desa": {
+      "title": "For Villages",
+      "points": [
+        "Integrated waste bank model",
+        "Sorting & recycling training",
+        "Access to offtaker markets & creative products"
+      ],
+      "quote": "Baciraro helps our village turn waste into products with economic value.",
+      "caseStudy": {
+        "partner": "Likupang Tourism Village",
+        "result": "Active waste bank with 200+ customers and ecobrick production",
+        "badge": "Local Impact"
+      }
+    },
+    "lihatDetail": "View Details"
+  },
+  "ceo": {
+    "label": "LEADERSHIP",
+    "title": "A call for",
+    "titleItalic": "change.",
+    "cta": "Read More"
+  },
+  "footer": {
+    "tagline": "\"Recycled product collection. Earn points. Support the earth.\"",
+    "center": "Circular Economy Ecosystem Hub",
+    "ekosistemSirkular": "Circular Ecosystem",
+    "produkLayanan": "Products & Services",
+    "semuaProduk": "All Products",
+    "seniman": "Artists",
+    "plastik": "Plastic",
+    "kriya": "Craft",
+    "organik": "Organic",
+    "akunSaya": "My Account",
+    "kontakKami": "Contact Us",
+    "pesanWA": "Order via WhatsApp",
+    "digdayaOleh": "Powered By",
+    "ordersDesc": "The digital platform & technology driving the entire Baciraro ecosystem.",
+    "kunjungiOrders": "Visit ORDERS",
+    "kembaliKeAtas": "↑ Back to Top",
+    "copyright": "© {year} Baciraro. All rights reserved.",
+    "technology": "TECHNOLOGY",
+    "bottomDigdaya": "Powered by",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "whatsapp": "WhatsApp",
+    "baciraroLogoAlt": "Baciraro logo",
+    "ordersLogoAlt": "ORDERS logo",
+    "toggleLang": "Toggle language",
+    "baciraroBrand": "BACIRARO",
+    "ordersBrand": "ORDERS"
+  },
+  "products": {
+    "title": "Baciraro Products",
+    "headline": "From Waste",
+    "headlineHighlight": "to Valuable Products",
+    "subtitle": "Every Baciraro product carries a story — from waste collected, sorted, and transformed into high-value creations. Explore our collection.",
+    "semua": "All",
+    "plastic": "Plastic",
+    "organic": "Organic",
+    "craft": "Craft",
+    "digital": "Digital",
+    "art": "Baciraro Art Series",
+    "3dprint": "3D Print",
+    "memuat": "Loading products...",
+    "kosong": "No products in this category yet.",
+    "bahanTerselamatkan": "{kg} kg of material saved",
+    "pesan": "Order",
+    "kembali": "Back to catalog",
+    "tidakDitemukan": "Product not found",
+    "ceritaProduk": "Product Story",
+    "tentangSeniman": "About the Artist",
+    "materialBreakdown": "Material Breakdown",
+    "totalBahan": "Total Materials",
+    "plastikDialihkan": "Plastic Diverted",
+    "reviewPelanggan": "Customer Reviews",
+    "unitKg": "kg",
+    "scanQR": "Scan QR",
+    "lihatQR": "View QR",
+    "cetak50QR": "Print 50 QR",
+    "pesanWA": "Order via WhatsApp",
+    "waMessage": "Hello, I want to order {title}{variant}, can you help me?",
+    "cari": "Search products...",
+    "sortTerbaru": "Newest",
+    "sortTerlama": "Oldest",
+    "sortNama": "Name A–Z",
+    "sortKg": "Most Material",
+    "jumlahProduk": "{count} products",
+    "setaraBotol": "Plastic Bottle Equivalent",
+    "botol": "bottles",
+    "hindariCO2": "CO₂ Emissions Avoided",
+    "foto": "Photo",
+    "tampilan3d": "3D View",
+    "dari": "from",
+    "harga": "Price",
+    "hargaMulai": "Starting at",
+    "perGram": "per gram",
+    "pilihVarian": "Choose a variant to see weight, print time & price",
+    "custom": "Custom",
+    "customCta": "Chat for a custom order",
+    "customWaMessage": "Hi Baciraro, I'd like to discuss a custom order {name}, can you help?",
+    "customTagline": "Turn an idea into reality — let's discuss your custom design together.",
+    "customStepsTitle": "How it works",
+    "customStep1Title": "Share your idea",
+    "customStep1Desc": "Contact us on WhatsApp and describe your concept or needs.",
+    "customStep2Title": "Send references",
+    "customStep2Desc": "Upload reference images so our design is more accurate.",
+    "customStep3Title": "Discuss & produce",
+    "customStep3Desc": "We discuss design, material, and estimate before production.",
+    "customFormTitle": "Start a custom discussion",
+    "customName": "Your name",
+    "customNamePlaceholder": "Type your name...",
+    "customIdea": "Tell us about your custom idea",
+    "customIdeaPlaceholder": "Example: community logo keychain in red-black colors...",
+    "customReference": "Reference image (optional)",
+    "customReferenceHint": "PNG / JPG, max 8MB",
+    "customUploading": "Uploading...",
+    "customUploaded": "Reference uploaded",
+    "customUploadFail": "Upload failed, please try again.",
+    "customKirim": "Send via WhatsApp",
+    "customNamaDiperlukan": "Please enter your name first.",
+    "customIdeaDiperlukan": "Please share your custom idea first.",
+    "filterHarga": "Filter by price",
+    "hargaDepan": "Up to",
+    "sortHargaTerendah": "Price Low to High",
+    "sortHargaTertinggi": "Price High to Low"
+  },
+  "artists": {
+    "label": "Artists & Artisans",
+    "title": "The Artists",
+    "desc": "Every Baciraro work is born from the hands of artists and artisans who turn waste into valuable pieces. Explore their profiles and the works they have produced.",
+    "kosong": "No documented artists yet.",
+    "karyaTerkait": "Related Works"
+  },
+  "qrModal": {
+    "title": "Scan QR",
+    "download": "Download QR"
+  },
+  "qrSheets": {
+    "title": "QR Code — Scan to claim & earn points",
+    "loading": "Generating 50 QR codes with logo...",
+    "progress": "{done} / 50 completed",
+    "print": "Print QR Sheet",
+    "ready": "{count} QR codes ready to print",
+    "brand": "baciraro.net",
+    "footer": "baciraro.net — Scan each QR code to claim products and earn points"
+  },
+  "auth": {
+    "masuk": "Log In",
+    "daftar": "Sign Up",
+    "selamatDatang": "Welcome back",
+    "buatAkun": "Create new account",
+    "namaLengkap": "Full name",
+    "noHp": "Phone (optional)",
+    "email": "Email",
+    "password": "Password",
+    "memproses": "Processing...",
+    "sudahPunyaAkun": "Already have an account? ",
+    "belumPunyaAkun": "Don't have an account? ",
+    "loginGagal": "Login failed",
+    "gagalUpload": "Failed to upload profile photo"
+  },
+  "scan": {
+    "title": "Scan QR",
+    "heading": "Scan Product Barcode",
+    "scanning": "Point at QR Code",
+    "successTitle": "Thank You!",
+    "successProduct": "Product: {title}",
+    "nologinTitle": "QR Detected!",
+    "nologinProduct": "Product: {title}",
+    "nologinDesc": "Sign up or log in to claim the product and earn points!",
+    "daftarMasuk": "Sign Up / Log In",
+    "errorTitle": "Failed",
+    "errorDesc": "QR Code is invalid or already claimed",
+    "scanLagi": "Scan Again"
+  },
+  "claim": {
+    "loading": "Loading...",
+    "notFound": "QR Code not found",
+    "registrasi": "Buyer Registration",
+    "registrasiDesc": "Enter your details for this product",
+    "loginPrompt": "Earn points by logging in / signing up!",
+    "masukDaftar": "Log In / Sign Up",
+    "namaPembeli": "Buyer name",
+    "noHp": "Phone (optional)",
+    "menyimpan": "Saving...",
+    "klaimDapatkanPoin": "Claim & Earn Points",
+    "simpan": "Save",
+    "terimaKasihTitle": "Thank You!",
+    "terimaKasihSubtitle": "Your contribution means a lot to the environment.",
+    "terimaKasihClaimed": "Thank You",
+    "reviewPrompt": "Share your thoughts about this product",
+    "reviewPlaceholder": "Write your review...",
+    "mengirim": "Sending...",
+    "kirim": "Send",
+    "sudahReview": "You have submitted a review",
+    "editReview": "Edit review",
+    "poinEarned": "+{poin} Points successfully added!"
+  },
+  "account": {
+    "title": "My Account",
+    "editProfil": "Edit Profile",
+    "simpan": "Save",
+    "nama": "Name",
+    "email": "Email",
+    "noHp": "Phone",
+    "poin": "Total Points",
+    "riwayatPoin": "Points History",
+    "transaksi": "Transaction",
+    "poinLabel": "points",
+    "loginTitle": "Log In to View Profile",
+    "loginDesc": "Sign up or log in to access your profile and points",
+    "daftarMasuk": "Sign Up / Log In",
+    "kembaliBeranda": "Back to home",
+    "perbaruiData": "Update your personal data",
+    "menyimpan": "Saving...",
+    "keluar": "Log Out",
+    "totalPoin": "Total Points",
+    "poinDesc": "Each product claim gives 10 points",
+    "tukarPoin": "Redeem Points",
+    "belumAdaTx": "No point transactions yet",
+    "txHint": "Scan QR code on products to earn points",
+    "gagalUpload": "Failed to upload photo",
+    "placeholderNama": "Full name",
+    "placeholderHP": "Phone number"
+  },
+  "dashboard": {
+    "qr": {
+      "title": "QR Codes",
+      "total": "Total",
+      "claimed": "Claimed",
+      "reviewed": "Reviewed",
+      "product": "Product",
+      "code": "Code",
+      "status": "Status",
+      "buyer": "Buyer",
+      "review": "Review",
+      "date": "Date",
+      "pending": "Pending",
+      "claimedLabel": "Claimed",
+      "reviewedLabel": "Reviewed",
+      "loading": "Loading...",
+      "unauthTitle": "Restricted access",
+      "unauthDesc": "Log in to access the QR dashboard",
+      "login": "Log In",
+      "totalQr": "{n} total QR codes"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "close": "Close",
+    "search": "Search",
+    "all": "All",
+    "noData": "No data"
+  },
+  "about": {
+    "label": "About Baciraro",
+    "heroTitle": "One integrated ecosystem for",
+    "heroTitleItalic": "a circular future.",
+    "heroDesc": "Baciraro connects education, processing, innovation, and digitization in one trusted circular economy value chain — from upstream to downstream.",
+    "ekosistemLabel": "Integrated Ecosystem",
+    "ekosistemTitle": "Connecting education, processing, innovation, and digitization.",
+    "ekosistemDesc": "Baciraro is designed to solve environmental problems with an inclusive circular approach, connecting community programs directly to industrial offtakers.",
+    "ekosistemItems": [
+      "Connecting waste management from communities to industry.",
+      "Promoting circular economy with measurable approaches.",
+      "Providing dashboards and transparent impact tracking.",
+      "Supporting CSR, government, and village collaboration."
+    ],
+    "visi": "Vision",
+    "visiDesc": "To become the leading circular economy ecosystem that transforms waste into economic, social, and environmental value sustainably for Indonesia and the world.",
+    "misi": "Mission",
+    "misiDesc": "Building an integrated waste management system through education, recycling, community empowerment, creative programs, and digital tracking to create measurable and transparent impact.",
+    "nilaiLabel": "Our Values",
+    "nilaiTitle": "Principles that drive every step.",
+    "timelineLabel": "Journey",
+    "timelineTitle": "Every step is a",
+    "timelineTitleItalic": "story.",
+    "kolaborasiLabel": "Collaboration",
+    "kolaborasiTitle": "Interested in collaborating?",
+    "kolaborasiDesc": "We are open to partnership discussions, CSR implementation, and joint environmental programs.",
+    "hubungiKami": "Contact Us",
+    "lihatLeadership": "View Leadership",
+    "lihatPerjalanan": "View Journey",
+    "statMitra": "Partners",
+    "ekosistemAlt": "Baciraro Ecosystem",
+    "milestones": [
+      {
+        "year": "2018",
+        "title": "Foundation Established",
+        "desc": "Baciraro was founded as a circular economy platform connecting environmental education with real action."
+      },
+      {
+        "year": "2019",
+        "title": "First Waste Bank",
+        "desc": "Established Cells and Wale Sejati waste banks as community-based waste management models."
+      },
+      {
+        "year": "2020",
+        "title": "Pandemic Response",
+        "desc": "COVID-19 response program: handwashing stations, aid packages, and health protocol education for waste bank managers."
+      },
+      {
+        "year": "2021",
+        "title": "TRC & ELMAST",
+        "desc": "Launched Trash Recycle Center (recycling) and ELMAST Greenovasi (organic processing)."
+      },
+      {
+        "year": "2022",
+        "title": "ORDERS & Digital",
+        "desc": "ORDERS community built an end-to-end digital waste tracking platform."
+      },
+      {
+        "year": "2023-25",
+        "title": "Expansion & Creative",
+        "desc": "Baciraro Creative and Creative Studio were born, bridging recycling with creative industries and culture."
+      }
+    ],
+    "values": [
+      {
+        "title": "Circular Economy",
+        "desc": "Every material has a valuable second life cycle."
+      },
+      {
+        "title": "Empowerment",
+        "desc": "Community is at the heart of every solution we build."
+      },
+      {
+        "title": "Sustainability",
+        "desc": "Long-term impact matters more than instant results."
+      },
+      {
+        "title": "Transparency",
+        "desc": "Data and waste footprints are recorded digitally and openly."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contact Us",
+    "heroTitle": "Let's",
+    "heroTitleItalic": "talk.",
+    "heroDesc": "Have a collaboration idea, CSR program, or want to learn more about Baciraro? We're ready to listen.",
+    "emailCard": "Official Email",
+    "kirimEmail": "Send Email",
+    "waCard": "WhatsApp / Phone",
+    "hubungi": "Contact",
+    "lokasiCard": "Location",
+    "sosmedLabel": "Social Media",
+    "sosmedTitle": "Follow our journey.",
+    "sosmedDesc": "Get the latest updates about Baciraro's programs, education, and impact through social media.",
+    "formTitle": "Or send a direct message",
+    "formDesc": "Fill out the form below and our team will contact you.",
+    "formNama": "Name",
+    "formEmail": "Email",
+    "formPesan": "Your Message",
+    "kirimPesan": "Send Message",
+    "formSent": "Your message is ready to send — WhatsApp will open to continue. Thank you!",
+    "ctaLabel": "Ready to Move",
+    "ctaTitle": "Together we create real impact.",
+    "ctaDesc": "Every collaborative step is an investment in a more circular and sustainable future.",
+    "hubungiWA": "Contact via WhatsApp",
+    "kembaliBeranda": "Back to Home",
+    "waMessage": "Hello Baciraro Team, I am interested in collaborating on CSR / environmental partnerships."
+  },
+  "creative": {
+    "heroLogoAlt": "Baciraro Creative Logo",
+    "heroTitle": "Dialog Budaya Minahasa 2026",
+    "heroTagline": "Evolusi Atribut Kawasaran: Mengurai Benang Merah antara Otentisitas Budaya dan Inovasi Plastik Daur Ulang",
+    "heroDate": "Saturday, 1 August 2026",
+    "heroVenue": "Kedai Kana, Desa Sukur, North Minahasa",
+    "heroCta": "View Event Details",
+    "heroCtaRecap": "View Documentation",
+    "countdownDays": "Days",
+    "countdownHours": "Hours",
+    "countdownMinutes": "Minutes",
+    "countdownSeconds": "Seconds",
+    "tentangLabel": "About",
+    "tentangTitle": "Baciraro Creative",
+    "tentangBody": "Baciraro Creative is a platform for creative innovation that bridges Minahasa cultural heritage with plastic upcycling technology. We believe that tradition and sustainability can walk hand in hand — honoring ancestral wisdom while building a circular future through design, collaboration, and community empowerment.",
+    "eventKonsepTitle": "Forum Concept",
+    "eventKonsepBody": "A limited but representative dialogue forum exploring the evolution of Kawasaran attributes — tracing the red thread between cultural authenticity and recycled plastic innovation. Bringing together adat authorities, academics, artists, environmentalists, government, and youth.",
+    "eventPrinsipTitle": "Forum Principles",
+    "eventPrinsip": [
+      "Limited but representative — invitations based on capacity to contribute.",
+      "Dialogic, not ceremonial — prime time for speakers and invited participants.",
+      "Respecting adat authority — outcomes are called initial recommendations, not official adat decisions.",
+      "Non-judgmental toward innovation before hearing adat, historical, academic, artistic, environmental, government, and youth perspectives.",
+      "Clear documentation, recommendations, publication, and follow-up."
+    ],
+    "rundownTitle": "Event Rundown",
+    "rundown": [
+      "Registration, welcome coffee, and networking",
+      "Opening, prayer, and introduction",
+      "Baciraro Creative introduction",
+      "Panel session with speakers",
+      "Main dialogue with speakers",
+      "Break, lunch, and networking",
+      "Thematic dialogue: Culture",
+      "Thematic dialogue: Environment",
+      "Thematic dialogue: Conservation",
+      "Thematic dialogue: Sustainable Tourism",
+      "Declaration signing and group photo"
+    ],
+    "catatanTitle": "Notes for Guests",
+    "catatanHadir": "Please arrive no later than 08:45 WITA for registration.",
+    "catatanIkut": "Participants are expected to attend until the declaration signing and group photo session.",
+    "catatanSesuai": "Schedule may adjust according to dialogue dynamics.",
+    "pelajariEvent": "Learn About the Forum",
+    "sembunyikan": "Hide Details",
+    "portfolioTitle": "Creative Works",
+    "portfolioSubtitle": "Plastic upcycled into cultural artifacts and everyday objects.",
+    "portfolioCta": "View All Products",
+    "portfolioLoading": "Loading products...",
+    "footerTagline": "Creative Innovation · Cultural Heritage · Circular Future"
+  },
+  "lokawaya": {
+    "label": "Activity Recap",
+    "title": "Lokawaya × Baciraro Creative",
+    "date": "July 25, 2026",
+    "description": "We participated in the Lokawaya event with a workshop turning bottle caps into keychains and a booth featuring Baciraro Creative products redeemable with Dobu or Doi Bulu.",
+    "cta": "View Full Documentation",
+    "detail": {
+      "heroSubtitle": "Baciraro Creative Participation",
+      "heroTitle": "Lokawaya 2026",
+      "heroDate": "July 25, 2026",
+      "heroDesc": "Baciraro Creative took part in the Lokawaya event — presenting a bottle cap upcycling workshop and a product booth redeemable with Dobu or Doi Bulu (1 Dobu = Rp 1).",
+      "boothTitle": "Baciraro Creative Booth",
+      "boothDesc": "Our booth was filled with enthusiastic visitors exploring Baciraro Creative's recycled products. The unique payment system using Dobu or Doi Bulu made the experience even more engaging and interactive.",
+      "workshopTitle": "Workshop: Bottle Caps to Keychains",
+      "workshopDesc": "Visitors learned to transform plastic bottle caps into unique keychains. A child from the USA made their own keychain — proof that creativity and recycling can be enjoyed by all ages and backgrounds.",
+      "visitorsTitle": "Visitor Highlights",
+      "visitorsDesc": "Lokawaya attracted visitors from all walks of life — international tourists and locals alike, all enthusiastically engaging with Baciraro Creative's products and workshop."
+    }
+  },
+  "dialogBudaya": {
+    "label": "Activity Recap",
+    "title": "Dialog Budaya Minahasa 2026",
+    "date": "Saturday, 1 August 2026",
+    "description": "A limited dialogue forum tracing the evolution of Kawasaran attributes — bringing together adat authorities, academics, artists, environmentalists, government, and youth to untangle the red thread between cultural authenticity and recycled plastic innovation.",
+    "cta": "View Full Documentation",
+    "detail": {
+      "heroSubtitle": "Dialog Budaya Recap",
+      "heroTitle": "Dialog Budaya Minahasa 2026",
+      "heroDate": "Saturday, 1 August 2026",
+      "heroDesc": "The Dialog Budaya Minahasa 2026 forum was successfully held at Kedai Kana, Sukur Village, North Minahasa. The forum traced the evolution of Kawasaran attributes — untangling the red thread between cultural authenticity and recycled plastic innovation, bringing together adat authorities, academics, artists, environmentalists, government, and youth.",
+      "registrasiTitle": "Registration & Atmosphere",
+      "registrasiDesc": "Participants were warmly welcomed through registration and welcome coffee before the forum began.",
+      "pidatoTitle": "Speech & Opening",
+      "pidatoDesc": "The opening and speeches opened a space for dialogue across cultural, academic, and environmental perspectives.",
+      "fotoBersamaTitle": "Group Photos",
+      "fotoBersamaDesc": "Declaration signing and group photos closed the cultural dialogue series.",
+      "narasumberTitle": "Photos with Speakers",
+      "narasumberDesc": "Moments with the speakers who opened the cross-perspective dialogue.",
+      "tamuUndanganTitle": "Speakers & Guests",
+      "tamuUndanganDesc": "Speakers together with invited guests throughout the dialogue.",
+      "panitiaTitle": "Committee Photos",
+      "panitiaDesc": "Documentation of the committee behind the success of the cultural dialogue."
+    }
+  },
+  "undangan": {
+    "label": "Invitation",
+    "heroTitle": "Dialog Budaya Minahasa 2026",
+    "heroTagline": "Evolusi Atribut Kawasaran: Mengurai Benang Merah antara Otentisitas Budaya dan Inovasi Plastik Daur Ulang",
+    "heroDate": "Saturday, 1 August 2026",
+    "heroTime": "08.30 – 15.00 WITA",
+    "heroVenue": "Kedai Kana, Desa Sukur, North Minahasa",
+    "greeting": "To Our Esteemed Guests",
+    "greetingBody": "We are honored to invite you to the Dialog Budaya Minahasa 2026 — a dialogue forum exploring the evolution of Kawasaran attributes, bridging cultural authenticity and recycled plastic innovation.",
+    "tentang": "About the Event",
+    "detail1": "A limited but representative dialogue forum featuring adat authorities, academics, artists, environmentalists, government representatives, and youth.",
+    "detail2": "The forum will explore the philosophical meaning of traditional Kawasaran materials, the boundaries of sacred attributes, and the role of recycled plastic innovation in cultural preservation.",
+    "detail3": "Outcomes will serve as initial recommendations — not official adat decisions — with clear documentation, publication, and follow-up.",
+    "rsvpTitle": "RSVP Confirmation",
+    "formNama": "Full Name",
+    "formNamaPlaceholder": "Enter your full name",
+    "formMewakili": "Representing",
+    "formMewakiliPlaceholder": "Institution / Organization / Community",
+    "formMinuman": "Beverage Choice",
+    "formMinumanPlaceholder": "Select a beverage",
+    "beverages": [
+      "Coffee",
+      "Tea"
+    ],
+    "hadir": "Attending",
+    "tidakHadir": "Not Attending",
+    "konfirmasiHadir": "Thank You for Confirming!",
+    "konfirmasiHadirBody": "Your attendance confirmation has been saved. Please join our WhatsApp group for further event information and discussion.",
+    "konfirmasiTidak": "We Understand",
+    "konfirmasiTidakBody": "Thank you for letting us know. We hope to see you at our next event.",
+    "kirimWA": "Send Confirmation via WhatsApp",
+    "waTerkirim": "Confirmation sent. Welcome to the group!",
+    "joinGroup": "Join WhatsApp Group",
+    "ubahData": "Change my data",
+    "kembali": "Go back",
+    "lokasiTitle": "Event Location",
+    "bukaMaps": "Open in Google Maps"
+  },
+  "orders": {
+    "label": "ORDERS",
+    "slide01Label": "01 — Who We Are",
+    "slide01Title": "Tech for",
+    "slide01Title2": "Circular",
+    "slide01Title3": "Future",
+    "slide01Desc": "A community of technology developers supporting waste management digitization in the Baciraro ecosystem with innovation, collaboration, and high expertise.",
+    "slide02Label": "02 — The Mission",
+    "slide02Title": "Digital",
+    "slide02Title2": "Solidarity &",
+    "slide02Title3": "Trust",
+    "slide03Label": "03 — Products",
+    "slide03Title": "Robust Digital Systems",
+    "slide03Desc": "Digital platforms that regularly monitor circular economy operational data within the Baciraro ecosystem.",
+    "slide04Label": "04 — Solutions & Vision",
+    "slide04Title": "Platform",
+    "slide04Title2": "Digital",
+    "slide04Title3": "Waste",
+    "slide05Label": "05 — Join Us",
+    "slide05Title": "Ready to",
+    "slide05Title2": "Collaborate?",
+    "slide05Desc": "We welcome collaboration with developers, designers, and social entrepreneurs passionate about advancing green technology transformation.",
+    "hubungiKami": "Contact Us",
+    "kembaliEkosistem": "Back to Ecosystem",
+    "visiKeberlanjutan": "Sustainability Vision",
+    "visiDigitalisasi": "Digitization Vision",
+    "ecosystemSuffix": "↻ Ecosystem",
+    "slide01Footer": "Roots of Tradition, Face of the Future.",
+    "slide02Footer": "Roots of Tradition, Face of the Future.",
+    "slide03Footer": "Roots of Tradition, Face of the Future.",
+    "slide04Footer": "Roots of Tradition, Face of the Future.",
+    "slideCopyright": "© {year} ORDERS — Baciraro Ecosystem",
+    "products": [
+      {
+        "name": "Foundation Website",
+        "description": "Digital platform for foundation data management and communication with Baciraro ecosystem partners."
+      },
+      {
+        "name": "Kolongan Village Waste Bank App",
+        "description": "Integrated waste tracking system for Kolongan Village community with user-friendly interface."
+      },
+      {
+        "name": "StorJo Waste Bank App Pinabetengan",
+        "description": "Mobile platform for waste bank management with real-time monitoring and reporting features."
+      }
+    ],
+    "solutions": [
+      {
+        "name": "Digital Waste Management Platform",
+        "description": "Integrated system for waste monitoring and tracking"
+      },
+      {
+        "name": "Monitoring Dashboard",
+        "description": "Real-time data visualization for quick decision making"
+      },
+      {
+        "name": "Waste Tracking System",
+        "description": "End-to-end tracking from collection to processing"
+      }
+    ],
+    "visionPoints": [
+      "Operational efficiency through digitization",
+      "Transparent waste management data",
+      "More active community involvement",
+      "Data-driven decision making"
+    ],
+    "slide02Paragraph1": "ORDERS is a community of technology developers dedicated to creating innovative digital solutions in transparent waste management.",
+    "slide02Paragraph2": "We are committed to transforming how the Baciraro ecosystem operates through scalable, secure, and user-friendly data-driven systems.",
+    "slide02DescVisi": "With an experienced development team and a strong sustainability vision, we design platforms to bring stakeholders together in one integrated digital space.",
+    "slide04Desc": "Technology is a vital means to transparently track environmental impact data, driving an efficient and sustainable circular economy.",
+    "slide05Footer": "Roots of Tradition, Face of the Future.",
+    "slide02OpenSource": "Open-Source Dev",
+    "slide02SecureAudits": "Real-time Audits",
+    "storyFlowLabel": "ORDERS Interactive Story Flow",
+    "heroLabel": "ORDERS Hero",
+    "tentangLabel": "About ORDERS",
+    "produkLabel": "Products & Works",
+    "solusiLabel": "Solutions & Vision",
+    "hubungiLabel": "Contact Us",
+    "logoAlt": "ORDERS Logo Illustration"
+  },
+  "tananyiurlestari": {
+    "label": "TNL Foundation",
+    "heroTitle": "Building Environmental Awareness from the Community",
+    "heroDesc": "An environmental education institution focused on community empowerment through sustainable waste management programs and social innovation.",
+    "lihatProgram": "View Programs",
+    "lihatDampak": "View Impact",
+    "tentangLabel": "About the Foundation",
+    "programLabel": "Featured Programs",
+    "programTitle": "Real Action for the Environment",
+    "programDesc": "Three main programs we run to empower communities in integrated waste management.",
+    "dampakTitle": "Social & Environmental Impact",
+    "ctaTitle": "Join and Collaborate",
+    "ctaDesc": "We are open to partnerships, collaborations, and joint action to expand the reach of integrated environmental management programs.",
+    "hubungiKami": "Contact Us",
+    "kembaliEkosistem": "Back to Ecosystem",
+    "programs": [
+      {
+        "name": "Waste Bank",
+        "desc": "Community empowerment program with a waste collection and exchange system with economic incentives."
+      },
+      {
+        "name": "BLANTE Waste",
+        "desc": "Waste education activities at the community level with ongoing workshops and training."
+      },
+      {
+        "name": "DropBox",
+        "desc": "Centralized drop-off system to make it easier for communities to regularly submit waste."
+      }
+    ],
+    "impactData": [
+      {
+        "number": "20+",
+        "label": "Villages Involved"
+      },
+      {
+        "number": "2.500+",
+        "label": "Active Community Members"
+      },
+      {
+        "number": "12",
+        "label": "Sustainable Programs"
+      }
+    ],
+    "benefits": [
+      "Increased environmental awareness",
+      "Community economic empowerment",
+      "Reduced waste volume to landfill",
+      "Creation of local employment opportunities"
+    ],
+    "paragraph1": "Tana Nyiur Lestari Foundation is a non-profit institution committed to building environmental awareness and action at the community level.",
+    "paragraph2": "Through innovative programs, we empower local communities to manage waste independently while creating economic and social value.",
+    "paragraph3": "Our vision is to create a sustainable, inclusive waste management ecosystem that delivers long-term positive impact for communities and the environment.",
+    "heroAlt": "Tana Nyiur Lestari Foundation",
+    "aboutAlt": "About the Foundation"
+  },
+  "trashrecyclecenter": {
+    "label": "Recycle Center",
+    "heroTitle": "Turning Waste into Valuable Resources",
+    "heroDesc": "A recycling business unit that serves as an offtaker and processor of waste into quality raw materials for the creative and manufacturing industries.",
+    "lihatProses": "View Process",
+    "lihatOutput": "View Output",
+    "komoditasLabel": "Processing Commodities",
+    "komoditasTitle": "Types of Waste We Process",
+    "komoditasDesc": "We handle various types of waste with standardized sorting technology and processes.",
+    "alurLabel": "Operational Flow",
+    "alurTitle": "Recycling Work Process",
+    "outputTitle": "Output & Sustainability Impact",
+    "ctaTitle": "Waste Management Collaboration",
+    "ctaDesc": "We open collaboration opportunities for industry, government, and communities in professional and value-added waste management.",
+    "hubungiKami": "Contact Us",
+    "kembaliEkosistem": "Back to Ecosystem",
+    "wasteTypes": [
+      {
+        "name": "Plastic",
+        "desc": "Collection and processing of plastic from various sources into quality raw materials."
+      },
+      {
+        "name": "Paper",
+        "desc": "Recycling of used paper into raw materials for creative and manufacturing industries."
+      },
+      {
+        "name": "Metal",
+        "desc": "Sorting and processing of metal waste for resale to industry."
+      }
+    ],
+    "processSteps": [
+      {
+        "step": "Collection",
+        "desc": "Collection from various sources: households, industry, commerce"
+      },
+      {
+        "step": "Sorting",
+        "desc": "Manual and mechanical sorting by material type"
+      },
+      {
+        "step": "Processing",
+        "desc": "Washing, drying, and compacting process"
+      },
+      {
+        "step": "Raw Materials",
+        "desc": "Transformation into industry-ready raw materials"
+      }
+    ],
+    "outputCards": [
+      {
+        "title": "Creative Industry Raw Materials",
+        "desc": "Plastic compound, kraft paper, galvanized steel for crafts and green manufacturing."
+      },
+      {
+        "title": "Marketplace & Tourism Distribution",
+        "desc": "Recycled products marketed through online marketplaces and integrated tourism villages."
+      },
+      {
+        "title": "Economic & Social Value",
+        "desc": "Creation of local employment and increased community income in surrounding areas."
+      }
+    ],
+    "heroAlt": "Trash Recycle Center",
+    "outputAlt": "TRC Output"
+  },
+  "elmast": {
+    "label": "ELMAST Greenovasi",
+    "heroTitle": "Turning Organic Waste into Energy",
+    "heroDesc": "Innovative technology for processing organic waste into biogas, compost, and high-quality liquid organic fertilizer for soil conservation and energy independence.",
+    "lihatTeknologi": "View Technology",
+    "lihatManfaat": "View Benefits",
+    "teknologiTitle": "About ELMAST Technology",
+    "dokumentasiLabel": "Activity Documentation",
+    "dokumentasiTitle": "Field Action Gallery",
+    "dokumentasiDesc": "Implementation activities of organic waste processing into green energy and sustainable fertilizer with communities.",
+    "produkLabel": "Processing Results",
+    "produkTitle": "Featured Products",
+    "produkDesc": "Three main products born from ELMAST's environmentally friendly technology facility.",
+    "solusiLabel": "Problem Solutions",
+    "solusiTitle": "Solution Scope",
+    "manfaatTitle": "Benefits & Real Impact",
+    "ctaTitle": "ELMAST Technology Implementation",
+    "ctaDesc": "We are ready to facilitate the implementation of integrated biogas installations and sustainable biological fertilizer systems at your location.",
+    "hubungiKami": "Contact Us",
+    "kembaliEkosistem": "Back to Ecosystem",
+    "tutup": "Close",
+    "products": [
+      {
+        "name": "Biogas",
+        "desc": "Renewable gas energy from organic waste processing for cooking and electricity needs."
+      },
+      {
+        "name": "Compost",
+        "desc": "High-quality organic fertilizer from waste fermentation for sustainable agriculture."
+      },
+      {
+        "name": "Liquid Organic Fertilizer",
+        "desc": "Premium liquid nutrients for plants from optimal organic waste processing."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Household Waste",
+        "desc": "Processing organic waste from households into useful energy and fertilizer independently."
+      },
+      {
+        "title": "Lake Tondano Hyacinth",
+        "desc": "Innovative solution for managing water weeds into high economic value products for communities."
+      }
+    ],
+    "benefits": [
+      {
+        "label": "Landfill Reduction",
+        "value": "40%",
+        "desc": "Organic waste volume to disposal sites"
+      },
+      {
+        "label": "Renewable Energy",
+        "value": "100%",
+        "desc": "Clean and sustainable energy source"
+      },
+      {
+        "label": "Land Productivity",
+        "value": "+60%",
+        "desc": "Increased agricultural yield with natural fertilizer"
+      }
+    ],
+    "paragraph1": "ELMAST Greenovasi presents an integrated biogas system that transforms organic waste into clean renewable energy sources and premium bio-fertilizer.",
+    "paragraph2": "Our technology has proven effective in significantly reducing organic waste volume to landfills through tightly controlled anaerobic fermentation processes.",
+    "paragraph3": "With a measurable circular economy model, this initiative strengthens household energy independence, reduces greenhouse gas emissions, and restores agricultural land productivity.",
+    "logoAlt": "ELMAST Logo",
+    "techAlt": "ELMAST Technology",
+    "openFull": "Open image in full size",
+    "previewAlt": "ELMAST image preview",
+    "galleryAlt": {
+      "0": "ELMAST Activity 1",
+      "1": "ELMAST Activity 2",
+      "2": "ELMAST Activity 3",
+      "3": "ELMAST Activity 4",
+      "4": "ELMAST Activity 5",
+      "5": "ELMAST Activity 6",
+      "6": "ELMAST Activity 7"
+    }
+  },
+  "leadership": {
+    "label": "Leadership",
+    "heroTitle": "Leadership Team",
+    "heroDesc": "Baciraro's leadership team dedicated to driving innovation, strengthening collaboration, and creating sustainable impact for communities and the environment.",
+    "valueInovasi": "Innovation",
+    "valueKolaborasi": "Collaboration",
+    "valueIntegritas": "Integrity",
+    "valueKeberlanjutan": "Sustainability",
+    "footerCredit": "Baciraro — Leadership Team",
+    "quote": "We believe that collaboration, innovation, and integrity are the keys to creating real change.",
+    "linkedinLabel": "{name} LinkedIn",
+    "instagramLabel": "{name} Instagram",
+    "emailLabel": "{name} Email",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "tagline": "The Green Observatory",
+    "ceoFallback": "Chief Executive Officer (CEO)"
+  },
+  "layout": {
+    "title": "Baciraro | Integrated Circular Economy & Environmental CSR Solutions",
+    "description": "Baciraro builds an integrated waste management ecosystem through education, recycling, community empowerment, creative programs, and digital tracking of environmental impact."
+  },
+  "ceoSection": {
+    "label": "LEADERSHIP & VISION",
+    "quote": "Synergy between entities is the key to creating real and sustainable waste circularity from upstream to downstream.",
+    "name": "Marlon Kamagi, CEO Baciraro Sustainability",
+    "bio": "Community Development Worker & Climate Leader with years of experience in sustainable development, climate action, and community facilitation.",
+    "bacaPerjalanan": "Read Baciraro's Journey",
+    "lihatLeadership": "View Full Leadership"
+  },
+  "qr": {
+    "download": "Download QR Code"
+  },
+  "trackRecord": {
+    "label": "Track Record",
+    "heroTitle": "Living Archive",
+    "heroDesc": "A living archive of the sustainable waste management journey in North Sulawesi.",
+    "jelajahiCerita": "Explore Stories",
+    "jelajahiArsip": "Explore Archive",
+    "ceritaPerjalanan": "Journey",
+    "kegiatan": "Activities",
+    "wilayah": "Region",
+    "foto": "Photos",
+    "eraAwal": "Early",
+    "eraTumbuh": "Growing",
+    "eraMeluas": "Expanding",
+    "eraTransformasi": "Transformation",
+    "scrollEraAwal": "Early Era",
+    "scrollEraTumbuh": "Growing Era",
+    "scrollEraMeluas": "Expanding Era",
+    "scrollEraTransformasi": "Transformation Era",
+    "catLingkungan": "Environment",
+    "catSosial": "Social",
+    "catEkonomi": "Economic",
+    "catTeknologi": "Technology",
+    "catPendidikan": "Education",
+    "pencapaian": "Achievements",
+    "kategori": "Category",
+    "kapabilitas": "Capabilities",
+    "statTahun": "Years of Journey",
+    "statKegiatan": "Activities & Programs",
+    "statFoto": "Photos Documented",
+    "statLokasi": "Locations Reached",
+    "peran": "Baciraro's Role",
+    "peranTitle": "Roles We've Played",
+    "peranDesc": "From facilitator to executor — Baciraro has taken strategic roles in every program along the circular economy value chain.",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "framesLabel": "Frame of Change",
+    "framesTitle": "Visual Documentation",
+    "semua": "All",
+    "tampilkanLagi": "Show More",
+    "tersisa": "remaining",
+    "studiKasus": "Case Studies",
+    "proyekUnggulan": "Featured Projects",
+    "studiKasusDesc": "Baciraro's strategic programs and initiatives with partners.",
+    "studiKasusBaca": "Read Case Study",
+    "studiKasusMitra": "In Collaboration With",
+    "studiKasusRangkuman": "Program Overview",
+    "studiKasusTerkait": "Related Activities",
+    "studiKasusSebelumnya": "Previous",
+    "studiKasusBerikutnya": "Next",
+    "studiKasusNotFound": "Case study not found",
+    "kembali": "Back",
+    "arsipTitle": "Complete Archive",
+    "arsipLabel": "Journey Archive Index",
+    "arsipDesc": "Explore Baciraro's entire track record year by year.",
+    "tahun": "Year {year}",
+    "tampilkanSemua": "Show all",
+    "tampilkanSedikit": "Show less",
+    "indexPhotoLabel": "photos",
+    "indexActivityLabel": "activities",
+    "framesCount": "documented in Baciraro's journey.",
+    "role": {
+      "mitra_pelaksana": "Implementing Partner",
+      "mitra_riset": "Research Partner",
+      "penyelenggara": "Organizer",
+      "fasilitator": "Facilitator",
+      "executor": "Executor",
+      "koordinator_lapangan": "Field Coordinator",
+      "pendamping": "Mentor",
+      "konsultan": "Consultant",
+      "inisiator": "Initiator"
+    },
+    "capability": {
+      "produksi_film": "Film Production",
+      "strategi_kreatif": "Creative Strategy",
+      "manajemen_kampanye": "Campaign Management",
+      "pendampingan_komunitas": "Community Facilitation",
+      "daur_ulang_plastik": "Plastic Recycling",
+      "pengembangan_sistem_digital": "Digital Systems Development",
+      "edukasi_lingkungan": "Environmental Education",
+      "pemberdayaan_perempuan": "Women Empowerment",
+      "pengelolaan_sampah_organik": "Organic Waste Management",
+      "pengelolaan_sampah_wisata": "Tourism Waste Management",
+      "pengelolaan_sampah_pesisir": "Coastal Waste Management",
+      "biogas_energi_terbarukan": "Biogas & Renewable Energy"
+    }
+  },
+  "siteSections": {
+    "inovasi": "Innovation",
+    "inovasiTitle": "Innovation and Waste Management Startup",
+    "inovasiDesc": "Development of technology-based solutions and recycled product innovation.",
+    "ekosistem": "Ecosystem",
+    "ekosistemTitle": "Baciraro Ecosystem Across Regions",
+    "csr": "CSR & Partnerships",
+    "csrTitle": "CSR Programs and Strategic Partnerships",
+    "mitra": "Partners",
+    "mitraTitle": "Partners and Institutions",
+    "produkLayanan": "Products & Services",
+    "produkLayananTitle": "Baciraro Products and Services",
+    "kompetensi": "Competencies",
+    "kompetensiTitle": "Baciraro Recycle Core Competencies",
+    "kolaborasi": "Let's Collaborate",
+    "hubungiKami": "Contact Us",
+    "kembaliBeranda": "Back to Home",
+    "dindingFoto": "Photo Wall",
+    "indeksArsip": "Archive Index",
+    "ekosistemDesc": "The Baciraro ecosystem across all regions, from community programs to industrial partnerships.",
+    "csrDesc": "Collaboration with various institutions and companies in social and environmental programs.",
+    "mitraDesc": "Baciraro's partnership network with government, corporations, and communities.",
+    "produkLayananDesc": "From recycled craft products to social impact consulting.",
+    "kompetensiDesc": "Core expertise that underpins every program and innovation Baciraro runs.",
+    "kolaborasiDesc": "Baciraro is open for partnerships, CSR collaboration, and joint environmental action programs."
+  },
+  "siteSectionsData": {
+    "innovationData": [
+      {
+        "title": "Baciraro Ecosystem Development",
+        "description": [
+          "Integrated waste management from upstream to downstream.",
+          "Strengthening the recycling industry supply chain.",
+          "Application of circular economy principles in waste management."
+        ]
+      }
+    ],
+    "csrPrograms": [
+      {
+        "title": "Pertamina Geothermal Energy (PGE) Lahendong",
+        "program": "Setor Jo Waste Bank Program",
+        "points": [
+          "Waste sorting education.",
+          "Strengthening waste bank institutions.",
+          "Development of recycled plastic products.",
+          "Eco-Enzyme training.",
+          "Empowerment of women and environmental communities."
+        ]
+      },
+      {
+        "title": "Danone Aqua",
+        "program": "Wise Plastic Use Program",
+        "points": [
+          "Strengthening the waste management ecosystem in Likupang Super Priority Tourism Destination.",
+          "Construction of plastic waste collection facilities.",
+          "Support for beach and village clean-up activities."
+        ]
+      },
+      {
+        "title": "Ministry of Marine Affairs and Fisheries RI",
+        "program": "Clean Coastal Village Program",
+        "points": [
+          "Empowerment of fishing groups.",
+          "Segregated waste management.",
+          "Assistance with buildings and plastic recycling machinery."
+        ]
+      },
+      {
+        "title": "Ministry of Tourism RI",
+        "program": "Waste Bank Management Training",
+        "points": [
+          "Mentoring five tourism villages in Likupang Super Priority Tourism Destination.",
+          "Capacity building for village waste bank managers."
+        ]
+      },
+      {
+        "title": "SOE Collaboration Program",
+        "points": [
+          "Waste management socialization.",
+          "Waste bank management training.",
+          "Assistance with recycling facilities and infrastructure.",
+          "Training on craft products from recycled plastic."
+        ]
+      },
+      {
+        "title": "PLN UID Suluttenggo",
+        "program": "Green Action Program",
+        "points": [
+          "Plastic waste recycling workshop.",
+          "Education for fostered SMEs under PLN Peduli.",
+          "Clean Up and Bottle Up activities.",
+          "Supporting the Zero Waste Warriors Program."
+        ]
+      }
+    ],
+    "partnerCategories": [
+      {
+        "title": "Government",
+        "items": [
+          "Ministry of Marine Affairs and Fisheries RI",
+          "Ministry of Tourism RI",
+          "Ministry of Communication and Informatics RI",
+          "Manado City Government",
+          "North Minahasa Regency Government",
+          "Minahasa Regency Government",
+          "Manado City Environmental Agency",
+          "Manado City Development Planning Agency",
+          "North Sulawesi Provincial Environmental Agency"
+        ]
+      },
+      {
+        "title": "SOEs and Corporations",
+        "items": [
+          "Pertamina Geothermal Energy (PGE) Lahendong",
+          "Danone Aqua",
+          "PLN UID Suluttenggo",
+          "BNI 46",
+          "BPJS Health"
+        ]
+      },
+      {
+        "title": "Health and Education",
+        "items": [
+          "Prof. Kandou General Hospital Manado",
+          "State Senior High School 7 Manado"
+        ]
+      },
+      {
+        "title": "Organizations and Communities",
+        "items": [
+          "Trash Waste Solution (TWS)",
+          "Ocean Hero",
+          "APDUPI (Indonesian Plastic Recycling Entrepreneurs Association)",
+          "Tana Nyiur Lestari Foundation",
+          "Likupang Nature Lovers Community",
+          "BRITS Bunaken",
+          "TerraGo Indonesia"
+        ]
+      }
+    ],
+    "ecosystemRegionData": [
+      {
+        "title": "Bitung City",
+        "points": [
+          "Collaboration with Bitung Ocean Fishing Port managing the port area.",
+          "Inblood (Infinity Blood) digital startup collaborating with PMI and Baciraro Recycle in the \"Trash For Life\" program — over 50 cafes and restaurants have joined and actively donate plastic waste.",
+          "Baciraro Bitung Waste Bank, spread across several sub-districts and villages in Bitung City."
+        ]
+      },
+      {
+        "title": "North Minahasa",
+        "points": [
+          "Likupang Main Waste Bank, in collaboration with Baciraro Recycle and Danone for the Collecting and Education program.",
+          "Inblood (Infinity Blood) digital startup collaborating with Baciraro Recycle in the \"Trash For Life\" program — over 4 cafes and restaurants have joined and actively donate plastic waste.",
+          "Baciraro Agape Tumaluntung Waste Bank, in Kauditan sub-district."
+        ]
+      },
+      {
+        "title": "Manado",
+        "points": [
+          "Bank DBS, Sociolla Manado, and Erha Clinic collaborating with Baciraro Recycle through Waste4Change for segregated waste pick-up.",
+          "Inblood (Infinity Blood) digital startup collaborating with Baciraro Recycle in the \"Trash For Life\" program — over 5 cafes and restaurants have joined and actively donate plastic waste.",
+          "Grand Luley Tongkaina Manado Waste Bank."
+        ]
+      },
+      {
+        "title": "Minahasa",
+        "points": [
+          "Bank Stor Jo — a Waste Bank program in collaboration between Pertamina Geothermal Energy (PGE) Lahendong and Baciraro Recycle in the Tompaso Raya and North Langowan operational areas.",
+          "Baciraro Recycle MoU with Minahasa Regency Government (DLH) for a digital waste management program with startup partners Kompis (Waste Bank app) and GWM (online transportation app).",
+          "Serving as management and member of the Indonesian Waste Bank Association (ASOBSI) Minahasa Regional Council."
+        ]
+      },
+      {
+        "title": "Sangihe Islands",
+        "points": [
+          "10% Movement — an educational initiative setting aside 10% of Baciraro Eco-Craft recycled product sales.",
+          "Baciraro Recycle MoU with the English Learning Center Sangihe, which provides English and basic literacy classes in exchange for plastic bottles.",
+          "Green Corner Sangihe Waste Bank."
+        ]
+      },
+      {
+        "title": "Tomohon City",
+        "points": [
+          "Organic Farming. Baciraro organic farming with farmers in Minahasa and Rurukan Tomohon develops organic agriculture through organic fertilizer supply. Organic fertilizer products are distributed to farmer groups with assistance from Baciraro through organic food production and marketing networks.",
+          "Organic Waste Management. Baciraro Recycle partners with producers (Nutrifood) to manage organic waste from pre-expired materials (3 months before expiry). Pre-expired materials are channeled to the waste bank network for members as feed material (milk protein), while expired materials are processed into organic fertilizer."
+        ]
+      }
+    ],
+    "projectDetailData": [
+      {
+        "title": "\"Setor Jo\" Waste Bank",
+        "description": "A collaboration program between Baciraro Recycle and Pertamina Geothermal Energy in Minahasa Regency, particularly in the operational areas of Tompaso, West Tompaso, and North Langowan sub-districts. The program has established 4 waste banks with 15 more to follow. It supports Clean Minahasa by educating the community to sort waste and turn it into economic value."
+      },
+      {
+        "title": "Education and Collecting",
+        "description": "A collaboration program between Baciraro Recycle and Danone in North Minahasa Regency, specifically in the Likupang Super Priority Destination area, to educate communities on waste management in tourism areas. The education program has reached over 1,000 people and reduced waste by 5 tons in 2022."
+      },
+      {
+        "title": "Waste Bank Capacity Building",
+        "description": "A Waste Bank Capacity Building Program with the Ministry of Tourism and Creative Economy of the Republic of Indonesia. Capacity building for waste management in Likupang was conducted through Waste Bank Socialization and Waste Bank Management Training. 115 people were educated about waste and its solutions, resulting in 4 Waste Banks and 1 Recycling Center in East Likupang sub-district."
+      },
+      {
+        "title": "Recycling Center Development",
+        "description": "A Recycling Center Development Program with the Ministry of Marine Affairs and Fisheries of the Republic of Indonesia. Construction of plastic waste management facilities to produce furniture and craft products is underway. This program is expected to support the waste management ecosystem with circular economy principles in the Likupang Super Priority Tourism Destination."
+      },
+      {
+        "title": "Baciraro Organic Farm",
+        "description": "An organic waste management program integrated with organic farming in Rurukan Village. The collaboration also involves the Eco-Enzyme Manado Community as a source of Eco-Enzyme pulp for mixing with organic fertilizer alongside organic waste from several corporate partners. Baciraro Organic Farm serves as an integrated organic waste management model supporting organic-based food security in North Sulawesi."
+      },
+      {
+        "title": "10% Movement",
+        "description": "A waste management education program through collaboration with English language education institutions in Sangihe. Participants only need to bring plastic bottles as payment to receive free courses. Baciraro Recycle allocates 10% of recycled product sales to support this program."
+      },
+      {
+        "title": "Trash For Life",
+        "description": "A blood donation program through collaboration with a blood bank startup in Bitung together with PMI. The collaboration involves cafe and restaurant owners donating plastic waste — proceeds from transactions between the blood bank and Baciraro Recycle fund insurance for donors. The program has gained support from over 50 cafes and restaurants across Bitung City, Manado City, and North Minahasa."
+      }
+    ],
+    "productServiceData": [
+      {
+        "title": "Baciraro Eco-Craft",
+        "description": "In support of circular economy in waste management in North Sulawesi, Baciraro Recycle partners with various parties including Souvenir Likupang to produce diverse products from recycled materials. The craft products produced by Baciraro Eco-Craft are expected to support the creative economy sector for the Likupang Super Priority Destination (DSP)."
+      },
+      {
+        "title": "SROI Consulting",
+        "description": "Performing SROI calculations for the Gellar Foundation's 23 SOE TJSL Collaboration Program in DSP Likupang. This consulting provides social impact insights for program implementation evaluation conducted in 2022. The program is part of the waste management ecosystem development plan in Likupang, particularly utilizing waste for craft products and supporting sustainable tourism with circular economy principles."
+      }
+    ],
+    "competencies": [
+      "Waste Bank development and mentoring.",
+      "Circular economy-based waste management.",
+      "Community and women's group empowerment.",
+      "Tourism area waste management.",
+      "Coastal and marine waste management.",
+      "Plastic recycling into value-added products.",
+      "Digital waste management system development.",
+      "Community training and mentoring.",
+      "Eco-enzyme development and organic waste processing.",
+      "Biogas and organic fertilizer technology development.",
+      "Sustainable waste management business model development."
+    ]
+  },
+  "creativeStudio": {
+    "gateTitle": "Baciraro Creative Studio",
+    "gateFrom": "From Waste",
+    "gateTo": "Into Creation",
+    "gateDesc": "Product and compost bucket management platform for the Baciraro ecosystem. Manage data, track impact, and monitor recycling production in real-time.",
+    "login": "Log In",
+    "masukGuest": "Enter as Guest",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Sign In",
+    "guestLabel": "Guest",
+    "loginError": "Invalid username or password",
+    "namePrompt": "Enter your name (optional):",
+    "dashboard": "Dashboard",
+    "hello": "Hello, ",
+    "logout": "Logout",
+    "qrDashboard": "QR Dashboard",
+    "kembali": "Back",
+    "dampakTerukur": "Measurable Impact",
+    "editData": "Edit Data",
+    "sampahOrganik": "Organic Waste",
+    "sampahAnorganik": "Inorganic Waste",
+    "produkDihasilkan": "Products Made",
+    "produkJadi": "Finished Products",
+    "emberTracker": "Compost Bucket Tracker",
+    "tambahEmber": "Add Bucket",
+    "editEmber": "Edit Bucket",
+    "tambahEmberBaru": "Add New Bucket",
+    "kodeEmber": "Bucket Code (e.g. EMBR-004)",
+    "statusFermentasi": "Fermenting",
+    "statusSiapPanen": "Ready to Harvest",
+    "statusSudahDipanen": "Harvested",
+    "typeKompos": "Compost",
+    "typePoc": "POC",
+    "typeKomposPoc": "Compost + POC",
+    "bahanBaku": "Raw materials (e.g. kitchen waste, leaves)",
+    "catatan": "Additional notes",
+    "simpanPerubahan": "Save Changes",
+    "tambahEmberBtn": "Add Bucket",
+    "emberKosong": "No compost buckets yet. Click 'Add Bucket' to start.",
+    "fermentasiLabel": "Fermenting:",
+    "panenLabel": "Harvest:",
+    "bahanLabel": "Materials:",
+    "manajemenProduk": "Product Management",
+    "tambahProduk": "Add Product",
+    "editProduk": "Edit Product",
+    "tambahProdukBaru": "Add New Product",
+    "namaProduk": "Product Name",
+    "slugProduk": "Slug (e.g. eco-board)",
+    "deskripsiSingkat": "Short description",
+    "totalPlastik": "Total Plastic (kg)",
+    "ceritaProdukLabel": "Product story (long narrative)",
+    "gambarUtama": "Main Image",
+    "gambarTerupload": "Uploaded image",
+    "berat": "3D Print weight (grams)",
+    "waktuCetak": "Estimated print time (minutes)",
+    "varian": "3D Print variants (JSON: [{\"label\":\"...\",\"weight_g\":10,\"minutes\":41}])",
+    "material": "Material",
+    "tambahMaterial": "+ Add Material",
+    "namaMaterial": "Material name",
+    "satuanKg": "kg",
+    "satuanGram": "gram",
+    "satuanMeter": "meter",
+    "satuanBuah": "unit",
+    "simpanProduk": "Save Changes",
+    "tambahProdukBtn": "Add Product",
+    "seniman": "Artists",
+    "tambahSeniman": "+ Add Artist",
+    "namaSeniman": "Artist name",
+    "peranSeniman": "Role (e.g. Painter)",
+    "bioSeniman": "Short artist bio",
+    "fotoSeniman": "Artist Photo",
+    "fotoSenimanTerupload": "Photo uploaded",
+    "produkKosong": "No products yet. Click 'Add Product' to start.",
+    "kgPlastik": "kg of plastic",
+    "hapusEmber": "Delete this bucket?",
+    "hapusProduk": "Delete this product?",
+    "sampahOrganikLabel": "Organic Waste (kg):",
+    "sampahAnorganikLabel": "Inorganic Waste (kg):",
+    "jumlahProdukLabel": "Total Products:",
+    "uploading": "Uploading...",
+    "jumlah": "Amount",
+    "showcase": {
+      "0": {
+        "title": "Plastic Board (Eco-Board)",
+        "desc": "Water-resistant wood alternative made from recycled HDPE for custom furniture.",
+        "label": "Recycled HDPE"
+      },
+      "1": {
+        "title": "CSR Souvenirs & Plaques",
+        "desc": "Eco-friendly souvenirs officially ordered by state-owned enterprises & corporations.",
+        "label": "Recycled HDPE & PP"
+      },
+      "2": {
+        "title": "Organic Compost",
+        "desc": "Quality compost from fermented household organic waste.",
+        "label": "Organic Waste"
+      },
+      "3": {
+        "title": "Liquid Organic Fertilizer",
+        "desc": "Liquid organic fertilizer byproduct of composter bucket fermentation.",
+        "label": "Fermentation"
+      }
+    }
+  },
+  "partnerMarquee": {
+    "headline": "Trusted in Environmental Collaboration and Circular Economy"
+  },
+  "flowHorizontal": {
+    "label": "WASTE MANAGEMENT FLOW",
+    "title": "From waste to data,",
+    "titleItalic": "then back into value.",
+    "metricLabel": "Measurable Impact",
+    "steps": {
+      "0": {
+        "title": "Waste",
+        "tagline": "Identifying Every Source of Impact",
+        "desc": "Precise mapping of waste types and generation points in urban and rural areas.",
+        "metric": "18+ Points"
+      },
+      "1": {
+        "title": "Education",
+        "tagline": "Building Collective Awareness",
+        "desc": "Direct mentoring in schools, communities, and villages to integrate sorting habits.",
+        "metric": "1,200+ People"
+      },
+      "2": {
+        "title": "Collection",
+        "tagline": "Picking Up Sustainability",
+        "desc": "Scheduled segregated waste pickup system with digital logistics data integration.",
+        "metric": "500+ Tons"
+      },
+      "3": {
+        "title": "Recycling",
+        "tagline": "Transforming Residual Materials",
+        "desc": "Organic → compost processing, plastic → premium raw materials for manufacturing.",
+        "metric": "85% Reduction"
+      },
+      "4": {
+        "title": "Products",
+        "tagline": "Sustainable Aesthetics",
+        "desc": "Crafts, ecological furniture, and high-economic-value souvenirs from recycled materials.",
+        "metric": "40+ Works"
+      },
+      "5": {
+        "title": "Digital Tracking",
+        "tagline": "Maintaining Public Trust",
+        "desc": "End-to-end waste tracking by ORDERS for transparent circularity reports.",
+        "metric": "100% Data"
+      }
+    }
+  },
+  "ecosystemRadial": {
+    "label": "FIVE INTEGRATED ENTITIES",
+    "title": "Ecosystem ",
+    "titleItalic": "Baciraro",
+    "subtitle": "Baciraro builds a circular economy ecosystem connecting community education, waste collection and processing, environmental technology, creative products, and digital systems in one integrated chain.",
+    "desc": "Each entity has a specific function in the circular ecosystem — from upstream education to downstream digital tracking.",
+    "learnMore": "Learn More",
+    "entities": {
+      "tnl": {
+        "tagline": "Environmental Education and Community Empowerment",
+        "description": "Plays a role in the early stages of the ecosystem through environmental education, awareness raising, and community empowerment.",
+        "labels": [
+          "Education",
+          "Empowerment",
+          "Social Innovation"
+        ]
+      },
+      "trc": {
+        "tagline": "Collection, Sorting, and Material Processing",
+        "description": "Operational unit acting as offtaker and waste processor, turning waste into quality raw materials.",
+        "labels": [
+          "Collection",
+          "Sorting",
+          "Processing",
+          "Raw Materials"
+        ]
+      },
+      "elmast": {
+        "tagline": "Organic Waste Processing Technology",
+        "description": "Develops technology to process organic waste into biogas, compost, and liquid organic fertilizer.",
+        "labels": [
+          "Biogas",
+          "Compost",
+          "Organic Fertilizer",
+          "Clean Energy"
+        ]
+      },
+      "orders": {
+        "tagline": "Digital Technology and Impact Measurement",
+        "description": "Supports ecosystem digitalization through websites, applications, dashboards, and impact tracking.",
+        "labels": [
+          "Digitalization",
+          "Data",
+          "Monitoring",
+          "EcoDigital"
+        ]
+      }
+    },
+    "flowSteps": {
+      "0": {
+        "label": "Community Education",
+        "desc": "Awareness & sorting at source"
+      },
+      "1": {
+        "label": "Collection & Sorting",
+        "desc": "Integrated logistics & material sorting"
+      },
+      "2": {
+        "label": "Processing",
+        "desc": "Plastic → material, Organic → energy"
+      },
+      "3": {
+        "label": "Products & Energy",
+        "desc": "Added value for industry & community"
+      },
+      "4": {
+        "label": "Digital Monitoring",
+        "desc": "Transparent data & measured impact"
+      }
+    },
+    "mobileDesc": "Baciraro builds an integrated waste management system connecting education, collection, processing, creative products, community empowerment, and digital tracking."
+  },
+  "activities": {
+    "label": "Activities & Documentation",
+    "title": "Baciraro ",
+    "titleItalic": "Activities",
+    "subtitle": "Documentation of Baciraro Creative's activities — cultural forums and community participation in strengthening cultural heritage through recycled plastic innovation."
+  },
+  "creativeShowcase": {
+    "label": "ACTIVE PROGRAM",
+    "title": "Baciraro ",
+    "titleItalic": "Creative",
+    "subtitle": "High-value craft products from recycled materials — the result of collaboration with communities, corporations, and local creators.",
+    "cta": "View All Products",
+    "products": {
+      "0": {
+        "title": "CSR Souvenirs & Plaques",
+        "desc": "Eco-friendly souvenirs officially ordered by state-owned enterprises & corporations as durable and meaningful alternatives.",
+        "label": "Recycled HDPE & PP"
+      },
+      "1": {
+        "title": "Ecobrick Sofa Puff",
+        "desc": "Handcrafted sofa resulting from the empowerment of village women groups using ecobrick technique from used PET.",
+        "label": "PET & Residue"
+      },
+      "2": {
+        "title": "Creative & Cultural Works",
+        "desc": "High-value creative products rooted in local culture and the spirit of Baciraro's 10% Movement.",
+        "label": "10% Movement"
+      }
+    }
+  },
+  "trackRecordData": {
+    "activity": {
+      "0": {
+        "title": "Reboisasi Gunung Klabat",
+        "narrative": "The beginning of Baciraro's environmental awareness. Reforestation program in the Mount Klabat area with Aqua volunteers, planting trees to preserve forests and water resources in North Sulawesi."
+      },
+      "1": {
+        "title": "Salvos Go Green",
+        "narrative": "Salvos Go Green program, an environmental action by the Salvation Army Church involving tree planting and environmental education in North Sulawesi. Tree planting action by Salvation Army Youth throughout Indonesia focused on reforestation and environmental awareness."
+      },
+      "2": {
+        "title": "Community-Based Waste Management on Bunaken Island",
+        "narrative": "Assistance for the BRITS waste management group on Bunaken Island. Collaboration with the North Sulawesi Provincial Environmental Agency. Implementation of a community-based Waste Bank system. Awarded the 2012 MDGs award for community initiative-based waste management."
+      },
+      "3": {
+        "title": "Klabat Lestari Program with Aqua",
+        "narrative": "Conservation program for Mount Klabat in partnership with Aqua. Involving community groups in environmental conservation, reforestation, and waste management activities in the Mount Klabat area."
+      },
+      "4": {
+        "title": "Biogas Study & Kencana Online Technology",
+        "narrative": "A visit by the Minahasa cooperative team to PT Kencana Online in Bandung to study biogas technology, composters, and renewable energy. Learning about biodigester systems, biogas generators, biogas stoves, and biogas purification for sustainable energy management."
+      },
+      "5": {
+        "title": "Tondano Landfill Observation",
+        "narrative": "Observation of conditions at the Final Processing Site (TPA) in Tondano to understand waste management systems and their impact on the surrounding environment."
+      },
+      "6": {
+        "title": "Manado River Pollution Documentation",
+        "narrative": "Documentation of river conditions in Manado polluted by waste. This data and documentation served as the foundation for advocacy and education on waste management in Manado City."
+      },
+      "7": {
+        "title": "Climate Reality Project Indonesia",
+        "narrative": "Participation in the Climate Reality Project Indonesia in Jakarta. A climate change training and advocacy program initiated by former US Vice President Al Gore."
+      },
+      "8": {
+        "title": "Klabat Lestari Program - Hutan Kenangan",
+        "narrative": "Tree planting activities at Hutan Kenangan as part of the Klabat Lestari Program. Involving composting and tree planting in the foothills of Mount Klabat."
+      },
+      "9": {
+        "title": "Water Hyacinth Research on Lake Tondano",
+        "narrative": "Research on water hyacinth in Lake Tondano in collaboration with Groningen University Netherlands and Bank Indonesia. Also conducted visits to organic farming sites in Rurukan and meetings with Lantos Pin from Groningen University."
+      },
+      "10": {
+        "title": "Indonesia Carbon Update",
+        "narrative": "Indonesia Carbon Update seminar with Rahmat Witular (former Minister of Environment) and Steven Sumolang (anthropology researcher, Chair of the Sulut Mountenering Forum)."
+      },
+      "11": {
+        "title": "Klabat Lestari Socialization",
+        "narrative": "Socialization of the Klabat Lestari Program by the Green Community Forum of North Sulawesi to expand the impact of Mount Klabat conservation."
+      },
+      "12": {
+        "title": "Indonesian Tour Guide Association Outbound",
+        "narrative": "Outbound activity for the management of the Indonesian Tour Guide Association (HPI) as part of organizational capacity building."
+      },
+      "13": {
+        "title": "Lake Limboto Documentation",
+        "narrative": "Documentation of Lake Limboto's siltation due to water hyacinth, serving as a foundation for waste and pollution management advocacy in North Sulawesi."
+      },
+      "14": {
+        "title": "Establishment of Polri TV North Sulawesi",
+        "narrative": "Meeting for the establishment of Polri TV in North Sulawesi. Baciraro's involvement in communication forums and police media development in the North Sulawesi region."
+      },
+      "15": {
+        "title": "Taponesia Tree Planting Application",
+        "narrative": "Development of the Taponesia tree planting application featuring a dashboard, social wall, and profile menu. A digital innovation for monitoring reforestation and greening activities."
+      },
+      "16": {
+        "title": "Green Community Forum Tree Planting",
+        "narrative": "Tree planting action by the Green Community Forum of North Minahasa. Involving tree identification and planting at various locations across North Minahasa."
+      },
+      "17": {
+        "title": "SMASH Waste Bank Application",
+        "narrative": "Development of the SMASH online waste bank application. Facilitating the implementation of a digital waste bank system in Manado City for integration with cashless systems."
+      },
+      "18": {
+        "title": "Agape Waste Bank Launch",
+        "narrative": "Launch of the Agape Waste Bank in Tumaluntung Village, Kauditan District. Establishment of a community-based waste bank for village-level waste management."
+      },
+      "19": {
+        "title": "Danone Jakarta Meeting",
+        "narrative": "Meeting with Danone Headquarters in Jakarta to explore collaboration on waste management and the Wise Plastic program in North Sulawesi."
+      },
+      "20": {
+        "title": "Pinili Village Agricultural Program",
+        "narrative": "Seedling and agricultural program in Pinili Village. Including chili seedling cultivation, seeding, and rice planting as part of sustainable agricultural development."
+      },
+      "21": {
+        "title": "Simfoni Waste Bank",
+        "narrative": "Launch of the Simfoni Waste Bank at the Easter Festival and development of congregation-based waste banks to support tourism in North Sulawesi. This waste bank serves as a community-based waste collection and sorting center."
+      },
+      "22": {
+        "title": "Adiwiyata Program at SMA Negeri 7 Manado",
+        "narrative": "Mentoring SMA Negeri 7 Manado towards becoming an Independent Adiwiyata School. Included waste bank launch, composter production, composting, and waste management education within the school environment. Successfully achieved the Independent Adiwiyata School award."
+      },
+      "23": {
+        "title": "Sumompo Landfill Visit",
+        "narrative": "Visit to the Sumompo Final Processing Site (TPA) to study the waste management system and discuss recycling development potential with the CELS Cooperative."
+      },
+      "24": {
+        "title": "Waste Management at Siladen Resort",
+        "narrative": "Waste processing training for employees at Siladen Resort and a workshop on waste management and circular economy. An initiative to repurpose used wine bottles into glasses and value-added products in the tourism area."
+      },
+      "25": {
+        "title": "Celebes Energi Lestari Cooperative (CELS)",
+        "narrative": "Development of the CELS Cooperative as the first waste bank cooperative in North Sulawesi. Exploring hospital waste management partnerships with Siloam Hospital and visiting Pertamina Geothermal for waste management synergy."
+      },
+      "26": {
+        "title": "Adipura Bitung Waste Bank",
+        "narrative": "Establishment of the Adipura waste bank in Bitung City to support urban cleanliness and greening programs. Included socialization, establishment, and waste bank operations."
+      },
+      "27": {
+        "title": "Bangka Island Waste Sorting",
+        "narrative": "Waste sorting activities from the sea around Bangka Island in collaboration with the Bangka Conservation Foundation. Efforts to reduce plastic waste pollution in marine conservation areas."
+      },
+      "28": {
+        "title": "Recycling Technology Development",
+        "narrative": "Development of equipment to distill plastic waste into fuel oil and manufacture bricks from plastic waste residue. Collaboration with Politeknik Negeri Manado for the production of waste shredding machines."
+      },
+      "29": {
+        "title": "Ecobrick Sofa Production",
+        "narrative": "Innovation in manufacturing sofas from ecobricks (used plastic bottles). Environmentally friendly furniture products that became Baciraro's icon in the circular economy and plastic waste recycling."
+      },
+      "30": {
+        "title": "Griffith University Australia Visit",
+        "narrative": "Visit by Prof. Noel Scott from Griffith University Australia to the Simfoni Waste Bank and Politeknik Negeri Manado. A study on sustainable tourism and sustainable waste management in tourism areas."
+      },
+      "31": {
+        "title": "Paintings and Art from Plastic Waste",
+        "narrative": "Processing plastic waste and used towels into paintings and creative products. Recycling innovation that transforms waste into high-value art pieces."
+      },
+      "32": {
+        "title": "APSI National Conference",
+        "narrative": "Participation in the National Conference of the Indonesian Waste Entrepreneurs Association (APSI) and becoming part of the management of Indonesia's plastic recycling entrepreneurs organization."
+      },
+      "33": {
+        "title": "Simfoni Waste Bank Operations",
+        "narrative": "Daily operations of the Simfoni Waste Bank including plastic bottle sorting, weighing, customer passbook issuance, and waste management. This waste bank serves as a community-based circular economy center."
+      },
+      "34": {
+        "title": "Crafts from Used Towels",
+        "narrative": "Innovation in recycling used towels into pots, earrings, and various craft products. A community empowerment program through textile recycling creativity."
+      },
+      "35": {
+        "title": "Media Coverage and Public Discussion",
+        "narrative": "Served as a resource person on Kompas TV Sapa Manado with the theme 'Manado and Waste', as well as a discussion on flooding on TVRI. Media coverage and public education on waste management."
+      },
+      "36": {
+        "title": "AIS Exhibition and Marine Events",
+        "narrative": "Participation in the AIS (Archipelagic and Island States) exhibition with marine researchers from around the world. Introducing waste management innovations and waste banks to the international community."
+      },
+      "37": {
+        "title": "Waste Bank Socialization with PGE",
+        "narrative": "Socialization of the waste bank program with Pertamina Geothermal Energy in PADIOR. Education on waste sorting and waste bank establishment in PGE's operational areas."
+      },
+      "38": {
+        "title": "1000 Digital Startup Competition",
+        "narrative": "Baciraro Recycle introduced itself as a digital startup innovating in source waste management, including digital-based waste banks and circular economy ecosystems. A national program of the Indonesian Ministry of Communication and Informatics."
+      },
+      "39": {
+        "title": "Plastic Brick Project from Waste",
+        "narrative": "Plastic Brick, a collaborative project with Trash Waste Solution to manufacture plastic bricks from waste, addressing the issue of reducing plastic waste pollution in the ocean. Connected activities between the Trash Waste Solution team on Siladen Island and Baciraro Recycle. Produced using standard Precious Plastic machinery."
+      },
+      "40": {
+        "title": "Setor Jo Waste Bank & Eco-Enzyme Program",
+        "narrative": "Collaboration program with Pertamina Geothermal Energy Lahendong covering plastic waste sorting education and eco-enzyme training. The Setor Jo Waste Bank Program in North Pinabetengan Village and the development of recycled products."
+      },
+      "41": {
+        "title": "Danone Aqua Wise Plastic Program",
+        "narrative": "Partnership between Danone Aqua and Baciraro Recycle for plastic waste collection facilities, supported by the Likupang Nature Lovers Community. Strengthening the DPSP Likupang waste management ecosystem."
+      },
+      "42": {
+        "title": "Coastal Village Program & BUMN Collaboration",
+        "narrative": "Collaboration with the Ministry of Maritime Affairs, Fisheries, and the Ministry of Tourism for fisherfolk empowerment and tourism villages. The Clean Coastal Village Program in Serawet Village and Waste Bank Management training."
+      },
+      "43": {
+        "title": "Dialog Budaya Minahasa 2026",
+        "narrative": "A dialogue forum exploring the evolution of the Kawasaran attributes — unravelling the common thread between cultural authenticity and recycled plastic innovation. Bringing together traditional leaders, academics, artists, environmental activists, government, and the younger generation at Kedai Kana, Sukur Village, North Minahasa."
+      },
+      "44": {
+        "title": "Lokawaya × Baciraro Creative",
+        "narrative": "Baciraro Creative's participation in the Lokawaya event — a workshop turning bottle caps into keychains and a product booth exchangeable for Dobu or Doi Bulu. Visited by enthusiastic local and foreign tourists interacting with recycled products."
+      }
+    }
+  }
+}

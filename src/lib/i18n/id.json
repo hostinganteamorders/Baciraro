@@ -1,0 +1,1807 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "produk": "Produk",
+    "seniman": "Seniman",
+    "trackRecord": "Track Record",
+    "leadership": "Leadership",
+    "creativeStudio": "Creative Studio",
+    "creative": "Baciraro Creative",
+    "contact": "Contact",
+    "daftarMasuk": "Daftar / Masuk",
+    "admin": "Admin",
+    "keluar": "Keluar",
+    "profil": "Profil",
+    "riwayatPoin": "Riwayat Poin",
+    "storePoin": "Store Poin",
+    "totalPoin": "Total Poin",
+    "toggleMenu": "Toggle menu"
+  },
+  "header": {
+    "sustainability": "Sustainability Platform",
+    "subtitle": "Pusat Ekosistem Circular Economy",
+    "mobileCreativeStudio": "Creative Studio",
+    "mobileProfilPoin": "Profil & Poin",
+    "brandName": "Baciraro"
+  },
+  "hero": {
+    "ekosistem": "Ekosistem Circular Economy",
+    "tagline": "Sustainability",
+    "deskripsi": "Ekosistem pengelolaan sampah terintegrasi yang menghubungkan edukasi, daur ulang, pemberdayaan masyarakat, program kreatif, dan digital tracking untuk menciptakan dampak lingkungan yang terukur.",
+    "mulaiKolaborasi": "Mulai Kolaborasi CSR",
+    "jelajahiEkosistem": "Jelajahi Ekosistem",
+    "stats": {
+      "sampah": "Ton Sampah Terkelola",
+      "komunitas": "Komunitas Aktif",
+      "proyek": "Proyek Digital"
+    },
+    "features": {
+      "endToEnd": "Circular Economy End-to-End",
+      "digital": "Digital Monitoring System",
+      "creative": "Creative Product Innovation",
+      "community": "Community Empowerment"
+    },
+    "featureStats": {
+      "endToEnd": "6 entitas",
+      "digital": "100% transparan",
+      "creative": "40+ karya",
+      "community": "80+ komunitas"
+    }
+  },
+  "ecosystem": {
+    "label": "EKOSISTEM SIRKULAR",
+    "title": "Satu visi,",
+    "titleItalic": "enam entitas.",
+    "subtitle": "Baciraro bukan sekadar produk — ini ekosistem sirkular yang menghubungkan enam entitas dari hulu ke hilir.",
+    "entities": {
+      "tnl": {
+        "name": "Tana Nyiur Lestari",
+        "role": "Edukasi & Pemberdayaan"
+      },
+      "trc": {
+        "name": "Trash Recycle Center",
+        "role": "Pengumpulan & Pengolahan"
+      },
+      "elmast": {
+        "name": "ELMAST Greenovasi",
+        "role": "Teknologi Organik"
+      },
+      "orders": {
+        "name": "ORDERS",
+        "role": "Digital & Data"
+      },
+      "creative": {
+        "name": "Baciraro Creative",
+        "role": "Produk Kreatif Daur Ulang"
+      },
+      "retail": {
+        "name": "Baciraro Retail",
+        "role": "Distribusi & Penjualan"
+      }
+    },
+    "cta": "Pelajari Ekosistem"
+  },
+  "flow": {
+    "title": "Dari sampah",
+    "titleItalic": "jadi dampak.",
+    "subtitle": "Alur kerja terpadu dari hulu ke hilir — setiap tahap melibatkan komunitas dan teknologi.",
+    "steps": {
+      "pilah": {
+        "label": "01",
+        "title": "Pemilahan",
+        "desc": "Sampah dipilah dari sumbernya oleh komunitas dan bank sampah mitra."
+      },
+      "olah": {
+        "label": "02",
+        "title": "Pengolahan",
+        "desc": "Material diolah menjadi bahan baku siap produksi di TRC dan ELMAST."
+      },
+      "kreatif": {
+        "label": "03",
+        "title": "Produk Kreatif",
+        "desc": "Bahan baku disulap menjadi produk bernilai oleh Baciraro Creative."
+      },
+      "distribusi": {
+        "label": "04",
+        "title": "Distribusi",
+        "desc": "Produk didistribusikan melalui Baciraro Retail dan mitra."
+      },
+      "track": {
+        "label": "05",
+        "title": "Digital Tracking",
+        "desc": "ORDERS mencatat setiap langkah — transparan dan terukur."
+      }
+    }
+  },
+  "showcase": {
+    "label": "KARYA TERPILIH",
+    "title": "Kreativitas dari",
+    "titleItalic": "limbah.",
+    "subtitle": "Koleksi produk daur ulang yang memadukan nilai estetika, fungsionalitas, dan dampak lingkungan.",
+    "cta": "Jelajahi Semua Produk"
+  },
+  "impact": {
+    "label": "DAMPAK TERUKUR",
+    "title": "Data yang",
+    "titleItalic": "bicara.",
+    "subtitle": "Setiap angka adalah hasil kerja nyata di lapangan — dari hulu ke hilir.",
+    "metrics": {
+      "sampah": "Sampah Terkelola",
+      "komunitas": "Komunitas Aktif",
+      "produk": "Produk Kreatif",
+      "proyek": "Proyek Digital",
+      "reduksi": "Reduksi ke TPA",
+      "mitra": "Mitra Kolaborasi"
+    },
+    "metricsUnits": {
+      "ton": "ton",
+      "komunitas": "komunitas",
+      "karya": "karya",
+      "proyek": "proyek",
+      "persen": "%",
+      "mitra": "mitra"
+    },
+    "dashboard": {
+      "title": "Dashboard Dampak Terpusat",
+      "desc": "Monitoring real-time untuk stakeholder dan mitra CSR"
+    }
+  },
+  "points": {
+    "label": "POIN LEADERBOARD",
+    "title": "Apresiasi",
+    "titleItalic": "kontributor.",
+    "subtitle": "{poin} poin telah didistribusikan kepada pelanggan setia Baciraro.",
+    "loading": "Memuat data...",
+    "poin": "Poin",
+    "earnedPrefix": "+{poin} Poin berhasil ditambahkan!",
+    "earned": "+{poin} Poin",
+    "youHave": "Poin: {poin}"
+  },
+  "pointsStore": {
+    "label": "TUKAR POIN",
+    "title": "Store Poin",
+    "desc": "Tukarkan poinmu dengan hadiah menarik dari Baciraro. Kumpulkan poin dengan men-scan QR pada setiap produk.",
+    "poinSaya": "Poin Saya",
+    "perluMasuk": "Masuk untuk menukarkan poinmu menjadi hadiah.",
+    "masukDaftar": "Masuk / Daftar",
+    "memuat": "Memuat hadiah...",
+    "kosong": "Belum ada hadiah yang tersedia.",
+    "tukarPoin": "Tukar Poin",
+    "menukarkan": "Menukarkan...",
+    "poinKurang": "Poin Belum Cukup",
+    "redemptionFailed": "Gagal menukarkan poin. Coba lagi.",
+    "suksesTitle": "Penukaran Berhasil!",
+    "suksesDesc": "Hadiah \"{title}\" telah berhasil ditukar. Kami akan segera menghubungimu.",
+    "selesai": "Selesai",
+    "kembaliAkun": "Kembali ke akun"
+  },
+  "compost": {
+    "label": "Lacak Kompos",
+    "memuat": "Memuat data kompos...",
+    "tidakDitemukan": "Kode kompos tidak ditemukan",
+    "kembali": "Kembali ke Track Record",
+    "sisaWaktu": "Perkiraan Panen",
+    "hari": "hari lagi",
+    "jenisKompos": "Jenis",
+    "tanggal": "Periode Pengomposan",
+    "bahan": "Bahan Organik",
+    "catatan": "Catatan"
+  },
+  "reviews": {
+    "label": "Apa Kata Mereka"
+  },
+  "services": {
+    "label": "LAYANAN & KERJA SAMA",
+    "title": "Dirancang untuk",
+    "titleItalic": "kolaborasi.",
+    "subtitle": "Baciraro dapat disesuaikan untuk kebutuhan operasional, pemberdayaan masyarakat, hingga transformasi digital di level organisasi.",
+    "perusahaan": {
+      "title": "Untuk Perusahaan",
+      "points": [
+        "Program CSR pengelolaan sampah terukur",
+        "Pelaporan dampak & dashboard digital",
+        "Suvenir & plakat dari bahan daur ulang"
+      ],
+      "quote": "Kolaborasi dengan Baciraro membantu kami mewujudkan program TJSL yang terukur dan berdampak langsung.",
+      "caseStudy": {
+        "partner": "BNI 46 Manado",
+        "result": "50+ ton sampah terkelola melalui program CSR bank sampah",
+        "badge": "CSR Tersertifikasi"
+      }
+    },
+    "pemerintah": {
+      "title": "Untuk Pemerintah",
+      "points": [
+        "Penguatan layanan persampahan daerah",
+        "Edukasi & pendampingan sistem digital",
+        "Pemetaan timbulan sampah partisipatif"
+      ],
+      "quote": "Pendekatan Baciraro yang partisipatif sangat cocok untuk program pemberdayaan masyarakat pesisir.",
+      "caseStudy": {
+        "partner": "KKP & Kemenparekraf",
+        "result": "Program edukasi lingkungan di 5 desa wisata pesisir",
+        "badge": "Kemitraan Strategis"
+      }
+    },
+    "desa": {
+      "title": "Untuk Desa",
+      "points": [
+        "Model bank sampah terpadu",
+        "Pelatihan pemilahan & daur ulang",
+        "Akses pasar offtaker & produk kreatif"
+      ],
+      "quote": "Baciraro membantu desa kami mengelola sampah jadi produk yang punya nilai jual.",
+      "caseStudy": {
+        "partner": "Desa Wisata Likupang",
+        "result": "Bank sampah aktif dengan 200+ nasabah dan produksi ecobrick",
+        "badge": "Dampak Lokal"
+      }
+    },
+    "lihatDetail": "Lihat Detail"
+  },
+  "ceo": {
+    "label": "KEPEMIMPINAN",
+    "title": "Panggilan untuk",
+    "titleItalic": "perubahan.",
+    "cta": "Selengkapnya"
+  },
+  "footer": {
+    "tagline": "\"Koleksi produk daur ulang. Kumpulkan poin. Dukung bumi.\"",
+    "center": "Pusat Ekosistem Circular Economy",
+    "ekosistemSirkular": "Ekosistem Sirkular",
+    "produkLayanan": "Produk & Layanan",
+    "semuaProduk": "Semua Produk",
+    "seniman": "Seniman",
+    "plastik": "Plastik",
+    "kriya": "Kriya",
+    "organik": "Organik",
+    "akunSaya": "Akun Saya",
+    "kontakKami": "Kontak Kami",
+    "pesanWA": "Pesan via WhatsApp",
+    "digdayaOleh": "Digdaya Oleh",
+    "ordersDesc": "Platform digital & teknologi yang menggerakkan seluruh ekosistem Baciraro.",
+    "kunjungiOrders": "Kunjungi ORDERS",
+    "kembaliKeAtas": "↑ Kembali ke Atas",
+    "copyright": "© {year} Baciraro. All rights reserved.",
+    "technology": "TECHNOLOGY",
+    "bottomDigdaya": "Digdaya oleh",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "whatsapp": "WhatsApp",
+    "baciraroLogoAlt": "Logo Baciraro",
+    "ordersLogoAlt": "Logo ORDERS",
+    "toggleLang": "Ganti bahasa",
+    "baciraroBrand": "BACIRARO",
+    "ordersBrand": "ORDERS"
+  },
+  "products": {
+    "title": "Baciraro Products",
+    "headline": "Dari Sampah",
+    "headlineHighlight": "Menjadi Produk Bernilai",
+    "subtitle": "Setiap produk Baciraro membawa cerita — dari sampah yang dikumpulkan, dipilah, dan disulap menjadi karya bernilai tinggi. Jelajahi koleksi kami.",
+    "semua": "Semua",
+    "plastic": "Plastic",
+    "organic": "Organic",
+    "craft": "Craft",
+    "digital": "Digital",
+    "art": "Baciraro Art Series",
+    "3dprint": "3D Print",
+    "memuat": "Memuat produk...",
+    "kosong": "Belum ada produk di kategori ini.",
+    "bahanTerselamatkan": "{kg} kg bahan terselamatkan",
+    "pesan": "Pesan",
+    "kembali": "Kembali ke katalog",
+    "tidakDitemukan": "Produk tidak ditemukan",
+    "ceritaProduk": "Cerita Produk",
+    "tentangSeniman": "Tentang Seniman",
+    "materialBreakdown": "Material Breakdown",
+    "totalBahan": "Total Bahan",
+    "plastikDialihkan": "Plastik Dialihkan",
+    "reviewPelanggan": "Review Pelanggan",
+    "unitKg": "kg",
+    "scanQR": "Scan QR",
+    "lihatQR": "Lihat QR",
+    "cetak50QR": "Cetak 50 QR",
+    "pesanWA": "Pesan via WhatsApp",
+    "waMessage": "Halo, saya ingin memesan produk {title}{variant}, bisa dibantu?",
+    "cari": "Cari produk...",
+    "sortTerbaru": "Terbaru",
+    "sortTerlama": "Terlama",
+    "sortNama": "Nama A–Z",
+    "sortKg": "Bahan Terbanyak",
+    "jumlahProduk": "{count} produk",
+    "setaraBotol": "Setara Botol Plastik",
+    "botol": "botol",
+    "hindariCO2": "Emisi CO₂ Dihindari",
+    "foto": "Foto",
+    "tampilan3d": "3D View",
+    "dari": "mulai",
+    "harga": "Harga",
+    "hargaMulai": "Harga Mulai",
+    "perGram": "per gram",
+    "pilihVarian": "Pilih varian untuk melihat berat, waktu & harga",
+    "custom": "Custom",
+    "customCta": "Chat untuk custom order",
+    "customWaMessage": "Halo Baciraro, saya ingin diskusi custom order {name}, bisa dibantu?",
+    "customTagline": "Idea jadi kenyataan — diskusikan desain custom-mu bersama kami.",
+    "customStepsTitle": "Cara kerjanya",
+    "customStep1Title": "Ceritakan ide",
+    "customStep1Desc": "Hubungi kami lewat WhatsApp dan jelaskan konsep atau kebutuhanmu.",
+    "customStep2Title": "Kirim referensi",
+    "customStep2Desc": "Unggah gambar referensi agar desain kami lebih akurat.",
+    "customStep3Title": "Diskusi & produksi",
+    "customStep3Desc": "Kami bahas desain, material, dan estimasi sebelum diproduksi.",
+    "customFormTitle": "Mulai diskusi custom",
+    "customName": "Nama kamu",
+    "customNamePlaceholder": "Tulis nama kamu...",
+    "customIdea": "Ceritakan ide custom-mu",
+    "customIdeaPlaceholder": "Contoh: gantungan kunci logo komunitas dengan warna merah-hitam...",
+    "customReference": "Referensi gambar (opsional)",
+    "customReferenceHint": "PNG / JPG, maks 8MB",
+    "customUploading": "Mengunggah...",
+    "customUploaded": "Referensi terunggah",
+    "customUploadFail": "Gagal mengunggah, coba lagi.",
+    "customKirim": "Kirim via WhatsApp",
+    "customNamaDiperlukan": "Tulis nama kamu dulu ya.",
+    "customIdeaDiperlukan": "Ceritakan dulu ide custom-mu.",
+    "filterHarga": "Filter Harga",
+    "hargaDepan": "Sampai",
+    "sortHargaTerendah": "Harga Terendah",
+    "sortHargaTertinggi": "Harga Tertinggi"
+  },
+  "artists": {
+    "label": "Seniman & Pengrajin",
+    "title": "Para Seniman",
+    "desc": "Setiap karya Baciraro lahir dari tangan para seniman dan pengrajin yang mengubah sampah menjadi karya bernilai. Jelajahi profil mereka dan karya-karya yang telah dihasilkan.",
+    "kosong": "Belum ada seniman yang terdokumentasi.",
+    "karyaTerkait": "Karya Terkait"
+  },
+  "qrModal": {
+    "title": "Scan QR",
+    "download": "Download QR"
+  },
+  "qrSheets": {
+    "title": "QR Code — Scan untuk klaim & dapatkan poin",
+    "loading": "Menghasilkan 50 QR code dengan logo...",
+    "progress": "{done} / 50 selesai",
+    "print": "Cetak Lembar QR",
+    "ready": "{count} QR code siap dicetak",
+    "brand": "baciraro.net",
+    "footer": "baciraro.net — Scan setiap QR code untuk klaim produk dan kumpulkan poin"
+  },
+  "auth": {
+    "masuk": "Masuk",
+    "daftar": "Daftar",
+    "selamatDatang": "Selamat datang kembali",
+    "buatAkun": "Buat akun baru",
+    "namaLengkap": "Nama lengkap",
+    "noHp": "No. HP (opsional)",
+    "email": "Email",
+    "password": "Password",
+    "memproses": "Memproses...",
+    "sudahPunyaAkun": "Sudah punya akun? ",
+    "belumPunyaAkun": "Belum punya akun? ",
+    "loginGagal": "Login gagal",
+    "gagalUpload": "Gagal mengunggah foto profil"
+  },
+  "scan": {
+    "title": "Scan QR",
+    "heading": "Scan Barcode Produk",
+    "scanning": "Arahkan ke QR Code",
+    "successTitle": "Terima Kasih!",
+    "successProduct": "Produk: {title}",
+    "nologinTitle": "QR Terdeteksi!",
+    "nologinProduct": "Produk: {title}",
+    "nologinDesc": "Daftar atau masuk untuk mengklaim produk dan dapatkan poin!",
+    "daftarMasuk": "Daftar / Masuk",
+    "errorTitle": "Gagal",
+    "errorDesc": "QR Code tidak valid atau sudah diklaim",
+    "scanLagi": "Scan Lagi"
+  },
+  "claim": {
+    "loading": "Memuat...",
+    "notFound": "QR Code tidak ditemukan",
+    "registrasi": "Registrasi Pembeli",
+    "registrasiDesc": "Masukkan data kamu untuk produk ini",
+    "loginPrompt": "Dapatkan poin dengan masuk / daftar akun!",
+    "masukDaftar": "Masuk / Daftar",
+    "namaPembeli": "Nama pembeli",
+    "noHp": "No. HP (opsional)",
+    "menyimpan": "Menyimpan...",
+    "klaimDapatkanPoin": "Klaim & Dapatkan Poin",
+    "simpan": "Simpan",
+    "terimaKasihTitle": "Terima Kasih!",
+    "terimaKasihSubtitle": "Kontribusimu sangat berarti bagi lingkungan.",
+    "terimaKasihClaimed": "Terima Kasih",
+    "reviewPrompt": "Berikan kesan dan pesanmu tentang produk ini",
+    "reviewPlaceholder": "Tulis kesan dan pesanmu...",
+    "mengirim": "Mengirim...",
+    "kirim": "Kirim",
+    "sudahReview": "Kamu sudah memberikan review",
+    "editReview": "Edit review",
+    "poinEarned": "+{poin} Poin berhasil ditambahkan!"
+  },
+  "account": {
+    "title": "Akun Saya",
+    "editProfil": "Edit Profil",
+    "simpan": "Simpan",
+    "nama": "Nama",
+    "email": "Email",
+    "noHp": "No. HP",
+    "poin": "Total Poin",
+    "riwayatPoin": "Riwayat Poin",
+    "transaksi": "Transaksi",
+    "poinLabel": "poin",
+    "loginTitle": "Masuk untuk Melihat Profil",
+    "loginDesc": "Daftar atau masuk untuk mengakses profil dan poin kamu",
+    "daftarMasuk": "Daftar / Masuk",
+    "kembaliBeranda": "Kembali ke beranda",
+    "perbaruiData": "Perbarui data diri kamu",
+    "menyimpan": "Menyimpan...",
+    "keluar": "Keluar",
+    "totalPoin": "Total Poin",
+    "poinDesc": "Setiap klaim produk memberi 10 poin",
+    "tukarPoin": "Tukar Poin",
+    "belumAdaTx": "Belum ada transaksi poin",
+    "txHint": "Scan QR code pada produk untuk mendapatkan poin",
+    "gagalUpload": "Gagal mengunggah foto",
+    "placeholderNama": "Nama lengkap",
+    "placeholderHP": "No. HP"
+  },
+  "dashboard": {
+    "qr": {
+      "title": "QR Codes",
+      "total": "Total",
+      "claimed": "Diklaim",
+      "reviewed": "Direview",
+      "product": "Produk",
+      "code": "Kode",
+      "status": "Status",
+      "buyer": "Pembeli",
+      "review": "Review",
+      "date": "Tanggal",
+      "pending": "Pending",
+      "claimedLabel": "Diklaim",
+      "reviewedLabel": "Direview",
+      "loading": "Memuat...",
+      "unauthTitle": "Akses terbatas",
+      "unauthDesc": "Login untuk mengakses dashboard QR",
+      "login": "Login",
+      "totalQr": "{n} total QR codes"
+    }
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "back": "Kembali",
+    "close": "Tutup",
+    "search": "Cari",
+    "all": "Semua",
+    "noData": "Tidak ada data"
+  },
+  "about": {
+    "label": "Tentang Baciraro",
+    "heroTitle": "Satu ekosistem terpadu untuk",
+    "heroTitleItalic": "masa depan yang sirkular.",
+    "heroDesc": "Baciraro menghubungkan edukasi, pengolahan, inovasi, dan digitalisasi dalam satu rantai nilai ekonomi sirkular yang tepercaya — dari hulu ke hilir.",
+    "ekosistemLabel": "Ekosistem Terpadu",
+    "ekosistemTitle": "Menghubungkan edukasi, pengolahan, inovasi, dan digitalisasi.",
+    "ekosistemDesc": "Baciraro dirancang untuk menyelesaikan problem lingkungan dengan pendekatan sirkular yang inklusif, menghubungkan program komunitas secara langsung ke offtaker industri.",
+    "ekosistemItems": [
+      "Menghubungkan pengelolaan sampah dari komunitas ke industri.",
+      "Mendorong circular economy dengan pendekatan yang terukur.",
+      "Menyediakan dashboard dan jejak dampak yang transparan.",
+      "Mendukung kolaborasi CSR, pemerintah, dan desa."
+    ],
+    "visi": "Visi",
+    "visiDesc": "Menjadi ekosistem circular economy terdepan yang mengubah sampah menjadi nilai ekonomi, sosial, dan lingkungan secara berkelanjutan untuk Indonesia dan dunia.",
+    "misi": "Misi",
+    "misiDesc": "Membangun sistem pengelolaan sampah terintegrasi melalui edukasi, daur ulang, pemberdayaan masyarakat, program kreatif, dan digital tracking untuk menciptakan dampak yang terukur dan transparan.",
+    "nilaiLabel": "Nilai Kami",
+    "nilaiTitle": "Prinsip yang menggerakkan setiap langkah.",
+    "timelineLabel": "Perjalanan",
+    "timelineTitle": "Setiap langkah adalah",
+    "timelineTitleItalic": "cerita.",
+    "kolaborasiLabel": "Kolaborasi",
+    "kolaborasiTitle": "Tertarik untuk berkolaborasi?",
+    "kolaborasiDesc": "Kami terbuka untuk diskusi kemitraan, implementasi CSR, dan program lingkungan bersama.",
+    "hubungiKami": "Hubungi Kami",
+    "lihatLeadership": "Lihat Leadership",
+    "lihatPerjalanan": "Lihat Perjalanan",
+    "statMitra": "Mitra",
+    "ekosistemAlt": "Ekosistem Baciraro",
+    "milestones": [
+      {
+        "year": "2018",
+        "title": "Pendirian Yayasan",
+        "desc": "Baciraro didirikan sebagai platform circular economy yang menghubungkan edukasi lingkungan dengan aksi nyata."
+      },
+      {
+        "year": "2019",
+        "title": "Bank Sampah Pertama",
+        "desc": "Mendirikan bank sampah Cells dan Wale Sejati sebagai model pengelolaan sampah berbasis komunitas."
+      },
+      {
+        "year": "2020",
+        "title": "Dampak Pandemi",
+        "desc": "Program tanggap COVID-19: alat cuci tangan, paket bantuan, dan edukasi protokol kesehatan untuk pengurus bank sampah."
+      },
+      {
+        "year": "2021",
+        "title": "TRC & ELMAST",
+        "desc": "Meluncurkan Trash Recycle Center (daur ulang) dan ELMAST Greenovasi (pengolahan organik)."
+      },
+      {
+        "year": "2022",
+        "title": "ORDERS & Digital",
+        "desc": "Komunitas ORDERS hadir membangun platform digital tracking sampah end-to-end."
+      },
+      {
+        "year": "2023-25",
+        "title": "Ekspansi & Kreatif",
+        "desc": "Baciraro Creative dan Creative Studio lahir, menjembatani daur ulang dengan industri kreatif dan budaya."
+      }
+    ],
+    "values": [
+      {
+        "title": "Circular Economy",
+        "desc": "Setiap bahan memiliki siklus hidup kedua yang bernilai."
+      },
+      {
+        "title": "Pemberdayaan",
+        "desc": "Komunitas adalah inti dari setiap solusi yang kami bangun."
+      },
+      {
+        "title": "Keberlanjutan",
+        "desc": "Dampak jangka panjang lebih penting daripada hasil instan."
+      },
+      {
+        "title": "Transparansi",
+        "desc": "Data dan jejak sampah tercatat secara digital dan terbuka."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Hubungi Kami",
+    "heroTitle": "Mari",
+    "heroTitleItalic": "bicara.",
+    "heroDesc": "Punya ide kolaborasi, program CSR, atau ingin tahu lebih lanjut tentang Baciraro? Kami siap mendengar.",
+    "emailCard": "Email Resmi",
+    "kirimEmail": "Kirim Email",
+    "waCard": "WhatsApp / Telepon",
+    "hubungi": "Hubungi",
+    "lokasiCard": "Lokasi",
+    "sosmedLabel": "Media Sosial",
+    "sosmedTitle": "Ikuti perjalanan kami.",
+    "sosmedDesc": "Dapatkan update terbaru tentang program, edukasi, dan dampak Baciraro melalui media sosial.",
+    "formTitle": "Atau kirim pesan langsung",
+    "formDesc": "Isi form di bawah dan tim kami akan menghubungi Anda.",
+    "formNama": "Nama",
+    "formEmail": "Email",
+    "formPesan": "Pesan Anda",
+    "kirimPesan": "Kirim Pesan",
+    "formSent": "Pesan Anda siap dikirim — WhatsApp akan terbuka untuk melanjutkan. Terima kasih!",
+    "ctaLabel": "Siap Bergerak",
+    "ctaTitle": "Bersama kita ciptakan dampak nyata.",
+    "ctaDesc": "Setiap langkah kolaborasi adalah investasi untuk masa depan yang lebih sirkular dan berkelanjutan.",
+    "hubungiWA": "Hubungi via WhatsApp",
+    "kembaliBeranda": "Kembali ke Beranda",
+    "waMessage": "Halo Tim Baciraro, saya tertarik untuk berkolaborasi CSR / kemitraan lingkungan."
+  },
+  "creative": {
+    "heroLogoAlt": "Logo Baciraro Creative",
+    "heroTitle": "Dialog Budaya Minahasa 2026",
+    "heroTagline": "Evolusi Atribut Kawasaran: Mengurai Benang Merah antara Otentisitas Budaya dan Inovasi Plastik Daur Ulang",
+    "heroDate": "Sabtu, 1 Agustus 2026",
+    "heroVenue": "Kedai Kana, Desa Sukur, Minahasa Utara",
+    "heroCta": "Lihat Detail Event",
+    "heroCtaRecap": "Lihat Dokumentasi",
+    "countdownDays": "Hari",
+    "countdownHours": "Jam",
+    "countdownMinutes": "Menit",
+    "countdownSeconds": "Detik",
+    "tentangLabel": "Tentang",
+    "tentangTitle": "Baciraro Creative",
+    "tentangBody": "Baciraro Creative adalah platform inovasi kreatif yang menjembatani warisan budaya Minahasa dengan teknologi daur ulang plastik. Kami percaya tradisi dan keberlanjutan bisa berjalan beriringan — menghormati kearifan leluhur sambil membangun masa depan sirkular melalui desain, kolaborasi, dan pemberdayaan komunitas.",
+    "eventKonsepTitle": "Konsep Forum",
+    "eventKonsepBody": "Forum dialog terbatas namun representatif yang menelusuri evolusi atribut Kawasaran — mengurai benang merah antara otentisitas budaya dan inovasi plastik daur ulang. Mempertemukan tokoh adat, akademisi, seniman, pegiat lingkungan, pemerintah, dan generasi muda.",
+    "eventPrinsipTitle": "Prinsip Forum",
+    "eventPrinsip": [
+      "Terbatas tetapi representatif — undangan berdasarkan kapasitas kontribusi.",
+      "Dialogis, bukan seremonial — waktu utama untuk narasumber dan peserta.",
+      "Menghormati kewenangan adat — hasil disebut rekomendasi awal, bukan keputusan adat resmi.",
+      "Tidak menghakimi inovasi sebelum mendengar perspektif adat, sejarah, akademik, seni, lingkungan, pemerintah, dan generasi muda.",
+      "Dokumentasi, rekomendasi, publikasi, dan tindak lanjut yang jelas."
+    ],
+    "rundownTitle": "Rundown Acara",
+    "rundown": [
+      "Registrasi, welcome coffee, dan networking",
+      "Pembukaan, doa, dan pengantar kegiatan",
+      "Perkenalan Baciraro Creative",
+      "Panel bersama narasumber",
+      "Dialog utama bersama narasumber",
+      "Istirahat, makan siang, dan networking",
+      "Dialog tematik: Budaya",
+      "Dialog tematik: Lingkungan",
+      "Dialog tematik: Konservasi",
+      "Dialog tematik: Pariwisata Berkelanjutan",
+      "Penandatanganan deklarasi dan foto bersama"
+    ],
+    "catatanTitle": "Catatan untuk Tamu",
+    "catatanHadir": "Mohon hadir paling lambat pukul 08.45 WITA untuk proses registrasi.",
+    "catatanIkut": "Peserta diharapkan mengikuti kegiatan hingga sesi penandatanganan deklarasi dan foto bersama.",
+    "catatanSesuai": "Rangkaian waktu dapat menyesuaikan dengan dinamika dialog.",
+    "pelajariEvent": "Pelajari Forum",
+    "sembunyikan": "Sembunyikan Detail",
+    "portfolioTitle": "Karya Kreatif",
+    "portfolioSubtitle": "Plastik daur ulang menjadi artefak budaya dan benda sehari-hari.",
+    "portfolioCta": "Lihat Semua Produk",
+    "portfolioLoading": "Memuat produk...",
+    "footerTagline": "Inovasi Kreatif · Warisan Budaya · Masa Depan Sirkular"
+  },
+  "lokawaya": {
+    "label": "Recap Kegiatan",
+    "title": "Lokawaya × Baciraro Creative",
+    "date": "25 Juli 2026",
+    "description": "Kami berpartisipasi di event Lokawaya dengan workshop mengubah tutup botol menjadi keychain dan booth produk Baciraro Creative yang dapat ditukar dengan Dobu atau Doi Bulu.",
+    "cta": "Lihat Dokumentasi Lengkap",
+    "detail": {
+      "heroSubtitle": "Partisipasi Baciraro Creative",
+      "heroTitle": "Lokawaya 2026",
+      "heroDate": "25 Juli 2026",
+      "heroDesc": "Baciraro Creative berpartisipasi dalam event Lokawaya — menghadirkan workshop daur ulang tutup botol menjadi keychain dan booth produk yang dapat ditukar dengan Dobu atau Doi Bulu (1 Dobu = Rp 1).",
+      "boothTitle": "Booth Baciraro Creative",
+      "boothDesc": "Booth kami dipenuhi pengunjung yang antusias melihat produk daur ulang Baciraro Creative. Sistem pembayaran unik menggunakan Dobu atau Doi Bulu membuat pengalaman semakin seru dan interaktif.",
+      "workshopTitle": "Workshop: Tutup Botol Jadi Keychain",
+      "workshopDesc": "Pengunjung diajak belajar mengubah tutup botol plastik bekas menjadi gantungan kunci unik. Seorang anak dari USA berhasil membuat keychain-nya sendiri — bukti bahwa kreativitas dan daur ulang bisa dinikmati semua kalangan.",
+      "visitorsTitle": "Kunjungan Pengunjung",
+      "visitorsDesc": "Lokawaya menarik pengunjung dari berbagai kalangan — turis asing hingga lokal, semuanya antusias berinteraksi dengan produk dan workshop Baciraro Creative."
+    }
+  },
+  "dialogBudaya": {
+    "label": "Recap Kegiatan",
+    "title": "Dialog Budaya Minahasa 2026",
+    "date": "Sabtu, 1 Agustus 2026",
+    "description": "Forum dialog terbatas yang menelusuri evolusi atribut Kawasaran — mempertemukan tokoh adat, akademisi, seniman, pegiat lingkungan, pemerintah, dan generasi muda untuk mengurai benang merah antara otentisitas budaya dan inovasi plastik daur ulang.",
+    "cta": "Lihat Dokumentasi Lengkap",
+    "detail": {
+      "heroSubtitle": "Recap Dialog Budaya",
+      "heroTitle": "Dialog Budaya Minahasa 2026",
+      "heroDate": "Sabtu, 1 Agustus 2026",
+      "heroDesc": "Dialog Budaya Minahasa 2026 sukses diselenggarakan di Kedai Kana, Desa Sukur, Minahasa Utara. Forum ini menelusuri evolusi atribut Kawasaran — mengurai benang merah antara otentisitas budaya dengan inovasi plastik daur ulang, mempertemukan tokoh adat, akademisi, seniman, pegiat lingkungan, pemerintah, dan generasi muda.",
+      "registrasiTitle": "Registrasi & Suasana",
+      "registrasiDesc": "Peserta disambut hangat melalui proses registrasi dan welcome coffee sebelum forum dimulai.",
+      "pidatoTitle": "Pidato & Pembukaan",
+      "pidatoDesc": "Pembukaan dan pidato yang membuka ruang dialog lintas perspektif budaya, akademik, dan lingkungan.",
+      "fotoBersamaTitle": "Foto Bersama",
+      "fotoBersamaDesc": "Penandatanganan deklarasi dan foto bersama sebagai penutup rangkaian dialog budaya.",
+      "narasumberTitle": "Foto Bersama Narasumber",
+      "narasumberDesc": "Momen bersama para narasumber yang membuka ruang dialog lintas perspektif.",
+      "tamuUndanganTitle": "Narasumber & Tamu Undangan",
+      "tamuUndanganDesc": "Kebersamaan narasumber dengan para tamu undangan dalam rangkaian dialog.",
+      "panitiaTitle": "Foto Panitia",
+      "panitiaDesc": "Dokumentasi panitia di balik suksesnya penyelenggaraan dialog budaya."
+    }
+  },
+  "undangan": {
+    "label": "Undangan",
+    "heroTitle": "Dialog Budaya Minahasa 2026",
+    "heroTagline": "Evolusi Atribut Kawasaran: Mengurai Benang Merah antara Otentisitas Budaya dan Inovasi Plastik Daur Ulang",
+    "heroDate": "Sabtu, 1 Agustus 2026",
+    "heroTime": "08.30 – 15.00 WITA",
+    "heroVenue": "Kedai Kana, Desa Sukur, Minahasa Utara",
+    "greeting": "Kepada Yth. Bapak/Ibu/Saudara/i Tamu Undangan",
+    "greetingBody": "Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam forum Dialog Budaya Minahasa 2026 — sebuah dialog yang menelusuri evolusi atribut Kawasaran, menjembatani otentisitas budaya dengan inovasi plastik daur ulang.",
+    "tentang": "Tentang Acara",
+    "detail1": "Forum dialog terbatas namun representatif yang mempertemukan tokoh adat, akademisi, seniman, pegiat lingkungan, pemerintah, dan generasi muda.",
+    "detail2": "Forum akan menelusuri makna filosofis material asli atribut Kawasaran, batasan kesakralan dalam berbagai konteks, serta peran inovasi plastik daur ulang dalam pelestarian budaya.",
+    "detail3": "Keluaran forum berupa rekomendasi awal — bukan keputusan adat resmi — dengan dokumentasi, publikasi, dan tindak lanjut yang jelas.",
+    "rsvpTitle": "Konfirmasi Kehadiran",
+    "formNama": "Nama Lengkap",
+    "formNamaPlaceholder": "Masukkan nama lengkap Anda",
+    "formMewakili": "Mewakili",
+    "formMewakiliPlaceholder": "Instansi / Organisasi / Komunitas",
+    "formMinuman": "Pilihan Minuman",
+    "formMinumanPlaceholder": "Pilih minuman",
+    "beverages": [
+      "Kopi",
+      "Teh"
+    ],
+    "hadir": "Hadir",
+    "tidakHadir": "Tidak Hadir",
+    "konfirmasiHadir": "Terima Kasih!",
+    "konfirmasiHadirBody": "Konfirmasi kehadiran Anda sudah tercatat. Silakan bergabung ke grup WhatsApp untuk informasi dan diskusi lebih lanjut.",
+    "konfirmasiTidak": "Baik, Kami Mengerti",
+    "konfirmasiTidakBody": "Terima kasih sudah memberitahu. Kami berharap dapat bertemu di acara kami selanjutnya.",
+    "kirimWA": "Kirim Konfirmasi via WhatsApp",
+    "waTerkirim": "Konfirmasi terkirim. Selamat bergabung!",
+    "joinGroup": "Join Grup WhatsApp",
+    "ubahData": "Ubah data saya",
+    "kembali": "Kembali",
+    "lokasiTitle": "Lokasi Acara",
+    "bukaMaps": "Buka di Google Maps"
+  },
+  "orders": {
+    "label": "ORDERS",
+    "slide01Label": "01 — Who We Are",
+    "slide01Title": "Tech for",
+    "slide01Title2": "Circular",
+    "slide01Title3": "Future",
+    "slide01Desc": "Komunitas pengembang teknologi yang mendukung digitalisasi pengelolaan sampah dalam ekosistem Baciraro dengan inovasi, kolaborasi, dan keahlian tinggi.",
+    "slide02Label": "02 — The Mission",
+    "slide02Title": "Digital",
+    "slide02Title2": "Solidarity &",
+    "slide02Title3": "Trust",
+    "slide03Label": "03 — Products",
+    "slide03Title": "Sistem Digital Tangguh",
+    "slide03Desc": "Platform digital yang memantau data operasional circular economy ekosistem Baciraro secara berkala.",
+    "slide04Label": "04 — Solutions & Vision",
+    "slide04Title": "Platform",
+    "slide04Title2": "Digital",
+    "slide04Title3": "Waste",
+    "slide05Label": "05 — Join Us",
+    "slide05Title": "Ready to",
+    "slide05Title2": "Collaborate?",
+    "slide05Desc": "Kami menyambut kolaborasi dengan para pengembang, desainer, dan wirausahawan sosial yang bersemangat untuk memajukan transformasi teknologi hijau.",
+    "hubungiKami": "Hubungi Kami",
+    "kembaliEkosistem": "Kembali ke Ekosistem",
+    "visiKeberlanjutan": "Visi Keberlanjutan",
+    "visiDigitalisasi": "Visi Digitalisasi",
+    "ecosystemSuffix": "↻ Ekosistem",
+    "slide01Footer": "Akar Tradisi, Wajah Masa Depan.",
+    "slide02Footer": "Akar Tradisi, Wajah Masa Depan.",
+    "slide03Footer": "Akar Tradisi, Wajah Masa Depan.",
+    "slide04Footer": "Akar Tradisi, Wajah Masa Depan.",
+    "slideCopyright": "© {year} ORDERS — Ekosistem Baciraro",
+    "products": [
+      {
+        "name": "Website Yayasan",
+        "description": "Platform digital untuk pengelolaan data yayasan dan komunikasi dengan mitra ekosistem Baciraro."
+      },
+      {
+        "name": "Aplikasi Bank Sampah Desa Kolongan",
+        "description": "Sistem tracking sampah terintegrasi untuk masyarakat Desa Kolongan dengan interface user-friendly."
+      },
+      {
+        "name": "Aplikasi Bank Sampah StorJo Desa Pinabetengan",
+        "description": "Platform mobile untuk pengelolaan bank sampah dengan fitur monitoring dan pelaporan real-time."
+      }
+    ],
+    "solutions": [
+      {
+        "name": "Platform Digital Waste Management",
+        "description": "Sistem terpadu untuk monitoring dan tracking sampah"
+      },
+      {
+        "name": "Dashboard Monitoring",
+        "description": "Visualisasi data real-time untuk pengambilan keputusan cepat"
+      },
+      {
+        "name": "Sistem Tracking Sampah",
+        "description": "Pelacakan end-to-end dari pengumpulan hingga pemrosesan"
+      }
+    ],
+    "visionPoints": [
+      "Efisiensi operasional melalui digitalisasi",
+      "Transparansi data pengelolaan sampah",
+      "Keterlibatan masyarakat yang lebih aktif",
+      "Pengambilan keputusan berbasis data"
+    ],
+    "slide02Paragraph1": "ORDERS adalah komunitas pengembang teknologi yang didedikasikan untuk menciptakan solusi digital inovatif dalam pengelolaan sampah secara transparan.",
+    "slide02Paragraph2": "Kami berkomitmen untuk mentransformasi cara ekosistem Baciraro beroperasi melalui sistem berbasis data yang scalable, aman, dan berfokus pada kemudahan pengguna.",
+    "slide02DescVisi": "Dengan tim pengembang berpengalaman dan visi keberlanjutan yang kuat, kami merancang platform untuk mempertemukan pemangku kepentingan dalam satu ruang digital terintegrasi.",
+    "slide04Desc": "Teknologi adalah sarana vital untuk melacak data dampak lingkungan secara transparan, mendorong circular economy yang efisien dan berkelanjutan.",
+    "slide05Footer": "Akar Tradisi, Wajah Masa Depan.",
+    "slide02OpenSource": "Open-Source Dev",
+    "slide02SecureAudits": "Real-time Audits",
+    "storyFlowLabel": "Alur Cerita Interaktif ORDERS",
+    "heroLabel": "Hero ORDERS",
+    "tentangLabel": "Tentang ORDERS",
+    "produkLabel": "Produk & Karya",
+    "solusiLabel": "Solusi & Visi",
+    "hubungiLabel": "Hubungi Kami",
+    "logoAlt": "Ilustrasi Logo ORDERS"
+  },
+  "tananyiurlestari": {
+    "label": "Yayasan TNL",
+    "heroTitle": "Membangun Kesadaran Lingkungan dari Masyarakat",
+    "heroDesc": "Lembaga edukasi lingkungan yang berfokus pada pemberdayaan masyarakat melalui program pengelolaan sampah berkelanjutan dan inovasi sosial.",
+    "lihatProgram": "Lihat Program",
+    "lihatDampak": "Lihat Dampak",
+    "tentangLabel": "Tentang Yayasan",
+    "programLabel": "Program Unggulan",
+    "programTitle": "Aksi Nyata untuk Lingkungan",
+    "programDesc": "Tiga program utama yang kami jalankan untuk memberdayakan masyarakat dalam pengelolaan sampah secara terpadu.",
+    "dampakTitle": "Dampak Sosial & Lingkungan",
+    "ctaTitle": "Bergabung dan Berkolaborasi",
+    "ctaDesc": "Kami terbuka untuk kemitraan, kolaborasi, dan aksi bersama dalam memperluas jangkauan program pengelolaan lingkungan hidup terpadu.",
+    "hubungiKami": "Hubungi Kami",
+    "kembaliEkosistem": "Kembali ke Ekosistem",
+    "programs": [
+      {
+        "name": "Bank Sampah",
+        "desc": "Program pemberdayaan masyarakat dengan sistem pengumpulan dan tukar sampah dengan insentif ekonomi."
+      },
+      {
+        "name": "BLANTE Sampah",
+        "desc": "Kegiatan edukasi sampah di tingkat komunitas dengan workshop dan training berkelanjutan."
+      },
+      {
+        "name": "DropBox",
+        "desc": "Sistem drop-off terpusat untuk mempermudah masyarakat dalam menyerahkan sampah secara teratur."
+      }
+    ],
+    "impactData": [
+      {
+        "number": "20+",
+        "label": "Desa Terlibat"
+      },
+      {
+        "number": "2.500+",
+        "label": "Masyarakat Aktif"
+      },
+      {
+        "number": "12",
+        "label": "Program Berkelanjutan"
+      }
+    ],
+    "benefits": [
+      "Meningkatkan kesadaran lingkungan",
+      "Pemberdayaan ekonomi masyarakat",
+      "Pengurangan volume sampah ke TPA",
+      "Penciptaan lapangan kerja lokal"
+    ],
+    "paragraph1": "Yayasan Tana Nyiur Lestari adalah lembaga non-profit yang berkomitmen untuk membangun kesadaran dan aksi lingkungan di tingkat masyarakat.",
+    "paragraph2": "Melalui program-program inovatif, kami memberdayakan komunitas lokal untuk mengelola sampah secara mandiri sambil menciptakan nilai ekonomi dan sosial.",
+    "paragraph3": "Visi kami adalah menciptakan ekosistem pengelolaan sampah yang berkelanjutan, inklusif, dan memberikan dampak positif jangka panjang bagi masyarakat dan lingkungan.",
+    "heroAlt": "Yayasan Tana Nyiur Lestari",
+    "aboutAlt": "Tentang Yayasan"
+  },
+  "trashrecyclecenter": {
+    "label": "Recycle Center",
+    "heroTitle": "Mengubah Sampah Menjadi Sumber Daya Bernilai",
+    "heroDesc": "Unit usaha daur ulang yang berperan sebagai offtaker dan pengolah sampah menjadi bahan baku berkualitas untuk industri kreatif dan manufaktur.",
+    "lihatProses": "Lihat Proses",
+    "lihatOutput": "Lihat Output",
+    "komoditasLabel": "Komoditas Pengolahan",
+    "komoditasTitle": "Jenis Sampah yang Kami Proses",
+    "komoditasDesc": "Kami menangani berbagai jenis sampah dengan teknologi dan proses pemilahan yang terstandar.",
+    "alurLabel": "Alur Operasional",
+    "alurTitle": "Proses Kerja Daur Ulang",
+    "outputTitle": "Output & Dampak Keberlanjutan",
+    "ctaTitle": "Kerja Sama Pengelolaan Sampah",
+    "ctaDesc": "Kami membuka peluang kerjasama untuk industri, pemerintah, dan komunitas dalam pengelolaan sampah secara profesional dan bernilai tambah.",
+    "hubungiKami": "Hubungi Kami",
+    "kembaliEkosistem": "Kembali ke Ekosistem",
+    "wasteTypes": [
+      {
+        "name": "Plastik",
+        "desc": "Pengumpulan dan pemrosesan plastik dari berbagai sumber menjadi bahan baku berkualitas."
+      },
+      {
+        "name": "Kertas",
+        "desc": "Daur ulang kertas bekas menjadi bahan baku untuk industri kreatif dan manufaktur."
+      },
+      {
+        "name": "Logam",
+        "desc": "Pemilahan dan pengolahan limbah logam untuk dijual kembali ke industri."
+      }
+    ],
+    "processSteps": [
+      {
+        "step": "Pengumpulan",
+        "desc": "Kumpul dari berbagai sumber: rumah, industri, perdagangan"
+      },
+      {
+        "step": "Sorting",
+        "desc": "Pemilahan manual dan mekanis berdasarkan jenis material"
+      },
+      {
+        "step": "Pengolahan",
+        "desc": "Proses pencucian, pengeringan, dan pemadatan"
+      },
+      {
+        "step": "Bahan Baku",
+        "desc": "Transformasi menjadi bahan baku siap industri"
+      }
+    ],
+    "outputCards": [
+      {
+        "title": "Bahan Baku Industri Kreatif",
+        "desc": "Plastic compound, kertas kraft, baja galvanis untuk kerajinan dan manufaktur hijau."
+      },
+      {
+        "title": "Distribusi Marketplace & Wisata",
+        "desc": "Produk daur ulang dipasarkan melalui marketplace online dan desa wisata terpadu."
+      },
+      {
+        "title": "Nilai Ekonomi & Sosial",
+        "desc": "Pembukaan lapangan kerja lokal dan peningkatan pendapatan masyarakat di wilayah sekitar unit."
+      }
+    ],
+    "heroAlt": "Trash Recycle Center",
+    "outputAlt": "Output TRC"
+  },
+  "elmast": {
+    "label": "ELMAST Greenovasi",
+    "heroTitle": "Mengubah Sampah Organik Menjadi Energi",
+    "heroDesc": "Teknologi inovatif pengolahan sampah organik menjadi biogas, kompos, dan pupuk organik cair berkualitas tinggi untuk kelestarian tanah dan kemandirian energi.",
+    "lihatTeknologi": "Lihat Teknologi",
+    "lihatManfaat": "Lihat Manfaat",
+    "teknologiTitle": "Tentang Teknologi ELMAST",
+    "dokumentasiLabel": "Dokumentasi Kegiatan",
+    "dokumentasiTitle": "Galeri Aksi Lapangan",
+    "dokumentasiDesc": "Aktivitas implementasi pengolahan sampah organik menjadi energi hijau dan pupuk berkelanjutan bersama komunitas.",
+    "produkLabel": "Hasil Pengolahan",
+    "produkTitle": "Produk Unggulan",
+    "produkDesc": "Tiga produk utama yang lahir dari fasilitas teknologi ramah lingkungan ELMAST.",
+    "solusiLabel": "Solusi Masalah",
+    "solusiTitle": "Ruang Lingkup Solusi",
+    "manfaatTitle": "Manfaat & Dampak Nyata",
+    "ctaTitle": "Implementasi Teknologi ELMAST",
+    "ctaDesc": "Kami siap memfasilitasi implementasi instalasi biogas terintegrasi dan sistem pupuk hayati berkelanjutan di lokasi Anda.",
+    "hubungiKami": "Hubungi Kami",
+    "kembaliEkosistem": "Kembali ke Ekosistem",
+    "tutup": "Tutup",
+    "products": [
+      {
+        "name": "Biogas",
+        "desc": "Energi gas terbarukan dari pengolahan sampah organik untuk kebutuhan memasak dan listrik."
+      },
+      {
+        "name": "Kompos",
+        "desc": "Pupuk organik berkualitas tinggi hasil fermentasi sampah untuk pertanian berkelanjutan."
+      },
+      {
+        "name": "Pupuk Organik Cair",
+        "desc": "Nutrisi cair premium untuk tanaman dengan hasil pengolahan limbah organik optimal."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Sampah Rumah Tangga",
+        "desc": "Mengolah limbah organik dari rumah tangga menjadi energi dan pupuk berguna secara mandiri."
+      },
+      {
+        "title": "Eceng Gondok Danau Tondano",
+        "desc": "Solusi inovatif penanganan gulma air menjadi produk yang bernilai ekonomi tinggi untuk komunitas."
+      }
+    ],
+    "benefits": [
+      {
+        "label": "Pengurangan TPA",
+        "value": "40%",
+        "desc": "Volume sampah organik ke tempat pembuangan"
+      },
+      {
+        "label": "Energi Terbarukan",
+        "value": "100%",
+        "desc": "Sumber energi bersih dan berkelanjutan"
+      },
+      {
+        "label": "Produktivitas Lahan",
+        "value": "+60%",
+        "desc": "Peningkatan hasil pertanian dengan pupuk alami"
+      }
+    ],
+    "paragraph1": "ELMAST Greenovasi menghadirkan sistem biogas terpadu yang merombak limbah organik menjadi sumber energi bersih terbarukan sekaligus pupuk hayati premium.",
+    "paragraph2": "Teknologi kami telah terbukti efektif mengurangi beban volume sampah organik ke TPA secara signifikan dengan proses fermentasi anaerobic yang terkontrol ketat.",
+    "paragraph3": "Dengan model circular economy yang terukur, inisiatif ini memperkuat kemandirian energi rumah tangga, mengurangi emisi gas rumah kaca, dan memulihkan produktivitas lahan tani.",
+    "logoAlt": "Logo ELMAST",
+    "techAlt": "Teknologi ELMAST",
+    "openFull": "Buka gambar dalam ukuran penuh",
+    "previewAlt": "Pratinjau gambar ELMAST",
+    "galleryAlt": {
+      "0": "Aktivitas ELMAST 1",
+      "1": "Aktivitas ELMAST 2",
+      "2": "Aktivitas ELMAST 3",
+      "3": "Aktivitas ELMAST 4",
+      "4": "Aktivitas ELMAST 5",
+      "5": "Aktivitas ELMAST 6",
+      "6": "Aktivitas ELMAST 7"
+    }
+  },
+  "leadership": {
+    "label": "Leadership",
+    "heroTitle": "Leadership Team",
+    "heroDesc": "Tim kepemimpinan Baciraro yang berdedikasi untuk mendorong inovasi, memperkuat kolaborasi, dan menciptakan dampak berkelanjutan bagi masyarakat dan lingkungan.",
+    "valueInovasi": "Inovasi",
+    "valueKolaborasi": "Kolaborasi",
+    "valueIntegritas": "Integritas",
+    "valueKeberlanjutan": "Keberlanjutan",
+    "footerCredit": "Baciraro — Leadership Team",
+    "quote": "Kami percaya bahwa kolaborasi, inovasi, dan integritas adalah kunci untuk menciptakan perubahan nyata.",
+    "linkedinLabel": "{name} LinkedIn",
+    "instagramLabel": "{name} Instagram",
+    "emailLabel": "{name} Email",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "tagline": "The Green Observatory",
+    "ceoFallback": "Chief Executive Officer (CEO)"
+  },
+  "layout": {
+    "title": "Baciraro | Solusi Circular Economy & CSR Lingkungan Terintegrasi",
+    "description": "Baciraro membangun ekosistem pengelolaan sampah terintegrasi melalui edukasi, daur ulang, pemberdayaan masyarakat, program kreatif, dan digital tracking dampak lingkungan."
+  },
+  "ceoSection": {
+    "label": "KEPEMIMPINAN & VISI",
+    "quote": "Sinergi antar entitas adalah kunci untuk menciptakan sirkularitas sampah yang nyata dan berkelanjutan dari hulu ke hilir.",
+    "name": "Marlon Kamagi, CEO Baciraro Sustainability",
+    "bio": "Community Development Worker & Climate Leader dengan pengalaman bertahun-tahun dalam pembangunan berkelanjutan, aksi iklim, dan pendampingan masyarakat.",
+    "bacaPerjalanan": "Baca Perjalanan Baciraro",
+    "lihatLeadership": "Lihat Seluruh Leadership"
+  },
+  "qr": {
+    "download": "Download QR Code"
+  },
+  "trackRecord": {
+    "label": "Rekam Jejak",
+    "heroTitle": "Living Archive",
+    "heroDesc": "Sebuah arsip hidup perjalanan pengelolaan sampah berkelanjutan di Sulawesi Utara.",
+    "jelajahiCerita": "Jelajahi Cerita",
+    "jelajahiArsip": "Jelajahi Arsip",
+    "ceritaPerjalanan": "Perjalanan",
+    "kegiatan": "Kegiatan",
+    "wilayah": "Wilayah",
+    "foto": "Foto",
+    "eraAwal": "Awal",
+    "eraTumbuh": "Tumbuh",
+    "eraMeluas": "Meluas",
+    "eraTransformasi": "Transformasi",
+    "scrollEraAwal": "Era Awal",
+    "scrollEraTumbuh": "Era Tumbuh",
+    "scrollEraMeluas": "Era Meluas",
+    "scrollEraTransformasi": "Era Transformasi",
+    "catLingkungan": "Lingkungan",
+    "catSosial": "Sosial",
+    "catEkonomi": "Ekonomi",
+    "catTeknologi": "Teknologi",
+    "catPendidikan": "Pendidikan",
+    "pencapaian": "Pencapaian",
+    "kategori": "Kategori",
+    "kapabilitas": "Kapabilitas",
+    "statTahun": "Tahun Perjalanan",
+    "statKegiatan": "Kegiatan & Program",
+    "statFoto": "Foto Terdokumentasi",
+    "statLokasi": "Lokasi Terjangkau",
+    "peran": "Peran Baciraro",
+    "peranTitle": "Peran yang Telah Dijalani",
+    "peranDesc": "Dari fasilitator hingga eksekutor — Baciraro mengambil peran strategis dalam setiap program di sepanjang rantai nilai ekonomi sirkular.",
+    "beforeLabel": "Sebelum",
+    "afterLabel": "Sesudah",
+    "framesLabel": "Frame of Change",
+    "framesTitle": "Dokumentasi Visual",
+    "semua": "Semua",
+    "tampilkanLagi": "Tampilkan Lebih Banyak",
+    "tersisa": "tersisa",
+    "studiKasus": "Studi Kasus",
+    "proyekUnggulan": "Proyek Unggulan",
+    "studiKasusDesc": "Program dan inisiatif strategis Baciraro bersama mitra.",
+    "studiKasusBaca": "Baca Studi Kasus",
+    "studiKasusMitra": "Kolaborasi Bersama",
+    "studiKasusRangkuman": "Rangkuman Program",
+    "studiKasusTerkait": "Kegiatan Terkait",
+    "studiKasusSebelumnya": "Sebelumnya",
+    "studiKasusBerikutnya": "Berikutnya",
+    "studiKasusNotFound": "Studi kasus tidak ditemukan",
+    "kembali": "Kembali",
+    "arsipTitle": "Arsip Lengkap",
+    "arsipLabel": "Indeks Arsip Perjalanan",
+    "arsipDesc": "Jelajahi seluruh rekam jejak Baciraro dari tahun ke tahun.",
+    "tahun": "Tahun {year}",
+    "tampilkanSemua": "Tampilkan semua",
+    "tampilkanSedikit": "Tampilkan lebih sedikit",
+    "indexPhotoLabel": "foto",
+    "indexActivityLabel": "kegiatan",
+    "framesCount": "terdokumentasi dalam perjalanan Baciraro.",
+    "role": {
+      "mitra_pelaksana": "Mitra Pelaksana",
+      "mitra_riset": "Mitra Riset",
+      "penyelenggara": "Penyelenggara",
+      "fasilitator": "Fasilitator",
+      "executor": "Executor",
+      "koordinator_lapangan": "Koordinator Lapangan",
+      "pendamping": "Pendamping",
+      "konsultan": "Konsultan",
+      "inisiator": "Inisiator"
+    },
+    "capability": {
+      "produksi_film": "Produksi Film",
+      "strategi_kreatif": "Strategi Kreatif",
+      "manajemen_kampanye": "Manajemen Kampanye",
+      "pendampingan_komunitas": "Pendampingan Komunitas",
+      "daur_ulang_plastik": "Daur Ulang Plastik",
+      "pengembangan_sistem_digital": "Pengembangan Sistem Digital",
+      "edukasi_lingkungan": "Edukasi Lingkungan",
+      "pemberdayaan_perempuan": "Pemberdayaan Perempuan",
+      "pengelolaan_sampah_organik": "Pengelolaan Sampah Organik",
+      "pengelolaan_sampah_wisata": "Pengelolaan Sampah Wisata",
+      "pengelolaan_sampah_pesisir": "Pengelolaan Sampah Pesisir",
+      "biogas_energi_terbarukan": "Biogas & Energi Terbarukan"
+    }
+  },
+  "siteSections": {
+    "inovasi": "Inovasi",
+    "inovasiTitle": "Inovasi dan Startup Pengelolaan Sampah",
+    "inovasiDesc": "Pengembangan solusi berbasis teknologi dan inovasi produk daur ulang.",
+    "ekosistem": "Ekosistem",
+    "ekosistemTitle": "Ekosistem Baciraro di Seluruh Wilayah",
+    "csr": "CSR & Kemitraan",
+    "csrTitle": "Program CSR dan Kemitraan Strategis",
+    "mitra": "Mitra",
+    "mitraTitle": "Mitra dan Lembaga yang Pernah Bekerja Sama",
+    "produkLayanan": "Produk & Layanan",
+    "produkLayananTitle": "Produk dan Layanan Baciraro",
+    "kompetensi": "Kompetensi",
+    "kompetensiTitle": "Kompetensi Utama Baciraro Recycle",
+    "kolaborasi": "Mari Berkolaborasi",
+    "hubungiKami": "Hubungi Kami",
+    "kembaliBeranda": "Kembali ke Beranda",
+    "dindingFoto": "Dinding Foto",
+    "indeksArsip": "Indeks Arsip",
+    "ekosistemDesc": "Ekosistem Baciraro di seluruh wilayah, dari program komunitas hingga kemitraan industri.",
+    "csrDesc": "Kolaborasi dengan berbagai lembaga dan perusahaan dalam program sosial dan lingkungan.",
+    "mitraDesc": "Jaringan kemitraan Baciraro bersama pemerintah, korporasi, dan komunitas.",
+    "produkLayananDesc": "Dari produk kriya daur ulang hingga konsultansi dampak sosial.",
+    "kompetensiDesc": "Keahlian inti yang menjadi fondasi setiap program dan inovasi Baciraro.",
+    "kolaborasiDesc": "Baciraro terbuka untuk kemitraan, kolaborasi program CSR, dan aksi lingkungan bersama."
+  },
+  "siteSectionsData": {
+    "innovationData": [
+      {
+        "title": "Pengembangan Ekosistem Baciraro",
+        "description": [
+          "Integrasi pengelolaan sampah dari hulu hingga hilir.",
+          "Penguatan rantai pasok industri daur ulang.",
+          "Penerapan prinsip ekonomi sirkular dalam pengelolaan sampah."
+        ]
+      }
+    ],
+    "csrPrograms": [
+      {
+        "title": "Pertamina Geothermal Energy (PGE) Lahendong",
+        "program": "Program Bank Sampah Setor Jo",
+        "points": [
+          "Edukasi pemilahan sampah.",
+          "Penguatan kelembagaan bank sampah.",
+          "Pengembangan produk daur ulang plastik.",
+          "Pelatihan Eco-Enzyme.",
+          "Pemberdayaan perempuan dan komunitas lingkungan."
+        ]
+      },
+      {
+        "title": "Danone Aqua",
+        "program": "Program Bijak Berplastik",
+        "points": [
+          "Penguatan ekosistem pengelolaan sampah DPSP Likupang.",
+          "Pembangunan fasilitas penampungan sampah plastik.",
+          "Dukungan kegiatan bersih pantai dan kampung."
+        ]
+      },
+      {
+        "title": "Kementerian Kelautan dan Perikanan RI",
+        "program": "Program Desa Pesisir Bersih",
+        "points": [
+          "Pemberdayaan kelompok nelayan.",
+          "Pengelolaan sampah terpilah.",
+          "Bantuan bangunan dan mesin daur ulang plastik."
+        ]
+      },
+      {
+        "title": "Kementerian Pariwisata RI",
+        "program": "Pelatihan Manajemen Bank Sampah",
+        "points": [
+          "Pendampingan lima desa wisata di DPSP Likupang.",
+          "Penguatan kapasitas pengelola bank sampah desa."
+        ]
+      },
+      {
+        "title": "Program Kolaborasi BUMN",
+        "points": [
+          "Sosialisasi pengelolaan sampah.",
+          "Pelatihan manajemen bank sampah.",
+          "Bantuan sarana prasarana daur ulang.",
+          "Pelatihan produk kriya berbahan plastik daur ulang."
+        ]
+      },
+      {
+        "title": "PLN UID Suluttenggo",
+        "program": "Program Green Action",
+        "points": [
+          "Workshop daur ulang sampah plastik.",
+          "Edukasi UMKM binaan PLN Peduli.",
+          "Kegiatan Clean Up dan Bottle Up.",
+          "Mendukung Program Zero Waste Warriors."
+        ]
+      }
+    ],
+    "partnerCategories": [
+      {
+        "title": "Pemerintah",
+        "items": [
+          "Kementerian Kelautan dan Perikanan RI",
+          "Kementerian Pariwisata RI",
+          "Kementerian Komunikasi dan Informatika RI",
+          "Pemerintah Kota Manado",
+          "Pemerintah Kabupaten Minahasa Utara",
+          "Pemerintah Kabupaten Minahasa",
+          "Dinas Lingkungan Hidup Kota Manado",
+          "BAPELITBANGDA Kota Manado",
+          "Badan Lingkungan Hidup Provinsi Sulawesi Utara"
+        ]
+      },
+      {
+        "title": "BUMN dan Korporasi",
+        "items": [
+          "Pertamina Geothermal Energy (PGE) Lahendong",
+          "Danone Aqua",
+          "PLN UID Suluttenggo",
+          "BNI 46",
+          "BPJS Kesehatan"
+        ]
+      },
+      {
+        "title": "Kesehatan dan Pendidikan",
+        "items": [
+          "RSUP Prof. Kandou Manado",
+          "SMA Negeri 7 Manado"
+        ]
+      },
+      {
+        "title": "Organisasi dan Komunitas",
+        "items": [
+          "Trash Waste Solution (TWS)",
+          "Ocean Hero",
+          "APDUPI (Asosiasi Pengusaha Daur Ulang Plastik Indonesia)",
+          "Yayasan Tana Nyiur Lestari",
+          "Komunitas Pecinta Alam Likupang",
+          "BRITS Bunaken",
+          "TerraGo Indonesia"
+        ]
+      }
+    ],
+    "ecosystemRegionData": [
+      {
+        "title": "Kota Bitung",
+        "points": [
+          "Kerjasama dengan Pelabuhan Perikanan Samudera Bitung yang mengelola kawasan pelabuhan.",
+          "Inblood (Infinity Blood) startup digital yang bekerjasama dengan PMI dan Baciraro Recycle dalam program \"Trash For Life\", ada lebih dari 50 cafe dan restoran sudah menjadi anggota dan aktif donasi sampah plastik.",
+          "Bank Sampah Baciraro Bitung, tersebar di beberapa kecamatan dan kelurahan di Kota Bitung."
+        ]
+      },
+      {
+        "title": "Minahasa Utara",
+        "points": [
+          "Bank Sampah Induk Likupang, kerjasama dengan Baciraro Recycle dan Danone untuk program Collecting dan Education.",
+          "Inblood (Infinity Blood) startup digital yang bekerjasama Baciraro Recycle dalam program \"Trash For Life\", ada lebih dari 4 cafe dan restoran sudah menjadi anggota dan aktif donasi sampah plastik.",
+          "Bank Sampah Baciraro Agape Tumaluntung, di kecamatan Kauditan."
+        ]
+      },
+      {
+        "title": "Manado",
+        "points": [
+          "Bank DBS, Sociolla Manado, dan Erha Clinic, kerjasama dengan Baciraro Recycle melalui Waste4Change untuk penjemputan sampah terpilah.",
+          "Inblood (Infinity Blood) startup digital yang bekerjasama Baciraro Recycle dalam program \"Trash For Life\", ada lebih dari 5 cafe dan restoran sudah menjadi anggota dan aktif donasi sampah plastik.",
+          "Bank Sampah Grand Luley Tongkaina Manado."
+        ]
+      },
+      {
+        "title": "Minahasa",
+        "points": [
+          "Bank Stor Jo, program Bank Sampah kerjasama antara Pertamina Geothermal Energy (PGE) Lahendong dengan Baciraro Recycle di wilayah operasional Tompaso Raya dan Langowan Utara.",
+          "Baciraro Recycle MoU dengan Pemda Minahasa (DLH) dalam program pengelolaan sampah digital bersama startup Kompis (aplikasi Bank Sampah), GWM (aplikasi transportasi online).",
+          "Menjadi pengurus dan Anggota Asosiasi Bank Sampah Indonesia (ASOBSI) DPD Minahasa."
+        ]
+      },
+      {
+        "title": "Kepulauan Sangihe",
+        "points": [
+          "10% Movement, adalah sebuah gerakan edukasi dengan menyisihkan 10% penjualan produk daur ulang Baciraro Eco-Craft.",
+          "Baciraro Recycle MoU dengan Pengelola English Learning Center Sangihe yang menyelenggarakan pelatihan bahasa Inggris bagi anak-anak dan belajar CALISTUNG dengan membayar dengan botol plastik.",
+          "Bank Sampah Green Corner Sangihe."
+        ]
+      },
+      {
+        "title": "Kota Tomohon",
+        "points": [
+          "Pertanian Organik. Baciraro organic farming dengan petani di Minahasa dan Rurukan Tomohon mengembangkan pertanian organik melalui supply bahan pupuk organik. Produk pupuk organik didistribusikan ke kelompok tani dengan pendampingan dari Baciraro sampai produksi pangan organik dan jaringan pemasaran.",
+          "Pengelolaan Sampah Organik. Baciraro Recycle bermitra dengan Produsen (Nutrifood), mengelola limbah organik dari bahan kadaluwarsa pradaluarsa (3 bulan sebelum kadaluarsa). Bahan praluarsa disalurkan ke jaringan bank sampah untuk nasabah sebagai makanan bahan (protein susu) dan bahan kadaluwarsa diolah menjadi pupuk organik."
+        ]
+      }
+    ],
+    "projectDetailData": [
+      {
+        "title": "Bank Sampah \"Setor Jo\"",
+        "description": "Program kerjasama antara Baciraro Recycle dengan Pertamina Geothermal Energy di Kabupaten Minahasa khususnya di wilayah operasional Kecamatan Tompaso, Tompaso Barat dan Langowan Utara. Program ini sudah mendirikan 4 bank sampah dan akan menyusul sebanyak 15 bank sampah. Program ini mendukung Minahasa Bersih dengan mengedukasi masyarakat untuk memilah sampah dan menjadikannya bernilai ekonomi."
+      },
+      {
+        "title": "Education and Collecting",
+        "description": "Program kerjasama antara Baciraro Recycle dengan Danone di Kabupaten Minahasa Utara khususnya di daerah Destinasi Super Prioritas Likupang untuk mengedukasi masyarakat dalam pengelolaan sampah di kawasan wisata. Program Edukasi ini sudah menjangkau lebih dari 1000 orang dan memberi dampak pengurangan sampah sebesar 5 ton sampah di tahun 2022."
+      },
+      {
+        "title": "Pengembangan Kapasitas Bank Sampah",
+        "description": "Program Pengembangan Kapasitas Bank Sampah Bersama Kementerian Pariwisata dan Ekonomi Kreatif Republik Indonesia telah dilakukan pengembangan kapasitas pengelolaan sampah di Likupang melalui kegiatan Sosialisasi Bank Sampah dan Pelatihan manajemen Bank Sampah. Terdukasi tentang sampah dan solusinya sebanyak 115 orang dan terbentuk 4 Bank Sampah dan 1 Pusat Daur Ulang di Kecamatan Likupang Timur."
+      },
+      {
+        "title": "Pengembangan Pusat Daur Ulang",
+        "description": "Program Pengembangan Pusat Daur Ulang Bersama Kementerian Kelautan dan Perikanan Republik Indonesia sementara dilakukan pembangunan fasilitas pengelolaan sampah plastik menjadi produk bahan furniture dan Kriya. Program ini diharapkan menjadi penunjang ekosistem pengelolaan sampah dengan prinsip sirkular ekonomi di Destinasi Pariwisata Super Prioritas Likupang."
+      },
+      {
+        "title": "Baciraro Organic Farm",
+        "description": "Program pengelolaan sampah organik yang terintegrasi dengan pertanian organik di Kampung Rurukan. Kolaborasi ini juga melibatkan Komunitas Eco-Enzyme Manado yang menjadi sumber bahan baku ampas Eco-Enzyme sebagai pencampur pupuk organik bersama limbah organik dari beberapa mitra perusahaan. Baciraro Organic Farm menjadi model pengelolaan sampah organik terpadu dalam mendukung ketahanan pangan berbasis organik di Sulawesi Utara."
+      },
+      {
+        "title": "10% Movement",
+        "description": "Program edukasi pengelolaan sampah melalui mekanisme kolaborasi dengan lembaga pendidikan bahasa Inggris dan CALISTUNG di Sangihe. Untuk mendapatkan kursus gratis, peserta hanya perlu membawa botol plastik sebagai pengganti pembayaran. Baciraro Recycle melalui penjualan produk berbahan daur ulang akan menyisihkan 10% penjualan untuk mendukung program ini."
+      },
+      {
+        "title": "Trash For Life",
+        "description": "Program donor darah melalui mekanisme kolaborasi dengan startup bank darah di Bitung bersama PMI. Kolaborasi ini melibatkan pemilik cafe dan restoran untuk donasi sampah plastik dan hasil transaksi antara bank darah dan Baciraro Recycle akan menjadi pembiayaan asuransi bagi pendonor. Program ini berhasil mendapat dukungan lebih dari 50 cafe dan restoran yang tersebar di Kota Bitung, Kota Manado, dan Minahasa Utara."
+      }
+    ],
+    "productServiceData": [
+      {
+        "title": "Baciraro Eco-Craft",
+        "description": "Dalam upaya mendukung sirkular ekonomi dalam pengelolaan sampah di Sulawesi Utara, Baciraro Recycle bermitra dengan beberapa pihak diantaranya Souvenir Likupang untuk produksi beragam produk berbasis bahan baku daur ulang. Produk Kriya yang dihasilkan oleh Baciraro Eco-Craft diharapkan dapat mendukung sektor ekonomi kreatif untuk menunjang Destinasi Super Prioritas (DSP) Likupang."
+      },
+      {
+        "title": "Konsultansi SROI",
+        "description": "Mengerjakan perhitungan SROI dari Yayasan Gellar untuk Program Kolaborasi TJSL 23 BUMN di DSP Likupang. Konsultansi ini diharapkan dapat gambaran dampak sosial terhadap evaluasi implementasi program yang dilaksanakan tahun 2022. Program ini menjadi bagian dari rencana pengembangan ekosistem pengelolaan sampah di DPSP Likupang khususnya pemanfaatan sampah menjadi produk kriya dan mendukung pariwisata berkelanjutan dengan prinsip sirkular ekonomi."
+      }
+    ],
+    "competencies": [
+      "Pengembangan dan pendampingan Bank Sampah.",
+      "Pengelolaan sampah berbasis ekonomi sirkular.",
+      "Pemberdayaan masyarakat dan kelompok perempuan.",
+      "Pengelolaan sampah kawasan wisata.",
+      "Pengelolaan sampah pesisir dan kelautan.",
+      "Daur ulang plastik menjadi produk bernilai tambah.",
+      "Pengembangan sistem digital pengelolaan sampah.",
+      "Pelatihan dan pendampingan komunitas.",
+      "Pengembangan eco-enzyme dan pengolahan sampah organik.",
+      "Pengembangan teknologi biogas dan pupuk organik.",
+      "Penyusunan model bisnis pengelolaan sampah berkelanjutan."
+    ]
+  },
+  "creativeStudio": {
+    "gateTitle": "Baciraro Creative Studio",
+    "gateFrom": "Dari Sampah",
+    "gateTo": "Menjadi Karya",
+    "gateDesc": "Platform manajemen produk dan ember kompos untuk ekosistem Baciraro. Kelola data, lacak dampak, dan pantau produksi daur ulang secara real-time.",
+    "login": "Login",
+    "masukGuest": "Masuk sebagai Guest",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Masuk",
+    "guestLabel": "Tamu",
+    "loginError": "Username atau password salah",
+    "namePrompt": "Masukkan nama Anda (opsional):",
+    "dashboard": "Dashboard",
+    "hello": "Halo, ",
+    "logout": "Logout",
+    "qrDashboard": "QR Dashboard",
+    "kembali": "Kembali",
+    "dampakTerukur": "Dampak Terukur",
+    "editData": "Edit Data",
+    "sampahOrganik": "Sampah Organik",
+    "sampahAnorganik": "Sampah Anorganik",
+    "produkDihasilkan": "Produk Dihasilkan",
+    "produkJadi": "Produk Jadi",
+    "emberTracker": "Ember Kompos Tracker",
+    "tambahEmber": "Tambah Ember",
+    "editEmber": "Edit Ember",
+    "tambahEmberBaru": "Tambah Ember Baru",
+    "kodeEmber": "Kode Ember (contoh: EMBR-004)",
+    "statusFermentasi": "Fermentasi",
+    "statusSiapPanen": "Siap Panen",
+    "statusSudahDipanen": "Sudah Dipanen",
+    "typeKompos": "Kompos",
+    "typePoc": "POC",
+    "typeKomposPoc": "Kompos + POC",
+    "bahanBaku": "Bahan baku (contoh: sampah dapur, daun)",
+    "catatan": "Catatan tambahan",
+    "simpanPerubahan": "Simpan Perubahan",
+    "tambahEmberBtn": "Tambah Ember",
+    "emberKosong": "Belum ada ember kompos. Klik 'Tambah Ember' untuk memulai.",
+    "fermentasiLabel": "Fermentasi:",
+    "panenLabel": "Panen:",
+    "bahanLabel": "Bahan:",
+    "manajemenProduk": "Manajemen Produk",
+    "tambahProduk": "Tambah Produk",
+    "editProduk": "Edit Produk",
+    "tambahProdukBaru": "Tambah Produk Baru",
+    "namaProduk": "Nama Produk",
+    "slugProduk": "Slug (contoh: eco-board)",
+    "deskripsiSingkat": "Deskripsi singkat",
+    "totalPlastik": "Total Plastik (kg)",
+    "ceritaProdukLabel": "Cerita produk (narasi panjang)",
+    "gambarUtama": "Gambar Utama",
+    "gambarTerupload": "Gambar terupload",
+    "berat": "Berat 3D Print (gram)",
+    "waktuCetak": "Estimasi waktu cetak (menit)",
+    "varian": "Varian 3D Print (JSON: [{\"label\":\"...\",\"weight_g\":10,\"minutes\":41}])",
+    "material": "Material",
+    "tambahMaterial": "+ Tambah Material",
+    "namaMaterial": "Nama material",
+    "satuanKg": "kg",
+    "satuanGram": "gram",
+    "satuanMeter": "meter",
+    "satuanBuah": "buah",
+    "simpanProduk": "Simpan Perubahan",
+    "tambahProdukBtn": "Tambah Produk",
+    "seniman": "Seniman",
+    "tambahSeniman": "+ Tambah Seniman",
+    "namaSeniman": "Nama seniman",
+    "peranSeniman": "Peran (contoh: Pelukis)",
+    "bioSeniman": "Bio singkat seniman",
+    "fotoSeniman": "Foto Seniman",
+    "fotoSenimanTerupload": "Foto terupload",
+    "produkKosong": "Belum ada produk. Klik 'Tambah Produk' untuk memulai.",
+    "kgPlastik": "kg plastik",
+    "hapusEmber": "Hapus ember ini?",
+    "hapusProduk": "Hapus produk ini?",
+    "sampahOrganikLabel": "Sampah Organik (kg):",
+    "sampahAnorganikLabel": "Sampah Anorganik (kg):",
+    "jumlahProdukLabel": "Jumlah Produk:",
+    "uploading": "Mengunggah...",
+    "jumlah": "Jumlah",
+    "showcase": {
+      "0": {
+        "title": "Papan Plastik (Eco-Board)",
+        "desc": "Material alternatif kayu tahan air dari HDPE daur ulang untuk furnitur custom.",
+        "label": "HDPE Daur Ulang"
+      },
+      "1": {
+        "title": "Suvenir & Plakat CSR",
+        "desc": "Suvenir ramah lingkungan pesanan resmi BUMN & korporasi.",
+        "label": "HDPE & PP Daur Ulang"
+      },
+      "2": {
+        "title": "Kompos Organik",
+        "desc": "Pupuk kompos berkualitas dari fermentasi sampah organik rumah tangga.",
+        "label": "Sampah Organik"
+      },
+      "3": {
+        "title": "Pupuk Organik Cair",
+        "desc": "POC (Pupuk Organik Cair) hasil sampingan fermentasi ember kompos.",
+        "label": "Fermentasi"
+      }
+    }
+  },
+  "partnerMarquee": {
+    "headline": "Dipercaya dalam Kolaborasi Lingkungan dan Circular Economy"
+  },
+  "flowHorizontal": {
+    "label": "ALUR PENGELOLAAN SAMPAH",
+    "title": "Dari sampah menjadi data,",
+    "titleItalic": "lalu kembali menjadi nilai.",
+    "metricLabel": "Dampak Terukur",
+    "steps": {
+      "0": {
+        "title": "Sampah",
+        "tagline": "Mengenali Setiap Sumber Dampak",
+        "desc": "Pemetaan jenis dan titik timbulan sampah secara presisi di wilayah urban dan rural.",
+        "metric": "18+ Titik"
+      },
+      "1": {
+        "title": "Edukasi",
+        "tagline": "Membangun Kesadaran Kolektif",
+        "desc": "Pendampingan langsung di sekolah, komunitas, dan desa untuk integrasikan kebiasaan memilah.",
+        "metric": "1.200+ Warga"
+      },
+      "2": {
+        "title": "Pengumpulan",
+        "tagline": "Menjemput Keberlanjutan",
+        "desc": "Sistem penjemputan sampah terpilah terjadwal dengan integrasi data logistik digital.",
+        "metric": "500+ Ton"
+      },
+      "3": {
+        "title": "Daur Ulang",
+        "tagline": "Mentransformasi Material Sisa",
+        "desc": "Pengolahan organik → kompos, plastik → bahan baku premium untuk industri manufaktur.",
+        "metric": "85% Reduksi"
+      },
+      "4": {
+        "title": "Produk",
+        "tagline": "Estetika yang Berkelanjutan",
+        "desc": "Kriya, furnitur ekologis, dan suvenir bernilai ekonomi tinggi dari bahan daur ulang.",
+        "metric": "40+ Karya"
+      },
+      "5": {
+        "title": "Digital Tracking",
+        "tagline": "Menjaga Kepercayaan Publik",
+        "desc": "Pencatatan jejak sampah end-to-end oleh ORDERS untuk laporan sirkularitas transparan.",
+        "metric": "100% Data"
+      }
+    }
+  },
+  "ecosystemRadial": {
+    "label": "LIMA ENTITAS YANG TERINTEGRASI",
+    "title": "Ekosistem ",
+    "titleItalic": "Baciraro",
+    "subtitle": "Baciraro membangun ekosistem circular economy yang menghubungkan edukasi masyarakat, pengumpulan dan pengolahan sampah, teknologi lingkungan, produk kreatif, serta sistem digital dalam satu rangkaian yang terintegrasi.",
+    "desc": "Setiap entitas memiliki fungsi khusus dalam ekosistem sirkular — dari edukasi di hulu hingga pelacakan digital di hilir.",
+    "learnMore": "Pelajari Lebih Lanjut",
+    "entities": {
+      "tnl": {
+        "tagline": "Edukasi Lingkungan dan Pemberdayaan Masyarakat",
+        "description": "Berperan pada tahap awal ekosistem melalui edukasi lingkungan, peningkatan kesadaran, dan pemberdayaan masyarakat.",
+        "labels": [
+          "Edukasi",
+          "Pemberdayaan",
+          "Inovasi Sosial"
+        ]
+      },
+      "trc": {
+        "tagline": "Pengumpulan, Pemilahan, dan Pengolahan Material",
+        "description": "Unit operasional yang berperan sebagai offtaker dan pengolah sampah menjadi bahan baku berkualitas.",
+        "labels": [
+          "Pengumpulan",
+          "Pemilahan",
+          "Pengolahan",
+          "Bahan Baku"
+        ]
+      },
+      "elmast": {
+        "tagline": "Teknologi Pengolahan Sampah Organik",
+        "description": "Mengembangkan teknologi untuk mengolah sampah organik menjadi biogas, kompos, dan pupuk organik cair.",
+        "labels": [
+          "Biogas",
+          "Kompos",
+          "Pupuk Organik",
+          "Energi Bersih"
+        ]
+      },
+      "orders": {
+        "tagline": "Teknologi Digital dan Pengukuran Dampak",
+        "description": "Mendukung digitalisasi ekosistem melalui website, aplikasi, dashboard, dan pelacakan dampak.",
+        "labels": [
+          "Digitalisasi",
+          "Data",
+          "Monitoring",
+          "EcoDigital"
+        ]
+      }
+    },
+    "flowSteps": {
+      "0": {
+        "label": "Edukasi Masyarakat",
+        "desc": "Kesadaran & pemilahan dari sumber"
+      },
+      "1": {
+        "label": "Pengumpulan & Pemilahan",
+        "desc": "Logistik terpadu & sortasi material"
+      },
+      "2": {
+        "label": "Pengolahan",
+        "desc": "Plastik → material, Organik → energi"
+      },
+      "3": {
+        "label": "Produk & Energi",
+        "desc": "Nilai tambah untuk industri & komunitas"
+      },
+      "4": {
+        "label": "Digital Monitoring",
+        "desc": "Data transparan & dampak terukur"
+      }
+    },
+    "mobileDesc": "Baciraro membangun sistem pengelolaan sampah terintegrasi yang menghubungkan edukasi, pengumpulan, pengolahan, produk kreatif, pemberdayaan masyarakat, dan pelacakan digital."
+  },
+  "activities": {
+    "label": "Kegiatan & Dokumentasi",
+    "title": "Kegiatan ",
+    "titleItalic": "Baciraro",
+    "subtitle": "Dokumentasi kegiatan Baciraro Creative — forum budaya dan partisipasi komunitas dalam memperkuat warisan budaya melalui inovasi plastik daur ulang."
+  },
+  "creativeShowcase": {
+    "label": "PROGRAM AKTIF",
+    "title": "Baciraro ",
+    "titleItalic": "Creative",
+    "subtitle": "Produk kriya bernilai tinggi dari bahan daur ulang — hasil kolaborasi dengan masyarakat, korporasi, dan kreator lokal.",
+    "cta": "Lihat Semua Produk",
+    "products": {
+      "0": {
+        "title": "Suvenir & Plakat CSR",
+        "desc": "Suvenir ramah lingkungan pesanan resmi BUMN & korporasi sebagai alternatif durable dan bermakna.",
+        "label": "HDPE & PP Daur Ulang"
+      },
+      "1": {
+        "title": "Sofa Puff Ecobrick",
+        "desc": "Sofa kriya hasil pemberdayaan kelompok perempuan desa dengan teknik ecobrick dari PET bekas.",
+        "label": "PET & Residu"
+      },
+      "2": {
+        "title": "Karya Kreatif & Budaya",
+        "desc": "Produk kreatif bernilai tinggi yang berakar pada budaya lokal dan semangat 10% Movement Baciraro.",
+        "label": "10% Movement"
+      }
+    }
+  },
+  "trackRecordData": {
+    "activity": {
+      "0": {
+        "title": "Reboisasi Gunung Klabat",
+        "narrative": "Awal mula kepedulian Baciraro terhadap lingkungan. Program reboisasi di kawasan Gunung Klabat bersama relawan Aqua, menanam pohon untuk menjaga kelestarian hutan dan sumber daya air di Sulawesi Utara."
+      },
+      "1": {
+        "title": "Salvos Go Green",
+        "narrative": "Program Salvos Go Green, aksi peduli lingkungan oleh Gereja Bala Keselamatan yang melibatkan penanaman pohon dan edukasi lingkungan di Sulawesi Utara. Aksi tanam pohon oleh Pemuda Gereja Bala Keselamatan se-Indonesia berfokus pada penghijauan dan kepedulian lingkungan."
+      },
+      "2": {
+        "title": "Pengelolaan Sampah Berbasis Komunitas Pulau Bunaken",
+        "narrative": "Pendampingan kelompok pengelola sampah BRITS di Pulau Bunaken. Bekerja sama dengan Badan Lingkungan Hidup Provinsi Sulawesi Utara. Implementasi sistem Bank Sampah berbasis masyarakat. Menghasilkan penghargaan MDGs 2012 untuk pengelolaan sampah berbasis prakarsa komunitas lokal."
+      },
+      "3": {
+        "title": "Program Klabat Lestari bersama Aqua",
+        "narrative": "Program konservasi Gunung Klabat bersama Aqua. Melibatkan kelompok binaan dalam kegiatan pelestarian lingkungan, penghijauan, dan pengelolaan sampah di kawasan Gunung Klabat."
+      },
+      "4": {
+        "title": "Studi Biogas & Teknologi Kencana Online",
+        "narrative": "Kunjungan tim koperasi Minahasa ke PT Kencana Online di Bandung untuk mempelajari teknologi biogas, komposter, dan energi terbarukan. Mempelajari sistem biodigester, genset biogas, kompor biogas, dan pemurnian biogas untuk pengelolaan energi berkelanjutan."
+      },
+      "5": {
+        "title": "Observasi TPA Tondano",
+        "narrative": "Observasi kondisi Tempat Pemrosesan Akhir (TPA) di Tondano untuk memahami sistem pengelolaan sampah dan dampaknya terhadap lingkungan sekitar."
+      },
+      "6": {
+        "title": "Dokumentasi Pencemaran Sungai Manado",
+        "narrative": "Dokumentasi kondisi sungai di Manado yang tercemar sampah. Data dan dokumentasi ini menjadi dasar advokasi dan edukasi pengelolaan sampah di Kota Manado."
+      },
+      "7": {
+        "title": "Climate Reality Project Indonesia",
+        "narrative": "Partisipasi dalam kegiatan Climate Reality Project Indonesia di Jakarta. Program pelatihan dan advokasi perubahan iklim yang diprakarsai oleh mantan Wakil Presiden AS Al Gore."
+      },
+      "8": {
+        "title": "Program Klabat Lestari - Hutan Kenangan",
+        "narrative": "Kegiatan tanam pohon di Hutan Kenangan sebagai bagian dari Program Klabat Lestari. Melibatkan pembuatan kompos dan penanaman pohon di kawasan kaki Gunung Klabat."
+      },
+      "9": {
+        "title": "Penelitian Eceng Gondok Danau Tondano",
+        "narrative": "Penelitian eceng gondok di Danau Tondano bersama Groningen University Belanda dan Bank Indonesia. Juga melakukan kunjungan ke lokasi perkebunan organik Rurukan dan pertemuan dengan Lantos Pin dari Groningen University."
+      },
+      "10": {
+        "title": "Indonesia Carbon Update",
+        "narrative": "Seminar Indonesia Carbon Update bersama Rahmat Witular (mantan Menteri Lingkungan Hidup) dan Steven Sumolang (peneliti antropologi, Ketua Forum Mountenering Sulut)."
+      },
+      "11": {
+        "title": "Sosialisasi Klabat Lestari",
+        "narrative": "Sosialisasi Program Klabat Lestari oleh Green Community Forum Sulawesi Utara untuk memperluas dampak konservasi Gunung Klabat."
+      },
+      "12": {
+        "title": "Outbound Himpunan Pramuwisata Indonesia",
+        "narrative": "Kegiatan outbound pengurus Himpunan Pramuwisata Indonesia (HPI) sebagai bagian dari pengembangan kapasitas organisasi."
+      },
+      "13": {
+        "title": "Dokumentasi Danau Limboto",
+        "narrative": "Dokumentasi pendangkalan Danau Limboto akibat eceng gondok, menjadi salah satu dasar advokasi pengelolaan sampah dan limbah di Sulawesi Utara."
+      },
+      "14": {
+        "title": "Pembentukan TV Polri Sulawesi Utara",
+        "narrative": "Rapat pembentukan TV Polri di Sulawesi Utara. Keterlibatan Baciraro dalam forum komunikasi dan pengembangan media kepolisian di wilayah Sulut."
+      },
+      "15": {
+        "title": "Aplikasi Tanam Pohon Taponesia",
+        "narrative": "Pengembangan aplikasi tanam pohon Taponesia dengan fitur dashboard, social wall, dan menu profile. Inovasi digital untuk memantau kegiatan penghijauan dan reboisasi."
+      },
+      "16": {
+        "title": "Green Community Forum Tanam Pohon",
+        "narrative": "Aksi tanam pohon oleh Green Community Forum Minahasa Utara. Melibatkan identifikasi pohon dan penanaman di berbagai lokasi di wilayah Minahasa Utara."
+      },
+      "17": {
+        "title": "Aplikasi Bank Sampah SMASH",
+        "narrative": "Pengembangan aplikasi bank sampah online SMASH. Fasilitasi implementasi sistem bank sampah digital di Kota Manado untuk integrasi dengan sistem non-tunai."
+      },
+      "18": {
+        "title": "Launching Bank Sampah Agape",
+        "narrative": "Launching Bank Sampah Agape di Desa Tumaluntung, Kecamatan Kauditan. Pendirian bank sampah berbasis komunitas untuk pengelolaan sampah di tingkat desa."
+      },
+      "19": {
+        "title": "Meeting Danone Jakarta",
+        "narrative": "Pertemuan dengan Danone Pusat di Jakarta untuk menjajaki kerjasama pengelolaan sampah dan program bijak berplastik di Sulawesi Utara."
+      },
+      "20": {
+        "title": "Program Pertanian Desa Pinili",
+        "narrative": "Program pembibitan dan pertanian di Desa Pinili. Meliputi pembibitan rica (cabai), penyemaian, dan penanaman padi sebagai bagian dari pengembangan pertanian berkelanjutan."
+      },
+      "21": {
+        "title": "Bank Sampah Simfoni",
+        "narrative": "Pencanangan Bank Sampah Simfoni di Festival Paskah dan pengembangan bank sampah jemaat untuk menunjang pariwisata di Sulawesi Utara. Bank sampah ini menjadi pusat pengumpulan dan pemilahan sampah berbasis komunitas."
+      },
+      "22": {
+        "title": "Program Adiwiyata SMA Negeri 7 Manado",
+        "narrative": "Pendampingan SMA Negeri 7 Manado menuju Sekolah Adiwiyata Mandiri. Meliputi launching bank sampah, pembuatan komposter, pengomposan, dan edukasi pengelolaan sampah di lingkungan sekolah. Berhasil meraih penghargaan Sekolah Adiwiyata Mandiri."
+      },
+      "23": {
+        "title": "Kunjungan TPA Sumompo",
+        "narrative": "Kunjungan ke Tempat Pemrosesan Akhir (TPA) Sumompo untuk mempelajari sistem pengelolaan sampah dan berdiskusi dengan Koperasi CELS mengenai potensi pengembangan daur ulang."
+      },
+      "24": {
+        "title": "Pengelolaan Sampah di Siladen Resort",
+        "narrative": "Pelatihan pengolahan sampah pada karyawan di Siladen Resort dan workshop waste management and circular economy. Inisiatif pemanfaatan botol wine bekas menjadi gelas dan produk bernilai tambah di kawasan wisata."
+      },
+      "25": {
+        "title": "Koperasi Celebes Energi Lestari (CELS)",
+        "narrative": "Pengembangan Koperasi CELS sebagai koperasi bank sampah pertama di Sulawesi Utara. Menjajaki kerjasama pengelolaan sampah rumah sakit dengan RS Siloam dan kunjungan ke Pertamina Geothermal untuk sinergi pengelolaan sampah."
+      },
+      "26": {
+        "title": "Bank Sampah Adipura Bitung",
+        "narrative": "Pembentukan bank sampah Adipura di Kota Bitung untuk mendukung program kebersihan dan penghijauan kota. Meliputi sosialisasi, pendirian, dan operasional bank sampah."
+      },
+      "27": {
+        "title": "Pemilahan Sampah Pulau Bangka",
+        "narrative": "Kegiatan pemilahan sampah dari laut Pulau Bangka bekerja sama dengan Bangka Conservation Foundation. Upaya mengurangi pencemaran sampah plastik di kawasan konservasi laut."
+      },
+      "28": {
+        "title": "Pengembangan Teknologi Daur Ulang",
+        "narrative": "Pengembangan alat penyulingan sampah plastik menjadi BBM dan pembuatan batako dari residu sampah plastik. Kolaborasi dengan Politeknik Negeri Manado untuk pembuatan mesin pencacah sampah."
+      },
+      "29": {
+        "title": "Produksi Sofa Ecobrick",
+        "narrative": "Inovasi pembuatan sofa dari ecobrick (botol plastik bekas). Produk furnitur ramah lingkungan yang menjadi ikon Baciraro dalam ekonomi sirkular dan daur ulang sampah plastik."
+      },
+      "30": {
+        "title": "Kunjungan Griffith University Australia",
+        "narrative": "Kunjungan Prof Noel Scott dari Griffith University Australia ke Bank Sampah Simfoni dan Politeknik Negeri Manado. Study tentang sustainable tourism dan pengelolaan sampah berkelanjutan di kawasan wisata."
+      },
+      "31": {
+        "title": "Kreasi Lukisan dan Karya dari Sampah Plastik",
+        "narrative": "Pengolahan sampah plastik dan handuk bekas menjadi karya seni lukisan dan produk kreatif. Inovasi daur ulang yang mengubah limbah menjadi produk bernilai seni tinggi."
+      },
+      "32": {
+        "title": "Musyawarah Nasional APSI",
+        "narrative": "Partisipasi dalam Musyawarah Nasional Asosiasi Pengusaha Sampah Indonesia (APSI) dan menjadi bagian dari pengurus organisasi pengusaha daur ulang plastik Indonesia."
+      },
+      "33": {
+        "title": "Operasional Bank Sampah Simfoni",
+        "narrative": "Kegiatan operasional Bank Sampah Simfoni meliputi pemilahan botol plastik, penimbangan, penyerahan buku tabungan nasabah, dan pengelolaan sampah harian. Bank sampah ini menjadi pusat ekonomi sirkular berbasis komunitas."
+      },
+      "34": {
+        "title": "Kerajinan dari Handuk Bekas",
+        "narrative": "Inovasi daur ulang handuk bekas menjadi pot, anting-anting, dan berbagai produk kerajinan. Program pemberdayaan masyarakat melalui kreativitas daur ulang tekstil."
+      },
+      "35": {
+        "title": "Liputan Media dan Diskusi Publik",
+        "narrative": "Menjadi narasumber di Kompas TV Sapa Manado dengan tema 'Manado dan Sampah', serta diskusi tentang banjir di TVRI. Media coverage dan edukasi publik tentang pengelolaan sampah."
+      },
+      "36": {
+        "title": "Pameran AIS dan Event Kelautan",
+        "narrative": "Partisipasi dalam pameran AIS (Archipelagic and Island States) dengan peneliti kelautan dari seluruh dunia. Memperkenalkan inovasi pengelolaan sampah dan bank sampah kepada komunitas internasional."
+      },
+      "37": {
+        "title": "Sosialisasi Bank Sampah bersama PGE",
+        "narrative": "Sosialisasi program bank sampah bersama Pertamina Geothermal Energy di PADIOR. Edukasi pemilahan sampah dan pendirian bank sampah di wilayah operasional PGE."
+      },
+      "38": {
+        "title": "Kompetisi 1000 Startup Digital",
+        "narrative": "Baciraro Recycle memperkenalkan diri sebagai startup digital inovasi pengelolaan sampah di sumber, termasuk bank sampah berbasis digital dan ekosistem circular economy. Program nasional Kementerian Kominfo RI."
+      },
+      "39": {
+        "title": "Project Batako dari Sampah Plastik",
+        "narrative": "Plastic Brick, project kerjasama dengan Trash Waste Solution untuk pembuatan batako plastik dari sampah plastik dengan isu mengurangi dampak pencemaran sampah plastik di laut, terhubung dengan aktivitas antara team Trash Waste Solution di Pulau Siladen dengan Baciraro Recycle. Diproduksi dengan mesin standar Precious Plastic."
+      },
+      "40": {
+        "title": "Program Bank Sampah Setor Jo & Eco-Enzyme",
+        "narrative": "Program kerja sama dengan Pertamina Geothermal Energy Lahendong mencakup edukasi pemilahan sampah plastik dan pelatihan eco-enzyme. Program Bank Sampah Setor Jo di Desa Pinabetengan Utara dan pengembangan produk daur ulang."
+      },
+      "41": {
+        "title": "Program Bijak Berplastik Danone Aqua",
+        "narrative": "Kerja sama Danone Aqua dengan Baciraro Recycle untuk fasilitas penampungan sampah plastik, didukung Komunitas Pecinta Alam Likupang. Penguatan ekosistem pengelolaan sampah DPSP Likupang."
+      },
+      "42": {
+        "title": "Program Desa Pesisir & Kolaborasi BUMN",
+        "narrative": "Kolaborasi dengan Kementerian Kelautan, Perikanan, dan Kementerian Pariwisata untuk pemberdayaan nelayan dan desa wisata. Program Desa Pesisir Bersih di Desa Serawet dan pelatihan Manajemen Bank Sampah."
+      },
+      "43": {
+        "title": "Dialog Budaya Minahasa 2026",
+        "narrative": "Forum dialog yang menelusuri evolusi atribut Kawasaran — mengurai benang merah antara otentisitas budaya dan inovasi plastik daur ulang. Mempertemukan tokoh adat, akademisi, seniman, pegiat lingkungan, pemerintah, dan generasi muda di Kedai Kana, Desa Sukur, Minahasa Utara."
+      },
+      "44": {
+        "title": "Lokawaya × Baciraro Creative",
+        "narrative": "Partisipasi Baciraro Creative di event Lokawaya — workshop mengubah tutup botol menjadi keychain dan booth produk yang dapat ditukar dengan Dobu atau Doi Bulu. Dikunjungi turis asing dan lokal yang antusias berinteraksi dengan produk daur ulang."
+      }
+    }
+  }
+}

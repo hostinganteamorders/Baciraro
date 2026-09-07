@@ -1,0 +1,21 @@
+-- MakerWorld free-to-sell: shift image_url->-2, gallery->[-3,-4]
+UPDATE products SET image_url='/produk/3d/mw/frog-2.jpg', gallery='["/produk/3d/mw/frog-3.jpeg","/produk/3d/mw/frog-4.jpeg"]' WHERE slug='3d-frog';
+UPDATE products SET image_url='/produk/3d/mw/duck-2.jpg', gallery='["/produk/3d/mw/duck-3.jpg","/produk/3d/mw/duck-4.jpg"]' WHERE slug='3d-duck';
+UPDATE products SET image_url='/produk/3d/mw/carrot-2.jpg', gallery='["/produk/3d/mw/carrot-3.jpg","/produk/3d/mw/carrot-4.jpg"]' WHERE slug='3d-carrot';
+UPDATE products SET image_url='/produk/3d/mw/lizard-2.jpg', gallery='["/produk/3d/mw/lizard-3.jpg","/produk/3d/mw/lizard-4.jpg"]' WHERE slug='3d-lizard';
+UPDATE products SET image_url='/produk/3d/mw/flexi-christmas-tree-2.jpg', gallery='["/produk/3d/mw/flexi-christmas-tree-3.jpg","/produk/3d/mw/flexi-christmas-tree-4.jpg"]' WHERE slug='3d-flexi-christmas-tree';
+UPDATE products SET image_url='/produk/3d/mw/mesh-bowl-2.jpg', gallery='["/produk/3d/mw/mesh-bowl-3.jpg","/produk/3d/mw/mesh-bowl-4.jpg"]' WHERE slug='3d-mesh-bowl';
+UPDATE products SET image_url='/produk/3d/mw/tiger-necklace-2.jpg', gallery='["/produk/3d/mw/tiger-necklace-3.jpg","/produk/3d/mw/tiger-necklace-4.jpg"]' WHERE slug='3d-tiger-necklace';
+UPDATE products SET image_url='/produk/3d/mw/flexi-monster-2.jpg', gallery='["/produk/3d/mw/flexi-monster-3.jpg","/produk/3d/mw/flexi-monster-4.jpg"]' WHERE slug='3d-flexi-monster';
+UPDATE products SET image_url='/produk/3d/mw/flexi-unicorn-2.jpg', gallery='["/produk/3d/mw/flexi-unicorn-3.jpg","/produk/3d/mw/flexi-unicorn-4.jpg"]' WHERE slug='3d-flexi-unicorn';
+UPDATE products SET image_url='/produk/3d/mw/flexi-bear-2.jpg', gallery='["/produk/3d/mw/flexi-bear-3.jpg","/produk/3d/mw/flexi-bear-4.jpg"]' WHERE slug='3d-flexi-bear';
+UPDATE products SET image_url='/produk/3d/mw/hex-drip-2.jpg', gallery='["/produk/3d/mw/hex-drip-3.jpg","/produk/3d/mw/hex-drip-4.jpg"]' WHERE slug='3d-hex-drip';
+UPDATE products SET image_url='/produk/3d/mw/flexi-worm-2.jpg', gallery='["/produk/3d/mw/flexi-worm-3.jpg","/produk/3d/mw/flexi-worm-4.jpg"]' WHERE slug='3d-flexi-worm';
+UPDATE products SET image_url='/produk/3d/mw/valentine-gear-2.jpg', gallery='["/produk/3d/mw/valentine-gear-3.jpg","/produk/3d/mw/valentine-gear-4.jpg"]' WHERE slug='3d-valentine-gear';
+UPDATE products SET image_url='/produk/3d/mw/valentine-cube-2.jpg', gallery='["/produk/3d/mw/valentine-cube-3.jpg","/produk/3d/mw/valentine-cube-4.jpg"]' WHERE slug='3d-valentine-cube';
+UPDATE products SET image_url='/produk/3d/mw/spiral-bowl-2.jpg', gallery='["/produk/3d/mw/spiral-bowl-3.jpg","/produk/3d/mw/spiral-bowl-4.jpg"]' WHERE slug='3d-spiral-bowl';
+UPDATE products SET image_url='/produk/3d/mw/mini-dino-2.jpg', gallery='["/produk/3d/mw/mini-dino-3.jpg","/produk/3d/mw/mini-dino-4.jpg"]' WHERE slug='3d-mini-dino';
+UPDATE products SET image_url='/produk/3d/mw/wave-tray-2.jpg', gallery='["/produk/3d/mw/wave-tray-3.jpg","/produk/3d/mw/wave-tray-4.jpg"]' WHERE slug='3d-wave-tray';
+UPDATE products SET image_url='/produk/3d/mw/spiral-tray-2.jpg', gallery='["/produk/3d/mw/spiral-tray-3.jpg","/produk/3d/mw/spiral-tray-4.jpg"]' WHERE slug='3d-spiral-tray';
+UPDATE products SET image_url='/produk/3d/mw/daisy-magnets-2.jpg', gallery='["/produk/3d/mw/daisy-magnets-3.jpg","/produk/3d/mw/daisy-magnets-4.jpg"]' WHERE slug='3d-daisy-magnets';
+UPDATE products SET image_url='/produk/3d/mw/flexi-fox-2.jpeg', gallery='["/produk/3d/mw/flexi-fox-3.jpeg","/produk/3d/mw/flexi-fox-4.jpeg"]' WHERE slug='3d-flexi-fox';

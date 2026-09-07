@@ -1,0 +1,5 @@
+-- Baciraro Custom Order product (pinned at top via large id above any batch id)
+-- Run in Supabase SQL Editor to re-seed if needed. Adjust id if conflicts.
+INSERT INTO products (id, slug, title, description, category, story, materials, total_plastic_kg, image_url, gallery, is_active, weight_g, print_time_min, variants, artists) VALUES
+(900001, 'custom', 'Custom Order', 'Punya ide custom untuk produk? Hubungi kami langsung di WhatsApp, ceritakan konsepmu, kirim gambar referensi, dan kami wujudkan bersama.', 'custom', 'Custom order menggunakan proses yang personal: kamu ceritakan ide & kebutuhan, kirim referensi gambar lewat chat WhatsApp, lalu kami diskusikan desain, material, dan estimasi biaya sebelum diproduksi. Fleksibel untuk hadiah, merchandise, maupun kebutuhan khusus.', '[]', 0, '/produk/custom/custom-hero.png', '[]', true, NULL, NULL, '[]', '[]')
+ON CONFLICT (id) DO UPDATE SET slug = EXCLUDED.slug, title = EXCLUDED.title, description = EXCLUDED.description, category = EXCLUDED.category, story = EXCLUDED.story, image_url = EXCLUDED.image_url, is_active = true;
