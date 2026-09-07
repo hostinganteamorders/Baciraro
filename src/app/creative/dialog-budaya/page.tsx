@@ -206,10 +206,12 @@ export default function DialogBudayaPage() {
           </Link>
         </motion.div>
 
-        {/* ───── HERO VIDEO ───── */}
+        {/* ───── HERO IMAGE ───── */}
         <section ref={heroRef} className="relative h-screen overflow-hidden">
-          <VideoReel
-            src="/Dialog Budaya/spech nyong sulut.mp4"
+          <Image
+            src="/Dialog Budaya/foto bersama dengan narasumber.webp"
+            alt=""
+            fill
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.5] mix-blend-overlay" />
@@ -274,7 +276,7 @@ export default function DialogBudayaPage() {
         {/* ───── REGISTRASI: FULL-BLEED ───── */}
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
           <Image
-            src="/Dialog Budaya/registrasi.jpeg"
+            src="/Dialog Budaya/foto bersama dengan narasumber 3.webp"
             alt={t("dialogBudaya.detail.registrasiTitle")}
             fill
             className="object-cover"
