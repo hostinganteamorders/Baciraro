@@ -122,10 +122,12 @@ export default function LokawayaPage() {
           </Link>
         </motion.div>
 
-        {/* ───── HERO VIDEO ───── */}
+        {/* ───── HERO IMAGE ───── */}
         <section ref={heroRef} className="relative h-screen overflow-hidden">
-          <VideoReel
-            src="/Lokawaya/kondisi lokawaya.mp4"
+          <Image
+            src="/Lokawaya/kondisi lokawaya.png"
+            alt=""
+            fill
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.5] mix-blend-overlay" />
@@ -187,10 +189,12 @@ export default function LokawayaPage() {
           </motion.div>
         </section>
 
-        {/* ───── BOOTH: FULL-BLEED HERO VIDEO ───── */}
+        {/* ───── BOOTH: FULL-BLEED HERO IMAGE ───── */}
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
-          <VideoReel
-            src="/Lokawaya/kondisi booth baciraro creative.mp4"
+          <Image
+            src="/Lokawaya/kondisi booth baciraro creative.png"
+            alt=""
+            fill
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.4] mix-blend-overlay" />
@@ -222,10 +226,10 @@ export default function LokawayaPage() {
           <div className="mx-auto max-w-7xl">
             <MediaGrid
               items={[
-                { src: "/Lokawaya/timelapse booth.mp4", type: "video" },
-                { src: "/Lokawaya/video produk.mp4", type: "video" },
-                { src: "/Lokawaya/kondisi lokawaya.mp4", type: "video" },
-                { src: "/Lokawaya/kondisi lokawaya 2.mp4", type: "video" },
+                { src: "/Lokawaya/timelapse booth.png", type: "image" },
+                { src: "/Lokawaya/video produk.png", type: "image" },
+                { src: "/Lokawaya/kondisi lokawaya.png", type: "image" },
+                { src: "/Lokawaya/kondisi lokawaya 2.png", type: "image" },
               ]}
               layout={[
                 { cols: 1, rows: 1 },
@@ -242,10 +246,12 @@ export default function LokawayaPage() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_100%_50%,rgba(111,175,79,0.05),transparent_60%)]" />
 
           <div className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
-            {/* Left: video proses */}
+            {/* Left: foto proses */}
             <div className="relative h-[50vh] lg:h-auto overflow-hidden">
-              <VideoReel
-                src="/Lokawaya/proses pembuatan keychain anak dari USA.mp4"
+              <Image
+                src="/Lokawaya/proses pembuatan keychain anak dari USA.png"
+                alt=""
+                fill
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/20" />
@@ -274,7 +280,7 @@ export default function LokawayaPage() {
             {/* Right: foto hasil */}
             <div className="relative h-[50vh] lg:h-auto overflow-hidden">
               <Image
-                src="/Lokawaya/customer anak dari USA setelah selesai membuat sendiri keychainnya dari tutup botol plastik.jpeg"
+                src="/Lokawaya/proses pembuatan keychain anak dari USA.png"
                 alt="Hasil keychain"
                 fill
                 className="object-cover"
@@ -336,8 +342,8 @@ export default function LokawayaPage() {
 
             <MediaGrid
               items={[
-                { src: "/Lokawaya/kondisi workshop baciraro creative.mp4", type: "video" },
-                { src: "/Lokawaya/timelapse workshop.mp4", type: "video" },
+                { src: "/Lokawaya/kondisi workshop baciraro creative.png", type: "image" },
+                { src: "/Lokawaya/timelapse workshop.png", type: "image" },
               ]}
               layout={[
                 { cols: 2, rows: 1 },
@@ -372,12 +378,12 @@ export default function LokawayaPage() {
 
             <MediaGrid
               items={[
-                { src: "/Lokawaya/kunjungan dari turis asing.mp4", type: "video" },
-                { src: "/Lokawaya/kunjungan dari turis asing 2.mp4", type: "video" },
-                { src: "/Lokawaya/kunjungan dari turis asing 3.mp4", type: "video" },
-                { src: "/Lokawaya/kunjungan dari turis asing 4.mp4", type: "video" },
-                { src: "/Lokawaya/kunjungan dari turis asing 5.mp4", type: "video" },
-                { src: "/Lokawaya/kunjungan dari turis asing 6.mp4", type: "video" },
+                { src: "/Lokawaya/kunjungan dari turis asing.png", type: "image" },
+                { src: "/Lokawaya/kunjungan dari turis asing 2.png", type: "image" },
+                { src: "/Lokawaya/kunjungan dari turis asing 3.png", type: "image" },
+                { src: "/Lokawaya/kunjungan dari turis asing 4.png", type: "image" },
+                { src: "/Lokawaya/kunjungan dari turis asing 5.png", type: "image" },
+                { src: "/Lokawaya/kunjungan dari turis asing 6.png", type: "image" },
               ]}
               layout={[
                 { cols: 1, rows: 1 },
@@ -396,8 +402,8 @@ export default function LokawayaPage() {
           <div className="mx-auto max-w-7xl">
             <MediaGrid
               items={[
-                { src: "/Lokawaya/kunjungan dari turis lokal dan asing.mp4", type: "video" },
-                { src: "/Lokawaya/kunjungan turis dari USA.mp4", type: "video" },
+                { src: "/Lokawaya/kunjungan dari turis lokal dan asing.png", type: "image" },
+                { src: "/Lokawaya/kunjungan turis dari USA.png", type: "image" },
               ]}
               layout={[
                 { cols: 2, rows: 1 },
