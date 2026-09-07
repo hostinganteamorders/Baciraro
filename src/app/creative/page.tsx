@@ -56,13 +56,8 @@ export default function CreativePage() {
 
         {/* ───── SECTION 1: HERO ───── */}
         <section ref={heroRef} className="relative h-screen overflow-hidden">
-          <video
-            src="/teaser dialog budaya.mp4"
-            autoPlay loop playsInline preload="auto"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
           <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.7] mix-blend-overlay" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
 
           <motion.div style={{ opacity: heroOpacity }} className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
             <motion.div
@@ -319,7 +314,7 @@ export default function CreativePage() {
               >
                 <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
                   <Image
-                    src="/Dialog Budaya/registrasi.jpeg"
+                    src="/Dialog Budaya/foto bersama dengan narasumber.webp"
                     alt=""
                     fill
                     className="object-cover"
@@ -329,14 +324,11 @@ export default function CreativePage() {
                   </div>
                 </div>
                 <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <video
-                    src="/Dialog Budaya/spech nyong sulut.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="none"
-                    className="h-full w-full object-cover"
+                  <Image
+                    src="/Dialog Budaya/foto bersama dengan narasumber 2.webp"
+                    alt=""
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">{t("dialogBudaya.detail.pidatoTitle")}</span>
@@ -377,7 +369,7 @@ export default function CreativePage() {
               className="relative h-[50vh] lg:h-auto overflow-hidden"
             >
               <Image
-                src="/Lokawaya/customer anak dari USA setelah selesai membuat sendiri keychainnya dari tutup botol plastik.jpeg"
+                src="/Lokawaya/proses pembuatan keychain anak dari USA.png"
                 alt=""
                 fill
                 className="object-cover"
@@ -417,28 +409,22 @@ export default function CreativePage() {
                 className="mt-8 grid grid-cols-2 gap-3"
               >
                 <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <video
-                    src="/Lokawaya/kondisi booth baciraro creative.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="none"
-                    className="h-full w-full object-cover"
+                  <Image
+                    src="/Lokawaya/kondisi booth baciraro creative.png"
+                    alt=""
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Booth</span>
                   </div>
                 </div>
                 <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <video
-                    src="/Lokawaya/kunjungan dari turis asing.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="none"
-                    className="h-full w-full object-cover"
+                  <Image
+                    src="/Lokawaya/kunjungan dari turis asing.png"
+                    alt=""
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Kunjungan</span>
