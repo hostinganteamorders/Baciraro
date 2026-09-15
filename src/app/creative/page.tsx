@@ -273,7 +273,7 @@ export default function CreativePage() {
               className="relative h-[50vh] lg:h-auto overflow-hidden"
             >
               <Image
-                src="/storage/v1/object/public/product-images/projects/piala-aer-tembaga/01_Hero_Final_Trophies.png"
+                src="https://zkotqpszynvfunhenysp.supabase.co/storage/v1/object/public/product-images/projects/piala-aer-tembaga/01_Hero_Final_Trophies.png"
                 alt="Piala Aer Tembaga dari material plastik daur ulang untuk Bank Indonesia"
                 fill
                 className="object-cover object-top"
@@ -317,7 +317,7 @@ export default function CreativePage() {
               >
                 <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
                   <Image
-                    src="/storage/v1/object/public/product-images/projects/piala-aer-tembaga/01_Hero_Final_Trophies.png"
+                    src="https://zkotqpszynvfunhenysp.supabase.co/storage/v1/object/public/product-images/projects/piala-aer-tembaga/01_Hero_Final_Trophies.png"
                     alt="Tiga piala Aer Tembaga final"
                     fill
                     className="object-cover"
@@ -328,7 +328,7 @@ export default function CreativePage() {
                 </div>
                 <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
                   <Image
-                    src="/storage/v1/object/public/product-images/projects/piala-aer-tembaga/08_Blue_Flakes_In_Hands.png"
+                    src="https://zkotqpszynvfunhenysp.supabase.co/storage/v1/object/public/product-images/projects/piala-aer-tembaga/08_Blue_Flakes_In_Hands.png"
                     alt="Serpihan plastik biru sebagai bahan pembuatan piala"
                     fill
                     className="object-cover"
