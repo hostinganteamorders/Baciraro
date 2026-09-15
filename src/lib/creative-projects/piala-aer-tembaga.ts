@@ -1,4 +1,4 @@
-const IMAGE_BASE = "/Piala_Aer_Tembaga_Selected_Web_Photos";
+const IMAGE_BASE = "https://zkotqpszynvfunhenysp.supabase.co/storage/v1/object/public/product-images/projects/piala-aer-tembaga";
 
 export const projectImages = {
   hero: `${IMAGE_BASE}/01_Hero_Final_Trophies.png`,

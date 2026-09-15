@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       "Case study Baciraro Creative dalam mengembangkan Piala Aer Tembaga untuk Bank Indonesia menggunakan material plastik daur ulang.",
     images: [
       {
-        url: "/Piala_Aer_Tembaga_Selected_Web_Photos/01_Hero_Final_Trophies.png",
+        url: "https://zkotqpszynvfunhenysp.supabase.co/storage/v1/object/public/product-images/projects/piala-aer-tembaga/01_Hero_Final_Trophies.png",
         width: 1200,
         height: 630,
         alt: "Piala Aer Tembaga dari material plastik daur ulang untuk Bank Indonesia",
