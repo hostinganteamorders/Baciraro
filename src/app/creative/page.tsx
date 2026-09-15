@@ -259,6 +259,105 @@ export default function CreativePage() {
           </div>
         </section>
 
+        {/* ───── SECTION 3B: PIALA AER TEMBAGA ───── */}
+        <section className="relative border-t border-white/5 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(0,118,200,0.06),transparent_60%)]" />
+
+          <div className="relative grid grid-cols-1 lg:grid-cols-2">
+            {/* Left: photo full-height */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: springEase }}
+              className="relative h-[50vh] lg:h-auto overflow-hidden"
+            >
+              <Image
+                src="/Piala_Aer_Tembaga_Selected_Web_Photos/01_Hero_Final_Trophies.png"
+                alt="Piala Aer Tembaga dari material plastik daur ulang untuk Bank Indonesia"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent lg:bg-gradient-to-r lg:from-background/80 lg:via-background/20 lg:to-transparent" />
+            </motion.div>
+
+            {/* Right: content */}
+            <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 lg:py-20">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: springEase }}
+              >
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#0076C8]">
+                  PROJECT 2026
+                </p>
+                <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
+                  Piala Aer Tembaga
+                </h2>
+                <p className="mt-1.5 text-sm text-[#0076C8]/80">
+                  Bank Indonesia × Baciraro Creative
+                </p>
+                <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
+                  Turning recycled plastic into a symbol of achievement. Piala custom dari material tutup botol daur ulang untuk Bank Indonesia.
+                </p>
+                <p className="mt-3 text-xs text-[#0076C8]">
+                  2.078 gram plastik didaur ulang
+                </p>
+              </motion.div>
+
+              {/* Media thumbnail */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15, ease: springEase }}
+                className="mt-8 grid grid-cols-2 gap-3"
+              >
+                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
+                  <Image
+                    src="/Piala_Aer_Tembaga_Selected_Web_Photos/01_Hero_Final_Trophies.png"
+                    alt="Tiga piala Aer Tembaga final"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Final Objects</span>
+                  </div>
+                </div>
+                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
+                  <Image
+                    src="/Piala_Aer_Tembaga_Selected_Web_Photos/08_Blue_Flakes_In_Hands.png"
+                    alt="Serpihan plastik biru sebagai bahan pembuatan piala"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Circular Material</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.25, ease: springEase }}
+                className="mt-6"
+              >
+                <Link
+                  href="/creative/projects/piala-aer-tembaga"
+                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-[#0076C8]/30 hover:text-white"
+                >
+                  View Case Study
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* ───── SECTION 4: DIALOG BUDAYA RECAP ───── */}
         <section id="dialog-budaya" className="relative border-t border-white/5 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(196,74,58,0.06),transparent_60%)]" />
