@@ -1,4 +1,4 @@
-const IMAGE_BASE = "/Mataluntung_Selected_Web_Photos";
+const IMAGE_BASE = "https://zkotqpszynvfunhenysp.supabase.co/storage/v1/object/public/product-images/projects/mataluntung";
 
 export const projectImages = {
   hero: `${IMAGE_BASE}/01_Hero_Mataluntung_Collection.png`,
