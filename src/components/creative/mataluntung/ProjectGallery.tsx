@@ -4,34 +4,14 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Maximize2 } from "lucide-react";
-import {
-  projectImages,
-  pialaAerTembagaProject,
-} from "@/lib/creative-projects/piala-aer-tembaga";
+import { mataluntungProject } from "@/lib/creative-projects/mataluntung";
 import ProjectLightbox from "./ProjectLightbox";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
-type ArchiveCategory = "MATERIAL" | "MAKING" | "DETAILS" | "FINAL OBJECTS";
+type GalleryCategory = (typeof mataluntungProject.galleryCategories)[number];
 
-const allImages: { src: string; alt: string; category: ArchiveCategory }[] = [
-  { src: projectImages.rawMaterials, alt: "Tutup botol plastik bekas sebagai bahan awal", category: "MATERIAL" },
-  { src: projectImages.blueCaps, alt: "Tutup botol plastik biru setelah dipilah", category: "MATERIAL" },
-  { src: projectImages.redCaps, alt: "Tutup botol plastik merah setelah dipilah", category: "MATERIAL" },
-  { src: projectImages.sortedFlakes, alt: "Serpihan plastik daur ulang setelah pencacahan", category: "MATERIAL" },
-  { src: projectImages.blueFlakes, alt: "Serpihan plastik biru di tangan", category: "MATERIAL" },
-  { src: projectImages.recycledSheet, alt: "Lembaran material padat dari daur ulang", category: "MAKING" },
-  { src: projectImages.shaping, alt: "Proses pemotongan lembar plastik daur ulang", category: "MAKING" },
-  { src: projectImages.formDevelopment, alt: "Bentuk piala sebelum finishing", category: "MAKING" },
-  { src: projectImages.assembly, alt: "Meja perakitan komponen piala", category: "MAKING" },
-  { src: projectImages.weighing, alt: "Dokumentasi proses penimbangan material", category: "MAKING" },
-  { src: projectImages.emblemDetail, alt: "Detail emblem Bank Indonesia pada piala", category: "DETAILS" },
-  { src: projectImages.trophyInHand, alt: "Piala Aer Tembaga dipegang oleh tangan", category: "DETAILS" },
-  { src: projectImages.hero, alt: "Tiga piala Aer Tembaga final dari material plastik daur ulang", category: "FINAL OBJECTS" },
-  { src: projectImages.finalGroup, alt: "Komposisi tiga piala final Bank Indonesia", category: "FINAL OBJECTS" },
-];
-
-const initialCount = 12;
+const initialCount = 10;
 
 const masonryClasses = [
   "col-span-2 row-span-2",
@@ -44,32 +24,32 @@ const masonryClasses = [
   "col-span-1 row-span-1",
 ];
 
-export default function ProjectArchive() {
-  const [activeCategory, setActiveCategory] = useState<ArchiveCategory | "ALL">("ALL");
+export default function ProjectGallery() {
+  const [activeCategory, setActiveCategory] = useState<GalleryCategory>("ALL");
   const [showAll, setShowAll] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const filteredImages = useMemo(() => {
     const base =
       activeCategory === "ALL"
-        ? allImages
-        : allImages.filter((img) => img.category === activeCategory);
+        ? mataluntungProject.galleryImages
+        : mataluntungProject.galleryImages.filter(
+            (img) => img.category === activeCategory
+          );
     return showAll ? base : base.slice(0, initialCount);
   }, [activeCategory, showAll]);
 
   const lightboxPhotos = useMemo(
-    () =>
-      filteredImages.map((img) => ({
-        src: img.src,
-        alt: img.alt,
-      })),
+    () => filteredImages.map((img) => ({ src: img.src, alt: img.alt })),
     [filteredImages]
   );
 
   const totalForCategory =
     activeCategory === "ALL"
-      ? allImages.length
-      : allImages.filter((img) => img.category === activeCategory).length;
+      ? mataluntungProject.galleryImages.length
+      : mataluntungProject.galleryImages.filter(
+          (img) => img.category === activeCategory
+        ).length;
 
   return (
     <section className="relative border-t border-white/5 py-28 sm:py-36">
@@ -85,40 +65,38 @@ export default function ProjectArchive() {
             ARCHIVE
           </p>
           <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white">
-            {pialaAerTembagaProject.archiveTitle}
+            {mataluntungProject.galleryTitle}
           </h2>
         </motion.div>
 
         {/* Category filter — text with underline */}
         <div className="mb-10 flex flex-wrap gap-x-6 gap-y-3 border-b border-white/5 pb-4">
-          {(["ALL", ...pialaAerTembagaProject.archiveCategories] as const).map(
-            (cat) => (
-              <button
-                key={cat}
-                onClick={() => {
-                  setActiveCategory(cat === "ALL" ? "ALL" : cat);
-                  setShowAll(false);
-                }}
-                className={`relative pb-2 text-[11px] font-bold uppercase tracking-[0.25em] transition-colors ${
-                  activeCategory === cat || (cat === "ALL" && activeCategory === "ALL")
-                    ? "text-[#34D399]"
-                    : "text-[#9CA3A0]/60 hover:text-[#F4F1EA]/70"
-                }`}
-              >
-                {cat}
-                {(activeCategory === cat || (cat === "ALL" && activeCategory === "ALL")) && (
-                  <motion.div
-                    layoutId="archiveFilter"
-                    className="absolute bottom-0 left-0 right-0 h-px bg-[#34D399]"
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-              </button>
-            )
-          )}
+          {mataluntungProject.galleryCategories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => {
+                setActiveCategory(cat);
+                setShowAll(false);
+              }}
+              className={`relative pb-2 text-[11px] font-bold uppercase tracking-[0.25em] transition-colors ${
+                activeCategory === cat
+                  ? "text-[#34D399]"
+                  : "text-[#9CA3A0]/60 hover:text-[#F4F1EA]/70"
+              }`}
+            >
+              {cat}
+              {activeCategory === cat && (
+                <motion.div
+                  layoutId="galleryFilter"
+                  className="absolute bottom-0 left-0 right-0 h-px bg-[#34D399]"
+                  transition={{ duration: 0.3 }}
+                />
+              )}
+            </button>
+          ))}
         </div>
 
-        {/* Masonry grid — no rounded corners, tighter gap */}
+        {/* Masonry grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-2 auto-rows-[140px] sm:auto-rows-[180px]">
           <AnimatePresence mode="popLayout">
             {filteredImages.map((img, i) => (

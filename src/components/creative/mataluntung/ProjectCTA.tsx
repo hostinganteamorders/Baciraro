@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { pialaAerTembagaProject } from "@/lib/creative-projects/piala-aer-tembaga";
+import { mataluntungProject } from "@/lib/creative-projects/mataluntung";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -18,9 +18,9 @@ export default function ProjectCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: springEase }}
-          className="font-serif text-[clamp(2rem,5vw,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white"
+          className="font-serif text-[clamp(2rem,5vw,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white whitespace-pre-line"
         >
-          {pialaAerTembagaProject.ctaHeading}
+          {mataluntungProject.ctaHeading}
         </motion.h2>
 
         <motion.p
@@ -30,7 +30,7 @@ export default function ProjectCTA() {
           transition={{ duration: 0.6, delay: 0.1, ease: springEase }}
           className="mt-5 mx-auto max-w-[55ch] text-[15px] leading-relaxed text-[#9CA3A0]"
         >
-          {pialaAerTembagaProject.ctaBody}
+          {mataluntungProject.ctaBody}
         </motion.p>
 
         <motion.div
@@ -60,7 +60,7 @@ export default function ProjectCTA() {
       {/* Footer signature */}
       <div className="relative mt-28 border-t border-white/5 px-4 py-14 text-center">
         <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/40">
-          © {pialaAerTembagaProject.year} {pialaAerTembagaProject.brand}
+          © {mataluntungProject.year} {mataluntungProject.creative}
         </p>
       </div>
     </section>

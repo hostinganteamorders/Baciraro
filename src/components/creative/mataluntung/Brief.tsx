@@ -2,15 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { pialaAerTembagaProject, projectImages } from "@/lib/creative-projects/piala-aer-tembaga";
+import { mataluntungProject, projectImages } from "@/lib/creative-projects/mataluntung";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
-export default function ProjectBrief() {
+export default function Brief() {
   return (
     <section className="relative border-t border-white/5 py-28 sm:py-36">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(0,118,200,0.03),transparent_60%)]" />
-
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: text */}
@@ -31,13 +29,13 @@ export default function ProjectBrief() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1, ease: springEase }}
-              className="mt-6 max-w-[55ch] font-serif italic text-[clamp(1.1rem,2vw,1.4rem)] leading-snug text-[#F4F1EA]/90"
+              className="mt-6 max-w-[55ch] font-serif italic text-[clamp(1.1rem,2vw,1.4rem)] leading-snug text-[#F4F1EA]/90 whitespace-pre-line"
             >
-              {pialaAerTembagaProject.briefStatement}
+              {mataluntungProject.briefStatement}
             </motion.p>
 
             <div className="mt-10 space-y-8">
-              {pialaAerTembagaProject.briefConcepts.map((concept, i) => (
+              {mataluntungProject.briefConcepts.map((concept, i) => (
                 <motion.div
                   key={concept.title}
                   initial={{ opacity: 0, y: 16 }}
@@ -51,7 +49,7 @@ export default function ProjectBrief() {
                 >
                   <div className="flex items-center gap-3">
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#F87171]/30 bg-[#F87171]/10 text-[12px] font-bold text-[#F87171]">
-                      {String(i + 1).padStart(2, "0")}
+                      {concept.number}
                     </span>
                     <h3 className="text-[12px] font-bold uppercase tracking-[0.25em] text-white">
                       {concept.title}
@@ -65,7 +63,7 @@ export default function ProjectBrief() {
             </div>
           </div>
 
-          {/* Right: image — no rounded-2xl */}
+          {/* Right: hero image */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,19 +73,14 @@ export default function ProjectBrief() {
           >
             <div className="relative aspect-[3/5]">
               <Image
-                src={projectImages.emblemDetail}
-                alt="Close-up emblem Bank Indonesia pada piala daur ulang"
+                src={projectImages.ashtrayCollection}
+                alt="Koleksi asbak Mataluntung dalam berbagai bentuk dan warna"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/50 to-transparent" />
-            <div className="absolute bottom-4 left-4">
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]/50">
-                Bank Indonesia Identity Detail
-              </span>
-            </div>
           </motion.div>
         </div>
       </div>

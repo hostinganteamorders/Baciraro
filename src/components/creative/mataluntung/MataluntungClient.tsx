@@ -4,31 +4,33 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { motion, useScroll } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import ProjectHero from "@/components/creative/piala-aer-tembaga/ProjectHero";
-import ProjectIntro from "@/components/creative/piala-aer-tembaga/ProjectIntro";
-import ProjectMeta from "@/components/creative/piala-aer-tembaga/ProjectMeta";
-import ProjectBrief from "@/components/creative/piala-aer-tembaga/ProjectBrief";
-import ProcessStory from "@/components/creative/piala-aer-tembaga/ProcessStory";
-import DesignLanguage from "@/components/creative/piala-aer-tembaga/DesignLanguage";
-import MaterialPalette from "@/components/creative/piala-aer-tembaga/MaterialPalette";
-import CircularFlow from "@/components/creative/piala-aer-tembaga/CircularFlow";
-import ProjectDocumentation from "@/components/creative/piala-aer-tembaga/ProjectDocumentation";
-import DetailsGallery from "@/components/creative/piala-aer-tembaga/DetailsGallery";
-import FinalObjects from "@/components/creative/piala-aer-tembaga/FinalObjects";
-import ProjectArchive from "@/components/creative/piala-aer-tembaga/ProjectArchive";
-import ProjectClosing from "@/components/creative/piala-aer-tembaga/ProjectClosing";
-import ProjectCTA from "@/components/creative/piala-aer-tembaga/ProjectCTA";
+import Hero from "./Hero";
+import ProjectIntro from "./ProjectIntro";
+import ProjectSnapshot from "./ProjectSnapshot";
+import Brief from "./Brief";
+import ProductGanci from "./ProductGanci";
+import ProductCoaster from "./ProductCoaster";
+import ProductAsbak from "./ProductAsbak";
+import MaterialAsPattern from "./MaterialAsPattern";
+import MaterialPalette from "./MaterialPalette";
+import FormThickness from "./FormThickness";
+import ThreeObjects from "./ThreeObjects";
+import RealContext from "./RealContext";
+import Documentation from "./Documentation";
+import ProjectGallery from "./ProjectGallery";
+import ProjectClosing from "./ProjectClosing";
+import ProjectCTA from "./ProjectCTA";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 const navItems = [
   { label: "STORY", id: "story" },
-  { label: "MATERIAL", id: "material" },
-  { label: "MAKING", id: "making" },
-  { label: "OBJECT", id: "object" },
+  { label: "GANCI", id: "ganci" },
+  { label: "COASTER", id: "coaster" },
+  { label: "ASBAK", id: "asbak" },
 ];
 
-export default function PialaAerTembagaClient() {
+export default function MataluntungClient() {
   const pageRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress: pageProgress } = useScroll({
     offset: ["start start", "end end"],
@@ -112,25 +114,27 @@ export default function PialaAerTembagaClient() {
 
         {/* Sections */}
         <div id="story">
-          <ProjectHero />
-          <ProjectMeta />
+          <Hero />
+          <ProjectSnapshot />
           <ProjectIntro />
-          <ProjectBrief />
-          <ProcessStory />
+          <Brief />
         </div>
-        <div id="material">
-          <DesignLanguage />
-          <MaterialPalette />
+        <div id="ganci">
+          <ProductGanci />
         </div>
-        <div id="making">
-          <CircularFlow />
-          <ProjectDocumentation />
-          <DetailsGallery />
+        <div id="coaster">
+          <ProductCoaster />
         </div>
-        <div id="object">
-          <FinalObjects />
-          <ProjectArchive />
+        <div id="asbak">
+          <ProductAsbak />
         </div>
+        <MaterialAsPattern />
+        <MaterialPalette />
+        <FormThickness />
+        <ThreeObjects />
+        <RealContext />
+        <Documentation />
+        <ProjectGallery />
         <ProjectClosing />
         <ProjectCTA />
       </div>

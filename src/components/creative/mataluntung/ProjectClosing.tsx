@@ -2,21 +2,18 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-  projectImages,
-  pialaAerTembagaProject,
-} from "@/lib/creative-projects/piala-aer-tembaga";
+import { mataluntungProject } from "@/lib/creative-projects/mataluntung";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function ProjectClosing() {
   return (
     <section className="relative overflow-hidden">
-      {/* Full-width cinematic image — taller */}
+      {/* Full-width cinematic image */}
       <div className="relative h-[85vh] min-h-[500px]">
         <Image
-          src={projectImages.trophyInHand}
-          alt="Piala Aer Tembaga dari material plastik daur ulang"
+          src={mataluntungProject.realContext.heroImage}
+          alt="Tiga objek Mataluntung dalam konteks lifestyle"
           fill
           className="object-cover"
           sizes="100vw"
@@ -32,7 +29,7 @@ export default function ProjectClosing() {
               transition={{ duration: 0.8, ease: springEase }}
               className="font-serif text-[clamp(2.5rem,6vw,6rem)] font-normal leading-[1.1] tracking-[-0.03em] text-white whitespace-pre-line"
             >
-              {pialaAerTembagaProject.finalHeadline}
+              {mataluntungProject.closingHeadline}
             </motion.h2>
 
             <motion.p
@@ -40,35 +37,11 @@ export default function ProjectClosing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2, ease: springEase }}
-              className="mt-4 text-[15px] text-[#F4F1EA]/60"
+              className="mt-6 text-[15px] text-[#F4F1EA]/60 whitespace-pre-line"
             >
-              {pialaAerTembagaProject.finalSubheadline}
+              {mataluntungProject.closingAttribution}
             </motion.p>
           </div>
-        </div>
-      </div>
-
-      {/* Closing body */}
-      <div className="px-4 py-20 sm:px-6 md:px-8 sm:py-28 lg:py-36">
-        <div className="mx-auto max-w-[60ch]">
-          {pialaAerTembagaProject.closingFinalBody
-            .split("\n\n")
-            .map((p, i) => (
-              <motion.p
-                key={i}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: 0.1 + i * 0.08,
-                  ease: springEase,
-                }}
-                className="text-base leading-8 text-[#9CA3A0] mb-5 last:mb-0"
-              >
-                {p}
-              </motion.p>
-            ))}
         </div>
       </div>
     </section>

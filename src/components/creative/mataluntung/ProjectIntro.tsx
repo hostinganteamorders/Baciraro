@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { pialaAerTembagaProject, projectImages } from "@/lib/creative-projects/piala-aer-tembaga";
+import { mataluntungProject, projectImages } from "@/lib/creative-projects/mataluntung";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function ProjectIntro() {
-  const paragraphs = pialaAerTembagaProject.introBody.split("\n\n");
+  const paragraphs = mataluntungProject.introBody.split("\n\n");
 
   return (
     <section className="relative border-t border-white/5">
@@ -15,8 +15,8 @@ export default function ProjectIntro() {
         {/* Image side */}
         <div className="relative h-[65vh] lg:h-auto lg:min-h-[85vh] overflow-hidden">
           <Image
-            src={projectImages.trophyInHand}
-            alt="Piala Aer Tembaga dari material plastik daur ulang dipegang oleh tangan"
+            src={projectImages.hero}
+            alt="Koleksi Mataluntung — ganci, coaster, dan asbak"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -32,8 +32,8 @@ export default function ProjectIntro() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: springEase }}
           >
-            <h2 className="font-serif text-[clamp(2.2rem,4.5vw,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
-              {pialaAerTembagaProject.introHeading}
+            <h2 className="font-serif text-[clamp(2.2rem,4.5vw,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white whitespace-pre-line">
+              {mataluntungProject.introHeading}
             </h2>
           </motion.div>
 

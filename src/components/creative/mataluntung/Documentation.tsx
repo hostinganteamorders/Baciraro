@@ -2,16 +2,18 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { projectImages, pialaAerTembagaProject } from "@/lib/creative-projects/piala-aer-tembaga";
+import { mataluntungProject } from "@/lib/creative-projects/mataluntung";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
-export default function ProjectDocumentation() {
+export default function Documentation() {
+  const { documentation } = mataluntungProject;
+
   return (
     <section className="relative border-t border-white/5 py-28 sm:py-36">
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Image — larger, no rounded-2xl */}
+          {/* Image — smaller, documentary */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -19,24 +21,19 @@ export default function ProjectDocumentation() {
             transition={{ duration: 0.8, ease: springEase }}
             className="relative overflow-hidden"
           >
-            <div className="relative aspect-[3/2]">
+            <div className="relative aspect-[4/3]">
               <Image
-                src={projectImages.weighing}
-                alt="Dokumentasi proses penimbangan material piala daur ulang"
+                src={documentation.image}
+                alt={documentation.imageAlt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/50 to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4">
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]/40">
-                Documented batch weighing — 2.078 g
-              </span>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/40 to-transparent" />
           </motion.div>
 
-          {/* Text + Frames counter */}
+          {/* Text */}
           <div className="flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -47,28 +44,23 @@ export default function ProjectDocumentation() {
               <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/70">
                 DOCUMENTATION
               </p>
-              <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white">
-                Documenting the Process
+              <h2 className="mt-3 font-serif text-[clamp(2.2rem,4.5vw,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white whitespace-pre-line">
+                {documentation.heading}
               </h2>
             </motion.div>
 
-            {/* Frames counter */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1, ease: springEase }}
-              className="mt-10 flex items-center gap-5"
+              className="mt-6"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#F87171]/20 bg-[#F87171]/5">
-                <span className="font-serif text-xl text-[#F87171]">
-                  {pialaAerTembagaProject.documentedFrames}
-                </span>
-              </div>
-              <div>
-                <p className="text-[15px] font-medium text-white">Project Frames</p>
-                <p className="text-[13px] text-[#9CA3A0]">Making process documented</p>
-              </div>
+              {documentation.body.split("\n\n").map((p, i) => (
+                <p key={i} className="text-base leading-8 text-[#9CA3A0] mb-4 last:mb-0">
+                  {p}
+                </p>
+              ))}
             </motion.div>
           </div>
         </div>

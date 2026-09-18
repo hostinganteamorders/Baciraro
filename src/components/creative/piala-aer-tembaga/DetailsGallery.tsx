@@ -35,8 +35,8 @@ const galleryItems = [
 
 export default function DetailsGallery() {
   return (
-    <section className="relative border-t border-white/5 py-24 sm:py-32">
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
+    <section className="relative border-t border-white/5 py-28 sm:py-36">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function DetailsGallery() {
           transition={{ duration: 0.7, ease: springEase }}
           className="mb-12"
         >
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/60">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/70">
             GALLERY
           </p>
           <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white">
@@ -52,8 +52,8 @@ export default function DetailsGallery() {
           </h2>
         </motion.div>
 
-        {/* Asymmetric editorial gallery */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+        {/* Asymmetric editorial gallery — no rounded-2xl */}
+        <div className="grid grid-cols-2 gap-1 sm:gap-2 lg:grid-cols-3">
           {galleryItems.map((item, i) => (
             <motion.div
               key={item.caption}
@@ -61,7 +61,7 @@ export default function DetailsGallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: springEase }}
-              className={`group relative overflow-hidden rounded-2xl ${item.className}`}
+              className={`group relative overflow-hidden ${item.className}`}
             >
               <Image
                 src={item.src}
@@ -72,7 +72,7 @@ export default function DetailsGallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div className="absolute bottom-3 left-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]/80">
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]/80">
                   {item.caption}
                 </span>
               </div>

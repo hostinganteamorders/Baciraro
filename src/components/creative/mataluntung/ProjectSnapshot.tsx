@@ -1,27 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { pialaAerTembagaProject } from "@/lib/creative-projects/piala-aer-tembaga";
+import { mataluntungProject } from "@/lib/creative-projects/mataluntung";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 const metaItems = [
-  { label: "CLIENT", value: pialaAerTembagaProject.client },
-  { label: "PROJECT", value: pialaAerTembagaProject.title },
-  { label: "CATEGORY", value: pialaAerTembagaProject.category },
-  { label: "MATERIAL", value: pialaAerTembagaProject.material },
-  { label: "YEAR", value: String(pialaAerTembagaProject.year) },
-  {
-    label: "AWARD LEVELS",
-    value: pialaAerTembagaProject.awardLevels.join(" · "),
-  },
-  {
-    label: "DOCUMENTATION",
-    value: `${pialaAerTembagaProject.documentedFrames} Project Frames`,
-  },
+  { label: "CLIENT", value: mataluntungProject.client },
+  { label: "CREATIVE", value: mataluntungProject.creative },
+  { label: "PROJECT", value: mataluntungProject.projectType },
+  { label: "PRODUCTS", value: mataluntungProject.products.join(" · ") },
+  { label: "MATERIAL", value: mataluntungProject.material },
+  { label: "YEAR", value: String(mataluntungProject.year) },
 ];
 
-export default function ProjectMeta() {
+export default function ProjectSnapshot() {
   return (
     <section className="border-t border-white/5 px-4 py-12 sm:px-6 md:px-8">
       <div className="mx-auto max-w-6xl">

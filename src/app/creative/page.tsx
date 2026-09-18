@@ -358,6 +358,102 @@ export default function CreativePage() {
           </div>
         </section>
 
+        {/* ───── SECTION 3C: MATALUNTUNG ───── */}
+        <section className="relative border-t border-white/5 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(52,211,153,0.06),transparent_60%)]" />
+
+          <div className="relative grid grid-cols-1 lg:grid-cols-2">
+            {/* Left: photo full-height */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: springEase }}
+              className="relative h-[50vh] lg:h-auto overflow-hidden"
+            >
+              <Image
+                src="/Mataluntung_Selected_Web_Photos/01_Hero_Mataluntung_Collection.png"
+                alt="Koleksi Mataluntung — ganci, coaster, dan asbak dari material plastik daur ulang"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent lg:bg-gradient-to-r lg:from-background/80 lg:via-background/20 lg:to-transparent" />
+            </motion.div>
+
+            {/* Right: content */}
+            <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 lg:py-20">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: springEase }}
+              >
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#34D399]">
+                  COLLABORATION 2026
+                </p>
+                <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
+                  Mataluntung
+                </h2>
+                <p className="mt-1.5 text-sm text-[#34D399]/80">
+                  Mataluntung × Baciraro Creative
+                </p>
+                <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
+                  Functional Objects, Recast Through Recycled Material. Tiga produk — ganci, coaster, dan asbak — dari material plastik daur ulang dengan karakter material sebagai identitas visual.
+                </p>
+              </motion.div>
+
+              {/* Media thumbnail */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15, ease: springEase }}
+                className="mt-8 grid grid-cols-2 gap-3"
+              >
+                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
+                  <Image
+                    src="/Mataluntung_Selected_Web_Photos/06_Ashtray_Collection_Color_Forms.png"
+                    alt="Koleksi asbak Mataluntung dalam berbagai bentuk dan warna"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Material Collection</span>
+                  </div>
+                </div>
+                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
+                  <Image
+                    src="/Mataluntung_Selected_Web_Photos/10_Three_Objects_Lifestyle.png"
+                    alt="Tiga objek Mataluntung dalam konteks lifestyle"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Everyday Objects</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.25, ease: springEase }}
+                className="mt-6"
+              >
+                <Link
+                  href="/creative/projects/mataluntung"
+                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-[#34D399]/30 hover:text-white"
+                >
+                  View Case Study
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* ───── SECTION 4: DIALOG BUDAYA RECAP ───── */}
         <section id="dialog-budaya" className="relative border-t border-white/5 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(196,74,58,0.06),transparent_60%)]" />
