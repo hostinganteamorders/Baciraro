@@ -61,9 +61,9 @@ export default function PialaAerTembagaClient() {
     <main
       ref={pageRef}
       className="relative overflow-hidden text-[#F4F1EA] min-h-screen"
-      style={{ background: "#050806" }}
     >
-      <div aria-hidden="true" className="page-bg opacity-[0.03]" />
+      <div aria-hidden="true" className="page-bg" />
+      <div className="bg-noise pointer-events-none fixed inset-0 z-0 opacity-[0.08]" />
       <div className="relative z-[1]">
         {/* Progress bar */}
         <motion.div
