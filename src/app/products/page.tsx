@@ -312,6 +312,7 @@ export default function ProductsPage() {
 	const [loading, setLoading] = useState(true);
 	const [visible3d, setVisible3d] = useState(12);
 	const [visibleAll, setVisibleAll] = useState(24);
+	const [featureImgFailed, setFeatureImgFailed] = useState(false);
 
 	useEffect(() => {
 		fetch("/api/products")
@@ -542,13 +543,20 @@ export default function ProductsPage() {
 										picks.length ? "lg:aspect-auto lg:col-span-1" : "lg:col-span-3"
 									}`}
 								>
-									<Image
-										src={feature.imageUrl}
-										alt={feature.title}
-										fill
-										sizes="(max-width: 1024px) 100vw, 33vw"
-										className="object-cover transition-transform duration-700 group-hover:scale-105"
-									/>
+									{featureImgFailed || !feature.imageUrl ? (
+										<div className="absolute inset-0 flex items-center justify-center bg-zinc-900/50">
+											<Recycle className="h-12 w-12 text-zinc-700" />
+										</div>
+									) : (
+										<Image
+											src={feature.imageUrl}
+											alt={feature.title}
+											fill
+											sizes="(max-width: 1024px) 100vw, 33vw"
+											className="object-cover transition-transform duration-700 group-hover:scale-105"
+											onError={() => setFeatureImgFailed(true)}
+										/>
+									)}
 									<div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10" />
 									<div className="absolute inset-x-0 bottom-0 p-6">
 										<span className="text-[10px] font-bold uppercase tracking-[0.28em] text-emerald-400">

@@ -80,6 +80,14 @@ export default function ProductDetailPage() {
   const [viewerReady, setViewerReady] = useState(false);
   const [viewMode, setViewMode] = useState<"image" | "3d">("image");
   const [selectedVariant, setSelectedVariant] = useState(0);
+  const [failedImages, setFailedImages] = useState<Set<number>>(new Set());
+  const markImageFailed = (index: number) =>
+    setFailedImages((prev) => {
+      if (prev.has(index)) return prev;
+      const next = new Set(prev);
+      next.add(index);
+      return next;
+    });
 
   useEffect(() => {
     let mounted = true;
@@ -236,12 +244,13 @@ export default function ProductDetailPage() {
                   interaction-prompt-threshold="2000"
                   style={{ width: "100%", height: "100%" }}
                 />
-              ) : allImages.length > 0 && allImages[selectedImage] ? (
+              ) : allImages.length > 0 && allImages[selectedImage] && !failedImages.has(selectedImage) ? (
                 <Image
                   src={allImages[selectedImage]}
                   alt={product.title}
                   fill
                   className="object-cover"
+                  onError={() => markImageFailed(selectedImage)}
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -259,7 +268,13 @@ export default function ProductDetailPage() {
                       i === selectedImage ? "border-emerald-500/50 ring-1 ring-emerald-500/30" : "border-white/10 opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <Image src={img} alt="" fill className="object-cover" />
+                    {failedImages.has(i) ? (
+                      <div className="absolute inset-0 flex items-center justify-center bg-zinc-900/50">
+                        <Recycle className="h-4 w-4 text-zinc-700" />
+                      </div>
+                    ) : (
+                      <Image src={img} alt="" fill className="object-cover" onError={() => markImageFailed(i)} />
+                    )}
                   </button>
                 ))}
               </div>
