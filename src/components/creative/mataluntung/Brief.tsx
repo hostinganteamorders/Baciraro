@@ -74,7 +74,7 @@ export default function Brief() {
             <div className="relative aspect-[3/5]">
               <Image
                 src={projectImages.ashtrayCollection}
-                alt="Koleksi asbak Mataluntung dalam berbagai bentuk dan warna"
+                alt="Koleksi asbak dalam berbagai bentuk dan warna"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 45vw"

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Calendar, MapPin, Sparkles, Target, Recycle } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
+import { projectImages as mataluntungImages } from "@/lib/creative-projects/mataluntung";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -372,7 +373,7 @@ export default function CreativePage() {
               className="relative h-[50vh] lg:h-auto overflow-hidden"
             >
               <Image
-                src="/Mataluntung_Selected_Web_Photos/01_Hero_Mataluntung_Collection.png"
+                src={mataluntungImages.hero}
                 alt="Koleksi Mataluntung — ganci, coaster, dan asbak dari material plastik daur ulang"
                 fill
                 className="object-cover object-top"
@@ -413,8 +414,8 @@ export default function CreativePage() {
               >
                 <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
                   <Image
-                    src="/Mataluntung_Selected_Web_Photos/06_Ashtray_Collection_Color_Forms.png"
-                    alt="Koleksi asbak Mataluntung dalam berbagai bentuk dan warna"
+                    src={mataluntungImages.ashtrayCollection}
+                    alt="Koleksi asbak dalam berbagai bentuk dan warna"
                     fill
                     className="object-cover"
                   />
@@ -424,7 +425,7 @@ export default function CreativePage() {
                 </div>
                 <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
                   <Image
-                    src="/Mataluntung_Selected_Web_Photos/10_Three_Objects_Lifestyle.png"
+                    src={mataluntungImages.threeObjectsLifestyle}
                     alt="Tiga objek Mataluntung dalam konteks lifestyle"
                     fill
                     className="object-cover"

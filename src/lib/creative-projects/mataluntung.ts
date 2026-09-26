@@ -117,7 +117,7 @@ Ketebalan, serpihan warna, dan variasi permukaan menjadi bahasa visual utama dar
 
 Bentuk bulat, poligonal, hingga kotak memberi karakter yang berbeda pada setiap objek, sementara material yang sama menyatukan seluruh collection melalui warna dan tekstur.`,
     collectionImage: projectImages.ashtrayCollection,
-    collectionAlt: "Koleksi asbak Mataluntung dalam berbagai bentuk dan warna",
+    collectionAlt: "Koleksi asbak dalam berbagai bentuk dan warna",
     squareImage: projectImages.ashtraySquare,
     squareAlt: "Asbak bentuk kotak dari material daur ulang",
     microLabels: ["ROUND", "POLYGONAL", "SQUARE", "DEEP CAVITY", "RECYCLED SURFACE"],
