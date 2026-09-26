@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import { createAdminClient } from "@/utils/supabase/admin";
+import { applyProductImageFixes } from "@/lib/product-image-fixes";
 
 const SECRET = process.env.JWT_SECRET || "baciraro-secret-dev";
 
@@ -27,7 +28,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ slug
   if (!product) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
-  return NextResponse.json({ product });
+  return NextResponse.json({ product: applyProductImageFixes(product) });
 }
 
 export async function PUT(req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {

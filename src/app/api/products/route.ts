@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import { createAdminClient } from "@/utils/supabase/admin";
+import { applyProductImageFixes } from "@/lib/product-image-fixes";
 
 const SECRET = process.env.JWT_SECRET || "baciraro-secret-dev";
 
@@ -24,7 +25,7 @@ export async function GET() {
   if (error) {
     return NextResponse.json({ products: [], error: error.message });
   }
-  return NextResponse.json({ products: data || [] });
+  return NextResponse.json({ products: (data || []).map(applyProductImageFixes) });
 }
 
 export async function POST(req: NextRequest) {
