@@ -56,3 +56,8 @@ __pycache__/
 
 # google service account keys
 /orders-app-461615-*.json
+
+# Katalog produksi (work + output)
+BACIRARO_CATALOG/
+BACIRARO_PRODUCT_CATALOG_FINAL/
+BACIRARO_PRODUCT_CATALOG_FINAL.zip

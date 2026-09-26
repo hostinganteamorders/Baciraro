@@ -9,9 +9,9 @@ import { useLanguage } from "@/lib/i18n/context";
 const TERRACOTTA = "#D4785C";
 
 const PRODUCTS = [
-  { image: "/produk/kriya/Flat Lay Katalog Medali.png", slug: "/products/souvenir-csr" },
+  { image: "/produk/kriya/Flat Lay Katalog Medali.png", slug: "/products/medali" },
   { image: "/produk/kriya/Lifestyle Sofa.png", slug: "/products/sofa-puff-ecobrick" },
-  { image: "/produk/kriya/Lifestyle Beruang 2.png", slug: "/products/karya-kreatif" },
+  { image: "/produk/kriya/Flat Lay Katalog Rangkong.png", slug: "/products/rangkong" },
 ];
 
 export default function CreativeShowcase() {
@@ -79,7 +79,7 @@ export default function CreativeShowcase() {
           className="mt-10 text-center"
         >
           <Link
-            href="/creative-studio"
+            href="/products"
             className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-zinc-300 backdrop-blur transition-all hover:bg-white/10 hover:border-[#D4785C]/30 hover:text-white"
           >
             {t("creativeShowcase.cta")}

@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X, LogOut, Eye, LogIn, Recycle, Leaf, Palette, Droplets, Timer, CheckCircle, Archive, Pencil, QrCode, Upload, Package } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { parseMaterials } from "@/lib/product-curation";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -245,7 +246,7 @@ export default function CreativeStudioPage() {
       description: product.description,
       category: product.category,
       story: product.story,
-      materials: typeof product.materials === "string" ? product.materials : JSON.stringify(product.materials || []),
+      materials: JSON.stringify(parseMaterials(product.materials, product.total_plastic_kg)),
       total_plastic_kg: product.total_plastic_kg,
       image_url: product.image_url,
       gallery: product.gallery,

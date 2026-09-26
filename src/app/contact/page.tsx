@@ -116,7 +116,7 @@ export default function ContactPage() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
-                    href="https://www.instagram.com/baciraro/"
+                    href="https://www.instagram.com/baciraro_creative/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-zinc-300 backdrop-blur transition-all hover:bg-white/10 hover:text-white"

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, MessageCircle, User, Mail, Palette, Recycle, Leaf, Music, Globe } from "lucide-react";
+import { ArrowUpRight, MessageCircle, User, Mail, Palette, Recycle, Leaf, Music, Globe, Printer } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 
 const categoryLinks = [
@@ -133,6 +133,15 @@ export default function Footer() {
                   {t("footer.kontakKami")}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/products/print"
+                  className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-white"
+                >
+                  <Printer className="h-3 w-3 text-zinc-500" />
+                  {t("catalog.cetakKatalog")}
+                </Link>
+              </li>
             </ul>
 
             <div className="mt-5">
@@ -189,7 +198,7 @@ export default function Footer() {
             {/* Social Media */}
             <div className="flex items-center gap-3">
               <a
-                href="https://instagram.com/baciraro"
+                href="https://instagram.com/baciraro_creative"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-8 w-8 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-zinc-500 hover:text-pink-400 hover:border-pink-400/30 hover:bg-pink-500/10 transition-all"

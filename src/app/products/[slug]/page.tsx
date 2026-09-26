@@ -12,6 +12,7 @@ import QRModal from "@/components/QRModal";
 import { useAdminAuth } from "@/lib/admin-auth-context";
 import { useLanguage } from "@/lib/i18n/context";
 import { formatRupiah, formatMinutes, parseVariants, variantPrice, PRICE_PER_GRAM } from "@/lib/pricing";
+import { parseMaterials } from "@/lib/product-curation";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -156,7 +157,7 @@ export default function ProductDetailPage() {
     );
   }
 
-  const materials: Material[] = Array.isArray(product.materials) ? product.materials : JSON.parse(product.materials || "[]");
+  const materials: Material[] = parseMaterials(product.materials, product.total_plastic_kg);
   const artists: Artist[] = Array.isArray(product.artists) ? product.artists : (() => {
     try {
       return JSON.parse(product.artists || "[]");
@@ -172,7 +173,7 @@ export default function ProductDetailPage() {
     }
   })();
   const allImages = [product.image_url, ...gallery].filter(Boolean);
-  const totalKg = materials.reduce((sum, m) => sum + m.amount, 0);
+  const totalKg = materials.reduce((sum, m) => sum + m.amount, 0) || Number(product.total_plastic_kg) || 0;
   const Icon = categoryIcons[product.category] || Package;
   const allVariants = parseVariants(product.variants);
   const printVariants = allVariants;
@@ -471,6 +472,7 @@ export default function ProductDetailPage() {
             </div>
 
             {/* Total Impact Card */}
+            {totalKg > 0 && (
             <div className="mt-6 rounded-[1.5rem] border border-emerald-500/10 bg-emerald-500/[0.03] backdrop-blur p-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -504,6 +506,7 @@ export default function ProductDetailPage() {
                 </div>
               )}
             </div>
+            )}
           </motion.section>
         )}
 
