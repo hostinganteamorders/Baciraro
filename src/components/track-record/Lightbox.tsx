@@ -12,15 +12,18 @@ export default function Lightbox({
   index,
   onClose,
   caption,
+  captions,
   rotateDeg = 0,
 }: {
   photos: LightboxPhoto[];
   index: number;
   onClose: () => void;
   caption?: string;
+  captions?: string[];
   rotateDeg?: number;
 }) {
   const [current, setCurrent] = useState(index);
+  const activeCaption = captions?.[current] ?? caption;
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -50,10 +53,13 @@ export default function Lightbox({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      role="dialog"
+      aria-modal="true"
+      aria-label={caption ?? "Photo viewer"}
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
       onClick={onClose}
     >
-      <button onClick={onClose} className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-all" aria-label="Close">
+      <button onClick={onClose} autoFocus className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-all" aria-label="Close">
         <X className="h-5 w-5" />
       </button>
       {photos.length > 1 && (
@@ -77,9 +83,9 @@ export default function Lightbox({
       >
         <Image src={photos[current].src} alt={photos[current].alt} fill className="object-contain" quality={100} />
       </motion.div>
-      <div className="absolute bottom-6 flex items-center gap-3">
+      <div className="absolute bottom-6 flex max-w-[80vw] items-center gap-3">
         <span className="text-sm text-zinc-400 font-medium">{current + 1} / {photos.length}</span>
-        {caption && <span className="hidden sm:inline text-sm text-zinc-500">{caption}</span>}
+        {activeCaption && <span className="hidden truncate text-sm text-zinc-500 sm:inline">{activeCaption}</span>}
       </div>
     </motion.div>
   );

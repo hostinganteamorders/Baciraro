@@ -7,6 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Calendar, MapPin, Sparkles, Target, Recycle } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 import { projectImages as mataluntungImages } from "@/lib/creative-projects/mataluntung";
+import { projectImages as pensilImages } from "@/lib/creative-projects/pensil-2026";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -448,6 +449,113 @@ export default function CreativePage() {
                   className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-[#34D399]/30 hover:text-white"
                 >
                   View Case Study
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* ───── SECTION 3D: PENSIL 2026 PROJECT RECAP ───── */}
+        <section id="pensil-2026" className="relative border-t border-white/5 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(217,122,43,0.07),transparent_60%)]" />
+
+          <div className="relative grid grid-cols-1 lg:grid-cols-2">
+            {/* Left: portrait poster, kept uncropped */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: springEase }}
+              className="relative flex min-h-[460px] items-center justify-center overflow-hidden px-6 py-12 lg:min-h-[620px] lg:px-10 lg:py-16"
+            >
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(217,122,43,0.1),transparent_65%)]" />
+              <div className="relative aspect-[4/5] w-full max-w-[360px] overflow-hidden rounded-2xl border border-white/[0.09] bg-black/40">
+                <Image
+                  src={pensilImages.handover}
+                  alt={t("pensil2026.photoAlts.handover")}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 80vw, 30vw"
+                />
+              </div>
+            </motion.div>
+
+            {/* Right: content */}
+            <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 lg:py-20">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: springEase }}
+              >
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand-orange">
+                  {t("pensil2026.eyebrow")}
+                </p>
+                <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
+                  {t("pensil2026.title")}
+                </h2>
+                <p className="mt-1.5 text-sm text-brand-orange/80">
+                  {t("pensil2026.partner")}
+                </p>
+                <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
+                  {t("pensil2026.teaserDescription")}
+                </p>
+                <p className="mt-3 text-xs text-brand-orange">
+                  {t("pensil2026.teaserImpact")}
+                </p>
+              </motion.div>
+
+              {/* Media thumbnails */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15, ease: springEase }}
+                className="mt-8 grid grid-cols-2 gap-3"
+              >
+                <figure>
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
+                    <Image
+                      src={pensilImages.design}
+                      alt={t("pensil2026.photoAlts.design")}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 45vw, 20vw"
+                    />
+                  </div>
+                  <figcaption className="mt-2 text-[10px] font-bold uppercase tracking-wider text-white/60">
+                    {t("pensil2026.photoCaptions.design")}
+                  </figcaption>
+                </figure>
+                <figure>
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
+                    <Image
+                      src={pensilImages.weighing}
+                      alt={t("pensil2026.photoAlts.weighing")}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 45vw, 20vw"
+                    />
+                  </div>
+                  <figcaption className="mt-2 text-[10px] font-bold uppercase tracking-wider text-white/60">
+                    {t("pensil2026.photoCaptions.weighing")}
+                  </figcaption>
+                </figure>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.25, ease: springEase }}
+                className="mt-6"
+              >
+                <Link
+                  href="/creative/projects/pensil-2026"
+                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-brand-orange/30 hover:text-white"
+                >
+                  {t("pensil2026.teaserCta")}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </motion.div>
