@@ -7,6 +7,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/lib/i18n/context";
+import { mediaUrl } from "@/lib/media";
 
 const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -80,7 +81,7 @@ export default function CustomPage() {
           <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: springEase }} className="mt-8 overflow-hidden rounded-[2rem] border border-white/[0.07] bg-white/[0.02]">
             <div className="relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/produk/custom/custom-hero.png" alt="Baciraro Custom" className="w-full object-cover" />
+              <img src={mediaUrl("/produk/custom/custom-hero.png")} alt="Baciraro Custom" className="w-full object-cover" />
             </div>
             <div className="p-8 lg:p-10">
               <p className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.28em] text-emerald-400">

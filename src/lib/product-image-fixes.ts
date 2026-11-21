@@ -1,3 +1,5 @@
+import { mediaUrl } from "@/lib/media";
+
 export type ProductImageRow = {
   slug: string;
   image_url?: string | null;
@@ -29,6 +31,11 @@ export function hasImageFix(slug: string): boolean {
 
 export function applyProductImageFixes<T extends ProductImageRow>(product: T): T {
   const fix = IMAGE_FIXES[product.slug];
-  if (!fix) return product;
-  return { ...product, ...fix } as T;
+  const out = (fix ? { ...product, ...fix } : product) as T;
+  if (!process.env.NEXT_PUBLIC_MEDIA_BASE_URL) return out;
+  return {
+    ...out,
+    image_url: mediaUrl(out.image_url),
+    gallery: Array.isArray(out.gallery) ? out.gallery.map((g) => (typeof g === "string" ? mediaUrl(g) : g)) : out.gallery,
+  } as T;
 }

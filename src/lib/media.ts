@@ -1,0 +1,9 @@
+// Alamat dasar foto produk di Supabase Storage, mis.
+//   https://<project>.supabase.co/storage/v1/object/public/product-images
+// Jika NEXT_PUBLIC_MEDIA_BASE_URL belum diisi, foto tetap dilayani dari folder public/ (perilaku lama).
+const BASE = process.env.NEXT_PUBLIC_MEDIA_BASE_URL?.replace(/\/$/, "");
+
+export function mediaUrl<T extends string | null | undefined>(src: T): T | string {
+  if (!BASE || !src || !src.startsWith("/produk/")) return src;
+  return BASE + src.split("/").map(encodeURIComponent).join("/");
+}

@@ -61,3 +61,7 @@ __pycache__/
 BACIRARO_CATALOG/
 BACIRARO_PRODUCT_CATALOG_FINAL/
 BACIRARO_PRODUCT_CATALOG_FINAL.zip
+
+# hasil kompresi lokal & backup migrasi media
+_media-out/
+scripts/media/backup-products-*.json
