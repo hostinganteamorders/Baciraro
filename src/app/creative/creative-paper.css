@@ -1,0 +1,350 @@
+/* ───────────────────────────────────────────────────────────
+   Baciraro Creative — skin "Kertas Daur Ulang"
+   Palet diambil dari poster "Baciraro Creative itu apa sih?!"
+   Semua selector diawali .cp agar tidak memengaruhi halaman lain.
+   ─────────────────────────────────────────────────────────── */
+.cp {
+  --cp-paper: #f4f4f2;
+  --cp-paper-2: #eceae4;
+  --cp-card: #fbfaf7;
+  --cp-ink: #17130f;
+  --cp-ink-2: #4d453c;
+  --cp-terra: #bf7436;
+  --cp-terra-soft: #ecc9a6;
+  --cp-brick: #a84d3b;
+  --cp-leaf: #7ba95a;
+  --cp-leaf-deep: #4d7a35;
+  --cp-sun: #ebb44a;
+
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  color: var(--cp-ink);
+  font-family: var(--font-poppins), "Poppins", ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--cp-paper);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900'%3E%3Cfilter id='c' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.011' numOctaves='3' seed='7' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='%23fff' surfaceScale='4.5' diffuseConstant='1.15' result='l'%3E%3CfeDistantLight azimuth='235' elevation='58'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix in='l' values='0 0 0 0 .32 0 0 0 0 .26 0 0 0 0 .2 -1.7 0 0 0 1.66'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .08 0 0 0 0 .05 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 900px 900px, 260px 260px;
+}
+
+.cp *, .cp *::before, .cp *::after { box-sizing: border-box; }
+:where(.cp) a { color: inherit; text-decoration: none; }
+
+.cp-wrap { width: min(1240px, 100% - 2.5rem); margin-inline: auto; }
+
+/* ── tipografi ── */
+.cp-display {
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+.cp-h2 {
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-size: clamp(2rem, 4.6vw, 3.6rem);
+}
+.cp-hand {
+  font-family: var(--font-caveat), "Caveat", cursive;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.cp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--cp-ink-2);
+}
+.cp-eyebrow::before {
+  content: "";
+  width: 1.6rem;
+  height: 3px;
+  background: var(--cp-brick);
+  border-radius: 2px;
+}
+.cp-lead { color: var(--cp-ink-2); line-height: 1.75; font-size: clamp(.95rem, 1.2vw, 1.08rem); }
+
+/* ── blok warna bertepi sobek (teks tetap tajam) ── */
+.cp-block {
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  padding: .02em .22em .06em;
+  color: #fff;
+}
+.cp-block::before {
+  content: "";
+  position: absolute;
+  inset: 0 -.04em;
+  z-index: -1;
+  background: var(--c, var(--cp-terra));
+  filter: url(#cp-rough);
+}
+.cp-block--sun { --c: var(--cp-sun); color: var(--cp-ink); }
+.cp-block--leaf { --c: var(--cp-leaf); color: var(--cp-ink); }
+.cp-underline {
+  display: block;
+  width: min(100%, 22rem);
+  height: 8px;
+  margin-top: 1.1rem;
+  background: var(--cp-brick);
+  border-radius: 4px;
+  filter: url(#cp-rough);
+}
+.cp-torn {
+  position: absolute;
+  background: var(--c);
+  filter: url(#cp-rough);
+  pointer-events: none;
+}
+
+/* ── tombol, chip ── */
+.cp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .8rem 1.4rem;
+  border-radius: 999px;
+  border: 2px solid var(--cp-ink);
+  background: var(--cp-ink);
+  color: var(--cp-paper);
+  font-size: .9rem;
+  font-weight: 600;
+  box-shadow: 3px 3px 0 var(--cp-terra);
+  transition: transform .18s ease, box-shadow .18s ease;
+  cursor: pointer;
+}
+.cp-btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--cp-terra); }
+.cp-btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--cp-terra); }
+.cp-btn--ghost { background: transparent; color: var(--cp-ink); box-shadow: 3px 3px 0 var(--cp-leaf); }
+.cp-btn--ghost:hover { box-shadow: 5px 5px 0 var(--cp-leaf); }
+.cp-btn--light { background: var(--cp-paper); color: var(--cp-ink); border-color: var(--cp-ink); box-shadow: 3px 3px 0 var(--cp-ink); }
+.cp-btn--light:hover { box-shadow: 5px 5px 0 var(--cp-ink); }
+.cp a:focus-visible, .cp button:focus-visible {
+  outline: 3px solid var(--cp-ink);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.cp-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .28rem .7rem;
+  border-radius: 999px;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: var(--cp-sun);
+  color: var(--cp-ink);
+}
+.cp-chip[data-cat="produk"] { background: var(--cp-leaf); }
+.cp-chip[data-cat="event"] { background: var(--cp-terra-soft); }
+.cp-chip[data-cat="budaya"] { background: var(--cp-brick); color: #fff; }
+
+.cp-filter {
+  padding: .55rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid var(--cp-ink);
+  background: transparent;
+  color: var(--cp-ink);
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+.cp-filter:hover { transform: translateY(-1px); background: var(--cp-paper-2); }
+.cp-filter[aria-pressed="true"] { background: var(--cp-ink); color: var(--cp-paper); }
+
+/* ── bilah atas ── */
+.cp-bar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: color-mix(in srgb, var(--cp-paper) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--cp-ink);
+}
+.cp-logo-mask {
+  display: block;
+  background: var(--cp-ink);
+  -webkit-mask: url("/Logo Baciraro Creative.png") center / contain no-repeat;
+  mask: url("/Logo Baciraro Creative.png") center / contain no-repeat;
+}
+.cp-nav a {
+  position: relative;
+  padding: .35rem .1rem;
+  font-size: .85rem;
+  font-weight: 600;
+}
+.cp-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 3px;
+  background: var(--cp-terra);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .2s ease;
+}
+.cp-nav a:hover::after { transform: scaleX(1); }
+
+/* ── pil pencarian ala poster ── */
+.cp-search {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .7rem 1.2rem;
+  border-radius: 999px;
+  border: 2px solid var(--cp-ink);
+  background: #fff;
+  font-size: .9rem;
+  color: var(--cp-ink);
+  box-shadow: 3px 3px 0 var(--cp-sun);
+}
+.cp-caret {
+  width: 2px; height: 1.1em;
+  background: var(--cp-ink);
+  animation: cp-blink 1.1s steps(1) infinite;
+}
+@keyframes cp-blink { 50% { opacity: 0; } }
+
+/* ── foto "polaroid" bertape ── */
+.cp-photo {
+  padding: .55rem .55rem 1.9rem;
+  background: var(--cp-card);
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(23,19,15,.06), 0 14px 30px -12px rgba(23,19,15,.35);
+}
+.cp-photo::before {
+  content: "";
+  position: absolute;
+  top: -.8rem; left: 50%;
+  width: 5.2rem; height: 1.6rem;
+  transform: translateX(-50%) rotate(-3deg);
+  background: color-mix(in srgb, var(--cp-sun) 78%, transparent);
+  box-shadow: 0 1px 2px rgba(23,19,15,.18);
+  clip-path: polygon(0 8%, 4% 0, 8% 10%, 12% 0, 16% 10%, 84% 10%, 88% 0, 92% 10%, 96% 0, 100% 8%, 100% 92%, 96% 100%, 92% 90%, 88% 100%, 84% 90%, 16% 90%, 12% 100%, 8% 90%, 4% 100%, 0 92%);
+}
+.cp-photo img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 3px; }
+.cp-photo figcaption { position: absolute; left: .8rem; right: .8rem; bottom: .35rem; font-size: 1.15rem; line-height: 1; color: var(--cp-ink-2); }
+
+/* ── pita berjalan ── */
+.cp-ticker { overflow: hidden; background: var(--cp-sun); border-block: 2px solid var(--cp-ink); }
+.cp-ticker-track { display: flex; width: max-content; animation: cp-scroll 36s linear infinite; }
+.cp-ticker:hover .cp-ticker-track { animation-play-state: paused; }
+@keyframes cp-scroll { to { transform: translateX(-50%); } }
+
+/* ── kartu karya ── */
+.cp-card {
+  position: relative;
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 1.6rem;
+  background: var(--cp-card);
+  border: 2px solid var(--cp-ink);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 4px 4px 0 var(--cp-ink);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.cp-card:hover { transform: translate(-2px, -2px) rotate(-.4deg); box-shadow: 8px 8px 0 var(--cp-terra); }
+.cp-card:nth-child(3n+2):hover { box-shadow: 8px 8px 0 var(--cp-leaf); transform: translate(-2px, -2px) rotate(.4deg); }
+.cp-card:nth-child(3n):hover { box-shadow: 8px 8px 0 var(--cp-sun); }
+.cp-card-img { position: relative; overflow: hidden; border-bottom: 2px solid var(--cp-ink); background: var(--cp-paper-2); }
+.cp-card-img img { transition: transform .6s ease; }
+.cp-card:hover .cp-card-img img { transform: scale(1.04); }
+
+/* ── kartu angka ── */
+.cp-stat { position: relative; border: 2px solid var(--cp-ink); border-radius: 18px; padding: 1.6rem 1.5rem 1.4rem; box-shadow: 4px 4px 0 var(--cp-ink); }
+.cp-stat--terra { background: var(--cp-terra); color: #fff; }
+.cp-stat--leaf { background: var(--cp-leaf); color: var(--cp-ink); }
+.cp-stat--sun { background: var(--cp-sun); color: var(--cp-ink); }
+.cp-stat--paper { background: var(--cp-card); color: var(--cp-ink); }
+
+/* ── produk ── */
+.cp-prod { display: block; background: var(--cp-card); border: 2px solid var(--cp-ink); border-radius: 14px; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; box-shadow: 3px 3px 0 var(--cp-ink); }
+.cp-prod:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--cp-leaf); }
+.cp-skel { background: linear-gradient(90deg, var(--cp-paper-2), #f7f5f0, var(--cp-paper-2)); background-size: 200% 100%; animation: cp-shimmer 1.4s linear infinite; border-radius: 14px; }
+@keyframes cp-shimmer { to { background-position: -200% 0; } }
+
+/* ── putar stiker ── */
+.cp-spin { animation: cp-rotate 22s linear infinite; }
+@keyframes cp-rotate { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .cp-ticker-track, .cp-spin, .cp-caret, .cp-skel { animation: none; }
+  .cp-card, .cp-btn, .cp-prod, .cp-card-img img { transition: none; }
+}
+
+/* ── sub-halaman proyek ── */
+.cp-title {
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-size: clamp(2.1rem, 5.2vw, 4.2rem);
+}
+.cp-quote {
+  position: relative;
+  margin-top: 3rem;
+  padding: 1.8rem 1.8rem 1.6rem;
+  border: 2px solid var(--cp-ink);
+  border-radius: 18px;
+  background: var(--cp-sun);
+  box-shadow: 5px 5px 0 var(--cp-ink);
+  transform: rotate(-.6deg);
+}
+.cp-shot {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--cp-ink);
+  border-radius: 14px;
+  background: var(--cp-paper-2);
+  box-shadow: 3px 3px 0 var(--cp-ink);
+  transition: transform .2s ease, box-shadow .2s ease;
+  cursor: zoom-in;
+}
+.cp-shot:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--cp-terra); }
+.cp-shot img { transition: transform .6s ease; }
+.cp-shot:hover img { transform: scale(1.03); }
+.cp-step { position: relative; border: 2px solid var(--cp-ink); border-radius: 18px; background: var(--cp-card); padding: 1.6rem; box-shadow: 4px 4px 0 var(--cp-ink); }
+.cp-badge {
+  position: absolute;
+  right: .75rem; top: .75rem;
+  z-index: 2;
+  padding: .3rem .7rem;
+  border: 2px solid var(--cp-ink);
+  border-radius: 10px;
+  background: var(--cp-terra);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  transform: rotate(4deg);
+  box-shadow: 2px 2px 0 var(--cp-ink);
+}
+.cp-partner {
+  display: inline-flex;
+  align-items: center;
+  padding: .6rem 1.1rem;
+  border: 2px solid var(--cp-ink);
+  border-radius: 999px;
+  background: var(--cp-card);
+  font-size: .85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.cp-partner:nth-child(4n+1) { box-shadow: 3px 3px 0 var(--cp-terra); }
+.cp-partner:nth-child(4n+2) { box-shadow: 3px 3px 0 var(--cp-leaf); }
+.cp-partner:nth-child(4n+3) { box-shadow: 3px 3px 0 var(--cp-sun); }
+.cp-partner:nth-child(4n) { box-shadow: 3px 3px 0 var(--cp-brick); }

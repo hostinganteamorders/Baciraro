@@ -1,19 +1,24 @@
 import type { Metadata } from "next";
-import PensilRecapClient from "@/components/creative/pensil-2026/PensilRecapClient";
+import { notFound } from "next/navigation";
+import RecapClient from "@/components/creative/recap/RecapClient";
+import { getRecap, recapPhotoUrl } from "@/lib/creative-projects/recaps";
 
-export const metadata: Metadata = {
-  title: "PENSIL 2026 × Baciraro Creative — Project Recap",
-  description:
-    "BACIRARO Creative memproduksi piala penghargaan berbahan plastik daur ulang untuk PENSIL 2026 bersama ROHIS SMA Negeri 1 Manado. 2.904 gram sampah plastik menjadi simbol apresiasi.",
-  openGraph: {
-    title: "PENSIL 2026 × Baciraro Creative",
-    description:
-      "Dari sampah plastik menjadi simbol apresiasi. 2.904 gram plastik daur ulang menjadi piala penghargaan PENSIL 2026.",
-    type: "website",
-    images: ["/creative/pensil-2026/09-penyerahan-piala.jpeg"],
-  },
-};
+const project = getRecap("pensil-2026");
 
-export default function Pensil2026Page() {
-  return <PensilRecapClient />;
+export const metadata: Metadata = project
+  ? {
+      title: "PENSIL 2026 × Baciraro Creative — Project Recap",
+      description: project.metaDescription.id,
+      openGraph: {
+        title: "PENSIL 2026 × Baciraro Creative",
+        description: project.metaDescription.id,
+        type: "website",
+        images: [recapPhotoUrl(project, project.hero)],
+      },
+    }
+  : {};
+
+export default function Page() {
+  if (!project) notFound();
+  return <RecapClient project={project} />;
 }

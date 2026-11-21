@@ -1,16 +1,18 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Calendar, MapPin, Sparkles, Target, Recycle } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight, ArrowUpRight, AtSign, Boxes, Palette, Recycle, Search, Sparkles, Users } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
-import { projectImages as mataluntungImages } from "@/lib/creative-projects/mataluntung";
+import { categoryLabel, works, type WorkCategory } from "@/lib/creative-projects/works";
+import { recapPhotoUrl, recapProjects } from "@/lib/creative-projects/recaps";
 import { projectImages as pensilImages } from "@/lib/creative-projects/pensil-2026";
-import { projectImages as plasticWasteBinImages } from "@/lib/creative-projects/plastic-waste-bin";
+import { PaperBar, PaperFilters, usePaperBody } from "@/components/creative/paper/PaperChrome";
+import "./creative-paper.css";
 
-const springEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 type Product = {
   id: number;
@@ -21,865 +23,391 @@ type Product = {
   image_url: string;
 };
 
-const categoryAccent: Record<string, string> = {
-  plastic: "border-blue-500/20 bg-blue-500/10 text-blue-400",
-  organic: "border-emerald-500/20 bg-emerald-500/10 text-emerald-400",
-  craft: "border-amber-500/20 bg-amber-500/10 text-amber-400",
-  digital: "border-purple-500/20 bg-purple-500/10 text-purple-400",
-  art: "border-[#f2d479]/20 bg-[#f2d479]/10 text-[#f2d479]",
-};
+const IG = "https://www.instagram.com/baciraro_creative/";
+
+const heroPhotos = (() => {
+  const ag = recapProjects.find((p) => p.slug === "annual-games-2026")!;
+  const ka = recapProjects.find((p) => p.slug === "atribut-kawasaran")!;
+  return {
+    trophy: recapPhotoUrl(ag, 19, true),
+    handover: pensilImages.trophies,
+    dancer: recapPhotoUrl(ka, 16, true),
+  };
+})();
 
 export default function CreativePage() {
-  const { t } = useLanguage();
+  const { lang } = useLanguage();
+  usePaperBody();
+  const reduce = useReducedMotion();
+  const tx = (id: string, en: string) => (lang === "id" ? id : en);
+
+  const [filter, setFilter] = useState<WorkCategory | "all">("all");
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   useEffect(() => {
     fetch("/api/products")
       .then((r) => r.json())
       .then((data) => {
         const items: Product[] = data?.products || data || [];
-        setProducts(items.slice(0, 6));
+        setProducts(items.slice(0, 8));
       })
       .catch(() => {})
       .finally(() => setLoading(false));
   }, []);
 
+  const shown = useMemo(() => (filter === "all" ? works : works.filter((w) => w.category === filter)), [filter]);
+  const cats = Object.keys(categoryLabel) as WorkCategory[];
+  const aspects = ["aspect-[4/5]", "aspect-[1/1]", "aspect-[4/3]", "aspect-[5/6]"];
+
+  const reveal = (delay = 0) =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, y: 24 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, margin: "-60px" },
+          transition: { duration: 0.6, delay, ease },
+        };
+
+  const stats = [
+    { cls: "cp-stat--terra", value: "2.078", unit: tx("gram", "grams"), label: tx("tutup botol jadi Piala Aer Tembaga", "bottle caps became the Aer Tembaga trophies") },
+    { cls: "cp-stat--leaf", value: "2.904", unit: tx("gram", "grams"), label: tx("plastik jadi piala PENSIL 2026", "plastic became PENSIL 2026 trophies") },
+    { cls: "cp-stat--sun", value: "312", unit: tx("penghargaan", "awards"), label: tx("27 piala + 285 medali Annual Games 2026", "27 trophies + 285 medals for Annual Games 2026") },
+    { cls: "cp-stat--paper", value: String(works.length), unit: tx("proyek", "projects"), label: tx("terdokumentasi di halaman ini", "documented on this page") },
+  ];
+
+  const pillars = [
+    { icon: Sparkles, title: tx("Tradisi & Inovasi", "Tradition & Innovation"), body: tx("Memadukan kearifan lokal dengan teknologi daur ulang modern.", "Blending local wisdom with modern recycling technology.") },
+    { icon: Recycle, title: tx("Ekonomi Sirkular", "Circular Economy"), body: tx("Mengubah limbah plastik menjadi produk bernilai budaya tinggi.", "Turning plastic waste into products of high cultural value.") },
+    { icon: Users, title: tx("Kolaborasi Komunitas", "Community Collaboration"), body: tx("Memberdayakan seniman, desainer, dan komunitas untuk masa depan berkelanjutan.", "Empowering artists, designers and communities for a sustainable future.") },
+  ];
+
+  const tickerWords = ["Recycle", "Create", "Collaborate"];
+  const ticker = Array.from({ length: 12 }, (_, i) => tickerWords[i % 3]);
+
   return (
-    <main className="relative overflow-hidden text-primary-text min-h-screen">
-      <div aria-hidden="true" className="page-bg" />
-      <div className="relative z-[1]">
+    <main className="cp">
+      <PaperFilters />
+      <PaperBar />
 
-        {/* ───── SECTION 1: HERO ───── */}
-        <section ref={heroRef} className="relative h-screen overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-          <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.7] mix-blend-overlay" />
+      {/* ───── HERO ───── */}
+      <section className="relative overflow-hidden">
+        <span className="cp-torn hidden md:block" style={{ "--c": "var(--cp-leaf)", top: -30, right: 170, width: 190, height: 150 } as React.CSSProperties} aria-hidden="true" />
+        <span className="cp-torn hidden md:block" style={{ "--c": "var(--cp-sun)", top: -40, right: -30, width: 210, height: 170 } as React.CSSProperties} aria-hidden="true" />
+        <span className="cp-torn hidden md:block" style={{ "--c": "var(--cp-terra)", top: 110, right: -40, width: 150, height: 170 } as React.CSSProperties} aria-hidden="true" />
 
-          <motion.div style={{ opacity: heroOpacity }} className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: springEase }}
-            >
-              <Image
-                src="/Logo Baciraro Creative.png"
-                alt={t("creative.heroLogoAlt")}
-                width={140}
-                height={48}
-                className="mb-8 h-auto w-28 object-contain md:w-36"
-              />
-            </motion.div>
+        <div className="cp-wrap relative grid items-center gap-14 pb-20 pt-14 lg:grid-cols-[1.08fr_0.92fr] lg:pb-28 lg:pt-20">
+          <div>
+            <motion.p {...(reduce ? {} : { initial: { opacity: 0, y: -10 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, ease } })} className="cp-hand text-2xl text-[color:var(--cp-brick)]">
+              {tx("halo, kami…", "hello, we are…")}
+            </motion.p>
 
             <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: springEase }}
-              className="max-w-4xl font-serif text-[clamp(24px,5vw,56px)] font-normal leading-[1.1] tracking-[-0.02em] text-white"
+              {...(reduce ? {} : { initial: { opacity: 0, y: 28 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay: 0.1, ease } })}
+              className="cp-display mt-3 text-[clamp(2.6rem,7.4vw,6.4rem)]"
             >
-              {t("creative.heroTitle")}
+              <span className="cp-block">{tx("Dari sampah,", "From waste,")}</span>
+              <br />
+              <span>{tx("jadi karya.", "to creation.")}</span>
+              <span className="cp-underline" aria-hidden="true" />
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: springEase }}
-              className="mt-4 max-w-2xl text-sm text-white/70 sm:text-base md:text-lg"
-            >
-              {t("creative.heroTagline")}
+            <motion.p {...reveal(0.2)} className="cp-lead mt-8 max-w-xl">
+              {tx(
+                "Baciraro Creative adalah creative arm dari Baciraro Recycle — membawa semangat circular economy ke desain, produk, komunikasi visual, teknologi, dan kolaborasi.",
+                "Baciraro Creative is the creative arm of Baciraro Recycle — bringing the spirit of the circular economy to design, products, visual communication, technology and collaboration.",
+              )}
             </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5, ease: springEase }}
-              className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm text-white/60"
-            >
-              <span className="flex items-center gap-1.5">
-                <Calendar className="h-4 w-4 text-brand-orange" />
-                {t("creative.heroDate")}
-              </span>
-              <span className="hidden text-white/20 sm:inline">&middot;</span>
-              <span className="flex items-center gap-1.5">
-                <MapPin className="h-4 w-4 text-brand-terracotta" />
-                {t("creative.heroVenue")}
+            <motion.div {...reveal(0.3)} className="mt-6">
+              <span className="cp-search">
+                <Search className="h-4 w-4" aria-hidden="true" />
+                <span>{tx("oke google apa itu baciraro creative", "ok google what is baciraro creative")}</span>
+                <span className="cp-caret" aria-hidden="true" />
               </span>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.65, ease: springEase }}
-              className="mt-10"
-            >
-              <a
-                href="#dialog-budaya"
-                className="group inline-flex items-center gap-3 rounded-full bg-brand-terracotta px-6 py-3 text-sm font-medium text-white transition-all hover:bg-brand-orange hover:gap-4"
-              >
-                {t("creative.heroCtaRecap")}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <motion.div {...reveal(0.4)} className="mt-9 flex flex-wrap gap-4">
+              <a href="#karya" className="cp-btn">
+                {tx("Lihat karya kami", "See our work")}
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a href="#tentang" className="cp-btn cp-btn--ghost">
+                {tx("Kenali kami", "About us")}
               </a>
             </motion.div>
-          </motion.div>
-        </section>
-
-        {/* ───── SECTION 2: TENTANG BACIRARO CREATIVE ───── */}
-        <section className="relative border-t border-white/5 px-4 py-24 sm:px-6 md:px-8 md:py-32">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(196,74,58,0.08),transparent_60%)]" />
-          <div className="relative mx-auto max-w-6xl text-center">
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: springEase }}
-              className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold"
-            >
-              {t("creative.tentangLabel")}
-            </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.1, ease: springEase }}
-              className="mt-4 font-serif text-[clamp(28px,4vw,48px)] font-normal leading-[1.1] tracking-[-0.02em] text-white"
-            >
-              {t("creative.tentangTitle")}
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.2, ease: springEase }}
-              className="mx-auto mt-6 max-w-3xl text-sm leading-7 text-zinc-300 sm:text-base md:text-lg"
-            >
-              {t("creative.tentangBody")}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.35, ease: springEase }}
-              className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-3"
-            >
-              {[
-                { icon: Sparkles, color: "text-brand-terracotta", key: "Tradisi & Inovasi", desc: "Memadukan kearifan lokal dengan teknologi daur ulang modern." },
-                { icon: Recycle, color: "text-brand-green", key: "Ekonomi Sirkular", desc: "Mengubah limbah plastik menjadi produk bernilai budaya tinggi." },
-                { icon: Target, color: "text-brand-orange", key: "Kolaborasi Komunitas", desc: "Memberdayakan seniman, desainer, dan komunitas untuk masa depan berkelanjutan." },
-              ].map((item, i) => (
-                <div key={i} className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-6 text-center backdrop-blur">
-                  <item.icon className={`mx-auto h-8 w-8 ${item.color}`} />
-                  <h3 className="mt-4 text-sm font-semibold text-white">{item.key}</h3>
-                  <p className="mt-2 text-xs text-zinc-400">{item.desc}</p>
-                </div>
-              ))}
-            </motion.div>
           </div>
-        </section>
 
-        {/* ───── SECTION 3: PORTFOLIO PRODUK ───── */}
-        <section className="relative border-t border-white/5 px-4 py-20 sm:px-6 md:px-8 md:py-28">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(111,175,79,0.05),transparent_60%)]" />
-          <div className="relative mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: springEase }}
-              className="text-center"
-            >
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand-green">
-                {t("creative.portfolioTitle")}
-              </p>
-              <h2 className="mt-4 font-serif text-[clamp(24px,3.5vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
-                {t("creative.portfolioTitle")}
-              </h2>
-              <p className="mx-auto mt-3 max-w-2xl text-sm text-zinc-400">
-                {t("creative.portfolioSubtitle")}
-              </p>
+          {/* kolase foto */}
+          <motion.div {...(reduce ? {} : { initial: { opacity: 0, scale: 0.96 }, animate: { opacity: 1, scale: 1 }, transition: { duration: 0.9, delay: 0.15, ease } })} className="relative mx-auto h-[28rem] w-full max-w-[34rem] sm:h-[34rem]">
+            <figure className="cp-photo absolute left-0 top-6 w-[52%] -rotate-[5deg]">
+              <div className="relative aspect-[3/4]">
+                <Image src={heroPhotos.trophy} alt={tx("Piala Annual Games 2026 dari plastik daur ulang", "Annual Games 2026 trophy from recycled plastic")} fill sizes="(max-width: 640px) 50vw, 280px" priority unoptimized />
+              </div>
+              <figcaption className="cp-hand">{tx("piala juara", "champion trophy")}</figcaption>
+            </figure>
+            <figure className="cp-photo absolute right-0 top-0 w-[46%] rotate-[4deg]">
+              <div className="relative aspect-[4/5]">
+                <Image src={heroPhotos.handover} alt={tx("Deretan piala PENSIL 2026", "PENSIL 2026 trophies lined up")} fill sizes="(max-width: 640px) 46vw, 250px" priority unoptimized />
+              </div>
+              <figcaption className="cp-hand">{tx("PENSIL 2026", "PENSIL 2026")}</figcaption>
+            </figure>
+            <figure className="cp-photo absolute bottom-0 right-[10%] w-[50%] rotate-[-2deg]">
+              <div className="relative aspect-[4/3]">
+                <Image src={heroPhotos.dancer} alt={tx("Atribut Kawasaran dari plastik daur ulang", "Kawasaran attributes from recycled plastic")} fill sizes="(max-width: 640px) 50vw, 270px" unoptimized />
+              </div>
+              <figcaption className="cp-hand">{tx("atribut Kawasaran", "Kawasaran attributes")}</figcaption>
+            </figure>
+
+            {/* stiker putar */}
+            <div className="absolute bottom-6 left-2 h-28 w-28 sm:h-32 sm:w-32" aria-hidden="true">
+              <svg viewBox="0 0 120 120" className="cp-spin h-full w-full">
+                <defs>
+                  <path id="cp-circle" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
+                </defs>
+                <circle cx="60" cy="60" r="58" fill="var(--cp-leaf)" stroke="var(--cp-ink)" strokeWidth="2" />
+                <text fontSize="11.5" fontWeight="700" letterSpacing="2.2" fill="var(--cp-ink)">
+                  <textPath href="#cp-circle">RECYCLE • CREATE • COLLABORATE •</textPath>
+                </text>
+              </svg>
+              <Recycle className="absolute inset-0 m-auto h-9 w-9 text-[color:var(--cp-ink)]" />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ───── PITA BERJALAN ───── */}
+      <div className="cp-ticker" aria-hidden="true">
+        <div className="cp-ticker-track">
+          {[...ticker, ...ticker].map((w, i) => (
+            <span key={i} className="cp-display flex shrink-0 items-center gap-6 px-6 py-3 text-lg sm:text-xl">
+              {w}
+              <span className="inline-block h-2.5 w-2.5 rotate-45 bg-[color:var(--cp-ink)]" />
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ───── ANGKA ───── */}
+      <section className="cp-wrap py-20 sm:py-24">
+        <motion.div {...reveal()} className="max-w-2xl">
+          <span className="cp-eyebrow">{tx("Dampak nyata", "Real impact")}</span>
+          <h2 className="cp-h2 mt-4">{tx("Sampah yang kami ubah jadi sesuatu.", "Waste we turned into something.")}</h2>
+        </motion.div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((s, i) => (
+            <motion.div key={s.label} {...reveal(i * 0.07)} className={`cp-stat ${s.cls}`} style={{ rotate: i % 2 ? "0.6deg" : "-0.6deg" }}>
+              <p className="cp-display text-[clamp(2.6rem,5vw,3.8rem)] !normal-case leading-none">{s.value}</p>
+              <p className="mt-1 text-sm font-bold uppercase tracking-[0.14em]">{s.unit}</p>
+              <p className="mt-4 text-sm leading-6 opacity-90">{s.label}</p>
             </motion.div>
+          ))}
+        </div>
+      </section>
 
-            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {loading ? (
-                <p className="col-span-full text-center text-sm text-zinc-500">{t("creative.portfolioLoading")}</p>
-              ) : (
-                products.map((product, i) => (
-                  <motion.div
-                    key={product.id}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: i * 0.08, ease: springEase }}
-                  >
-                    <Link href={`/products/${product.slug}`} className="group block overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.02] transition-all hover:border-white/20 hover:bg-white/[0.05]">
-                      <div className="relative aspect-[4/3] overflow-hidden">
-                        <Image
-                          src={product.image_url}
-                          alt={product.title}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
+      {/* ───── TENTANG ───── */}
+      <section id="tentang" className="scroll-mt-20 border-y-2 border-[color:var(--cp-ink)] bg-[color:var(--cp-paper-2)]/70">
+        <div className="cp-wrap grid gap-12 py-20 sm:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+          <motion.div {...reveal()}>
+            <span className="cp-eyebrow">{tx("Tentang kami", "About us")}</span>
+            <h2 className="cp-h2 mt-4">
+              {tx("Kreativitas itu cara memberi ", "Creativity is a way of giving ")}
+              <span className="cp-block cp-block--sun">{tx("nilai baru", "new value")}</span>
+              {tx(" pada material, ide, dan peluang kolaborasi.", " to material, ideas and chances to collaborate.")}
+            </h2>
+            <p className="cp-lead mt-8 max-w-xl">
+              {tx(
+                "Mulai dari pengembangan produk daur ulang, kebutuhan creative media, hingga project kolaboratif bersama komunitas, brand, institusi, dan berbagai stakeholder — Baciraro Creative tumbuh sebagai ruang untuk menciptakan karya yang relevan, berkelanjutan, dan berdampak.",
+                "From recycled-product development and creative-media needs to collaborative projects with communities, brands, institutions and stakeholders — Baciraro Creative grows as a space for relevant, sustainable, high-impact work.",
+              )}
+            </p>
+            <p className="cp-hand mt-6 text-3xl text-[color:var(--cp-brick)]">{tx("setiap proses membuka kemungkinan baru.", "every process opens a new possibility.")}</p>
+          </motion.div>
+
+          <ul className="grid gap-5">
+            {pillars.map((p, i) => (
+              <motion.li key={p.title} {...reveal(i * 0.08)} className="flex gap-4 rounded-2xl border-2 border-[color:var(--cp-ink)] bg-[color:var(--cp-card)] p-5 shadow-[4px_4px_0_var(--cp-ink)]">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border-2 border-[color:var(--cp-ink)]" style={{ background: ["var(--cp-terra)", "var(--cp-leaf)", "var(--cp-sun)"][i] }}>
+                  <p.icon className="h-6 w-6" style={{ color: i === 0 ? "#fff" : "var(--cp-ink)" }} />
+                </span>
+                <div>
+                  <h3 className="text-base font-bold">{p.title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-[color:var(--cp-ink-2)]">{p.body}</p>
+                </div>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ───── CARA KERJA ───── */}
+      <section className="cp-wrap py-20 sm:py-24">
+        <motion.div {...reveal()} className="max-w-2xl">
+          <span className="cp-eyebrow">{tx("Cara kerja", "How we work")}</span>
+          <h2 className="cp-h2 mt-4">{tx("Dari tumpukan plastik ke benda yang bercerita.", "From a pile of plastic to an object with a story.")}</h2>
+          <p className="cp-lead mt-4">
+            {tx(
+              "Baciraro Recycle mengelola sampahnya; Baciraro Creative mengubahnya jadi desain, produk, dan karya kolaboratif.",
+              "Baciraro Recycle handles the waste; Baciraro Creative turns it into design, products and collaborative work.",
+            )}
+          </p>
+        </motion.div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            { icon: Boxes, color: "var(--cp-terra)", fg: "#fff", n: "01", title: tx("Kumpulkan & pilah", "Collect & sort"), body: tx("Plastik bekas dikumpulkan, dibersihkan, dan dipilah per jenis dan warna.", "Used plastic is collected, cleaned and sorted by type and colour.") },
+            { icon: Recycle, color: "var(--cp-leaf)", fg: "var(--cp-ink)", n: "02", title: tx("Olah jadi material", "Process into material"), body: tx("Dicacah dan dipres menjadi papan bermotif — setiap warna jadi pola yang tidak akan pernah sama.", "Shredded and pressed into patterned boards — every colour becomes a pattern that is never the same twice.") },
+            { icon: Palette, color: "var(--cp-sun)", fg: "var(--cp-ink)", n: "03", title: tx("Desain & kolaborasi", "Design & collaborate"), body: tx("Bersama klien dan komunitas, papan itu dibentuk jadi piala, produk, dan karya budaya.", "Together with clients and communities, the boards are shaped into trophies, products and cultural work.") },
+          ].map((st, i) => (
+            <motion.div key={st.n} {...reveal(i * 0.08)} className="cp-step">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl border-2 border-[color:var(--cp-ink)]" style={{ background: st.color }}>
+                <st.icon className="h-6 w-6" style={{ color: st.fg }} />
+              </span>
+              <p className="mt-4 text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--cp-brick)]">{st.n}</p>
+              <h3 className="mt-1 text-xl font-extrabold tracking-tight">{st.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-[color:var(--cp-ink-2)]">{st.body}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ───── KARYA ───── */}
+      <section id="karya" className="cp-wrap scroll-mt-20 py-20 sm:py-28">
+        <motion.div {...reveal()} className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <span className="cp-eyebrow">{tx("Karya & proyek", "Work & projects")}</span>
+            <h2 className="cp-h2 mt-4">{tx("Semua yang sudah kami buat.", "Everything we've made.")}</h2>
+          </div>
+          <div className="flex flex-wrap gap-2" role="group" aria-label={tx("Filter karya", "Filter work")}>
+            <button type="button" className="cp-filter" aria-pressed={filter === "all"} onClick={() => setFilter("all")}>
+              {tx("Semua", "All")} ({works.length})
+            </button>
+            {cats.map((c) => (
+              <button key={c} type="button" className="cp-filter" aria-pressed={filter === c} onClick={() => setFilter(c)}>
+                {categoryLabel[c][lang]} ({works.filter((w) => w.category === c).length})
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        <div key={filter} className="mt-12 columns-1 gap-6 sm:columns-2 lg:columns-3">
+          {shown.map((w, i) => (
+            <motion.div key={w.slug} {...(reduce ? {} : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.5, delay: Math.min(i, 8) * 0.05, ease } })}>
+              <Link href={w.href} className="cp-card">
+                <div className={`cp-card-img ${aspects[i % aspects.length]}`}>
+                  <Image
+                    src={w.image}
+                    alt={w.title[lang]}
+                    fill
+                    unoptimized
+                    loading={i < 3 ? "eager" : "lazy"}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    style={{ objectFit: "cover", objectPosition: w.focus ?? "50% 50%" }}
+                  />
+                  <span className="cp-chip absolute left-3 top-3" data-cat={w.category}>
+                    {w.tag[lang]}
+                  </span>
+                  {w.figure && <span className="cp-badge">{w.figure}</span>}
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-extrabold leading-snug tracking-tight">{w.title[lang]}</h3>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.1em] text-[color:var(--cp-brick)]">{w.partner[lang]}</p>
+                  <p className="mt-3 text-sm leading-6 text-[color:var(--cp-ink-2)]">{w.blurb[lang]}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold">
+                    {w.cta[lang]}
+                    <ArrowUpRight className="h-4 w-4" />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ───── DIPERCAYA OLEH ───── */}
+      <section className="border-y-2 border-[color:var(--cp-ink)] bg-[color:var(--cp-paper-2)]/70">
+        <div className="cp-wrap py-14">
+          <p className="cp-eyebrow">{tx("Dipercaya & didukung oleh", "Trusted & supported by")}</p>
+          <ul className="mt-6 flex flex-wrap gap-3">
+            {["Bank Indonesia", "PT Bintan Industrial Estate", "Masarang Foundation", "Universitas Negeri Manado", "Kementerian Kebudayaan RI", "LPDP", "Dana Indonesiaraya", "Mataluntung Coffee & Culture", "SMA Negeri 1 Manado", "Galeri Investasi BEI FEB UNIMA"].map((n) => (
+              <li key={n} className="cp-partner">{n}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ───── KATALOG PRODUK ───── */}
+      <section id="katalog" className="scroll-mt-20 border-y-2 border-[color:var(--cp-ink)] bg-[color:var(--cp-leaf)]/25">
+        <div className="cp-wrap py-20 sm:py-24">
+          <motion.div {...reveal()} className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <span className="cp-eyebrow">{tx("Katalog produk", "Product catalog")}</span>
+              <h2 className="cp-h2 mt-4">{tx("Bisa dibawa pulang.", "Take it home.")}</h2>
+              <p className="cp-lead mt-4">{tx("Produk daur ulang dari studio kami — ganci, aksesori, hingga perlengkapan.", "Recycled products from our studio — keychains, accessories and more.")}</p>
+            </div>
+            <Link href="/products" className="cp-btn cp-btn--light self-start md:self-auto">
+              {tx("Lihat semua produk", "See all products")}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </motion.div>
+
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            {loading
+              ? Array.from({ length: 8 }, (_, i) => <div key={i} className="cp-skel aspect-[4/5]" />)
+              : products.map((p, i) => (
+                  <motion.div key={p.id} {...reveal(Math.min(i, 7) * 0.05)}>
+                    <Link href={`/products/${p.slug}`} className="cp-prod">
+                      <div className="relative aspect-square overflow-hidden border-b-2 border-[color:var(--cp-ink)] bg-[color:var(--cp-paper-2)]">
+                        <Image src={p.image_url} alt={p.title} fill unoptimized loading="lazy" sizes="(max-width: 1024px) 50vw, 25vw" style={{ objectFit: "cover" }} />
                       </div>
-                      <div className="p-4">
-                        <span className={`inline-block rounded-full border px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider ${categoryAccent[product.category] || categoryAccent.craft}`}>
-                          {product.category}
+                      <div className="p-3 sm:p-4">
+                        <span className="cp-chip" data-cat={p.category === "plastic" ? "produk" : p.category === "art" ? "budaya" : undefined}>
+                          {p.category}
                         </span>
-                        <h3 className="mt-2 text-sm font-semibold text-white transition-colors group-hover:text-brand-gold">
-                          {product.title}
-                        </h3>
-                        <p className="mt-1 line-clamp-2 text-xs text-zinc-400">
-                          {product.description}
-                        </p>
+                        <h3 className="mt-2 line-clamp-2 text-sm font-bold leading-snug">{p.title}</h3>
                       </div>
                     </Link>
                   </motion.div>
-                ))
+                ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───── KOLABORASI / PENUTUP ───── */}
+      <section id="kolaborasi" className="cp-wrap scroll-mt-20 py-20 sm:py-28">
+        <motion.div {...reveal()} className="relative overflow-hidden rounded-[2rem] border-2 border-[color:var(--cp-ink)] bg-[color:var(--cp-terra)] px-6 py-14 text-white shadow-[6px_6px_0_var(--cp-ink)] sm:px-14 sm:py-20">
+          <span className="cp-torn" style={{ "--c": "var(--cp-sun)", right: -50, top: -50, width: 220, height: 200 } as React.CSSProperties} aria-hidden="true" />
+          <span className="cp-torn" style={{ "--c": "var(--cp-leaf)", right: 120, bottom: -60, width: 200, height: 150 } as React.CSSProperties} aria-hidden="true" />
+          <div className="relative max-w-2xl">
+            <p className="cp-hand text-3xl">{tx("yuk bikin sesuatu bareng", "let's make something together")}</p>
+            <h2 className="cp-display mt-3 text-[clamp(2rem,5.4vw,4.2rem)]">{tx("Punya sampah, ide, atau acara?", "Got waste, an idea, or an event?")}</h2>
+            <p className="mt-6 max-w-xl text-base leading-7 text-white/95">
+              {tx(
+                "Piala, merchandise, produk custom, workshop, sampai project budaya — kita ubah jadi karya yang bercerita.",
+                "Trophies, merchandise, custom products, workshops, even cultural projects — we'll turn them into work that tells a story.",
               )}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3, ease: springEase }}
-              className="mt-10 text-center"
-            >
-              <Link
-                href="/products"
-                className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-brand-green/30 hover:text-white"
-              >
-                {t("creative.portfolioCta")}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* ───── SECTION 3B: PIALA AER TEMBAGA ───── */}
-        <section className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(0,118,200,0.06),transparent_60%)]" />
-
-          <div className="relative grid grid-cols-1 lg:grid-cols-2">
-            {/* Left: photo full-height */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: springEase }}
-              className="relative h-[50vh] lg:h-auto overflow-hidden"
-            >
-              <Image
-                src="https://zkotqpszynvfunhenysp.supabase.co/storage/v1/object/public/product-images/projects/piala-aer-tembaga/01_Hero_Final_Trophies.png"
-                alt="Piala Aer Tembaga dari material plastik daur ulang untuk Bank Indonesia"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent lg:bg-gradient-to-r lg:from-background/80 lg:via-background/20 lg:to-transparent" />
-            </motion.div>
-
-            {/* Right: content */}
-            <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 lg:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: springEase }}
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#0076C8]">
-                  PROJECT 2026
-                </p>
-                <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
-                  Piala Aer Tembaga
-                </h2>
-                <p className="mt-1.5 text-sm text-[#0076C8]/80">
-                  Bank Indonesia × Baciraro Creative
-                </p>
-                <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
-                  Turning recycled plastic into a symbol of achievement. Piala custom dari material tutup botol daur ulang untuk Bank Indonesia.
-                </p>
-                <p className="mt-3 text-xs text-[#0076C8]">
-                  2.078 gram plastik didaur ulang
-                </p>
-              </motion.div>
-
-              {/* Media thumbnail */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.15, ease: springEase }}
-                className="mt-8 grid grid-cols-2 gap-3"
-              >
-                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <Image
-                    src="https://zkotqpszynvfunhenysp.supabase.co/storage/v1/object/public/product-images/projects/piala-aer-tembaga/01_Hero_Final_Trophies.png"
-                    alt="Tiga piala Aer Tembaga final"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Final Objects</span>
-                  </div>
-                </div>
-                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <Image
-                    src="https://zkotqpszynvfunhenysp.supabase.co/storage/v1/object/public/product-images/projects/piala-aer-tembaga/08_Blue_Flakes_In_Hands.png"
-                    alt="Serpihan plastik biru sebagai bahan pembuatan piala"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Circular Material</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.25, ease: springEase }}
-                className="mt-6"
-              >
-                <Link
-                  href="/creative/projects/piala-aer-tembaga"
-                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-[#0076C8]/30 hover:text-white"
-                >
-                  View Case Study
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* ───── SECTION 3C: MATALUNTUNG ───── */}
-        <section className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(52,211,153,0.06),transparent_60%)]" />
-
-          <div className="relative grid grid-cols-1 lg:grid-cols-2">
-            {/* Left: photo full-height */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: springEase }}
-              className="relative h-[50vh] lg:h-auto overflow-hidden"
-            >
-              <Image
-                src={mataluntungImages.hero}
-                alt="Koleksi Mataluntung — ganci, coaster, dan asbak dari material plastik daur ulang"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent lg:bg-gradient-to-r lg:from-background/80 lg:via-background/20 lg:to-transparent" />
-            </motion.div>
-
-            {/* Right: content */}
-            <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 lg:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: springEase }}
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#34D399]">
-                  COLLABORATION 2026
-                </p>
-                <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
-                  Mataluntung
-                </h2>
-                <p className="mt-1.5 text-sm text-[#34D399]/80">
-                  Mataluntung × Baciraro Creative
-                </p>
-                <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
-                  Functional Objects, Recast Through Recycled Material. Tiga produk — ganci, coaster, dan asbak — dari material plastik daur ulang dengan karakter material sebagai identitas visual.
-                </p>
-              </motion.div>
-
-              {/* Media thumbnail */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.15, ease: springEase }}
-                className="mt-8 grid grid-cols-2 gap-3"
-              >
-                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <Image
-                    src={mataluntungImages.ashtrayCollection}
-                    alt="Koleksi asbak dalam berbagai bentuk dan warna"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Material Collection</span>
-                  </div>
-                </div>
-                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <Image
-                    src={mataluntungImages.threeObjectsLifestyle}
-                    alt="Tiga objek Mataluntung dalam konteks lifestyle"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Everyday Objects</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.25, ease: springEase }}
-                className="mt-6"
-              >
-                <Link
-                  href="/creative/projects/mataluntung"
-                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-[#34D399]/30 hover:text-white"
-                >
-                  View Case Study
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* ───── SECTION 3D: PENSIL 2026 PROJECT RECAP ───── */}
-        <section id="pensil-2026" className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(217,122,43,0.07),transparent_60%)]" />
-
-          <div className="relative grid grid-cols-1 lg:grid-cols-2">
-            {/* Left: portrait poster, kept uncropped */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: springEase }}
-              className="relative flex min-h-[460px] items-center justify-center overflow-hidden px-6 py-12 lg:min-h-[620px] lg:px-10 lg:py-16"
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(217,122,43,0.1),transparent_65%)]" />
-              <div className="relative aspect-[4/5] w-full max-w-[360px] overflow-hidden rounded-2xl border border-white/[0.09] bg-black/40">
-                <Image
-                  src={pensilImages.handover}
-                  alt={t("pensil2026.photoAlts.handover")}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 80vw, 30vw"
-                />
-              </div>
-            </motion.div>
-
-            {/* Right: content */}
-            <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 lg:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: springEase }}
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand-orange">
-                  {t("pensil2026.eyebrow")}
-                </p>
-                <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
-                  {t("pensil2026.title")}
-                </h2>
-                <p className="mt-1.5 text-sm text-brand-orange/80">
-                  {t("pensil2026.partner")}
-                </p>
-                <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
-                  {t("pensil2026.teaserDescription")}
-                </p>
-                <p className="mt-3 text-xs text-brand-orange">
-                  {t("pensil2026.teaserImpact")}
-                </p>
-              </motion.div>
-
-              {/* Media thumbnails */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.15, ease: springEase }}
-                className="mt-8 grid grid-cols-2 gap-3"
-              >
-                <figure>
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                    <Image
-                      src={pensilImages.design}
-                      alt={t("pensil2026.photoAlts.design")}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 45vw, 20vw"
-                    />
-                  </div>
-                  <figcaption className="mt-2 text-[10px] font-bold uppercase tracking-wider text-white/60">
-                    {t("pensil2026.photoCaptions.design")}
-                  </figcaption>
-                </figure>
-                <figure>
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                    <Image
-                      src={pensilImages.weighing}
-                      alt={t("pensil2026.photoAlts.weighing")}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 45vw, 20vw"
-                    />
-                  </div>
-                  <figcaption className="mt-2 text-[10px] font-bold uppercase tracking-wider text-white/60">
-                    {t("pensil2026.photoCaptions.weighing")}
-                  </figcaption>
-                </figure>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.25, ease: springEase }}
-                className="mt-6"
-              >
-                <Link
-                  href="/creative/projects/pensil-2026"
-                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-brand-orange/30 hover:text-white"
-                >
-                  {t("pensil2026.teaserCta")}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* ───── SECTION 3E: PLASTIC WASTE BIN PROJECT RECAP ───── */}
-        <section id="plastic-waste-bin" className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(56,189,248,0.07),transparent_60%)]" />
-
-          <div className="relative grid grid-cols-1 lg:grid-cols-2">
-            {/* Left: portrait poster, kept uncropped */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: springEase }}
-              className="relative flex min-h-[460px] items-center justify-center overflow-hidden px-6 py-12 lg:min-h-[620px] lg:px-10 lg:py-16"
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(56,189,248,0.1),transparent_65%)]" />
-              <div className="relative aspect-[4/5] w-full max-w-[360px] overflow-hidden rounded-2xl border border-white/[0.09] bg-black/40">
-                <Image
-                  src={plasticWasteBinImages.prototype}
-                  alt={t("plasticWasteBin.photoAlts.prototype")}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 80vw, 30vw"
-                />
-              </div>
-            </motion.div>
-
-            {/* Right: content */}
-            <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 lg:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: springEase }}
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-sky-400">
-                  {t("plasticWasteBin.eyebrow")}
-                </p>
-                <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
-                  {t("plasticWasteBin.title")}
-                </h2>
-                <p className="mt-1.5 text-sm text-sky-400/80">
-                  {t("plasticWasteBin.category")}
-                </p>
-                <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
-                  {t("plasticWasteBin.teaserDescription")}
-                </p>
-                <p className="mt-3 text-xs text-sky-400">
-                  {t("plasticWasteBin.teaserMaterial")}
-                </p>
-              </motion.div>
-
-              {/* Media thumbnails */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.15, ease: springEase }}
-                className="mt-8 grid grid-cols-2 gap-3"
-              >
-                <figure>
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                    <Image
-                      src={plasticWasteBinImages.team}
-                      alt={t("plasticWasteBin.photoAlts.team")}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 45vw, 20vw"
-                    />
-                  </div>
-                  <figcaption className="mt-2 text-[10px] font-bold uppercase tracking-wider text-white/60">
-                    {t("plasticWasteBin.photoCaptions.team")}
-                  </figcaption>
-                </figure>
-                <figure>
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                    <Image
-                      src={plasticWasteBinImages.lid}
-                      alt={t("plasticWasteBin.photoAlts.lid")}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 45vw, 20vw"
-                    />
-                  </div>
-                  <figcaption className="mt-2 text-[10px] font-bold uppercase tracking-wider text-white/60">
-                    {t("plasticWasteBin.photoCaptions.lid")}
-                  </figcaption>
-                </figure>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.25, ease: springEase }}
-                className="mt-6"
-              >
-                <Link
-                  href="/creative/projects/plastic-waste-bin"
-                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-sky-400/30 hover:text-white"
-                >
-                  {t("plasticWasteBin.teaserCta")}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* ───── SECTION 4: DIALOG BUDAYA RECAP ───── */}
-        <section id="dialog-budaya" className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(196,74,58,0.06),transparent_60%)]" />
-
-          <div className="relative grid grid-cols-1 lg:grid-cols-2">
-            {/* Left: photo full-height */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: springEase }}
-              className="relative h-[50vh] lg:h-auto overflow-hidden"
-            >
-              <Image
-                src="/Dialog Budaya/foto bersama dengan narasumber.webp"
-                alt=""
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent lg:bg-gradient-to-r lg:from-background/80 lg:via-background/20 lg:to-transparent" />
-            </motion.div>
-
-            {/* Right: content */}
-            <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 lg:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: springEase }}
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold">
-                  {t("dialogBudaya.label")}
-                </p>
-                <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
-                  {t("dialogBudaya.title")}
-                </h2>
-                <p className="mt-1.5 text-sm text-brand-gold/80">
-                  {t("dialogBudaya.date")}
-                </p>
-                <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
-                  {t("dialogBudaya.description")}
-                </p>
-              </motion.div>
-
-              {/* Media thumbnails row */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.15, ease: springEase }}
-                className="mt-8 grid grid-cols-2 gap-3"
-              >
-                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <Image
-                    src="/Dialog Budaya/foto bersama dengan narasumber.webp"
-                    alt=""
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">{t("dialogBudaya.detail.registrasiTitle")}</span>
-                  </div>
-                </div>
-                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <Image
-                    src="/Dialog Budaya/foto bersama dengan narasumber 2.webp"
-                    alt=""
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">{t("dialogBudaya.detail.pidatoTitle")}</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.25, ease: springEase }}
-                className="mt-6"
-              >
-                <Link
-                  href="/creative/dialog-budaya"
-                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-brand-gold/30 hover:text-white"
-                >
-                  {t("dialogBudaya.cta")}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* ───── SECTION 5: LOKAWAYA RECAP ───── */}
-        <section className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(242,212,121,0.06),transparent_60%)]" />
-
-          <div className="relative grid grid-cols-1 lg:grid-cols-2">
-            {/* Left: photo full-height */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: springEase }}
-              className="relative h-[50vh] lg:h-auto overflow-hidden"
-            >
-              <Image
-                src="/Lokawaya/proses pembuatan keychain anak dari USA.png"
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent lg:bg-gradient-to-r lg:from-background/80 lg:via-background/20 lg:to-transparent" />
-            </motion.div>
-
-            {/* Right: content */}
-            <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-14 lg:py-20">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: springEase }}
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold">
-                  {t("lokawaya.label")}
-                </p>
-                <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
-                  {t("lokawaya.title")}
-                </h2>
-                <p className="mt-1.5 text-sm text-brand-gold/80">
-                  {t("lokawaya.date")}
-                </p>
-                <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
-                  {t("lokawaya.description")}
-                </p>
-              </motion.div>
-
-              {/* Video thumbnails row */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.15, ease: springEase }}
-                className="mt-8 grid grid-cols-2 gap-3"
-              >
-                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <Image
-                    src="/Lokawaya/kondisi booth baciraro creative.png"
-                    alt=""
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Booth</span>
-                  </div>
-                </div>
-                <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.07] bg-black/40">
-                  <Image
-                    src="/Lokawaya/kunjungan dari turis asing.png"
-                    alt=""
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-transparent to-transparent p-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-white/80">Kunjungan</span>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.25, ease: springEase }}
-                className="mt-6"
-              >
-                <Link
-                  href="/creative/lokawaya"
-                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-brand-gold/30 hover:text-white"
-                >
-                  {t("lokawaya.cta")}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* ───── SECTION 6: FOOTER SIGNATURE ───── */}
-        <footer className="relative border-t border-white/5 px-4 py-16 text-center">
-          <div className="mx-auto max-w-md">
-            <Image
-              src="/Logo Baciraro Creative.png"
-              alt={t("creative.heroLogoAlt")}
-              width={100}
-              height={34}
-              className="mx-auto mb-4 h-auto w-24 object-contain opacity-60"
-            />
-            <p className="text-xs text-zinc-500">
-              {t("creative.footerTagline")}
             </p>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Link href="/contact" className="cp-btn cp-btn--light">
+                {tx("Ajak kolaborasi", "Start a project")}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a href={IG} target="_blank" rel="noopener noreferrer" className="cp-btn cp-btn--light" style={{ background: "transparent", color: "#fff", borderColor: "#fff", boxShadow: "3px 3px 0 var(--cp-ink)" }}>
+                <AtSign className="h-4 w-4" />
+                @baciraro_creative
+              </a>
+            </div>
           </div>
-        </footer>
+        </motion.div>
+      </section>
 
-      </div>
+      <footer className="border-t-2 border-[color:var(--cp-ink)] py-10 text-center">
+        <p className="cp-display text-sm tracking-[0.2em]">Recycle • Create • Collaborate</p>
+        <p className="mt-2 text-xs text-[color:var(--cp-ink-2)]">
+          {tx("Baciraro Creative — bagian dari ekosistem", "Baciraro Creative — part of the")} <Link href="/" className="font-bold underline">Baciraro</Link>
+          {lang === "en" ? " ecosystem" : ""}
+        </p>
+      </footer>
     </main>
   );
 }
