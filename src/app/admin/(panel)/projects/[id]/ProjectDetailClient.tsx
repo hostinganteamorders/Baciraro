@@ -38,9 +38,9 @@ type Props = {
 };
 
 const inputCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/25 focus:border-[#D97A2B] focus:ring-2 focus:ring-[#D97A2B]/20 outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white placeholder:text-white/25 focus:border-accent-2 focus:ring-2 focus:ring-accent-2/20 outline-none transition";
 const selectCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white focus:border-[#D97A2B] focus:ring-2 focus:ring-[#D97A2B]/20 outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white focus:border-accent-2 focus:ring-2 focus:ring-accent-2/20 outline-none transition";
 
 export default function ProjectDetailClient({
   project: initialProject,
@@ -252,7 +252,7 @@ export default function ProjectDetailClient({
       <div className="mb-8">
         <button
           onClick={() => router.push("/admin/projects")}
-          className="text-sm text-white/50 hover:text-[#E9A64E] transition flex items-center gap-1 mb-3"
+          className="text-sm text-white/50 hover:text-accent-2 transition flex items-center gap-1 mb-3"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -303,7 +303,7 @@ export default function ProjectDetailClient({
       )}
 
       {editing && isAdmin && (
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-6 mb-6 space-y-4">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-6 mb-6 space-y-4">
           <h2 className="font-semibold text-white">Edit Project</h2>
           <div>
             <label className="block text-sm font-medium text-white/70 mb-1">Nama Project</label>
@@ -333,7 +333,7 @@ export default function ProjectDetailClient({
           </div>
           <div className="flex gap-3">
             <button onClick={saveProject} disabled={loading}
-              className="px-5 py-2.5 rounded-lg bg-[#D97A2B] text-white font-semibold hover:opacity-90 transition disabled:opacity-50">
+              className="px-5 py-2.5 rounded-lg bg-accent-2 text-white font-semibold hover:opacity-90 transition disabled:opacity-50">
               {loading ? "Menyimpan..." : "Simpan Perubahan"}
             </button>
             <button onClick={deleteProject}
@@ -344,12 +344,12 @@ export default function ProjectDetailClient({
         </div>
       )}
 
-      <div className="bg-[#151515] rounded-xl border border-white/10 p-6 mb-6">
+      <div className="bg-surface-2 rounded-xl border border-white/10 p-6 mb-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold text-white">Anggota & Kontribusi</h2>
           {isAdmin && (
             <button onClick={() => setAddingMember(!addingMember)}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-[#D97A2B]/40 text-[#E9A64E] text-sm font-medium hover:bg-[#D97A2B]/10 transition">
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-accent-2/40 text-accent-2 text-sm font-medium hover:bg-accent-2/10 transition">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
               </svg>
@@ -359,13 +359,13 @@ export default function ProjectDetailClient({
         </div>
 
         {addingMember && isAdmin && (
-          <div className="mb-4 p-4 bg-[#D97A2B]/5 rounded-lg">
+          <div className="mb-4 p-4 bg-accent-2/5 rounded-lg">
             <div className="flex gap-2 mb-3">
               <button
                 type="button"
                 onClick={() => setAddType("member")}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition ${
-                  addType === "member" ? "bg-[#D97A2B] text-white" : "border border-white/15 text-white/60 hover:bg-white/5"
+                  addType === "member" ? "bg-accent-2 text-white" : "border border-white/15 text-white/60 hover:bg-white/5"
                 }`}
               >
                 Anggota
@@ -374,7 +374,7 @@ export default function ProjectDetailClient({
                 type="button"
                 onClick={() => setAddType("external")}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition ${
-                  addType === "external" ? "bg-[#D97A2B] text-white" : "border border-white/15 text-white/60 hover:bg-white/5"
+                  addType === "external" ? "bg-accent-2 text-white" : "border border-white/15 text-white/60 hover:bg-white/5"
                 }`}
               >
                 Orang Luar
@@ -399,14 +399,14 @@ export default function ProjectDetailClient({
               )}
               <div className="flex items-center gap-2">
                 <input type="number" min="0" max="100" value={newPercent} onChange={(e) => setNewPercent(e.target.value)}
-                  placeholder="%" className="w-24 px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/25 focus:border-[#D97A2B] outline-none transition" />
+                  placeholder="%" className="w-24 px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white placeholder:text-white/25 focus:border-accent-2 outline-none transition" />
                 <span className="text-white/50">%</span>
               </div>
               <input type="number" min="0" value={newAmount} onChange={(e) => setNewAmount(e.target.value)}
                 placeholder="Nominal (opsional)" className={inputCls + " flex-1"} />
               <input type="text" value={newTugas} onChange={(e) => setNewTugas(e.target.value)}
                 placeholder="Tugas / peran..." className={inputCls + " flex-1"} />
-              <button onClick={addMemberRow} className="px-4 py-2.5 rounded-lg bg-[#D97A2B] text-white text-sm font-semibold hover:opacity-90 transition">
+              <button onClick={addMemberRow} className="px-4 py-2.5 rounded-lg bg-accent-2 text-white text-sm font-semibold hover:opacity-90 transition">
                 Tambah
               </button>
             </div>
@@ -427,7 +427,7 @@ export default function ProjectDetailClient({
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={m.avatar_url} alt={m.name} className="w-10 h-10 rounded-full object-cover shrink-0" />
                   ) : (
-                    <div className="w-10 h-10 rounded-full bg-[#D97A2B]/20 text-[#E9A64E] flex items-center justify-center text-xs font-semibold shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-accent-2/20 text-accent-2 flex items-center justify-center text-xs font-semibold shrink-0">
                       {m.name.slice(0, 2).toUpperCase()}
                     </div>
                   )}
@@ -449,7 +449,7 @@ export default function ProjectDetailClient({
                             if (e.key === "Escape") setEditingTugas(null);
                           }}
                           placeholder="Tugas / peran di project..."
-                          className="w-full max-w-xs px-2 py-1 text-xs rounded border border-white/10 bg-[#0d0d0d] text-white focus:border-[#D97A2B] outline-none"
+                          className="w-full max-w-xs px-2 py-1 text-xs rounded border border-white/10 bg-surface text-white focus:border-accent-2 outline-none"
                         />
                         <button onClick={() => saveTugas(m.pm_id)} className="p-1 text-emerald-400 hover:bg-emerald-500/10 rounded" aria-label="Simpan">
                           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -464,7 +464,7 @@ export default function ProjectDetailClient({
                       </div>
                     ) : (
                       m.tugas && (
-                        <p className="text-xs text-[#E9A64E] mt-1 flex items-center gap-1">
+                        <p className="text-xs text-accent-2 mt-1 flex items-center gap-1">
                           <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                           </svg>
@@ -475,7 +475,7 @@ export default function ProjectDetailClient({
                   </div>
                   <div className="w-32 hidden md:block">
                     <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] rounded-full"
+                      <div className="h-full bg-gradient-to-r from-accent to-accent-2 rounded-full"
                         style={{ width: `${m.contribution_percent}%` }} />
                     </div>
                   </div>
@@ -487,7 +487,7 @@ export default function ProjectDetailClient({
                     <>
                       <button
                         onClick={() => setEditingTugas(editingTugas?.pm_id === m.pm_id ? null : { pm_id: m.pm_id, value: m.tugas ?? "" })}
-                        className="p-1.5 text-white/30 hover:text-[#E9A64E] transition" aria-label="Edit tugas"
+                        className="p-1.5 text-white/30 hover:text-accent-2 transition" aria-label="Edit tugas"
                       >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -510,7 +510,7 @@ export default function ProjectDetailClient({
         {members.length > 0 && (
           <div
             className={`mt-4 flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium ${
-              dist.totalPercent === 100 ? "bg-emerald-500/10 text-emerald-400" : "bg-[#D97A2B]/10 text-[#E9A64E]"
+              dist.totalPercent === 100 ? "bg-emerald-500/10 text-emerald-400" : "bg-accent-2/10 text-accent-2"
             }`}
           >
             <span>Total kontribusi</span>

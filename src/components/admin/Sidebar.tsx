@@ -154,7 +154,7 @@ export default function Sidebar({ name, role, isAdmin, avatarUrl }: SidebarProps
       {/* Mobile hamburger */}
       <button
         onClick={() => setMobileOpen(true)}
-        className="md:hidden fixed top-4 left-4 z-50 p-2.5 rounded-lg bg-[#111111] border border-white/10 text-white/70 hover:text-white transition"
+        className="md:hidden fixed top-4 left-4 z-50 p-2.5 rounded-lg bg-surface-2 border border-white/10 text-white/70 hover:text-white transition"
         aria-label="Buka menu"
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,7 +173,7 @@ export default function Sidebar({ name, role, isAdmin, avatarUrl }: SidebarProps
       {/* Sidebar */}
       <aside
         className={cn(
-          "w-64 shrink-0 bg-[#111111] border-r border-white/10 text-white flex flex-col min-h-screen sticky top-0 transition-transform duration-300 z-50",
+          "w-64 shrink-0 bg-surface-2 border-r border-white/10 text-white flex flex-col min-h-screen sticky top-0 transition-transform duration-300 z-50",
           "max-md:fixed max-md:inset-y-0 max-md:left-0",
           mobileOpen ? "max-md:translate-x-0" : "max-md:-translate-x-full"
         )}
@@ -181,7 +181,7 @@ export default function Sidebar({ name, role, isAdmin, avatarUrl }: SidebarProps
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C44A3A] to-[#D97A2B] flex items-center justify-center font-bold text-lg">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent-2 flex items-center justify-center font-bold text-lg">
                 B
               </div>
               <div>
@@ -214,7 +214,7 @@ export default function Sidebar({ name, role, isAdmin, avatarUrl }: SidebarProps
                 className={cn(
                   "flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition",
                   active
-                    ? "bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white shadow-lg shadow-orange-500/20"
+                    ? "bg-gradient-to-r from-accent to-accent-2 text-white shadow-lg shadow-orange-500/20"
                     : "text-white/60 hover:bg-white/5 hover:text-white"
                 )}
               >

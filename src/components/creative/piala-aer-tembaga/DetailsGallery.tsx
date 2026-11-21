@@ -44,7 +44,7 @@ export default function DetailsGallery() {
           transition={{ duration: 0.7, ease: springEase }}
           className="mb-12"
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/70">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-mute/70">
             GALLERY
           </p>
           <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white">
@@ -70,9 +70,9 @@ export default function DetailsGallery() {
                 className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div className="absolute bottom-3 left-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]/80">
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground/80">
                   {item.caption}
                 </span>
               </div>

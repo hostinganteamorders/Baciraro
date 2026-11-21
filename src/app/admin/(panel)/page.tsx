@@ -70,7 +70,7 @@ export default async function AdminDashboardPage() {
     .map((s) => ({
       name: s === "active" ? "Aktif" : s === "completed" ? "Selesai" : "Dibayar",
       value: allProjects.filter((p: any) => p.status === s).length,
-      color: s === "active" ? "#60A5FA" : s === "completed" ? "#34D399" : "#10B981",
+      color: s === "active" ? "#60A5FA" : s === "completed" ? "var(--accent)" : "var(--accent)",
     }))
     .filter((s) => s.value > 0);
 

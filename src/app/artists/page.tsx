@@ -64,8 +64,7 @@ export default function ArtistsPage() {
   }, [products]);
 
   return (
-    <main className="relative min-h-screen text-[#fafafa] overflow-hidden">
-      <div aria-hidden="true" className="page-bg" />
+    <main className="relative min-h-screen text-foreground overflow-hidden">
       <div className="relative z-[1]">
         <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
         <Header subtitle={t("artists.title")} />
@@ -115,7 +114,7 @@ export default function ArtistsPage() {
                       <div className="min-w-0">
                         <h3 className="font-serif text-[19px] leading-snug text-white">{name}</h3>
                         {artist.role && (
-                          <span className="mt-1.5 inline-block rounded-full border border-[#f2d479]/20 bg-[#f2d479]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f2d479]">
+                          <span className="mt-1.5 inline-block rounded-full border border-accent-2/20 bg-accent-2/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-accent-2">
                             {artist.role}
                           </span>
                         )}

@@ -35,7 +35,7 @@ export function InteractiveRegionMap() {
         <div className="aspect-[4/3] w-full relative">
           {/* Connecting lines */}
           <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <g stroke="rgba(16,185,129,0.15)" strokeWidth="0.4">
+            <g stroke="rgb(var(--accent-rgb)/0.15)" strokeWidth="0.4">
               <path d="M48 70 C 55 62, 60 52, 62 42" fill="none" />
               <path d="M62 42 C 66 46, 70 50, 72 52" fill="none" />
               <path d="M72 52 C 78 55, 84 58, 88 62" fill="none" />
@@ -59,7 +59,7 @@ export function InteractiveRegionMap() {
                 <span
                   className={`relative flex items-center justify-center rounded-full border transition-all duration-300 ${
                     isActive
-                      ? "h-12 w-12 border-emerald-400/60 bg-emerald-500/20 text-emerald-300 shadow-[0_0_24px_rgba(16,185,129,0.35)]"
+                      ? "h-12 w-12 border-emerald-400/60 bg-emerald-500/20 text-emerald-300 shadow-[0_0_24px_rgb(var(--accent-rgb)/0.35)]"
                       : "h-8 w-8 border-white/10 bg-zinc-900/80 text-zinc-500 hover:border-emerald-500/40 hover:text-emerald-400"
                   }`}
                 >

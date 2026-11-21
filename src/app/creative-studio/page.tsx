@@ -304,8 +304,7 @@ export default function CreativeStudioPage() {
 
   if (mode === "gate") {
     return (
-      <main className="relative min-h-screen text-[#fafafa] overflow-hidden">
-        <div aria-hidden="true" className="page-bg" />
+      <main className="relative min-h-screen text-foreground overflow-hidden">
         <div className="relative z-[1]">
         <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
         <Header subtitle={t("creativeStudio.gateTitle")} />
@@ -340,7 +339,7 @@ export default function CreativeStudioPage() {
                 <motion.form initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} onSubmit={handleLogin} className="mt-8 w-full max-w-[380px] rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur p-6 space-y-4">
                   <input value={loginUsername} onChange={e => setLoginUsername(e.target.value)} placeholder={t("creativeStudio.username")} className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-emerald-500/40 transition-colors" />
                   <input value={loginPassword} onChange={e => setLoginPassword(e.target.value)} type="password" placeholder={t("creativeStudio.password")} className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-emerald-500/40 transition-colors" />
-                  {loginError && <p className="text-xs text-[#f87171]">{loginError}</p>}
+                  {loginError && <p className="text-xs text-accent">{loginError}</p>}
                   <button type="submit" className="w-full rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black py-3 text-sm font-bold tracking-wider uppercase transition-all">{t("creativeStudio.loginButton")}</button>
                 </motion.form>
               )}
@@ -372,8 +371,7 @@ export default function CreativeStudioPage() {
   };
 
   return (
-    <main className="relative min-h-screen text-[#fafafa] overflow-hidden">
-      <div aria-hidden="true" className="page-bg" />
+    <main className="relative min-h-screen text-foreground overflow-hidden">
       <div className="relative z-[1]">
       <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
       <Header subtitle={t("creativeStudio.gateTitle")} />
@@ -393,14 +391,14 @@ export default function CreativeStudioPage() {
                   <QrCode className="h-3 w-3" />
                   {t("creativeStudio.qrDashboard")}
                 </Link>
-                <button onClick={handleLogout} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-zinc-400 hover:text-[#f87171] transition-all">
+                <button onClick={handleLogout} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-zinc-400 hover:text-accent transition-all">
                   <LogOut className="h-3 w-3" />
                   {t("creativeStudio.logout")}
                 </button>
               </>
             )}
             {!isAdmin && (
-              <button onClick={handleLogout} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-zinc-400 hover:text-[#f87171] transition-all">
+              <button onClick={handleLogout} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-zinc-400 hover:text-accent transition-all">
                 {t("creativeStudio.kembali")}
               </button>
             )}
@@ -412,7 +410,7 @@ export default function CreativeStudioPage() {
           <div className="flex items-center justify-between mb-6">
             <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-emerald-400">{t("creativeStudio.dampakTerukur")}</p>
             {isAdmin && (
-              <button onClick={handleEditStats} className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] font-semibold uppercase tracking-wider text-zinc-400 hover:text-[#f87171] transition-all">
+              <button onClick={handleEditStats} className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] font-semibold uppercase tracking-wider text-zinc-400 hover:text-accent transition-all">
                 <Pencil className="h-3 w-3" />
                 {t("creativeStudio.editData")}
               </button>
@@ -426,12 +424,12 @@ export default function CreativeStudioPage() {
             ].map((item) => (
               <div key={item.label} className="rounded-[20px] border border-white/[0.07] bg-white/[0.02] backdrop-blur p-6 transition-all hover:border-white/[0.12]">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className={`h-10 w-10 rounded-full flex items-center justify-center ${item.color === "emerald" ? "bg-emerald-500/10 text-emerald-400" : "bg-[#f87171]/10 text-[#f87171]"}`}>
+                  <div className={`h-10 w-10 rounded-full flex items-center justify-center ${item.color === "emerald" ? "bg-emerald-500/10 text-emerald-400" : "bg-accent/10 text-accent"}`}>
                     <item.icon className="h-5 w-5" />
                   </div>
                   <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">{item.label}</p>
                 </div>
-                <p className={`font-serif text-[32px] font-normal leading-tight ${item.color === "emerald" ? "text-emerald-400" : "text-[#f87171]"}`}>{item.value}</p>
+                <p className={`font-serif text-[32px] font-normal leading-tight ${item.color === "emerald" ? "text-emerald-400" : "text-accent"}`}>{item.value}</p>
               </div>
             ))}
           </div>
@@ -443,7 +441,7 @@ export default function CreativeStudioPage() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {showcaseProducts.map((product, i) => (
               <div key={i} className="group rounded-[20px] border border-white/[0.07] bg-white/[0.02] backdrop-blur p-6 transition-all duration-300 hover:border-white/[0.12] hover:-translate-y-0.5">
-                <div className={`h-12 w-12 rounded-full flex items-center justify-center mb-4 ${product.color === "emerald" ? "bg-emerald-500/10 text-emerald-400" : "bg-[#f87171]/10 text-[#f87171]"}`}>
+                <div className={`h-12 w-12 rounded-full flex items-center justify-center mb-4 ${product.color === "emerald" ? "bg-emerald-500/10 text-emerald-400" : "bg-accent/10 text-accent"}`}>
                   <product.icon className="h-6 w-6" />
                 </div>
                 <p className="text-[9px] font-bold uppercase tracking-wider text-zinc-500 mb-1">{t("creativeStudio.showcase." + i + ".label")}</p>
@@ -472,7 +470,7 @@ export default function CreativeStudioPage() {
                 <div className="rounded-[20px] border border-white/[0.07] bg-white/[0.02] backdrop-blur p-6 space-y-4">
                   <div className="flex items-center justify-between">
                     <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">{editingBucket ? t("creativeStudio.editEmber") : t("creativeStudio.tambahEmberBaru")}</p>
-                    <button type="button" onClick={() => { setShowForm(false); setEditingBucket(null); }} className="text-zinc-500 hover:text-[#f87171] transition-colors"><X className="h-4 w-4" /></button>
+                    <button type="button" onClick={() => { setShowForm(false); setEditingBucket(null); }} className="text-zinc-500 hover:text-accent transition-colors"><X className="h-4 w-4" /></button>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <input value={form.code} onChange={e => setForm({ ...form, code: e.target.value })} placeholder={t("creativeStudio.kodeEmber")} required className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-emerald-500/40" />
@@ -529,7 +527,7 @@ export default function CreativeStudioPage() {
                       {isAdmin && (
                         <div className="flex gap-2 ml-auto">
                           <button onClick={() => handleEdit(bucket)} className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-400 hover:text-emerald-400 transition-all"><Pencil className="h-3 w-3" /></button>
-                          <button onClick={() => handleDelete(bucket.id)} className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-400 hover:text-[#f87171] transition-all"><X className="h-3 w-3" /></button>
+                          <button onClick={() => handleDelete(bucket.id)} className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-400 hover:text-accent transition-all"><X className="h-3 w-3" /></button>
                         </div>
                       )}
                     </div>
@@ -560,7 +558,7 @@ export default function CreativeStudioPage() {
                 <div className="rounded-[20px] border border-white/[0.07] bg-white/[0.02] backdrop-blur p-6 space-y-4">
                   <div className="flex items-center justify-between">
                     <p className="text-xs font-semibold uppercase tracking-wider text-zinc-400">{editingProduct ? t("creativeStudio.editProduk") : t("creativeStudio.tambahProdukBaru")}</p>
-                    <button type="button" onClick={() => { setShowProductForm(false); setEditingProduct(null); }} className="text-zinc-500 hover:text-[#f87171] transition-colors"><X className="h-4 w-4" /></button>
+                    <button type="button" onClick={() => { setShowProductForm(false); setEditingProduct(null); }} className="text-zinc-500 hover:text-accent transition-colors"><X className="h-4 w-4" /></button>
                   </div>
 
                   <div className="grid gap-4 sm:grid-cols-2">
@@ -624,7 +622,7 @@ export default function CreativeStudioPage() {
                             <option value="meter">{t("creativeStudio.satuanMeter")}</option>
                             <option value="buah">{t("creativeStudio.satuanBuah")}</option>
                           </select>
-                          <button type="button" onClick={() => handleRemoveMaterial(i)} className="text-zinc-500 hover:text-[#f87171] transition-colors"><X className="h-4 w-4" /></button>
+                          <button type="button" onClick={() => handleRemoveMaterial(i)} className="text-zinc-500 hover:text-accent transition-colors"><X className="h-4 w-4" /></button>
                         </div>
                       ))}
                     </div>
@@ -641,7 +639,7 @@ export default function CreativeStudioPage() {
                         <div key={i} className="rounded-xl border border-white/10 bg-white/[0.02] p-4 space-y-2">
                           <div className="flex items-center justify-between">
                             <p className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">{t("creativeStudio.seniman")} #{i + 1}</p>
-                            <button type="button" onClick={() => handleRemoveArtist(i)} className="text-zinc-500 hover:text-[#f87171] transition-colors"><X className="h-4 w-4" /></button>
+                            <button type="button" onClick={() => handleRemoveArtist(i)} className="text-zinc-500 hover:text-accent transition-colors"><X className="h-4 w-4" /></button>
                           </div>
                           <div className="grid gap-2 sm:grid-cols-2">
                             <input value={artist.name} onChange={e => handleArtistChange(i, "name", e.target.value)} placeholder={t("creativeStudio.namaSeniman")} className="rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-emerald-500/40" />
@@ -708,7 +706,7 @@ export default function CreativeStudioPage() {
                             names = (JSON.parse(artists || "[]") as { name?: string }[]).map((a) => a.name).filter((n): n is string => Boolean(n));
                           } catch {}
                           return names.length > 0 ? (
-                            <p className="mt-1 text-[10px] text-[#f2d479] truncate">
+                            <p className="mt-1 text-[10px] text-accent-2 truncate">
                               {names.join(", ")}
                             </p>
                           ) : null;
@@ -722,7 +720,7 @@ export default function CreativeStudioPage() {
                       {isAdmin && (
                         <>
                           <button onClick={() => handleEditProduct(product)} className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-400 hover:text-emerald-400 transition-all"><Pencil className="h-3 w-3" /></button>
-                          <button onClick={() => handleDeleteProduct(product.slug)} className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-400 hover:text-[#f87171] transition-all"><X className="h-3 w-3" /></button>
+                          <button onClick={() => handleDeleteProduct(product.slug)} className="rounded-full border border-white/10 bg-white/5 p-2 text-zinc-400 hover:text-accent transition-all"><X className="h-3 w-3" /></button>
                         </>
                       )}
                     </div>

@@ -5,8 +5,8 @@ import { useLanguage } from "@/lib/i18n/context";
 import { motion } from "framer-motion";
 import { Package, Users, Sprout, Cpu, Recycle, Building2 } from "lucide-react";
 
-const TERRACOTTA = "#D4785C";
-const EMERALD = "#10B981";
+const TERRACOTTA = "var(--accent)";
+const EMERALD = "var(--accent)";
 
 const METRICS = [
   { value: 1200, suffix: "+", labelKey: "sampah", unit: "ton", icon: Package, color: EMERALD, percent: 85 },
@@ -79,7 +79,7 @@ export default function ImpactSection() {
 
   return (
     <section ref={sectionRef} id="impact" className="relative z-10 py-20 lg:py-24 overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.04),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_left,rgb(var(--accent-rgb)/0.04),transparent_60%)]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div

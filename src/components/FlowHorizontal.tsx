@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { MapPin, Users, Package, Recycle, Sprout, Cpu, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 
-const TERRACOTTA = "#D4785C";
+const TERRACOTTA = "var(--accent)";
 
 const STEPS = [
   { number: "01", icon: MapPin },
@@ -48,7 +48,7 @@ export default function FlowHorizontal() {
 
   return (
     <section id="flow" className="relative z-10 py-20 lg:py-24 overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_40%,rgba(212,120,92,0.03),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_40%,rgb(var(--accent-rgb)/0.03),transparent_70%)]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-10">
         <motion.p
@@ -57,7 +57,7 @@ export default function FlowHorizontal() {
           viewport={{ once: true }}
           className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-zinc-400 backdrop-blur shadow-lg"
         >
-          <span className="h-2 w-2 rounded-full bg-[#D4785C] animate-pulse" />
+          <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
           {t("flowHorizontal.label")}
         </motion.p>
         <motion.h2
@@ -68,7 +68,7 @@ export default function FlowHorizontal() {
           className="mt-4 text-3xl font-normal leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-5xl max-w-2xl"
         >
           {t("flowHorizontal.title")}{" "}
-          <span className="font-serif italic text-[#D4785C]">{t("flowHorizontal.titleItalic")}</span>
+          <span className="font-serif italic text-accent">{t("flowHorizontal.titleItalic")}</span>
         </motion.h2>
       </div>
 
@@ -88,7 +88,7 @@ export default function FlowHorizontal() {
         </div>
         <div className="flex justify-between mt-2">
           {STEPS.map((s, i) => (
-            <span key={s.number} className={`text-[9px] font-semibold uppercase tracking-wider transition-colors ${i === activeIndex ? "text-[#D4785C]" : "text-zinc-600"}`}>
+            <span key={s.number} className={`text-[9px] font-semibold uppercase tracking-wider transition-colors ${i === activeIndex ? "text-accent" : "text-zinc-600"}`}>
               {s.number}
             </span>
           ))}
@@ -112,11 +112,11 @@ export default function FlowHorizontal() {
                 className="rounded-[2rem] border border-white/5 bg-black/30 p-8 md:p-10 shadow-xl backdrop-blur-sm"
               >
                 <div className="flex items-start gap-6">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#D4785C]/10 text-[#D4785C]">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-accent/10 text-accent">
                     <step.icon className="h-7 w-7" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#D4785C]">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-accent">
                       {step.number} — {t("flowHorizontal.steps." + i + ".tagline")}
                     </span>
                     <h3 className="mt-2 text-2xl md:text-3xl font-normal text-white">{t("flowHorizontal.steps." + i + ".title")}</h3>
@@ -150,7 +150,7 @@ export default function FlowHorizontal() {
                 const el = scrollRef.current;
                 if (el) el.scrollTo({ left: i * el.clientWidth, behavior: "smooth" });
               }}
-              className={`h-2 rounded-full transition-all duration-300 ${i === activeIndex ? "w-6 bg-[#D4785C]" : "w-2 bg-white/20 hover:bg-white/30"}`}
+              className={`h-2 rounded-full transition-all duration-300 ${i === activeIndex ? "w-6 bg-accent" : "w-2 bg-white/20 hover:bg-white/30"}`}
             />
           ))}
         </div>

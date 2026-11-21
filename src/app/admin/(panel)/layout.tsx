@@ -19,7 +19,7 @@ export default async function AdminPanelLayout({
   const avatarUrl = admin.avatar_url ?? null;
 
   return (
-    <div className="min-h-screen bg-[#0b0b0b] flex">
+    <div className="min-h-screen bg-surface flex">
       <Sidebar name={name} role={role} isAdmin={isAdmin} avatarUrl={avatarUrl} />
       <main className="flex-1 min-w-0">
         <div className="p-4 md:p-6 lg:p-10 pt-14 md:pt-6">{children}</div>

@@ -27,8 +27,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative z-10 border-t border-white/5 bg-[#0c0f0c] text-zinc-400 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(16,185,129,0.04),_transparent_70%)] pointer-events-none" />
+    <footer className="relative z-10 border-t border-white/5 bg-surface text-zinc-400 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgb(var(--accent-rgb)/0.04),_transparent_70%)] pointer-events-none" />
       <div className="bg-noise absolute inset-0 opacity-[0.02] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20 relative z-10">
@@ -49,7 +49,7 @@ export default function Footer() {
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-emerald-400 flex items-center gap-1.5">
 {t("footer.baciraroBrand")}
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#f87171] animate-pulse" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
                 </p>
                 <p className="text-[11px] text-zinc-500 font-medium">{t("footer.center")}</p>
               </div>
@@ -168,7 +168,7 @@ export default function Footer() {
               className="group block rounded-2xl border border-orange-500/20 bg-gradient-to-br from-zinc-950 to-orange-950/20 p-5 transition-all duration-300 hover:border-orange-400/40 hover:shadow-[0_0_30px_rgba(249,115,22,0.08)]"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="relative h-12 w-12 overflow-hidden rounded-xl bg-white p-2 flex items-center justify-center border border-white/10 shadow-inner shrink-0">
+                <div className="relative h-12 w-12 overflow-hidden rounded-xl bg-[#f4f4f5] p-2 flex items-center justify-center border border-white/10 shadow-inner shrink-0">
                   <Image
                     src="/Orders.png"
                     alt={t("footer.ordersLogoAlt")}

@@ -75,7 +75,7 @@ export default function ProcessStep({ step, index }: ProcessStepProps) {
             </div>
 
             {/* Step label */}
-            <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/70">
+            <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.3em] text-mute/70">
               {step.label}
             </p>
 
@@ -85,7 +85,7 @@ export default function ProcessStep({ step, index }: ProcessStepProps) {
             </h3>
 
             {/* Body */}
-            <p className="mt-4 max-w-[45ch] text-base leading-8 text-[#9CA3A0]">
+            <p className="mt-4 max-w-[45ch] text-base leading-8 text-mute">
               {step.body}
             </p>
 
@@ -95,7 +95,7 @@ export default function ProcessStep({ step, index }: ProcessStepProps) {
                 {step.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[11px] font-bold uppercase tracking-wider text-[#F87171]/60"
+                    className="text-[11px] font-bold uppercase tracking-wider text-accent/60"
                   >
                     {tag}
                   </span>
@@ -144,14 +144,14 @@ export default function ProcessStep({ step, index }: ProcessStepProps) {
                 </div>
               )}
               {step.assemblyDiagram && (
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-1 bg-[#050806]/70 px-3 py-3 backdrop-blur-sm border border-white/10">
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-1 bg-background/70 px-3 py-3 backdrop-blur-sm border border-white/10">
                   {step.assemblyDiagram.map((label, i) => (
                     <div key={label} className="flex flex-col items-center">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-white/80">
                         {label}
                       </span>
                       {i < step.assemblyDiagram!.length - 1 && (
-                        <span className="text-xs text-[#9CA3A0]/50">↓</span>
+                        <span className="text-xs text-mute/50">↓</span>
                       )}
                     </div>
                   ))}
@@ -166,14 +166,14 @@ export default function ProcessStep({ step, index }: ProcessStepProps) {
                 className="aspect-[4/3]"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex items-center gap-3 sm:gap-4 bg-[#050806]/70 px-4 py-2 backdrop-blur-sm border border-white/10">
+                <div className="flex items-center gap-3 sm:gap-4 bg-background/70 px-4 py-2 backdrop-blur-sm border border-white/10">
                   {step.visualTransition.map((label, i) => (
                     <div key={label} className="flex items-center gap-3 sm:gap-4">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-white/80">
                         {label}
                       </span>
                       {i < step.visualTransition!.length - 1 && (
-                        <span className="text-lg text-[#F87171]">→</span>
+                        <span className="text-lg text-accent">→</span>
                       )}
                     </div>
                   ))}

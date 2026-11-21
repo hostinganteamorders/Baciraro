@@ -69,23 +69,23 @@ export default function ActivityLogClient({ activities }: Props) {
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Total Aktivitas</p>
           <p className="text-xl font-bold text-white mt-1">{activities.length}</p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Hari Ini</p>
           <p className="text-xl font-bold text-blue-400 mt-1">
             {activities.filter((a) => a.created_at.slice(0, 10) === new Date().toISOString().slice(0, 10)).length}
           </p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Pembuatan</p>
           <p className="text-xl font-bold text-emerald-400 mt-1">
             {activities.filter((a) => a.action === "create").length}
           </p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Penghapusan</p>
           <p className="text-xl font-bold text-red-400 mt-1">
             {activities.filter((a) => a.action === "delete").length}
@@ -103,13 +103,13 @@ export default function ActivityLogClient({ activities }: Props) {
       </div>
 
       {filtered.length === 0 ? (
-        <div className="bg-[#151515] rounded-xl border border-dashed border-white/20 p-16 text-center text-white/40">
+        <div className="bg-surface-2 rounded-xl border border-dashed border-white/20 p-16 text-center text-white/40">
           <p className="text-lg font-medium mb-1">Belum ada aktivitas</p>
           <p className="text-sm">Aktivitas akan tercatat saat ada perubahan data.</p>
         </div>
       ) : (
         <>
-          <div className="bg-[#151515] rounded-xl border border-white/10 overflow-x-auto">
+          <div className="bg-surface-2 rounded-xl border border-white/10 overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-left text-xs text-white/50 border-b border-white/10">

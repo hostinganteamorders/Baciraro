@@ -21,7 +21,7 @@ export default function ProjectClosing() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050806]/50 via-[#050806]/15 to-[#050806]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/15 to-background" />
 
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center max-w-4xl">
@@ -40,7 +40,7 @@ export default function ProjectClosing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2, ease: springEase }}
-              className="mt-4 text-[15px] text-[#F4F1EA]/60"
+              className="mt-4 text-[15px] text-foreground/60"
             >
               {pialaAerTembagaProject.finalSubheadline}
             </motion.p>
@@ -64,7 +64,7 @@ export default function ProjectClosing() {
                   delay: 0.1 + i * 0.08,
                   ease: springEase,
                 }}
-                className="text-base leading-8 text-[#9CA3A0] mb-5 last:mb-0"
+                className="text-base leading-8 text-mute mb-5 last:mb-0"
               >
                 {p}
               </motion.p>

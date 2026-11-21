@@ -34,13 +34,21 @@ export default function RootLayout({
   return (
     <html
       lang="id"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{var t=localStorage.getItem('bc-theme');document.documentElement.dataset.theme=(t==='light'?'light':'dark')}catch(e){document.documentElement.dataset.theme='dark'}",
+          }}
+        />
         <link rel="icon" href="/Baciraro cap.png" />
         <link rel="apple-touch-icon" href="/Baciraro cap.png" />
       </head>
       <body className="min-h-screen flex flex-col">
+        <div aria-hidden="true" className="page-bg" />
         <AdminAuthProvider>
         <CustomerAuthProvider>
         <LanguageProvider>

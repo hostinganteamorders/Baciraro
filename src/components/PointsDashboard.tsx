@@ -12,7 +12,7 @@ interface Customer {
   total_points: number;
 }
 
-const RANK_COLORS = ["#FFD700", "#C0C0C0", "#CD7F32"];
+const RANK_COLORS = ["var(--accent-2)", "#C0C0C0", "#CD7F32"];
 const RANK_ICONS = [Crown, Medal, Award];
 
 export default function PointsDashboard() {
@@ -32,7 +32,7 @@ export default function PointsDashboard() {
 
   return (
     <section className="relative z-10 py-20 lg:py-24 overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.04),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgb(var(--accent-rgb)/0.04),transparent_60%)]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div

@@ -9,6 +9,7 @@ import { useCustomerAuth } from "@/lib/customer-auth-context";
 import { useAdminAuth } from "@/lib/admin-auth-context";
 import { useLanguage } from "@/lib/i18n/context";
 import AuthModal from "./AuthModal";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { nameKey: "home", href: "/" },
@@ -92,8 +93,8 @@ export default function Header(_props?: { subtitle?: string }) {
       transition={{ duration: 0.25, ease: "easeInOut" }}
       className="sticky top-0 z-50 w-full px-4 sm:px-6 lg:px-8 pt-4 pb-2"
     >
-      <div className="mx-auto max-w-7xl rounded-3xl md:rounded-full border border-white/5 bg-[#0c0f0c]/90 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all duration-300">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(16,185,129,0.06),_transparent_75%)] pointer-events-none" />
+      <div className="mx-auto max-w-7xl rounded-3xl md:rounded-full border border-white/5 bg-surface/90 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all duration-300">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgb(var(--accent-rgb)/0.06),_transparent_75%)] pointer-events-none" />
         <div className="bg-noise absolute inset-0 opacity-[0.03] pointer-events-none" />
 
         <div className="flex items-center justify-between px-6 py-3.5 relative z-10">
@@ -112,7 +113,7 @@ export default function Header(_props?: { subtitle?: string }) {
               <Link
                 key={link.nameKey}
                 href={link.href}
-                className="px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-wider rounded-full transition-all duration-300 border text-zinc-400 hover:text-white hover:bg-white/5 border-transparent hover:border-white/5"
+                className="px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-wide rounded-full transition-all duration-300 border text-zinc-400 hover:text-white hover:bg-white/5 border-transparent hover:border-white/5"
               >
                 {t("nav." + link.nameKey)}
               </Link>
@@ -156,6 +157,8 @@ export default function Header(_props?: { subtitle?: string }) {
               </button>
             )}
 
+            <ThemeToggle />
+
             <button
               onClick={toggleLang}
               className="flex items-center justify-center h-9 w-9 rounded-full border border-white/10 bg-white/5 text-zinc-400 hover:text-emerald-400 hover:border-emerald-500/30 transition-all text-[10px] font-bold uppercase tracking-wider"
@@ -182,7 +185,7 @@ export default function Header(_props?: { subtitle?: string }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="md:hidden border-t border-white/5 bg-[#0c0f0c]/95 backdrop-blur-xl px-6 py-6 flex flex-col gap-2 relative z-10 will-change-[transform,opacity]"
+              className="md:hidden border-t border-white/5 bg-surface/95 backdrop-blur-xl px-6 py-6 flex flex-col gap-2 relative z-10 will-change-[transform,opacity]"
             >
               {navLinks.map((link) => (
                 <Link
@@ -250,7 +253,7 @@ export default function Header(_props?: { subtitle?: string }) {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.15 }}
             style={{ position: "fixed", right: dropdownPos.right, top: dropdownPos.top }}
-            className="w-48 rounded-2xl border border-white/10 bg-[#0c0f0c] backdrop-blur-xl shadow-2xl overflow-hidden z-[100]"
+            className="w-48 rounded-2xl border border-white/10 bg-surface backdrop-blur-xl shadow-2xl overflow-hidden z-[100]"
           >
             {admin ? (
               <>

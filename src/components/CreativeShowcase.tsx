@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 
-const TERRACOTTA = "#D4785C";
+const TERRACOTTA = "var(--accent)";
 
 const PRODUCTS = [
   { image: "/produk/kriya/Flat Lay Katalog Medali.png", slug: "/products/medali" },
@@ -18,7 +18,7 @@ export default function CreativeShowcase() {
   const { t } = useLanguage();
   return (
     <section id="creative-showcase" className="relative z-10 py-20 lg:py-24 overflow-hidden border-t border-white/5">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(212,120,92,0.04),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgb(var(--accent-rgb)/0.04),transparent_60%)]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
@@ -28,12 +28,12 @@ export default function CreativeShowcase() {
           className="mx-auto max-w-3xl text-center"
         >
           <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-zinc-400 backdrop-blur shadow-lg">
-            <span className="h-2 w-2 rounded-full bg-[#D4785C] animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
             {t("creativeShowcase.label")}
           </p>
           <h2 className="mt-5 text-4xl font-normal leading-[1.15] tracking-tight text-white sm:text-5xl">
             {t("creativeShowcase.title")}
-            <span className="font-serif italic text-[#D4785C]">{t("creativeShowcase.titleItalic")}</span>
+            <span className="font-serif italic text-accent">{t("creativeShowcase.titleItalic")}</span>
           </h2>
           <p className="mt-4 text-base leading-relaxed text-zinc-400 max-w-xl mx-auto">
             {t("creativeShowcase.subtitle")}
@@ -56,7 +56,7 @@ export default function CreativeShowcase() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10 group-hover:from-black/70 transition-all duration-300" />
                   <div className="absolute inset-0 flex items-end p-6">
                     <div className="relative z-10">
-                      <p className="text-[9px] font-semibold uppercase tracking-wider text-[#D4785C]">{t("creativeShowcase.products." + i + ".label")}</p>
+                      <p className="text-[9px] font-semibold uppercase tracking-wider text-accent">{t("creativeShowcase.products." + i + ".label")}</p>
                       <h3 className="mt-1.5 text-lg font-semibold text-white drop-shadow-lg">{t("creativeShowcase.products." + i + ".title")}</h3>
                       <p className="mt-1 text-xs text-zinc-300 max-w-sm drop-shadow-md">{t("creativeShowcase.products." + i + ".desc")}</p>
                     </div>
@@ -80,10 +80,10 @@ export default function CreativeShowcase() {
         >
           <Link
             href="/products"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-zinc-300 backdrop-blur transition-all hover:bg-white/10 hover:border-[#D4785C]/30 hover:text-white"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-zinc-300 backdrop-blur transition-all hover:bg-white/10 hover:border-accent/30 hover:text-white"
           >
             {t("creativeShowcase.cta")}
-            <ArrowRight className="h-4 w-4 text-[#D4785C] transition-transform group-hover:translate-x-0.5" />
+            <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-0.5" />
           </Link>
         </motion.div>
       </div>

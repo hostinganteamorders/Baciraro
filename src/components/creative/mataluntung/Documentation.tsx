@@ -30,7 +30,7 @@ export default function Documentation() {
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
           </motion.div>
 
           {/* Text */}
@@ -41,7 +41,7 @@ export default function Documentation() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: springEase }}
             >
-              <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/70">
+              <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-mute/70">
                 DOCUMENTATION
               </p>
               <h2 className="mt-3 font-serif text-[clamp(2.2rem,4.5vw,4rem)] font-normal leading-[1.1] tracking-[-0.02em] text-white whitespace-pre-line">
@@ -57,7 +57,7 @@ export default function Documentation() {
               className="mt-6"
             >
               {documentation.body.split("\n\n").map((p, i) => (
-                <p key={i} className="text-base leading-8 text-[#9CA3A0] mb-4 last:mb-0">
+                <p key={i} className="text-base leading-8 text-mute mb-4 last:mb-0">
                   {p}
                 </p>
               ))}

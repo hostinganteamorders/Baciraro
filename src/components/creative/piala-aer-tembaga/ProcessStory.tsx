@@ -24,7 +24,7 @@ export default function ProcessStory() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: springEase }}
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#34D399]">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">
             THE MAKING
           </p>
           <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white">
@@ -36,7 +36,7 @@ export default function ProcessStory() {
       {/* Progress line — desktop only */}
       <div className="absolute left-4 top-28 bottom-28 w-px bg-white/5 hidden lg:block">
         <motion.div
-          className="w-full bg-gradient-to-b from-[#F87171] to-[#34D399]"
+          className="w-full bg-gradient-to-b from-accent to-accent"
           style={{ height: lineHeight }}
         />
       </div>

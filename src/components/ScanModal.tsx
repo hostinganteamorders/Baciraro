@@ -190,7 +190,7 @@ export default function ScanModal({ open, onClose }: ScanModalProps) {
               exit={{ opacity: 0, scale: 0.92 }}
               transition={{ duration: 0.3, ease: springEase }}
               onClick={(e) => e.stopPropagation()}
-              className="relative rounded-[2rem] border border-white/10 bg-[#0c0f0c] p-6 shadow-2xl max-w-sm w-full"
+              className="relative rounded-[2rem] border border-white/10 bg-surface p-6 shadow-2xl max-w-sm w-full"
             >
               <button
                 onClick={handleClose}

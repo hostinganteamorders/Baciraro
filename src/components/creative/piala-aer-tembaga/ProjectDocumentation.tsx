@@ -28,9 +28,9 @@ export default function ProjectDocumentation() {
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4">
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]/40">
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground/40">
                 Documented batch weighing — 2.078 g
               </span>
             </div>
@@ -44,7 +44,7 @@ export default function ProjectDocumentation() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: springEase }}
             >
-              <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/70">
+              <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-mute/70">
                 DOCUMENTATION
               </p>
               <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white">
@@ -60,14 +60,14 @@ export default function ProjectDocumentation() {
               transition={{ duration: 0.6, delay: 0.1, ease: springEase }}
               className="mt-10 flex items-center gap-5"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#F87171]/20 bg-[#F87171]/5">
-                <span className="font-serif text-xl text-[#F87171]">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-accent/20 bg-accent/5">
+                <span className="font-serif text-xl text-accent">
                   {pialaAerTembagaProject.documentedFrames}
                 </span>
               </div>
               <div>
                 <p className="text-[15px] font-medium text-white">Project Frames</p>
-                <p className="text-[13px] text-[#9CA3A0]">Making process documented</p>
+                <p className="text-[13px] text-mute">Making process documented</p>
               </div>
             </motion.div>
           </div>

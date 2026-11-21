@@ -49,7 +49,7 @@ export function BaciraroRoleSection() {
 
   return (
     <section className="relative py-20 px-6 lg:px-8 bg-zinc-950/20">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.03),_transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgb(var(--accent-rgb)/0.03),_transparent_55%)]" />
 
       <div className="mx-auto max-w-7xl">
         <div className="mb-12">

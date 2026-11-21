@@ -23,7 +23,7 @@ export default function FinalObjects() {
           transition={{ duration: 0.7, ease: springEase }}
           className="mb-16"
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#F87171]">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">
             FINAL OBJECTS
           </p>
           <h2 className="mt-3 font-serif text-[clamp(3rem,8vw,8rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white whitespace-pre-line">
@@ -46,7 +46,7 @@ export default function FinalObjects() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
         </motion.div>
 
         {/* Secondary images — asymmetric */}
@@ -93,11 +93,11 @@ export default function FinalObjects() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 + i * 0.1, ease: springEase }}
             >
-              <span className="font-serif text-[clamp(1.5rem,3vw,2.5rem)] font-normal text-[#F87171]/60">
+              <span className="font-serif text-[clamp(1.5rem,3vw,2.5rem)] font-normal text-accent/60">
                 {level}
               </span>
               {i < pialaAerTembagaProject.awardLevels.length - 1 && (
-                <span className="hidden sm:inline ml-8 text-[#9CA3A0]/30">·</span>
+                <span className="hidden sm:inline ml-8 text-mute/30">·</span>
               )}
             </motion.div>
           ))}

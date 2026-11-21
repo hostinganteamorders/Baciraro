@@ -1,0 +1,137 @@
+/* ==== Revisi tampilan: palet A "Hutan Minahasa", mode gelap/terang, latar hidup ==== */
+
+:root {
+  color-scheme: dark;
+  --bg: #050806;
+  --bg2: #0a0f0b;
+  --surface: #0d130e;
+  --surface2: #141c15;
+  --fg: #f4f7f2;
+  --fg2: #b6c0b8;
+  --fg3: #aab5ac;
+  --accent: #3ddc65;
+  --accent-2: #f5c26b;
+  --accent-rgb: 61 220 101;
+  --accent2-rgb: 245 194 107;
+
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --muted: var(--surface2);
+  --primary: var(--accent);
+  --brand-terracotta: var(--accent);
+  --brand-orange: var(--accent-2);
+  --brand-gold: var(--accent-2);
+  --brand-green: var(--accent);
+
+  /* skala Tailwind dipetakan ulang supaya seluruh UI mengikuti tema */
+  --color-white: #f4f7f2;
+  --color-black: #050806;
+  --color-zinc-50: #f4f7f2; --color-zinc-100: #e8ede9; --color-zinc-200: #d3dbd5; --color-zinc-300: #bcc6be;
+  --color-zinc-400: #a3aea5; --color-zinc-500: #8d988f; --color-zinc-600: #68736b; --color-zinc-700: #46504a;
+  --color-zinc-800: #2a322c; --color-zinc-900: #161c17; --color-zinc-950: #0a0f0b;
+  --color-emerald-50: #e8fbed; --color-emerald-100: #c9f5d5; --color-emerald-200: #9bedb3; --color-emerald-300: #6fe58f;
+  --color-emerald-400: #3ddc65; --color-emerald-500: #2fc455; --color-emerald-600: #249a42; --color-emerald-700: #1c7a35;
+  --color-emerald-800: #17602b; --color-emerald-900: #124a23; --color-emerald-950: #0a2a14;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f3ea;
+  --bg2: #edeadc;
+  --surface: #fffefa;
+  --surface2: #eeebde;
+  --fg: #0f1a12;
+  --fg2: #435048;
+  --fg3: #55645a;
+  --accent: #16803c;
+  --accent-2: #9a5a0c;
+  --accent-rgb: 22 128 60;
+  --accent2-rgb: 154 90 12;
+
+  --color-white: #0f1a12;
+  --color-black: #f5f3ea;
+  --color-zinc-50: #0f1a12; --color-zinc-100: #17221a; --color-zinc-200: #26312a; --color-zinc-300: #36423a;
+  --color-zinc-400: #4a574f; --color-zinc-500: #5d6a62; --color-zinc-600: #7d897f; --color-zinc-700: #a3ada5;
+  --color-zinc-800: #d3d8cf; --color-zinc-900: #e6e3d6; --color-zinc-950: #efeadc;
+  --color-emerald-50: #0a2a14; --color-emerald-100: #0f3b1d; --color-emerald-200: #135a2b; --color-emerald-300: #135a2b;
+  --color-emerald-400: #16803c; --color-emerald-500: #25a653; --color-emerald-600: #0f6b30; --color-emerald-700: #bddcc6;
+  --color-emerald-800: #cfe6d5; --color-emerald-900: #d5eadb; --color-emerald-950: #dff0e3;
+  --color-red-300: #9f2d2f; --color-red-400: #b8393a; --color-red-500: #c0392b;
+  --color-amber-300: #8a5a0b; --color-amber-400: #9a5a0c; --color-amber-500: #a86512;
+  --color-yellow-300: #8a5a0b; --color-yellow-400: #9a5a0c;
+}
+/* gray/neutral/slate/stone mengikuti zinc */
+:root, html[data-theme="light"] {
+  --color-gray-50: var(--color-zinc-50); --color-gray-100: var(--color-zinc-100); --color-gray-200: var(--color-zinc-200); --color-gray-300: var(--color-zinc-300);
+  --color-gray-400: var(--color-zinc-400); --color-gray-500: var(--color-zinc-500); --color-gray-600: var(--color-zinc-600); --color-gray-700: var(--color-zinc-700);
+  --color-gray-800: var(--color-zinc-800); --color-gray-900: var(--color-zinc-900); --color-gray-950: var(--color-zinc-950);
+  --color-neutral-300: var(--color-zinc-300); --color-neutral-400: var(--color-zinc-400); --color-neutral-500: var(--color-zinc-500); --color-neutral-600: var(--color-zinc-600);
+  --color-neutral-700: var(--color-zinc-700); --color-neutral-800: var(--color-zinc-800); --color-neutral-900: var(--color-zinc-900); --color-neutral-950: var(--color-zinc-950);
+  --color-slate-400: var(--color-zinc-400); --color-slate-500: var(--color-zinc-500);
+}
+
+html { background-color: var(--bg); color: var(--fg); transition: background-color .35s ease, color .35s ease; }
+body { background: transparent; color: var(--fg); }
+
+/* kertas cetak & kode QR tetap putih di kedua mode */
+.print-doc, .print-card, .print-cover, .keep-paper {
+  --color-white: #ffffff; --color-black: #000000;
+  --color-zinc-50: #fafafa; --color-zinc-100: #f4f4f5; --color-zinc-200: #e4e4e7; --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #9f9fa9; --color-zinc-500: #71717b; --color-zinc-600: #52525c; --color-zinc-700: #3f3f46;
+}
+
+/* halaman tanpa warna latar sendiri agar latar hidup terlihat */
+main.bg-background, main.bg-black { background-color: transparent; }
+
+/* ---- latar hidup: pola doodle bergeser pelan, ulang tanpa sambungan ---- */
+.page-bg {
+  --tw: 1700px;
+  --th: 957px;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background: none;
+  filter: none;
+  background-image: none;
+}
+.page-bg::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--th) * -1);
+  left: calc(var(--tw) * -1);
+  right: 0;
+  bottom: 0;
+  background-image: url("/bg-tile.jpg");
+  background-size: var(--tw) auto;
+  background-repeat: repeat;
+  filter: brightness(1.6);
+  will-change: transform;
+  animation: bc-drift 200s linear infinite;
+}
+@keyframes bc-drift { to { transform: translate3d(var(--tw), var(--th), 0); } }
+html[data-theme="light"] .page-bg { mix-blend-mode: multiply; opacity: .75; }
+html[data-theme="light"] .page-bg::before { filter: invert(1) contrast(1.5); }
+@media (max-width: 1024px) { .page-bg { --tw: 1360px; --th: 766px; } }
+@media (max-width: 640px) { .page-bg { --tw: 1040px; --th: 585px; } }
+@media (prefers-reduced-motion: reduce) { .page-bg::before { animation: none; } }
+
+/* bayangan gelap pada kartu terlalu berat di mode terang */
+html[data-theme="light"] .shadow-2xl, html[data-theme="light"] .shadow-xl { --tw-shadow-color: rgba(15, 26, 18, 0.12); }
+@media print { .page-bg { display: none; } }
+
+/* bagian yang memang selalu gelap (mis. slide ORDERS) memakai variabel gelap di kedua mode */
+.keep-dark {
+  color-scheme: dark;
+  --bg: #050806; --bg2: #0a0f0b; --surface: #0d130e; --surface2: #141c15; --fg: #f4f7f2; --fg2: #b6c0b8; --fg3: #aab5ac;
+  --accent: #3ddc65; --accent-2: #f5c26b; --accent-rgb: 61 220 101; --accent2-rgb: 245 194 107;
+  --color-white: #f4f7f2; --color-black: #050806;
+  --color-zinc-50: #f4f7f2; --color-zinc-100: #e8ede9; --color-zinc-200: #d3dbd5; --color-zinc-300: #bcc6be;
+  --color-zinc-400: #a3aea5; --color-zinc-500: #8d988f; --color-zinc-600: #68736b; --color-zinc-700: #46504a;
+  --color-zinc-800: #2a322c; --color-zinc-900: #161c17; --color-zinc-950: #0a0f0b;
+  --color-emerald-300: #6fe58f; --color-emerald-400: #3ddc65; --color-emerald-500: #2fc455; --color-emerald-600: #249a42;
+  color: #f4f7f2;
+}
+/* logo berwarna putih dibalik di mode terang */
+html[data-theme="light"] .logo-on-dark { filter: invert(1) brightness(0.2); }

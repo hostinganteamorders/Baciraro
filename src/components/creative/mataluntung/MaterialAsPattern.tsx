@@ -58,7 +58,7 @@ export default function MaterialAsPattern() {
           className="mt-12 max-w-[60ch]"
         >
           {materialPattern.body.split("\n\n").map((p, i) => (
-            <p key={i} className="text-base leading-8 text-[#9CA3A0] mb-4 last:mb-0">
+            <p key={i} className="text-base leading-8 text-mute mb-4 last:mb-0">
               {p}
             </p>
           ))}

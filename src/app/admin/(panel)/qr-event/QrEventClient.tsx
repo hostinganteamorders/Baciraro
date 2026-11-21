@@ -19,7 +19,7 @@ function QrImage({ value }: { value: string }) {
   const [src, setSrc] = useState<string>("");
   useEffect(() => {
     let active = true;
-    QRCode.toDataURL(value, { width: 320, margin: 2, color: { dark: "#0b0b0b", light: "#ffffff" } })
+    QRCode.toDataURL(value, { width: 320, margin: 2, color: { dark: "#0d0d0d", light: "#ffffff" } })
       .then((u) => { if (active) setSrc(u); })
       .catch(() => {});
     return () => { active = false; };
@@ -102,7 +102,7 @@ export default function QrEventClient() {
       </p>
 
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-[#111111] border border-white/10 rounded-2xl p-6">
+        <div className="bg-surface-2 border border-white/10 rounded-2xl p-6">
           <h2 className="font-semibold text-white mb-4">Generate QR Baru</h2>
           <form onSubmit={handleCreate} className="space-y-4">
             <div>
@@ -111,7 +111,7 @@ export default function QrEventClient() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="mis. Lokawaya 2026"
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-[#D97A2B] outline-none text-white"
+                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-accent-2 outline-none text-white"
               />
             </div>
             <div>
@@ -120,26 +120,26 @@ export default function QrEventClient() {
                 type="number" min={1}
                 value={points}
                 onChange={(e) => setPoints(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-[#D97A2B] outline-none text-white"
+                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-accent-2 outline-none text-white"
                 required
               />
             </div>
             {createError && <p className="text-red-400 text-sm">{createError}</p>}
             <button
               type="submit" disabled={creating}
-              className="w-full py-3 rounded-lg bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] font-semibold text-white disabled:opacity-50"
+              className="w-full py-3 rounded-lg bg-gradient-to-r from-accent to-accent-2 font-semibold text-white disabled:opacity-50"
             >
               {creating ? "Membuat..." : "Generate QR"}
             </button>
           </form>
         </div>
 
-        <div className="bg-[#111111] border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center min-h-[200px]">
+        <div className="bg-surface-2 border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center min-h-[200px]">
           {preview ? (
             <>
               <QrImage value={preview.claim_url} />
               <p className="text-white font-semibold mt-4">{preview.event_name || "Baciraro Event"}</p>
-              <p className="text-[#D97A2B] text-2xl font-bold">+{preview.event_points} koin</p>
+              <p className="text-accent-2 text-2xl font-bold">+{preview.event_points} koin</p>
               <p className={`text-xs mt-1 ${preview.used ? "text-red-400" : "text-emerald-400"}`}>
                 {preview.used
                   ? `Terpakai${preview.claimed_by ? ` oleh ${preview.claimed_by.name}` : ""}`
@@ -156,7 +156,7 @@ export default function QrEventClient() {
                   value={refreshPoints}
                   onChange={(e) => setRefreshPoints(e.target.value)}
                   placeholder="Poin baru?"
-                  className="w-24 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/30 focus:border-[#D97A2B] outline-none"
+                  className="w-24 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white placeholder:text-white/30 focus:border-accent-2 outline-none"
                 />
                 <button
                   onClick={() => handleRefresh(preview.id)}
@@ -184,10 +184,10 @@ export default function QrEventClient() {
         ) : (
           <div className="grid gap-3">
             {qrs.map((qr) => (
-              <div key={qr.id} className="bg-[#111111] border border-white/10 rounded-xl p-4 flex items-center justify-between gap-4">
+              <div key={qr.id} className="bg-surface-2 border border-white/10 rounded-xl p-4 flex items-center justify-between gap-4">
                 <div className="min-w-0">
                   <p className="text-white font-medium truncate">{qr.event_name || "Baciraro Event"}</p>
-                  <p className="text-[#D97A2B] font-bold">+{qr.event_points} koin</p>
+                  <p className="text-accent-2 font-bold">+{qr.event_points} koin</p>
                   <p className="text-xs text-white/40 mt-1">
                     {qr.used ? (
                       <span className="text-red-400">Terpakai{qr.claimed_by ? ` oleh ${qr.claimed_by.name}` : ""}</span>
@@ -222,7 +222,7 @@ export default function QrEventClient() {
 function QrDownload({ value, code }: { value: string; code: string }) {
   const [href, setHref] = useState<string>("#");
   useEffect(() => {
-    QRCode.toDataURL(value, { width: 360, margin: 2, color: { dark: "#0b0b0b", light: "#ffffff" } })
+    QRCode.toDataURL(value, { width: 360, margin: 2, color: { dark: "#0d0d0d", light: "#ffffff" } })
       .then(setHref).catch(() => {});
   }, [value]);
   return (

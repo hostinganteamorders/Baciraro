@@ -28,7 +28,7 @@ export default function ProjectSnapshot() {
               transition={{ duration: 0.5, delay: i * 0.04, ease: springEase }}
               className="min-w-[120px]"
             >
-              <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#9CA3A0]/60">
+              <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-mute/60">
                 {item.label}
               </p>
               <p className="mt-1.5 text-[15px] font-medium text-white">

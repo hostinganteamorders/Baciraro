@@ -39,7 +39,7 @@ export default function RealContext() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
         </motion.div>
 
         {/* Two smaller images */}
@@ -75,7 +75,7 @@ export default function RealContext() {
           className="mt-12 max-w-[60ch]"
         >
           {realContext.body.split("\n\n").map((p, i) => (
-            <p key={i} className="text-base leading-8 text-[#9CA3A0] mb-4 last:mb-0">
+            <p key={i} className="text-base leading-8 text-mute mb-4 last:mb-0">
               {p}
             </p>
           ))}

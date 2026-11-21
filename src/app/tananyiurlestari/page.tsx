@@ -35,7 +35,7 @@ function HeroSection() {
   const { t: t2 } = useLanguage();
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(16,185,129,0.12),_transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgb(var(--accent-rgb)/0.12),_transparent_60%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -81,12 +81,12 @@ function HeroSection() {
             <div className="absolute -right-8 bottom-1/4 h-40 w-40 rounded-full bg-amber-500/5 blur-2xl" />
 
             <div className="relative aspect-square overflow-hidden rounded-[3rem] border border-white/5 bg-zinc-900/20 p-6 shadow-2xl backdrop-blur-sm">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.15),_transparent_70%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgb(var(--accent-rgb)/0.15),_transparent_70%)]" />
               <Image
                 src="/tnl-transparent.png"
                 alt={t2("tananyiurlestari.heroAlt")}
                 fill
-                className="object-contain p-8 drop-shadow-[0_15px_30px_rgba(16,185,129,0.2)]"
+                className="object-contain p-8 drop-shadow-[0_15px_30px_rgb(var(--accent-rgb)/0.2)]"
                 priority
               />
             </div>
@@ -108,7 +108,7 @@ function AboutSection() {
               src="/tnl-transparent.png"
               alt={t2("tananyiurlestari.aboutAlt")}
               fill
-              className="object-contain p-8 drop-shadow-[0_15px_30px_rgba(16,185,129,0.15)]"
+              className="object-contain p-8 drop-shadow-[0_15px_30px_rgb(var(--accent-rgb)/0.15)]"
             />
           </div>
 
@@ -168,7 +168,7 @@ function ImpactSection() {
   const { t: t2 } = useLanguage();
   return (
     <section id="impact" className="relative py-20 px-6 lg:px-8 overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(16,185,129,0.1),_transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgb(var(--accent-rgb)/0.1),_transparent_50%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <h2 className="text-4xl font-normal tracking-tight mb-12 text-center text-white">{t2("tananyiurlestari.dampakTitle")}</h2>
@@ -239,7 +239,6 @@ export default function TanaNyiurPage() {
   const { t } = useLanguage();
   return (
     <main className="relative overflow-hidden text-foreground min-h-screen">
-      <div aria-hidden="true" className="page-bg" />
       <div className="relative z-[1]">
       <div className="bg-noise pointer-events-none absolute inset-0 opacity-[0.12] -z-10" />
 

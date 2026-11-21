@@ -26,7 +26,7 @@ const categoryAccent: Record<string, string> = {
   organic: "border-emerald-500/20 bg-emerald-500/10 text-emerald-400",
   craft: "border-amber-500/20 bg-amber-500/10 text-amber-400",
   digital: "border-purple-500/20 bg-purple-500/10 text-purple-400",
-  art: "border-[#f2d479]/20 bg-[#f2d479]/10 text-[#f2d479]",
+  art: "border-accent-2/20 bg-accent-2/10 text-accent-2",
 };
 
 export default function CreativePage() {
@@ -54,7 +54,6 @@ export default function CreativePage() {
 
   return (
     <main className="relative overflow-hidden text-primary-text min-h-screen">
-      <div aria-hidden="true" className="page-bg" />
       <div className="relative z-[1]">
 
         {/* ───── SECTION 1: HERO ───── */}
@@ -73,7 +72,7 @@ export default function CreativePage() {
                 alt={t("creative.heroLogoAlt")}
                 width={140}
                 height={48}
-                className="mb-8 h-auto w-28 object-contain md:w-36"
+                className="logo-on-dark mb-8 h-auto w-28 object-contain md:w-36"
               />
             </motion.div>
 
@@ -131,7 +130,7 @@ export default function CreativePage() {
 
         {/* ───── SECTION 2: TENTANG BACIRARO CREATIVE ───── */}
         <section className="relative border-t border-white/5 px-4 py-24 sm:px-6 md:px-8 md:py-32">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(196,74,58,0.08),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgb(var(--accent-rgb)/0.08),transparent_60%)]" />
           <div className="relative mx-auto max-w-6xl text-center">
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -363,7 +362,7 @@ export default function CreativePage() {
 
         {/* ───── SECTION 3C: MATALUNTUNG ───── */}
         <section className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(52,211,153,0.06),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgb(var(--accent-rgb)/0.06),transparent_60%)]" />
 
           <div className="relative grid grid-cols-1 lg:grid-cols-2">
             {/* Left: photo full-height */}
@@ -392,13 +391,13 @@ export default function CreativePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, ease: springEase }}
               >
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#34D399]">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-accent">
                   COLLABORATION 2026
                 </p>
                 <h2 className="mt-3 font-serif text-[clamp(24px,4vw,44px)] font-normal leading-[1.1] tracking-[-0.02em] text-white">
                   Mataluntung
                 </h2>
-                <p className="mt-1.5 text-sm text-[#34D399]/80">
+                <p className="mt-1.5 text-sm text-accent/80">
                   Mataluntung × Baciraro Creative
                 </p>
                 <p className="mt-4 max-w-lg text-sm leading-relaxed text-zinc-400">
@@ -447,7 +446,7 @@ export default function CreativePage() {
               >
                 <Link
                   href="/creative/projects/mataluntung"
-                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-[#34D399]/30 hover:text-white"
+                  className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70 backdrop-blur transition-all hover:border-accent/30 hover:text-white"
                 >
                   View Case Study
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -459,7 +458,7 @@ export default function CreativePage() {
 
         {/* ───── SECTION 3D: PENSIL 2026 PROJECT RECAP ───── */}
         <section id="pensil-2026" className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(217,122,43,0.07),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgb(var(--accent2-rgb)/0.07),transparent_60%)]" />
 
           <div className="relative grid grid-cols-1 lg:grid-cols-2">
             {/* Left: portrait poster, kept uncropped */}
@@ -470,7 +469,7 @@ export default function CreativePage() {
               transition={{ duration: 0.8, ease: springEase }}
               className="relative flex min-h-[460px] items-center justify-center overflow-hidden px-6 py-12 lg:min-h-[620px] lg:px-10 lg:py-16"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(217,122,43,0.1),transparent_65%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgb(var(--accent2-rgb)/0.1),transparent_65%)]" />
               <div className="relative aspect-[4/5] w-full max-w-[360px] overflow-hidden rounded-2xl border border-white/[0.09] bg-black/40">
                 <Image
                   src={pensilImages.handover}
@@ -673,7 +672,7 @@ export default function CreativePage() {
 
         {/* ───── SECTION 4: DIALOG BUDAYA RECAP ───── */}
         <section id="dialog-budaya" className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(196,74,58,0.06),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgb(var(--accent-rgb)/0.06),transparent_60%)]" />
 
           <div className="relative grid grid-cols-1 lg:grid-cols-2">
             {/* Left: photo full-height */}
@@ -769,7 +768,7 @@ export default function CreativePage() {
 
         {/* ───── SECTION 5: LOKAWAYA RECAP ───── */}
         <section className="relative border-t border-white/5 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(242,212,121,0.06),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgb(var(--accent2-rgb)/0.06),transparent_60%)]" />
 
           <div className="relative grid grid-cols-1 lg:grid-cols-2">
             {/* Left: photo full-height */}
@@ -871,7 +870,7 @@ export default function CreativePage() {
               alt={t("creative.heroLogoAlt")}
               width={100}
               height={34}
-              className="mx-auto mb-4 h-auto w-24 object-contain opacity-60"
+              className="logo-on-dark mx-auto mb-4 h-auto w-24 object-contain opacity-60"
             />
             <p className="text-xs text-zinc-500">
               {t("creative.footerTagline")}

@@ -51,7 +51,7 @@ export default function Pagination({ page, totalItems, perPage, onPageChange }: 
               onClick={() => onPageChange(p)}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium transition ${
                 p === page
-                  ? "bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white"
+                  ? "bg-gradient-to-r from-accent to-accent-2 text-white"
                   : "border border-white/10 text-white/60 hover:bg-white/5"
               }`}
             >

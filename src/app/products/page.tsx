@@ -69,7 +69,7 @@ const categoryColors: Record<string, string> = {
 	organic: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
 	craft: "bg-amber-500/10 text-amber-400 border-amber-500/20",
 	digital: "bg-purple-500/10 text-purple-400 border-purple-500/20",
-	art: "bg-[#f2d479]/10 text-[#f2d479] border-[#f2d479]/20",
+	art: "bg-accent-2/10 text-accent-2 border-accent-2/20",
 	"3dprint": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
 	custom: "bg-white/10 text-zinc-200 border-white/20",
 };
@@ -407,8 +407,7 @@ export default function ProductsPage() {
 	};
 
 	return (
-		<main className="relative min-h-screen overflow-hidden text-[#fafafa]">
-			<div aria-hidden="true" className="page-bg" />
+		<main className="relative min-h-screen overflow-hidden text-foreground">
 			<div className="relative z-[1]">
 				<div className="pointer-events-none fixed inset-0 z-0 bg-noise opacity-[0.08]" />
 				<Header subtitle={t("products.title")} />

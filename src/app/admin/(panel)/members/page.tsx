@@ -97,36 +97,36 @@ export default async function AdminMembersPage() {
       />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Total Anggota</p>
           <p className="text-xl font-bold text-white mt-1">{stats.length} orang</p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Project Ditangani</p>
           <p className="text-xl font-bold text-white mt-1">{stats.reduce((s, m) => s + m.projectCount, 0)}</p>
           <p className="text-xs text-white/40 mt-1">total keterlibatan</p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Total Dibayar ke Anggota</p>
           <p className="text-xl font-bold text-emerald-400 mt-1">{formatRupiah(totalIncomeAll)}</p>
           <p className="text-xs text-white/40 mt-1">dari payout</p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Payout Belum Dibayar</p>
-          <p className="text-xl font-bold text-[#E9A64E] mt-1">{formatRupiah(pendingPayout)}</p>
+          <p className="text-xl font-bold text-accent-2 mt-1">{formatRupiah(pendingPayout)}</p>
           <p className="text-xs text-white/40 mt-1">pending + diproses</p>
         </div>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
         {stats.map((m) => (
-          <div key={m.id} className="bg-[#151515] rounded-xl border border-white/10 p-6">
+          <div key={m.id} className="bg-surface-2 rounded-xl border border-white/10 p-6">
             <div className="flex items-center gap-4 mb-4">
               {m.photo_url ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={m.photo_url} alt={m.name} className="w-12 h-12 rounded-full object-cover shrink-0" />
               ) : (
-                <div className="w-12 h-12 rounded-full bg-[#D97A2B]/20 text-[#E9A64E] flex items-center justify-center text-sm font-semibold shrink-0">
+                <div className="w-12 h-12 rounded-full bg-accent-2/20 text-accent-2 flex items-center justify-center text-sm font-semibold shrink-0">
                   {m.name.slice(0, 2).toUpperCase()}
                 </div>
               )}
@@ -134,7 +134,7 @@ export default async function AdminMembersPage() {
                 <div className="flex items-center gap-2">
                   <p className="font-semibold text-white">{m.name}</p>
                   {m.is_admin && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#D97A2B] text-white font-medium">ADMIN</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-accent-2 text-white font-medium">ADMIN</span>
                   )}
                 </div>
                 <p className="text-sm text-white/50">{m.role}</p>
@@ -161,7 +161,7 @@ export default async function AdminMembersPage() {
             </div>
 
             {m.pendingIncome > 0 && (
-              <p className="text-xs text-orange-400 mb-3 bg-[#D97A2B]/10 rounded-lg px-3 py-2">
+              <p className="text-xs text-orange-400 mb-3 bg-accent-2/10 rounded-lg px-3 py-2">
                 Belum dibayar: {formatRupiah(m.pendingIncome)} (project selesai, menunggu pembayaran)
               </p>
             )}
@@ -171,7 +171,7 @@ export default async function AdminMembersPage() {
                 {m.rows.map((pm: any) => (
                   <div key={pm.project_id} className="flex items-center justify-between text-sm py-1.5 border-t border-white/5">
                     <div className="min-w-0 flex-1 pr-3">
-                      <Link href={`/admin/projects/${pm.project_id}`} className="font-medium text-white hover:text-[#E9A64E] transition truncate block">
+                      <Link href={`/admin/projects/${pm.project_id}`} className="font-medium text-white hover:text-accent-2 transition truncate block">
                         {pm.projects?.name}
                       </Link>
                     </div>

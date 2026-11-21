@@ -47,7 +47,6 @@ export default function UndanganPage() {
 
   return (
     <main className="relative min-h-screen overflow-hidden text-primary-text">
-      <div aria-hidden="true" className="page-bg" />
       <div className="bg-noise pointer-events-none fixed inset-0 opacity-[0.06]" />
       <div className="relative z-[1]">
 
@@ -74,7 +73,7 @@ export default function UndanganPage() {
                 alt={t("creative.heroLogoAlt")}
                 width={100}
                 height={34}
-                className="mx-auto mb-6 h-auto w-24 object-contain"
+                className="logo-on-dark mx-auto mb-6 h-auto w-24 object-contain"
               />
             </motion.div>
 
@@ -403,7 +402,7 @@ export default function UndanganPage() {
             alt={t("creative.heroLogoAlt")}
             width={80}
             height={28}
-            className="mx-auto mb-3 h-auto w-20 object-contain opacity-50"
+            className="logo-on-dark mx-auto mb-3 h-auto w-20 object-contain opacity-50"
           />
           <p className="text-xs text-zinc-600">{t("creative.footerTagline")}</p>
         </footer>

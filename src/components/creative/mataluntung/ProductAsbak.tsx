@@ -20,7 +20,7 @@ export default function ProductAsbak() {
           transition={{ duration: 0.7, ease: springEase }}
           className="mb-16"
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#F87171]">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">
             PRODUCT 03
           </p>
           <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white whitespace-pre-line">
@@ -44,14 +44,14 @@ export default function ProductAsbak() {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 85vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
 
             {/* Micro labels */}
             <div className="absolute bottom-6 left-6 flex flex-wrap gap-4">
               {asbak.microLabels.map((label) => (
                 <span
                   key={label}
-                  className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]/60"
+                  className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground/60"
                 >
                   {label}
                 </span>
@@ -88,7 +88,7 @@ export default function ProductAsbak() {
             className="flex flex-col justify-center"
           >
             {asbak.body.split("\n\n").map((p, i) => (
-              <p key={i} className="text-base leading-8 text-[#9CA3A0] mb-4 last:mb-0">
+              <p key={i} className="text-base leading-8 text-mute mb-4 last:mb-0">
                 {p}
               </p>
             ))}

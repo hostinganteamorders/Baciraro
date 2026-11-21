@@ -25,12 +25,12 @@ export default function ThreeObjects() {
               <span className="font-serif text-[clamp(2rem,5vw,4rem)] font-normal text-white">
                 {item.object}
               </span>
-              <span className="text-[#F87171]/40">→</span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#9CA3A0]/70">
+              <span className="text-accent/40">→</span>
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-mute/70">
                 {item.action}
               </span>
               {i < threeObjects.flow.length - 1 && (
-                <span className="hidden sm:inline ml-4 text-[#9CA3A0]/20">·</span>
+                <span className="hidden sm:inline ml-4 text-mute/20">·</span>
               )}
             </motion.div>
           ))}

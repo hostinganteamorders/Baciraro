@@ -22,7 +22,7 @@ type Stats = {
   totalClaims: number;
 };
 
-const RANK_COLORS = ["#FFD700", "#C0C0C0", "#CD7F32"];
+const RANK_COLORS = ["var(--accent-2)", "#C0C0C0", "#CD7F32"];
 const RANK_ICONS = ["👑", "🥈", "🥉"];
 
 function initials(name?: string | null) {
@@ -99,7 +99,7 @@ export default function LeaderboardClient({
           {podium.map((c, i) => (
             <div
               key={c.id}
-              className="bg-[#111111] border border-white/10 rounded-2xl p-5 flex flex-col items-center text-center"
+              className="bg-surface-2 border border-white/10 rounded-2xl p-5 flex flex-col items-center text-center"
             >
               <div className="text-2xl mb-2">{RANK_ICONS[i]}</div>
               <Avatar row={c} color={RANK_COLORS[i]} />
@@ -118,13 +118,13 @@ export default function LeaderboardClient({
         </div>
       )}
 
-      <div className="bg-[#111111] border border-white/10 rounded-2xl p-5">
+      <div className="bg-surface-2 border border-white/10 rounded-2xl p-5">
         <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Cari nama / email / no. HP..."
-            className="flex-1 px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:border-[#D97A2B] outline-none text-sm"
+            className="flex-1 px-4 py-2.5 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:border-accent-2 outline-none text-sm"
           />
           <div className="flex gap-2 text-sm">
             {(
@@ -139,7 +139,7 @@ export default function LeaderboardClient({
                 onClick={() => setSort(k)}
                 className={`px-3 py-2 rounded-lg transition ${
                   sort === k
-                    ? "bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white"
+                    ? "bg-gradient-to-r from-accent to-accent-2 text-white"
                     : "bg-white/5 text-white/60 hover:text-white"
                 }`}
               >
@@ -181,7 +181,7 @@ export default function LeaderboardClient({
                       </div>
                     </div>
                   </td>
-                  <td className="py-3 pr-3 text-right font-bold text-[#D97A2B] tabular-nums">
+                  <td className="py-3 pr-3 text-right font-bold text-accent-2 tabular-nums">
                     {c.total_points.toLocaleString("id-ID")}
                   </td>
                   <td className="py-3 pr-3 text-right text-white/80 tabular-nums">
@@ -220,11 +220,11 @@ function StatCard({
   accent?: boolean;
 }) {
   return (
-    <div className="bg-[#111111] border border-white/10 rounded-2xl p-5">
+    <div className="bg-surface-2 border border-white/10 rounded-2xl p-5">
       <p className="text-white/40 text-xs uppercase tracking-wide">{label}</p>
       <p
         className={`text-3xl font-bold mt-1 tabular-nums ${
-          accent ? "text-[#D97A2B]" : "text-white"
+          accent ? "text-accent-2" : "text-white"
         }`}
       >
         {value.toLocaleString("id-ID")}
@@ -262,7 +262,7 @@ function Avatar({ row, color, size = 12 }: { row: Row; color?: string; size?: nu
       style={{
         width: dim,
         height: dim,
-        background: color || "#C44A3A",
+        background: color || "var(--accent)",
       }}
       className="rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
     >
