@@ -5,13 +5,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
+import { mediaUrl } from "@/lib/media";
 
 const TERRACOTTA = "#D4785C";
 
 const PRODUCTS = [
-  { image: "/produk/kriya/Flat Lay Katalog Medali.png", slug: "/products/medali" },
-  { image: "/produk/kriya/Lifestyle Sofa.png", slug: "/products/sofa-puff-ecobrick" },
-  { image: "/produk/kriya/Flat Lay Katalog Rangkong.png", slug: "/products/rangkong" },
+  { image: mediaUrl("/produk/kriya/Flat Lay Katalog Medali.png"), slug: "/products/medali" },
+  { image: mediaUrl("/produk/kriya/Lifestyle Sofa.png"), slug: "/products/sofa-puff-ecobrick" },
+  { image: mediaUrl("/produk/kriya/Flat Lay Katalog Rangkong.png"), slug: "/products/rangkong" },
 ];
 
 export default function CreativeShowcase() {
