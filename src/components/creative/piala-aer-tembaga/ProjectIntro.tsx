@@ -21,7 +21,7 @@ export default function ProjectIntro() {
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/70 via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#050806]/60 lg:via-[#050806]/10 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent lg:bg-gradient-to-r lg:from-background/60 lg:via-background/10 lg:to-transparent" />
         </div>
 
         {/* Text side */}
@@ -45,7 +45,7 @@ export default function ProjectIntro() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.08, ease: springEase }}
-                className="text-base leading-8 text-[#9CA3A0]"
+                className="text-base leading-8 text-mute"
               >
                 {p}
               </motion.p>

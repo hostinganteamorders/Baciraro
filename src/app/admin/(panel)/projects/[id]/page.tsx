@@ -69,7 +69,7 @@ export default async function ProjectDetailPage({
         statusColor={statusColor}
       />
 
-      <div className="bg-[#151515] rounded-xl border border-white/10 p-6">
+      <div className="bg-surface-2 rounded-xl border border-white/10 p-6">
         <h2 className="text-lg font-semibold text-white mb-4">Ringkasan Bagi Hasil</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -77,9 +77,9 @@ export default async function ProjectDetailPage({
             <p className="text-sm text-white/50">Nilai Total</p>
             <p className="text-xl font-bold text-white mt-1">{formatRupiah(dist.total)}</p>
           </div>
-          <div className="bg-[#D97A2B]/10 rounded-lg p-4">
-            <p className="text-sm text-[#E9A64E]">Kas Baciraro ({KAS_PERCENT}%)</p>
-            <p className="text-xl font-bold text-[#E9A64E] mt-1">{formatRupiah(dist.kasAmount)}</p>
+          <div className="bg-accent-2/10 rounded-lg p-4">
+            <p className="text-sm text-accent-2">Kas Baciraro ({KAS_PERCENT}%)</p>
+            <p className="text-xl font-bold text-accent-2 mt-1">{formatRupiah(dist.kasAmount)}</p>
           </div>
           <div className="bg-emerald-500/10 rounded-lg p-4">
             <p className="text-sm text-emerald-400">Dibagikan ke Anggota</p>

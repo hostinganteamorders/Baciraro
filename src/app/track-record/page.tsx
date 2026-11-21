@@ -294,7 +294,6 @@ export default function TrackRecordPage() {
 
   return (
     <main className="relative overflow-hidden text-foreground min-h-screen bg-transparent">
-      <div aria-hidden="true" className="page-bg" />
       <div className="relative z-[1]">
 
       <Header subtitle={t("trackRecord.label")} />

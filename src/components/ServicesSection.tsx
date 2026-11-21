@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n/context";
 import { ArrowRight, Factory, Building2, MapPin, Quote } from "lucide-react";
 
-const TERRACOTTA = "#D4785C";
+const TERRACOTTA = "var(--accent)";
 
 const SERVICES = [
   {
@@ -38,7 +38,7 @@ export default function ServicesSection() {
   const { t } = useLanguage();
   return (
     <section className="relative z-10 py-20 lg:py-24 overflow-hidden border-t border-white/5">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.03),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgb(var(--accent-rgb)/0.03),transparent_60%)]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
@@ -71,9 +71,9 @@ export default function ServicesSection() {
             >
               <Link
                 href={service.href}
-                className="group flex h-full flex-col rounded-[2rem] border border-white/5 bg-black/25 p-6 shadow-xl backdrop-blur-sm transition-all duration-300 hover:border-[#D4785C]/20 hover:bg-black/30 hover:-translate-y-1"
+                className="group flex h-full flex-col rounded-[2rem] border border-white/5 bg-black/25 p-6 shadow-xl backdrop-blur-sm transition-all duration-300 hover:border-accent/20 hover:bg-black/30 hover:-translate-y-1"
               >
-                <div className="inline-flex rounded-2xl bg-[#D4785C]/10 p-3.5 text-[#D4785C] w-fit">
+                <div className="inline-flex rounded-2xl bg-accent/10 p-3.5 text-accent w-fit">
                   <service.icon className="h-5 w-5" />
                 </div>
                 <h3 className="mt-5 text-xl font-normal text-white">{t("services." + service.titleKey + ".title")}</h3>
@@ -88,24 +88,24 @@ export default function ServicesSection() {
 
                 <div className="mt-6 rounded-xl border border-white/5 bg-black/30 p-4">
                   <div className="flex items-start gap-2">
-                    <Quote className="h-3 w-3 text-[#D4785C] shrink-0 mt-0.5" />
+                    <Quote className="h-3 w-3 text-accent shrink-0 mt-0.5" />
                     <p className="text-xs italic leading-relaxed text-zinc-400">{t("services." + service.titleKey + ".quote")}</p>
                   </div>
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
                   <div>
-                    <p className="text-[9px] font-semibold uppercase tracking-wider text-[#D4785C]">{t("services." + service.titleKey + ".caseStudy.partner")}</p>
+                    <p className="text-[9px] font-semibold uppercase tracking-wider text-accent">{t("services." + service.titleKey + ".caseStudy.partner")}</p>
                     <p className="text-[10px] text-zinc-500 mt-0.5 max-w-[180px]">{t("services." + service.titleKey + ".caseStudy.result")}</p>
                   </div>
                   <div className="shrink-0">
-                    <span className="rounded-full bg-[#D4785C]/10 px-2.5 py-1 text-[8px] font-bold uppercase tracking-wider text-[#D4785C]">
+                    <span className="rounded-full bg-accent/10 px-2.5 py-1 text-[8px] font-bold uppercase tracking-wider text-accent">
                       {t("services." + service.titleKey + ".caseStudy.badge")}
                     </span>
                   </div>
                 </div>
 
-                <div className="mt-5 pt-4 border-t border-white/5 flex items-center gap-1 text-xs font-semibold text-zinc-500 group-hover:text-[#D4785C] transition-colors">
+                <div className="mt-5 pt-4 border-t border-white/5 flex items-center gap-1 text-xs font-semibold text-zinc-500 group-hover:text-accent transition-colors">
                   {t("services.lihatDetail")}
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </div>

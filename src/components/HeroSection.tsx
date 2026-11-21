@@ -4,10 +4,8 @@ import { useRef, useEffect, useState, useCallback } from "react";
 import { useLanguage } from "@/lib/i18n/context";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, ChevronDown, Recycle, BarChart3, Sparkles, Users } from "lucide-react";
-
-const TERRACOTTA = "#D4785C";
+import { motion } from "framer-motion";
+import { ArrowRight, Recycle, BarChart3, Sparkles, Users } from "lucide-react";
 
 const FEATURES = [
   { icon: Recycle, titleKey: "endToEnd", statKey: "endToEnd" },
@@ -58,190 +56,96 @@ function AnimatedCounter({ target, suffix, duration = 2000 }: { target: number; 
   );
 }
 
-function ParticleCanvas() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    let w = window.innerWidth, h = window.innerHeight;
-    canvas.width = w; canvas.height = h;
-
-    const particles: { x: number; y: number; vx: number; vy: number; size: number; alpha: number; color: string }[] = [];
-    const count = Math.min(60, Math.floor((w * h) / 20000));
-
-    for (let i = 0; i < count; i++) {
-      particles.push({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        size: Math.random() * 2.5 + 0.5,
-        alpha: Math.random() * 0.4 + 0.1,
-        color: Math.random() > 0.5 ? TERRACOTTA : "#10B981",
-      });
-    }
-
-    let animId: number;
-    const animate = () => {
-      ctx.clearRect(0, 0, w, h);
-      particles.forEach((p) => {
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < 0 || p.x > w) p.vx *= -1;
-        if (p.y < 0 || p.y > h) p.vy *= -1;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
-        ctx.globalAlpha = p.alpha;
-        ctx.fill();
-      });
-
-      particles.forEach((a, i) => {
-        for (let j = i + 1; j < particles.length; j++) {
-          const b = particles[j];
-          const dx = a.x - b.x, dy = a.y - b.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = TERRACOTTA;
-            ctx.globalAlpha = 0.04 * (1 - dist / 120);
-            ctx.stroke();
-          }
-        }
-      });
-
-      ctx.globalAlpha = 1;
-      animId = requestAnimationFrame(animate);
-    };
-    animate();
-
-    const handleResize = () => {
-      w = window.innerWidth; h = window.innerHeight;
-      canvas.width = w; canvas.height = h;
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />;
-}
-
 export default function HeroSection() {
   const { t } = useLanguage();
-  const containerRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end start"] });
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 0.95]);
-
-  const scrollToNext = () => {
-    const el = containerRef.current?.nextElementSibling;
-    el?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
+    visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
   };
-
   const childVariants = {
-    hidden: { opacity: 0, y: 24 },
+    hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const } },
   };
 
   return (
-    <section ref={containerRef} className="relative z-10 min-h-screen flex items-center justify-center overflow-hidden">
-      <ParticleCanvas />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/70 pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(212,120,92,0.08),transparent_60%)] pointer-events-none" />
-
-      <motion.div style={{ opacity, scale }} className="relative mx-auto w-full max-w-7xl px-6 lg:px-8 py-20">
-        <motion.div
-          className="mx-auto flex w-full max-w-5xl flex-col items-center text-center"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div variants={childVariants} className="relative mb-6 h-56 w-56 md:h-64 md:w-64 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(212,120,92,0.15),transparent_70%)] animate-pulse" />
-            <Image src="/Baciraro cap.png" alt="Baciraro" fill priority sizes="256px" className="object-contain p-2 drop-shadow-[0_25px_60px_rgba(212,120,92,0.3)]" />
+    <section className="relative z-10 overflow-hidden">
+      <div className="absolute -left-60 -top-52 h-[900px] w-[900px] rounded-full bg-[radial-gradient(circle,rgb(var(--accent-rgb)/0.14),transparent_65%)] pointer-events-none" aria-hidden="true" />
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-24">
+        <motion.div variants={containerVariants} initial="hidden" animate="visible">
+          <motion.div variants={childVariants} className="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2">
+            <span className="h-[7px] w-[7px] rounded-full bg-accent" />
+            <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-zinc-300">{t("hero.ekosistem")}</span>
           </motion.div>
 
-          <motion.p variants={childVariants} className="font-serif text-xl md:text-2xl italic tracking-tight text-[#D4785C]">
-            {t("hero.ekosistem")}
-          </motion.p>
+          <motion.h1 variants={childVariants} className="mt-7 text-6xl font-bold leading-none tracking-[-0.035em] text-white sm:text-7xl lg:text-[6rem]">
+            Baciraro
+            <span className="block font-serif font-normal italic text-accent">{t("hero.tagline")}</span>
+          </motion.h1>
 
-          <motion.div variants={childVariants} className="mt-2">
-            <h1 className="text-5xl font-normal leading-[0.95] tracking-[-0.05em] text-white sm:text-7xl md:text-8xl lg:text-[7.5rem] drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]">
-              Baciraro
-            </h1>
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif italic text-[#D4785C]/80 mt-1 tracking-tight"
-            >
-              {t("hero.tagline")}
-            </motion.span>
-          </motion.div>
-
-          <motion.p variants={childVariants} className="mx-auto mt-6 max-w-3xl text-base md:text-lg leading-relaxed text-zinc-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+          <motion.p variants={childVariants} className="mt-7 max-w-xl text-base leading-relaxed text-zinc-300 md:text-lg">
             {t("hero.deskripsi")}
           </motion.p>
 
-          <motion.div variants={childVariants} className="mt-8 grid grid-cols-3 gap-6 max-w-lg mx-auto">
-            {STATS.map((s) => (
-              <div key={s.labelKey} className="text-center">
-                <p className="text-2xl md:text-3xl font-bold text-white tabular-nums">
-                  <AnimatedCounter target={s.value} suffix={s.suffix} />
-                </p>
-                <p className="text-[10px] text-zinc-500 mt-1 uppercase tracking-wider">{t("hero.stats." + s.labelKey)}</p>
-              </div>
-            ))}
-          </motion.div>
-
-          <motion.div variants={childVariants} className="mt-8 flex flex-wrap justify-center gap-3">
-            {FEATURES.map((f) => (
-              <div key={f.titleKey} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-4 py-2 backdrop-blur-sm">
-                <f.icon className="h-3.5 w-3.5 text-[#D4785C]" />
-                <span className="text-[10px] font-semibold text-zinc-300 whitespace-nowrap">{t("hero.features." + f.titleKey)}</span>
-                <span className="text-[8px] text-zinc-600 font-mono">{t("hero.featureStats." + f.statKey)}</span>
-              </div>
-            ))}
-          </motion.div>
-
-          <motion.div variants={childVariants} className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+          <motion.div variants={childVariants} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black transition-all hover:gap-3 shadow-[0_4px_24px_rgba(0,0,0,0.4)] hover:bg-zinc-100"
+              className="group inline-flex h-[52px] items-center justify-center gap-2.5 rounded-full bg-white px-7 text-[15px] font-bold text-black transition-all hover:-translate-y-px hover:opacity-90"
             >
               {t("hero.mulaiKolaborasi")}
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black transition-transform group-hover:scale-110">
-                <ArrowRight className="h-3 w-3 text-white" />
-              </span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               href="#ecosystem"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-all hover:bg-black/50 hover:border-[#D4785C]/30"
+              className="inline-flex h-[52px] items-center justify-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-7 text-[15px] font-bold text-white transition-all hover:bg-white/10"
             >
               {t("hero.jelajahiEkosistem")}
-              <ArrowRight className="h-3.5 w-3.5 text-[#D4785C]" />
+              <ArrowRight className="h-4 w-4 text-accent" />
             </Link>
           </motion.div>
-        </motion.div>
-      </motion.div>
 
-      <button onClick={scrollToNext} className="absolute bottom-8 left-1/2 -translate-x-1/2 text-zinc-500 hover:text-white transition-colors animate-bounce">
-        <ChevronDown className="h-6 w-6" />
-      </button>
+          <motion.div variants={childVariants} className="mt-12 grid max-w-lg grid-cols-3 gap-7">
+            {STATS.map((s) => (
+              <div key={s.labelKey}>
+                <p className="text-2xl font-bold tabular-nums text-white md:text-3xl">
+                  <AnimatedCounter target={s.value} suffix={s.suffix} />
+                </p>
+                <p className="mt-1 text-xs text-zinc-400">{t("hero.stats." + s.labelKey)}</p>
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+          className="relative h-[420px] overflow-hidden rounded-[28px] border border-white/10 bg-surface sm:h-[520px] lg:h-[620px]"
+        >
+          <Image
+            src="/Dialog Budaya/foto bersama dengan narasumber.webp"
+            alt={t("hero.photoAlt")}
+            fill
+            priority
+            sizes="(min-width: 1024px) 45vw, 100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-x-3.5 bottom-3.5 rounded-[18px] border border-white/10 bg-[rgba(5,7,6,0.82)] px-[18px] py-3.5 text-[#fafafa] backdrop-blur-sm">
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#fca5a5]">{t("hero.photoEyebrow")}</p>
+            <p className="mt-0.5 text-lg font-bold leading-snug">{t("hero.photoTitle")}</p>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="relative mx-auto flex max-w-7xl flex-wrap justify-center gap-3 px-6 pb-14 lg:px-8">
+        {FEATURES.map((f) => (
+          <div key={f.titleKey} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-surface/70 px-4 py-2 backdrop-blur-sm">
+            <f.icon className="h-3.5 w-3.5 text-accent" />
+            <span className="whitespace-nowrap text-[11px] font-semibold text-zinc-300">{t("hero.features." + f.titleKey)}</span>
+            <span className="font-mono text-[9px] text-zinc-500">{t("hero.featureStats." + f.statKey)}</span>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

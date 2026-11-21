@@ -50,9 +50,9 @@ const statusColor: Record<string, string> = {
 };
 
 const inputCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/25 focus:border-[#D97A2B] outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white placeholder:text-white/25 focus:border-accent-2 outline-none transition";
 const selectCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white focus:border-[#D97A2B] outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white focus:border-accent-2 outline-none transition";
 
 export default function PayoutsClient({
   payouts,
@@ -352,7 +352,7 @@ export default function PayoutsClient({
           {isAdmin && (
             <button
               onClick={() => (showForm ? setShowForm(false) : setShowForm(true))}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white text-sm font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-accent to-accent-2 text-white text-sm font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -369,17 +369,17 @@ export default function PayoutsClient({
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 print:hidden">
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Total Payout</p>
           <p className="text-xl font-bold text-white mt-1">{formatRupiah(totalNet)}</p>
           <p className="text-xs text-white/40 mt-1">net setelah fee Baciraro</p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Sudah Dibayar</p>
           <p className="text-xl font-bold text-emerald-400 mt-1">{formatRupiah(totalPaid)}</p>
           <p className="text-xs text-white/40 mt-1">payout berstatus Dibayar</p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Belum Dibayar</p>
           <p className="text-xl font-bold text-amber-400 mt-1">{formatRupiah(totalNet - totalPaid)}</p>
           <p className="text-xs text-white/40 mt-1">pending + diproses</p>
@@ -394,7 +394,7 @@ export default function PayoutsClient({
       )}
 
       {showForm && isAdmin && (
-        <form onSubmit={createPayout} className="bg-[#151515] rounded-xl border border-white/10 p-6 mb-6 space-y-4 print:hidden">
+        <form onSubmit={createPayout} className="bg-surface-2 rounded-xl border border-white/10 p-6 mb-6 space-y-4 print:hidden">
           <h2 className="font-semibold text-white">Buat Payout dari Project</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -447,7 +447,7 @@ export default function PayoutsClient({
                         <div className="flex items-center gap-2">
                           <input type="number" min="0" max="100" step="0.01" value={fm.contribution_percent}
                             onChange={(e) => updateMemberPercent(fm.key, Number(e.target.value))}
-                            className="w-24 px-3 py-2 rounded-lg border border-white/10 bg-[#0d0d0d] text-white text-right focus:border-[#D97A2B] outline-none transition" />
+                            className="w-24 px-3 py-2 rounded-lg border border-white/10 bg-surface text-white text-right focus:border-accent-2 outline-none transition" />
                           <span className="text-white/50 text-sm">%</span>
                         </div>
                         <button type="button" onClick={() => removeMemberRow(fm.key)}
@@ -462,11 +462,11 @@ export default function PayoutsClient({
                         value={fm.tugas}
                         onChange={(e) => updateMemberTugas(fm.key, e.target.value)}
                         placeholder="Tugas / peran (mis. cetak 3D, editing, pemasaran)..."
-                        className="w-full px-3 py-2 rounded-lg border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/25 focus:border-[#D97A2B] outline-none transition"
+                        className="w-full px-3 py-2 rounded-lg border border-white/10 bg-surface text-white placeholder:text-white/25 focus:border-accent-2 outline-none transition"
                       />
                     </div>
                   ))}
-                  <div className="flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium bg-[#D97A2B]/10 text-[#E9A64E]">
+                  <div className="flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium bg-accent-2/10 text-accent-2">
                     <span>Total kontribusi</span>
                     <span>{formTotalPercent.toFixed(2)}% {Math.round(formTotalPercent) === 100 ? "✓" : "(harus 100%)"}</span>
                   </div>
@@ -481,7 +481,7 @@ export default function PayoutsClient({
                   ))}
                 </select>
                 <button type="button" onClick={addMemberRow}
-                  className="px-4 py-2.5 rounded-lg border border-[#D97A2B]/40 text-[#E9A64E] text-sm font-medium hover:bg-[#D97A2B]/10 transition">
+                  className="px-4 py-2.5 rounded-lg border border-accent-2/40 text-accent-2 text-sm font-medium hover:bg-accent-2/10 transition">
                   Tambah
                 </button>
               </div>
@@ -498,7 +498,7 @@ export default function PayoutsClient({
                 </div>
                 <div>
                   <p className="text-xs text-white/50">Fee Baciraro ({KAS_PERCENT}%)</p>
-                  <p className="font-semibold text-[#E9A64E]">{formatRupiah(preview.kasAmount)}</p>
+                  <p className="font-semibold text-accent-2">{formatRupiah(preview.kasAmount)}</p>
                 </div>
                 <div>
                   <p className="text-xs text-white/50">Net untuk Member</p>
@@ -515,7 +515,7 @@ export default function PayoutsClient({
 
           <div className="flex gap-3">
             <button type="submit" disabled={saving}
-              className="px-5 py-2.5 rounded-lg bg-[#D97A2B] text-white font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2">
+              className="px-5 py-2.5 rounded-lg bg-accent-2 text-white font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2">
               {saving && (
                 <svg className="w-4 h-4 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12a8 8 0 018-8v0a8 8 0 018 8" />
@@ -534,14 +534,14 @@ export default function PayoutsClient({
       <div className="flex gap-2 mb-6 print:hidden">
         {(["all", "pending", "processing", "paid"] as const).map((f) => (
           <button key={f} onClick={() => setFilter(f)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${filter === f ? "bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white" : "bg-[#151515] border border-white/10 text-white/60 hover:bg-white/5"}`}>
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${filter === f ? "bg-gradient-to-r from-accent to-accent-2 text-white" : "bg-surface-2 border border-white/10 text-white/60 hover:bg-white/5"}`}>
             {f === "all" ? "Semua" : statusLabel[f]}
           </button>
         ))}
       </div>
 
       {filtered.length === 0 ? (
-        <div className="bg-[#151515] rounded-xl border border-dashed border-white/20 p-16 text-center text-white/40 print:hidden">
+        <div className="bg-surface-2 rounded-xl border border-dashed border-white/20 p-16 text-center text-white/40 print:hidden">
           <p className="text-lg font-medium mb-1">Belum ada payout</p>
           <p className="text-sm">Buat payout dari project yang selesai atau dibayar.</p>
         </div>
@@ -551,9 +551,9 @@ export default function PayoutsClient({
             const ms = membersByPayout.get(p.id) ?? [];
             const isOpen = !!expanded[p.id];
             return (
-              <div key={p.id} className="bg-[#151515] rounded-xl border border-white/10">
+              <div key={p.id} className="bg-surface-2 rounded-xl border border-white/10">
                 <div className="flex items-center gap-4 p-4">
-                  <button onClick={() => toggleExpand(p.id)} className="p-1.5 text-white/30 hover:text-[#E9A64E] transition print:hidden" aria-label="Rincian">
+                  <button onClick={() => toggleExpand(p.id)} className="p-1.5 text-white/30 hover:text-accent-2 transition print:hidden" aria-label="Rincian">
                     <svg className={`w-5 h-5 transition-transform ${isOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -564,7 +564,7 @@ export default function PayoutsClient({
                   </div>
                   <div className="hidden md:block text-right">
                     <p className="text-xs text-white/40">Total {formatRupiah(p.total_amount)}</p>
-                    <p className="text-xs text-[#E9A64E]">Fee {formatRupiah(p.orders_fee)}</p>
+                    <p className="text-xs text-accent-2">Fee {formatRupiah(p.orders_fee)}</p>
                   </div>
                   <div className="text-right shrink-0">
                     <p className="font-bold text-emerald-400">{formatRupiah(p.net_amount)}</p>
@@ -601,7 +601,7 @@ export default function PayoutsClient({
                     )}
                     {p.finalized_at && (
                       <a href={`/admin/payouts/${p.id}/invoice`} target="_blank" rel="noopener noreferrer"
-                        className="p-1.5 text-white/30 hover:text-[#E9A64E] transition" title="Invoice">
+                        className="p-1.5 text-white/30 hover:text-accent-2 transition" title="Invoice">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
@@ -612,8 +612,8 @@ export default function PayoutsClient({
                 {isOpen && (
                   <div className="border-t border-white/5 px-4 py-3 space-y-3">
                     {!p.finalized_at && p.status !== "paid" && (
-                      <div className="rounded-lg border border-[#D97A2B]/30 bg-[#D97A2B]/5 p-3">
-                        <p className="text-sm font-medium text-[#E9A64E] mb-2">Isi Total Riil Pendapatan</p>
+                      <div className="rounded-lg border border-accent-2/30 bg-accent-2/5 p-3">
+                        <p className="text-sm font-medium text-accent-2 mb-2">Isi Total Riil Pendapatan</p>
                         <p className="text-xs text-white/40 mb-2">
                           Persen sudah dikunci dari awal. Masukkan total pendapatan riil (mis. dari barang terjual),
                           otomatis dibagi ke tiap anggota sesuai persen.
@@ -625,7 +625,7 @@ export default function PayoutsClient({
                             value={finalizeDrafts[p.id] ?? ""}
                             onChange={(e) => setFinalizeDrafts((prev) => ({ ...prev, [p.id]: e.target.value }))}
                             placeholder="Total riil (Rp)"
-                            className="flex-1 px-3 py-2 rounded-lg border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/25 focus:border-[#D97A2B] outline-none transition"
+                            className="flex-1 px-3 py-2 rounded-lg border border-white/10 bg-surface text-white placeholder:text-white/25 focus:border-accent-2 outline-none transition"
                           />
                           <div className="flex items-center gap-2">
                             <span className="text-xs text-white/40 whitespace-nowrap">Kas Tambahan</span>
@@ -637,14 +637,14 @@ export default function PayoutsClient({
                               value={kasOptionalDrafts[p.id] ?? ""}
                               onChange={(e) => setKasOptionalDrafts((prev) => ({ ...prev, [p.id]: e.target.value }))}
                               placeholder="%"
-                              className="w-20 px-3 py-2 rounded-lg border border-white/10 bg-[#0d0d0d] text-white text-right placeholder:text-white/25 focus:border-[#D97A2B] outline-none transition"
+                              className="w-20 px-3 py-2 rounded-lg border border-white/10 bg-surface text-white text-right placeholder:text-white/25 focus:border-accent-2 outline-none transition"
                             />
                             <span className="text-xs text-white/40">%</span>
                           </div>
                           <button
                             onClick={() => finalizePayout(p)}
                             disabled={finalizingId === p.id}
-                            className="px-4 py-2 rounded-lg bg-[#D97A2B] text-white text-sm font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                            className="px-4 py-2 rounded-lg bg-accent-2 text-white text-sm font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed"
                           >
                             {finalizingId === p.id ? "Menyimpan..." : "Hitung & Simpan"}
                           </button>
@@ -659,12 +659,12 @@ export default function PayoutsClient({
                             <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-sm">
                               <div>
                                 <p className="text-xs text-white/50">Fee Baciraro (10%)</p>
-                                <p className="font-semibold text-[#E9A64E]">{formatRupiah(dist.kasAmount)}</p>
+                                <p className="font-semibold text-accent-2">{formatRupiah(dist.kasAmount)}</p>
                               </div>
                               {kasOpt > 0 && (
                                 <div>
                                   <p className="text-xs text-white/50">Kas Baciraro Tambahan ({kasOpt}%)</p>
-                                  <p className="font-semibold text-[#E9A64E]">{formatRupiah(dist.kasOptionalAmount)}</p>
+                                  <p className="font-semibold text-accent-2">{formatRupiah(dist.kasOptionalAmount)}</p>
                                 </div>
                               )}
                               <div>

@@ -18,7 +18,7 @@ export default function ProjectClosing() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050806]/50 via-[#050806]/15 to-[#050806]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/15 to-background" />
 
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <div className="text-center max-w-4xl">
@@ -37,7 +37,7 @@ export default function ProjectClosing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2, ease: springEase }}
-              className="mt-6 text-[15px] text-[#F4F1EA]/60 whitespace-pre-line"
+              className="mt-6 text-[15px] text-foreground/60 whitespace-pre-line"
             >
               {mataluntungProject.closingAttribution}
             </motion.p>

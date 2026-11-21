@@ -29,9 +29,9 @@ type Props = {
 const typeLabel: Record<string, string> = { income: "Pemasukan", expense: "Pengeluaran" };
 
 const inputCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/25 focus:border-[#D97A2B] outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white placeholder:text-white/25 focus:border-accent-2 outline-none transition";
 const selectCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white focus:border-[#D97A2B] outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white focus:border-accent-2 outline-none transition";
 
 const PER_PAGE = 15;
 
@@ -253,7 +253,7 @@ export default function TransactionsClient({ transactions, projects, isAdmin }: 
           {isAdmin && (
             <button
               onClick={() => (showForm ? setShowForm(false) : openCreate())}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white text-sm font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-accent to-accent-2 text-white text-sm font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -265,17 +265,17 @@ export default function TransactionsClient({ transactions, projects, isAdmin }: 
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Saldo</p>
           <p className={`text-xl font-bold mt-1 ${balance >= 0 ? "text-emerald-400" : "text-red-400"}`}>{formatRupiah(balance)}</p>
           <p className="text-xs text-white/40 mt-1">saldo berjalan</p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Pemasukan</p>
           <p className="text-xl font-bold text-blue-400 mt-1">{formatRupiah(totalIncome)}</p>
           <p className="text-xs text-white/40 mt-1">{withBalance.filter((t) => t.type === "income").length} transaksi</p>
         </div>
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-5">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-5">
           <p className="text-sm text-white/50">Pengeluaran</p>
           <p className="text-xl font-bold text-red-400 mt-1">{formatRupiah(totalExpense)}</p>
           <p className="text-xs text-white/40 mt-1">{withBalance.filter((t) => t.type === "expense").length} transaksi</p>
@@ -290,7 +290,7 @@ export default function TransactionsClient({ transactions, projects, isAdmin }: 
       )}
 
       {showForm && isAdmin && (
-        <form onSubmit={save} className="bg-[#151515] rounded-xl border border-white/10 p-6 mb-6 space-y-4">
+        <form onSubmit={save} className="bg-surface-2 rounded-xl border border-white/10 p-6 mb-6 space-y-4">
           <h2 className="font-semibold text-white">{editingId ? "Ubah Transaksi" : "Tambah Transaksi"}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -331,7 +331,7 @@ export default function TransactionsClient({ transactions, projects, isAdmin }: 
           </div>
           <div className="flex gap-3">
             <button type="submit" disabled={saving}
-              className="px-5 py-2.5 rounded-lg bg-[#D97A2B] text-white font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2">
+              className="px-5 py-2.5 rounded-lg bg-accent-2 text-white font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2">
               {saving && (
                 <svg className="w-4 h-4 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12a8 8 0 018-8v0a8 8 0 018 8" />
@@ -350,12 +350,12 @@ export default function TransactionsClient({ transactions, projects, isAdmin }: 
       <div className="flex flex-col sm:flex-row flex-wrap gap-2 mb-4">
         {(["all", "income", "expense"] as const).map((f) => (
           <button key={f} onClick={() => { setFilter(f); setPage(1); }}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${filter === f ? "bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white" : "bg-[#151515] border border-white/10 text-white/60 hover:bg-white/5"}`}>
+            className={`px-4 py-2 rounded-lg text-sm font-medium transition ${filter === f ? "bg-gradient-to-r from-accent to-accent-2 text-white" : "bg-surface-2 border border-white/10 text-white/60 hover:bg-white/5"}`}>
             {f === "all" ? "Semua" : typeLabel[f]}
           </button>
         ))}
         <select value={month} onChange={(e) => { setMonth(e.target.value); setPage(1); }}
-          className="px-4 py-2 rounded-lg text-sm font-medium bg-[#151515] border border-white/10 text-white/60 focus:border-[#D97A2B] outline-none transition">
+          className="px-4 py-2 rounded-lg text-sm font-medium bg-surface-2 border border-white/10 text-white/60 focus:border-accent-2 outline-none transition">
           <option value="all">Semua bulan</option>
           {months.map((m) => (
             <option key={m} value={m}>
@@ -367,13 +367,13 @@ export default function TransactionsClient({ transactions, projects, isAdmin }: 
       </div>
 
       {filtered.length === 0 ? (
-        <div className="bg-[#151515] rounded-xl border border-dashed border-white/20 p-16 text-center text-white/40">
+        <div className="bg-surface-2 rounded-xl border border-dashed border-white/20 p-16 text-center text-white/40">
           <p className="text-lg font-medium mb-1">Belum ada transaksi</p>
           <p className="text-sm">Catat pemasukan dan pengeluaran kas Baciraro.</p>
         </div>
       ) : (
         <>
-          <div className="bg-[#151515] rounded-xl border border-white/10 overflow-x-auto">
+          <div className="bg-surface-2 rounded-xl border border-white/10 overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-left text-xs text-white/50 border-b border-white/10">
@@ -411,7 +411,7 @@ export default function TransactionsClient({ transactions, projects, isAdmin }: 
                       <td className="px-4 py-3 text-right text-white/60 whitespace-nowrap">{formatRupiah(t.balance)}</td>
                       {isAdmin && (
                         <td className="px-4 py-3 whitespace-nowrap text-right">
-                          <button onClick={() => openEdit(t)} className="p-1.5 text-white/30 hover:text-[#E9A64E] transition" aria-label="Ubah">
+                          <button onClick={() => openEdit(t)} className="p-1.5 text-white/30 hover:text-accent-2 transition" aria-label="Ubah">
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                             </svg>

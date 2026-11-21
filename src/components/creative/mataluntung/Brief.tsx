@@ -29,7 +29,7 @@ export default function Brief() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1, ease: springEase }}
-              className="mt-6 max-w-[55ch] font-serif italic text-[clamp(1.1rem,2vw,1.4rem)] leading-snug text-[#F4F1EA]/90 whitespace-pre-line"
+              className="mt-6 max-w-[55ch] font-serif italic text-[clamp(1.1rem,2vw,1.4rem)] leading-snug text-foreground/90 whitespace-pre-line"
             >
               {mataluntungProject.briefStatement}
             </motion.p>
@@ -48,14 +48,14 @@ export default function Brief() {
                   }}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#F87171]/30 bg-[#F87171]/10 text-[12px] font-bold text-[#F87171]">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-accent/30 bg-accent/10 text-[12px] font-bold text-accent">
                       {concept.number}
                     </span>
                     <h3 className="text-[12px] font-bold uppercase tracking-[0.25em] text-white">
                       {concept.title}
                     </h3>
                   </div>
-                  <p className="mt-2 ml-11 text-[15px] leading-relaxed text-[#9CA3A0]">
+                  <p className="mt-2 ml-11 text-[15px] leading-relaxed text-mute">
                     {concept.description}
                   </p>
                 </motion.div>
@@ -80,7 +80,7 @@ export default function Brief() {
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
           </motion.div>
         </div>
       </div>

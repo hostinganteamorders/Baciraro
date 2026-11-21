@@ -25,8 +25,8 @@ type Props = {
 const statusName: Record<string, string> = { active: "Aktif", completed: "Selesai", paid: "Dibayar" };
 const statusColor: Record<string, string> = {
   active: "#60A5FA",
-  completed: "#34D399",
-  paid: "#10B981",
+  completed: "var(--accent)",
+  paid: "var(--accent)",
 };
 
 const tooltipStyle = {
@@ -34,7 +34,7 @@ const tooltipStyle = {
   border: "1px solid rgba(255,255,255,0.1)",
   borderRadius: 8,
   fontSize: 12,
-  color: "#fafafa",
+  color: "var(--fg)",
 };
 
 export default function DashboardCharts({ monthly, statusData }: Props) {
@@ -43,7 +43,7 @@ export default function DashboardCharts({ monthly, statusData }: Props) {
 
   return (
     <div className="grid lg:grid-cols-2 gap-8 mb-8">
-      <div className="bg-[#151515] rounded-xl border border-white/10 p-6">
+      <div className="bg-surface-2 rounded-xl border border-white/10 p-6">
         <h2 className="text-lg font-semibold text-white mb-4">Kas 6 Bulan Terakhir</h2>
         {hasMonthly ? (
           <ResponsiveContainer width="100%" height={260}>
@@ -63,7 +63,7 @@ export default function DashboardCharts({ monthly, statusData }: Props) {
         )}
       </div>
 
-      <div className="bg-[#151515] rounded-xl border border-white/10 p-6">
+      <div className="bg-surface-2 rounded-xl border border-white/10 p-6">
         <h2 className="text-lg font-semibold text-white mb-4">Status Project</h2>
         {hasStatus ? (
           <div className="flex items-center gap-6">

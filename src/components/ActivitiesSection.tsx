@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 
-const GOLD = "#F2D479";
+const GOLD = "var(--accent-2)";
 
 const ACTIVITIES = [
   {
@@ -35,7 +35,7 @@ export default function ActivitiesSection() {
   const { t } = useLanguage();
   return (
     <section id="activities" className="relative z-10 py-20 lg:py-24 overflow-hidden border-t border-white/5">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(242,212,121,0.04),transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgb(var(--accent2-rgb)/0.04),transparent_60%)]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
@@ -45,12 +45,12 @@ export default function ActivitiesSection() {
           className="mx-auto max-w-3xl text-center"
         >
           <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-zinc-400 backdrop-blur shadow-lg">
-            <span className="h-2 w-2 rounded-full bg-[#F2D479] animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-accent-2 animate-pulse" />
             {t("activities.label")}
           </p>
           <h2 className="mt-5 text-4xl font-normal leading-[1.15] tracking-tight text-white sm:text-5xl">
             {t("activities.title")}
-            <span className="font-serif italic text-[#D4785C]">{t("activities.titleItalic")}</span>
+            <span className="font-serif italic text-accent">{t("activities.titleItalic")}</span>
           </h2>
           <p className="mt-4 text-base leading-relaxed text-zinc-400 max-w-xl mx-auto">
             {t("activities.subtitle")}
@@ -79,14 +79,14 @@ export default function ActivitiesSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10 group-hover:from-black/75 transition-all duration-300" />
 
                   <div className="absolute top-4 right-4">
-                    <span className="rounded-full border border-white/10 bg-black/40 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#F2D479] backdrop-blur">
+                    <span className="rounded-full border border-white/10 bg-black/40 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-accent-2 backdrop-blur">
                       {t(activity.dateKey)}
                     </span>
                   </div>
 
                   <div className="absolute inset-0 flex items-end p-6">
                     <div className="relative z-10">
-                      <p className="text-[9px] font-semibold uppercase tracking-wider text-[#F2D479]">{t(activity.labelKey)}</p>
+                      <p className="text-[9px] font-semibold uppercase tracking-wider text-accent-2">{t(activity.labelKey)}</p>
                       <h3 className="mt-1.5 text-lg font-semibold text-white drop-shadow-lg">{t(activity.titleKey)}</h3>
                       <p className="mt-1 text-xs text-zinc-300 max-w-sm drop-shadow-md">{t(activity.descKey)}</p>
                     </div>

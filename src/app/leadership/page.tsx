@@ -56,7 +56,7 @@ function IconBtn({ href, label, children }: { href: string; label: string; child
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center rounded-full border border-white/[0.07] bg-white/[0.04] text-zinc-400 transition-all duration-300 hover:border-[#f87171]/25 hover:bg-[#f87171]/[0.06] hover:text-[#f87171]"
+      className="inline-flex items-center justify-center rounded-full border border-white/[0.07] bg-white/[0.04] text-zinc-400 transition-all duration-300 hover:border-accent/25 hover:bg-accent/[0.06] hover:text-accent"
       aria-label={label}
     >
       {children}
@@ -123,7 +123,7 @@ function DivisionSection({ head, members }: { head: TeamMember; members: TeamMem
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/[0.4] via-transparent to-transparent pointer-events-none" />
           </div>
-          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#f87171] mb-1">
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent mb-1">
             {head.title || head.role}
           </p>
           <h2 className="font-serif text-[26px] font-normal leading-tight text-white">{head.name}</h2>
@@ -187,8 +187,7 @@ export default function LeadershipPage() {
   ].filter((d) => d.head);
 
   return (
-    <main className="relative overflow-hidden text-[#fafafa] min-h-screen">
-      <div aria-hidden="true" className="page-bg" />
+    <main className="relative overflow-hidden text-foreground min-h-screen">
       <div className="relative z-[1]">
         <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
         <Header subtitle={t("leadership.label")} />
@@ -231,14 +230,14 @@ export default function LeadershipPage() {
                 transition={{ duration: 0.9, delay: 0.3, ease: springEase }}
                 className="relative rounded-[36px] p-8 lg:p-[60px_56px] border border-emerald-500/15 backdrop-blur-[20px]"
                 style={{
-                  background: "radial-gradient(ellipse 80% 60% at 30% 40%, rgba(16,185,129,0.06), transparent 70%), rgba(255,255,255,0.02)",
-                  boxShadow: "0 0 80px rgba(16,185,129,0.06), 0 0 160px rgba(16,185,129,0.04), inset 0 0 80px rgba(16,185,129,0.02)",
+                  background: "radial-gradient(ellipse 80% 60% at 30% 40%, rgb(var(--accent-rgb)/0.06), transparent 70%), rgba(255,255,255,0.02)",
+                  boxShadow: "0 0 80px rgb(var(--accent-rgb)/0.06), 0 0 160px rgb(var(--accent-rgb)/0.04), inset 0 0 80px rgb(var(--accent-rgb)/0.02)",
                 }}
               >
                 <div className="pointer-events-none absolute inset-[-1px] rounded-[36px]"
                   style={{
                     padding: 1,
-                    background: "linear-gradient(135deg, rgba(16,185,129,0.25), transparent 40%, transparent 60%, rgba(248,113,113,0.10))",
+                    background: "linear-gradient(135deg, rgb(var(--accent-rgb)/0.25), transparent 40%, transparent 60%, rgb(var(--accent-rgb)/0.10))",
                     WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
                     WebkitMaskComposite: "xor",
                     maskComposite: "exclude",
@@ -257,7 +256,7 @@ export default function LeadershipPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                   </div>
                   <div>
-                    <p className="text-[12px] font-bold uppercase tracking-[0.25em] text-[#f87171] mb-2">
+                    <p className="text-[12px] font-bold uppercase tracking-[0.25em] text-accent mb-2">
                       {ceo.title || t("leadership.ceoFallback")}
                     </p>
                     <h2 className="font-serif text-[clamp(40px,5vw,64px)] font-normal leading-[1.08] tracking-[-0.03em] text-white">
@@ -298,7 +297,7 @@ export default function LeadershipPage() {
               <span className="absolute top-2 left-6 font-serif text-[80px] leading-none text-emerald-500/10 pointer-events-none select-none">
                 &ldquo;
               </span>
-              <p className="font-serif text-[22px] italic leading-relaxed text-[#e8e8e8]">
+              <p className="font-serif text-[22px] italic leading-relaxed text-zinc-200">
                 {t("leadership.quote")}
               </p>
             </motion.div>

@@ -61,9 +61,9 @@ const emptyForm = {
 };
 
 const inputCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/25 focus:border-[#D97A2B] outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white placeholder:text-white/25 focus:border-accent-2 outline-none transition";
 const selectCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white focus:border-[#D97A2B] outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white focus:border-accent-2 outline-none transition";
 
 export default function ScheduleClient({ tasks, projects, members, isAdmin, icsConfigured, oauthConfigured, googleConnected, googleEmail, embedUrl, calendarEmail }: Props) {
   const router = useRouter();
@@ -365,13 +365,13 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
           {isAdmin && (
             <div className="flex items-center border border-white/10 rounded-lg overflow-hidden">
               <button onClick={() => setViewMode("list")}
-                className={`px-3 py-2 text-sm font-medium transition ${viewMode === "list" ? "bg-[#D97A2B] text-white" : "text-white/50 hover:bg-white/5"}`}>
+                className={`px-3 py-2 text-sm font-medium transition ${viewMode === "list" ? "bg-accent-2 text-white" : "text-white/50 hover:bg-white/5"}`}>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
               <button onClick={() => setViewMode("kanban")}
-                className={`px-3 py-2 text-sm font-medium transition ${viewMode === "kanban" ? "bg-[#D97A2B] text-white" : "text-white/50 hover:bg-white/5"}`}>
+                className={`px-3 py-2 text-sm font-medium transition ${viewMode === "kanban" ? "bg-accent-2 text-white" : "text-white/50 hover:bg-white/5"}`}>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7" />
                 </svg>
@@ -380,7 +380,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
           )}
           {isAdmin && (
             <button onClick={() => (showForm ? setShowForm(false) : openCreate())}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white text-sm font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition">
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-accent to-accent-2 text-white text-sm font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
               </svg>
@@ -398,7 +398,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
       )}
 
       {showForm && isAdmin && (
-        <form onSubmit={save} className="bg-[#151515] rounded-xl border border-white/10 p-6 mb-6 space-y-4">
+        <form onSubmit={save} className="bg-surface-2 rounded-xl border border-white/10 p-6 mb-6 space-y-4">
           <h2 className="font-semibold text-white">{editingId ? "Ubah Tugas" : "Tambah Tugas"}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="md:col-span-2">
@@ -454,7 +454,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
           </div>
           <div className="flex gap-3">
             <button type="submit" disabled={saving}
-              className="px-5 py-2.5 rounded-lg bg-[#D97A2B] text-white font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2">
+              className="px-5 py-2.5 rounded-lg bg-accent-2 text-white font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2">
               {saving && (
                 <svg className="w-4 h-4 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12a8 8 0 018-8v0a8 8 0 018 8" />
@@ -475,7 +475,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
           <button key={s} onClick={() => setStatusFilter(s)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
               statusFilter === s
-                ? "bg-[#D97A2B] text-white"
+                ? "bg-accent-2 text-white"
                 : "border border-white/10 text-white/50 hover:bg-white/5"
             }`}>
             {s === "all" ? "Semua" : s === "pending" ? "Menunggu" : s === "active" ? "Berjalan" : "Selesai"}
@@ -484,7 +484,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
         <button onClick={() => setStatusFilter(statusFilter === "recurring" ? "all" : "recurring")}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
             statusFilter === "recurring"
-              ? "bg-[#D97A2B] text-white"
+              ? "bg-accent-2 text-white"
               : "border border-white/10 text-white/50 hover:bg-white/5"
           }`}>
           Berulang
@@ -524,7 +524,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
                           {t.due_date && <span>📅 {formatDate(t.due_date)}</span>}
                           {project && <span>📁 {project.name}</span>}
                           {assigned && <span>👤 {assigned.name}</span>}
-                          {t.recurrence_rule && <span className="text-[#E9A64E]">🔁 {t.recurrence_rule === "daily" ? "Harian" : t.recurrence_rule === "weekly" ? "Mingguan" : t.recurrence_rule === "biweekly" ? "2 Mingguan" : "Bulanan"}</span>}
+                          {t.recurrence_rule && <span className="text-accent-2">🔁 {t.recurrence_rule === "daily" ? "Harian" : t.recurrence_rule === "weekly" ? "Mingguan" : t.recurrence_rule === "biweekly" ? "2 Mingguan" : "Bulanan"}</span>}
                         </div>
                         {isAdmin && (
                           <div className="flex items-center gap-1 mt-2 pt-2 border-t border-white/5">
@@ -534,7 +534,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
                             {col === "active" && (
                               <button onClick={() => setStatus(t, "completed")} className="text-[11px] text-emerald-400 hover:text-emerald-300 transition">Selesai</button>
                             )}
-                            <button onClick={() => openEdit(t)} className="ml-auto text-[11px] text-white/30 hover:text-[#E9A64E] transition">Ubah</button>
+                            <button onClick={() => openEdit(t)} className="ml-auto text-[11px] text-white/30 hover:text-accent-2 transition">Ubah</button>
                           </div>
                         )}
                       </div>
@@ -549,7 +549,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
       <div className="grid lg:grid-cols-2 gap-4">
         <div className="space-y-3">
           {filtered.length === 0 ? (
-            <div className="bg-[#151515] rounded-xl border border-dashed border-white/20 p-12 text-center text-white/40">
+            <div className="bg-surface-2 rounded-xl border border-dashed border-white/20 p-12 text-center text-white/40">
               <p className="text-lg font-medium mb-1">Tidak ada tugas</p>
               <p className="text-sm">Tambahkan tugas baru atau ubah filter status.</p>
             </div>
@@ -564,7 +564,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
                 calendarEmail,
               });
               return (
-                <div key={t.id} className="bg-[#151515] rounded-xl border border-white/10 p-4">
+                <div key={t.id} className="bg-surface-2 rounded-xl border border-white/10 p-4">
                   <div className="flex items-start gap-3">
                     <div className="flex flex-col gap-1 pt-0.5">
                       {t.status === "completed" ? (
@@ -594,7 +594,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
                         {project && <span className="inline-flex items-center gap-1">📁 {project.name}</span>}
                         {assigned && <span className="inline-flex items-center gap-1">👤 {assigned.name}</span>}
                         {t.recurrence_rule && (
-                          <span className="inline-flex items-center gap-1 text-[#E9A64E]">
+                          <span className="inline-flex items-center gap-1 text-accent-2">
                             🔁 {t.recurrence_rule === "daily" ? "Harian" : t.recurrence_rule === "weekly" ? "Mingguan" : t.recurrence_rule === "biweekly" ? "2 Mingguan" : "Bulanan"}
                           </span>
                         )}
@@ -614,7 +614,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
                         <div className="flex items-center gap-1">
                           {googleConnected && t.due_date && !t.gcal_event_id && (
                             <button onClick={() => syncToGoogle(t.id)} disabled={syncing === t.id}
-                              className="px-2 py-1 rounded text-[11px] font-medium text-white/50 hover:text-[#E9A64E] border border-white/10 hover:border-[#E9A64E]/40 transition disabled:opacity-50"
+                              className="px-2 py-1 rounded text-[11px] font-medium text-white/50 hover:text-accent-2 border border-white/10 hover:border-accent-2/40 transition disabled:opacity-50"
                               title="Sinkronkan ke Google Calendar">
                               {syncing === t.id ? "..." : "Sync"}
                             </button>
@@ -623,12 +623,12 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
                             <span className="text-emerald-400/80 text-xs" title="Tersinkron ke Google Calendar">✓</span>
                           )}
                           <a href={templateUrl} target="_blank" rel="noopener noreferrer"
-                            className="p-1.5 text-white/30 hover:text-[#E9A64E] transition" aria-label="Kalender" title="Buka di Google Calendar">
+                            className="p-1.5 text-white/30 hover:text-accent-2 transition" aria-label="Kalender" title="Buka di Google Calendar">
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                           </a>
-                          <button onClick={() => openEdit(t)} className="p-1.5 text-white/30 hover:text-[#E9A64E] transition" aria-label="Ubah">
+                          <button onClick={() => openEdit(t)} className="p-1.5 text-white/30 hover:text-accent-2 transition" aria-label="Ubah">
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                             </svg>
@@ -650,7 +650,7 @@ export default function ScheduleClient({ tasks, projects, members, isAdmin, icsC
 
         {embedUrl && (
           <div className="space-y-4">
-            <div className="bg-[#151515] rounded-xl border border-white/10 overflow-hidden">
+            <div className="bg-surface-2 rounded-xl border border-white/10 overflow-hidden">
               <div className="flex items-center justify-between px-4 py-3 border-b border-white/5">
                 <p className="font-medium text-white text-sm">Kalender</p>
                 <div className="flex items-center gap-2">

@@ -23,7 +23,9 @@
     "subtitle": "Circular Economy Ecosystem Hub",
     "mobileCreativeStudio": "Creative Studio",
     "mobileProfilPoin": "Profile & Points",
-    "brandName": "Baciraro"
+    "brandName": "Baciraro",
+    "themeToLight": "Switch to light mode",
+    "themeToDark": "Switch to dark mode"
   },
   "hero": {
     "ekosistem": "Circular Economy Ecosystem",
@@ -47,7 +49,10 @@
       "digital": "100% transparent",
       "creative": "40+ creations",
       "community": "80+ communities"
-    }
+    },
+    "photoAlt": "Minahasa Cultural Dialogue participants with the speakers",
+    "photoEyebrow": "Event recap · 1 August 2026",
+    "photoTitle": "Minahasa Cultural Dialogue 2026"
   },
   "ecosystem": {
     "label": "CIRCULAR ECOSYSTEM",
@@ -391,7 +396,7 @@
       "isiSemua": "All Products",
       "isiKurasi": "Featured Collection",
       "jumlah": "{count} products in this catalog",
-      "previewNote": "A4 page preview — press the print button then choose \u201cSave as PDF\u201d.",
+      "previewNote": "A4 page preview — press the print button then choose “Save as PDF”.",
       "tutupJudul": "Let's talk about your needs",
       "tutupDesc": "CSR souvenirs, event trophies, custom products, or simply asking for a price — the Baciraro team is ready to help via WhatsApp.",
       "scanDesc": "Scan to connect on WhatsApp",

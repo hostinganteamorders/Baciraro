@@ -84,7 +84,7 @@ export default function PartnerMarquee() {
                 key={`${partner.name}-${i}`}
                 className="group flex shrink-0 items-center gap-3"
               >
-                <div className="flex h-14 w-[7.25rem] shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/15 bg-zinc-100 px-2.5 py-2 transition-transform duration-300 group-hover:scale-[1.03]">
+                <div className="flex h-14 w-[7.25rem] shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/15 bg-[#f4f4f5] px-2.5 py-2 transition-transform duration-300 group-hover:scale-[1.03]">
                   <img
                     src={partner.logo}
                     alt={`Logo ${partner.name}`}

@@ -68,7 +68,7 @@ export default function ReviewMarquee() {
               )}
               <div className="flex items-center gap-1 mb-3">
                 {[1,2,3,4,5].map((s) => (
-                  <Star key={s} className="h-3.5 w-3.5" fill={s <= r.review_rating ? "#fbbf24" : "none"} stroke={s <= r.review_rating ? "#fbbf24" : "#52525b"} />
+                  <Star key={s} className="h-3.5 w-3.5" fill={s <= r.review_rating ? "var(--accent-2)" : "none"} stroke={s <= r.review_rating ? "var(--accent-2)" : "#52525b"} />
                 ))}
               </div>
               <p className="text-sm text-zinc-300 leading-relaxed">&ldquo;{r.review_text}&rdquo;</p>

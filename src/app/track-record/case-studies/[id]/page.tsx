@@ -46,8 +46,7 @@ export default function CaseStudyDetailPage() {
 
   if (index < 0) {
     return (
-      <main className="relative min-h-screen text-[#fafafa] overflow-hidden">
-        <div aria-hidden="true" className="page-bg" />
+      <main className="relative min-h-screen text-foreground overflow-hidden">
         <div className="relative z-[1]">
           <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
           <Header subtitle={t("trackRecord.studiKasus")} />
@@ -68,8 +67,7 @@ export default function CaseStudyDetailPage() {
   const next = projectDetailData[(index + 1) % projectDetailData.length];
 
   return (
-    <main className="relative min-h-screen text-[#fafafa] overflow-hidden">
-      <div aria-hidden="true" className="page-bg" />
+    <main className="relative min-h-screen text-foreground overflow-hidden">
       <div className="relative z-[1]">
         <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
         <Header subtitle={t("trackRecord.studiKasus")} />

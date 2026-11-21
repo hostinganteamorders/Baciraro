@@ -116,11 +116,11 @@ export default function ProjectLightbox({
       </motion.div>
 
       <div className="absolute bottom-6 flex items-center gap-3">
-        <span className="text-sm text-[#9CA3A0] font-medium">
+        <span className="text-sm text-mute font-medium">
           {current + 1} / {photos.length}
         </span>
         {photos[current].alt && (
-          <span className="hidden sm:inline text-sm text-[#9CA3A0]/60 max-w-[50ch] truncate">
+          <span className="hidden sm:inline text-sm text-mute/60 max-w-[50ch] truncate">
             {photos[current].alt}
           </span>
         )}

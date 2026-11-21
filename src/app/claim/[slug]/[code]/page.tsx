@@ -102,7 +102,7 @@ export default function ClaimPage() {
   const hasReview = qr?.review_text && qr?.review_rating;
 
   return (
-    <main className="min-h-screen bg-black text-[#fafafa] flex items-center justify-center p-6">
+    <main className="min-h-screen bg-black text-foreground flex items-center justify-center p-6">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
@@ -181,7 +181,7 @@ export default function ClaimPage() {
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
               className="w-20 h-20 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-6"
             >
-              <Heart className="h-10 w-10 text-emerald-400" fill="#34d399" />
+              <Heart className="h-10 w-10 text-emerald-400" fill="var(--accent)" />
             </motion.div>
             <h1 className="font-serif text-3xl text-white mb-2">{t("claim.terimaKasihTitle")}</h1>
             <p className="text-emerald-400 font-semibold text-lg mb-1">{qr.buyer_name}</p>
@@ -191,7 +191,7 @@ export default function ClaimPage() {
             <p className="text-sm text-zinc-400 mb-6">{t("claim.terimaKasihSubtitle")}</p>
             <div className="flex justify-center gap-1 mb-4">
               {[1,2,3,4,5].map((s) => (
-                <Star key={s} className="h-5 w-5" fill="#fbbf24" stroke="#fbbf24" />
+                <Star key={s} className="h-5 w-5" fill="var(--accent-2)" stroke="var(--accent-2)" />
               ))}
             </div>
             <p className="text-sm text-zinc-300 italic">&ldquo;{qr.review_text}&rdquo;</p>
@@ -199,7 +199,7 @@ export default function ClaimPage() {
         ) : !hasReview ? (
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.02] backdrop-blur p-8 text-center">
             <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-4">
-              <Heart className="h-7 w-7 text-emerald-400" fill="#34d399" />
+              <Heart className="h-7 w-7 text-emerald-400" fill="var(--accent)" />
             </div>
             <h1 className="font-serif text-2xl text-white mb-1">{t("claim.terimaKasihClaimed")}</h1>
             <p className="text-emerald-400 font-semibold text-lg mb-4">{qr.buyer_name}</p>
@@ -235,14 +235,14 @@ export default function ClaimPage() {
         ) : (
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.02] backdrop-blur p-8 text-center">
             <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-4">
-              <Heart className="h-7 w-7 text-emerald-400" fill="#34d399" />
+              <Heart className="h-7 w-7 text-emerald-400" fill="var(--accent)" />
             </div>
             <h1 className="font-serif text-2xl text-white mb-1">{t("claim.terimaKasihClaimed")}</h1>
             <p className="text-emerald-400 font-semibold text-lg mb-1">{qr.buyer_name}</p>
             <p className="text-xs text-zinc-500 mb-6">{t("claim.sudahReview")}</p>
             <div className="flex justify-center gap-1 mb-4">
               {[1,2,3,4,5].map((s) => (
-                <Star key={s} className="h-5 w-5" fill={s <= qr.review_rating ? "#fbbf24" : "none"} stroke={s <= qr.review_rating ? "#fbbf24" : "#52525b"} />
+                <Star key={s} className="h-5 w-5" fill={s <= qr.review_rating ? "var(--accent-2)" : "none"} stroke={s <= qr.review_rating ? "var(--accent-2)" : "#52525b"} />
               ))}
             </div>
             <p className="text-sm text-zinc-300 italic">&ldquo;{qr.review_text}&rdquo;</p>

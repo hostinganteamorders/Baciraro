@@ -81,7 +81,7 @@ export default function ProjectArchive() {
           transition={{ duration: 0.7, ease: springEase }}
           className="mb-10"
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/70">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-mute/70">
             ARCHIVE
           </p>
           <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white">
@@ -101,15 +101,15 @@ export default function ProjectArchive() {
                 }}
                 className={`relative pb-2 text-[11px] font-bold uppercase tracking-[0.25em] transition-colors ${
                   activeCategory === cat || (cat === "ALL" && activeCategory === "ALL")
-                    ? "text-[#34D399]"
-                    : "text-[#9CA3A0]/60 hover:text-[#F4F1EA]/70"
+                    ? "text-accent"
+                    : "text-mute/60 hover:text-foreground/70"
                 }`}
               >
                 {cat}
                 {(activeCategory === cat || (cat === "ALL" && activeCategory === "ALL")) && (
                   <motion.div
                     layoutId="archiveFilter"
-                    className="absolute bottom-0 left-0 right-0 h-px bg-[#34D399]"
+                    className="absolute bottom-0 left-0 right-0 h-px bg-accent"
                     transition={{ duration: 0.3 }}
                   />
                 )}
@@ -130,7 +130,7 @@ export default function ProjectArchive() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4, delay: i * 0.03, ease: springEase }}
                 onClick={() => setLightboxIndex(i)}
-                className={`group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F87171]/50 ${masonryClasses[i % masonryClasses.length]}`}
+                className={`group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 ${masonryClasses[i % masonryClasses.length]}`}
               >
                 <Image
                   src={img.src}
@@ -162,10 +162,10 @@ export default function ProjectArchive() {
           >
             <button
               onClick={() => setShowAll(true)}
-              className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-wider text-[#9CA3A0] transition-colors hover:text-white"
+              className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-wider text-mute transition-colors hover:text-white"
             >
               Explore All {totalForCategory} Frames
-              <span className="text-[#F87171]">→</span>
+              <span className="text-accent">→</span>
             </button>
           </motion.div>
         )}

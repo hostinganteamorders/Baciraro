@@ -64,7 +64,7 @@ export function CinematicHero({ onExploreStory, onBrowseArchive }: { onExploreSt
       </AnimatePresence>
 
       <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
-      <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.08),_transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(circle_at_center,_rgb(var(--accent-rgb)/0.08),_transparent_50%)]" />
 
       <div className="relative z-20 mx-auto max-w-7xl px-6 lg:px-8 w-full">
         <div className="max-w-4xl">

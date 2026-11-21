@@ -29,8 +29,8 @@ export default function ProjectHero() {
         />
       </motion.div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-[#050806]/50 via-[#050806]/15 to-[#050806]" />
-      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#050806] to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/15 to-background" />
+      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background to-transparent" />
 
       <motion.div
         style={{ opacity: heroOpacity }}
@@ -40,7 +40,7 @@ export default function ProjectHero() {
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: springEase }}
-          className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#F87171]"
+          className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent"
         >
           {pialaAerTembagaProject.eyebrow}
         </motion.p>
@@ -58,7 +58,7 @@ export default function ProjectHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: springEase }}
-          className="mt-3 text-[15px] text-[#F4F1EA]/70"
+          className="mt-3 text-[15px] text-foreground/70"
         >
           {pialaAerTembagaProject.clientLine}
         </motion.p>
@@ -76,12 +76,12 @@ export default function ProjectHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6, ease: springEase }}
-          className="mt-6 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]/50"
+          className="mt-6 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground/50"
         >
           <span>Custom Trophy</span>
-          <span className="w-1 h-1 rounded-full bg-[#F87171]/50" />
+          <span className="w-1 h-1 rounded-full bg-accent/50" />
           <span>Recycled Plastic</span>
-          <span className="w-1 h-1 rounded-full bg-[#F87171]/50" />
+          <span className="w-1 h-1 rounded-full bg-accent/50" />
           <span>Circular Design</span>
         </motion.div>
       </motion.div>
@@ -92,10 +92,10 @@ export default function ProjectHero() {
         transition={{ delay: 1.4 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
-        <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#9CA3A0]">
+        <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-mute">
           Scroll
         </span>
-        <div className="h-8 w-px bg-[#9CA3A0]/40" />
+        <div className="h-8 w-px bg-mute/40" />
       </motion.div>
     </section>
   );

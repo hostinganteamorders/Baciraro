@@ -125,7 +125,7 @@ export default function DashboardClient({
         </div>
         <Link
           href="/admin/projects/new"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-accent to-accent-2 text-white font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -137,7 +137,7 @@ export default function DashboardClient({
       {/* Stats Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         {/* Total Pendapatan */}
-        <div className="relative bg-[#151515] rounded-xl border border-white/10 p-5 overflow-hidden group hover:border-white/20 transition">
+        <div className="relative bg-surface-2 rounded-xl border border-white/10 p-5 overflow-hidden group hover:border-white/20 transition">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600" />
           <div className="flex items-start justify-between">
             <div>
@@ -154,7 +154,7 @@ export default function DashboardClient({
         </div>
 
         {/* Kas Riil */}
-        <div className="relative bg-[#151515] rounded-xl border border-white/10 p-5 overflow-hidden group hover:border-white/20 transition">
+        <div className="relative bg-surface-2 rounded-xl border border-white/10 p-5 overflow-hidden group hover:border-white/20 transition">
           <div className={`absolute top-0 left-0 w-full h-1 ${kasRiil >= 0 ? "bg-gradient-to-r from-emerald-500 to-emerald-600" : "bg-gradient-to-r from-red-500 to-red-600"}`} />
           <div className="flex items-start justify-between">
             <div>
@@ -173,7 +173,7 @@ export default function DashboardClient({
         </div>
 
         {/* Project Aktif */}
-        <div className="relative bg-[#151515] rounded-xl border border-white/10 p-5 overflow-hidden group hover:border-white/20 transition">
+        <div className="relative bg-surface-2 rounded-xl border border-white/10 p-5 overflow-hidden group hover:border-white/20 transition">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-orange-500" />
           <div className="flex items-start justify-between">
             <div>
@@ -190,7 +190,7 @@ export default function DashboardClient({
         </div>
 
         {/* Selesai / Dibayar */}
-        <div className="relative bg-[#151515] rounded-xl border border-white/10 p-5 overflow-hidden group hover:border-white/20 transition">
+        <div className="relative bg-surface-2 rounded-xl border border-white/10 p-5 overflow-hidden group hover:border-white/20 transition">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500" />
           <div className="flex items-start justify-between">
             <div>
@@ -209,31 +209,31 @@ export default function DashboardClient({
 
       {/* Quick Actions */}
       <div className="flex flex-wrap gap-2 mb-6">
-        <Link href="/admin/payouts" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#151515] border border-white/10 text-sm text-white/70 hover:text-white hover:border-[#D97A2B]/40 hover:bg-[#D97A2B]/5 transition">
-          <svg className="w-4 h-4 text-[#E9A64E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <Link href="/admin/payouts" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-2 border border-white/10 text-sm text-white/70 hover:text-white hover:border-accent-2/40 hover:bg-accent-2/5 transition">
+          <svg className="w-4 h-4 text-accent-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
           Buat Payout
         </Link>
-        <Link href="/admin/schedule" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#151515] border border-white/10 text-sm text-white/70 hover:text-white hover:border-[#D97A2B]/40 hover:bg-[#D97A2B]/5 transition">
+        <Link href="/admin/schedule" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-2 border border-white/10 text-sm text-white/70 hover:text-white hover:border-accent-2/40 hover:bg-accent-2/5 transition">
           <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
           Lihat Jadwal
         </Link>
-        <Link href="/admin/transactions" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#151515] border border-white/10 text-sm text-white/70 hover:text-white hover:border-[#D97A2B]/40 hover:bg-[#D97A2B]/5 transition">
+        <Link href="/admin/transactions" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-2 border border-white/10 text-sm text-white/70 hover:text-white hover:border-accent-2/40 hover:bg-accent-2/5 transition">
           <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
           </svg>
           Catat Transaksi
         </Link>
-        <Link href="/admin/meetings" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#151515] border border-white/10 text-sm text-white/70 hover:text-white hover:border-[#D97A2B]/40 hover:bg-[#D97A2B]/5 transition">
+        <Link href="/admin/meetings" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-2 border border-white/10 text-sm text-white/70 hover:text-white hover:border-accent-2/40 hover:bg-accent-2/5 transition">
           <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
           Tambah Meeting
         </Link>
-        <Link href="/admin/activity" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#151515] border border-white/10 text-sm text-white/70 hover:text-white hover:border-[#D97A2B]/40 hover:bg-[#D97A2B]/5 transition">
+        <Link href="/admin/activity" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-2 border border-white/10 text-sm text-white/70 hover:text-white hover:border-accent-2/40 hover:bg-accent-2/5 transition">
           <svg className="w-4 h-4 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -247,21 +247,21 @@ export default function DashboardClient({
       </div>
 
       {/* Date range filter (compact) */}
-      <div className="bg-[#151515] rounded-xl border border-white/10 p-4 mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <div className="bg-surface-2 rounded-xl border border-white/10 p-4 mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <p className="text-sm font-medium text-white/70">Rentang Data:</p>
         <div className="flex items-center gap-2">
           <input
             type="date"
             value={dateFrom}
             onChange={(e) => setDateFrom(e.target.value)}
-            className="px-3 py-2 rounded-lg border border-white/10 bg-[#0d0d0d] text-white text-sm focus:border-[#D97A2B] outline-none transition"
+            className="px-3 py-2 rounded-lg border border-white/10 bg-surface text-white text-sm focus:border-accent-2 outline-none transition"
           />
           <span className="text-white/30">—</span>
           <input
             type="date"
             value={dateTo}
             onChange={(e) => setDateTo(e.target.value)}
-            className="px-3 py-2 rounded-lg border border-white/10 bg-[#0d0d0d] text-white text-sm focus:border-[#D97A2B] outline-none transition"
+            className="px-3 py-2 rounded-lg border border-white/10 bg-surface text-white text-sm focus:border-accent-2 outline-none transition"
           />
         </div>
       </div>
@@ -269,10 +269,10 @@ export default function DashboardClient({
       {/* Bottom sections */}
       <div className="grid lg:grid-cols-2 gap-8">
         {/* Recent projects */}
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-6">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-semibold text-white">Project Terbaru</h2>
-            <Link href="/admin/projects" className="text-sm text-[#E9A64E] hover:underline">
+            <Link href="/admin/projects" className="text-sm text-accent-2 hover:underline">
               Lihat semua →
             </Link>
           </div>
@@ -282,7 +282,7 @@ export default function DashboardClient({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
               <p className="text-sm">Belum ada project.</p>
-              <Link href="/admin/projects/new" className="text-[#E9A64E] text-sm hover:underline mt-2 inline-block">
+              <Link href="/admin/projects/new" className="text-accent-2 text-sm hover:underline mt-2 inline-block">
                 + Tambah project pertama
               </Link>
             </div>
@@ -295,7 +295,7 @@ export default function DashboardClient({
                   className="flex items-center justify-between p-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 transition group"
                 >
                   <div className="min-w-0 flex-1">
-                    <p className="font-medium text-sm text-white truncate group-hover:text-[#E9A64E] transition">{project.name}</p>
+                    <p className="font-medium text-sm text-white truncate group-hover:text-accent-2 transition">{project.name}</p>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-xs text-white/40">{project.client_name || "Tanpa klien"}</span>
                       <span className="text-white/20">·</span>
@@ -315,10 +315,10 @@ export default function DashboardClient({
         </div>
 
         {/* Member ranking */}
-        <div className="bg-[#151515] rounded-xl border border-white/10 p-6">
+        <div className="bg-surface-2 rounded-xl border border-white/10 p-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-semibold text-white">Pendapatan Anggota</h2>
-            <Link href="/admin/workload" className="text-sm text-[#E9A64E] hover:underline">
+            <Link href="/admin/workload" className="text-sm text-accent-2 hover:underline">
               Workload →
             </Link>
           </div>
@@ -340,7 +340,7 @@ export default function DashboardClient({
                       ) : (
                         <span className="w-6 text-center text-xs font-bold text-white/20 shrink-0">{i + 1}</span>
                       )}
-                      <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#C44A3A]/30 to-[#D97A2B]/30 text-[#E9A64E] flex items-center justify-center text-xs font-semibold shrink-0 border border-white/5">
+                      <div className="w-9 h-9 rounded-full bg-gradient-to-br from-accent/30 to-accent-2/30 text-accent-2 flex items-center justify-center text-xs font-semibold shrink-0 border border-white/5">
                         {m.photo_url ? (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img src={m.photo_url} alt={m.name} className="w-full h-full rounded-full object-cover" />
@@ -356,7 +356,7 @@ export default function DashboardClient({
                         <div className="flex items-center gap-2 mt-1">
                           <div className="flex-1 h-1.5 rounded-full bg-white/5 overflow-hidden">
                             <div
-                              className="h-full rounded-full bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] transition-all duration-500"
+                              className="h-full rounded-full bg-gradient-to-r from-accent to-accent-2 transition-all duration-500"
                               style={{ width: `${barWidth}%` }}
                             />
                           </div>

@@ -10,8 +10,8 @@ export default function CEOSection() {
   const { t } = useLanguage();
   return (
     <section id="leadership" className="relative z-10 overflow-hidden py-20 text-white lg:py-24 border-t border-white/5">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,120,92,0.06),transparent_60%)]" />
-      <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-[#D4785C]/5 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgb(var(--accent-rgb)/0.06),transparent_60%)]" />
+      <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-accent/5 blur-3xl" />
 
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -34,7 +34,7 @@ export default function CEOSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               </div>
               <div className="absolute -bottom-4 -right-4 rounded-2xl border border-white/10 bg-black/60 backdrop-blur p-4 shadow-xl">
-                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#D4785C]">{t("ceoSection.label")}</p>
+                <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-accent">{t("ceoSection.label")}</p>
                 <p className="mt-1 text-sm font-semibold text-white">Marlon Kamagi</p>
               </div>
             </div>
@@ -57,7 +57,7 @@ export default function CEOSection() {
                 &ldquo;{t("ceoSection.quote")}&rdquo;
               </p>
               <footer className="mt-4 flex items-center gap-3">
-                <div className="h-px w-8 bg-[#D4785C]/50" />
+                <div className="h-px w-8 bg-accent/50" />
                 <span className="text-xs text-zinc-500">{t("ceoSection.name")}</span>
               </footer>
             </blockquote>
@@ -78,10 +78,10 @@ export default function CEOSection() {
               </Link>
               <Link
                 href="/leadership"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-5 py-2.5 text-xs font-semibold text-white backdrop-blur transition-all hover:bg-black/50 hover:border-[#D4785C]/30"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-5 py-2.5 text-xs font-semibold text-white backdrop-blur transition-all hover:bg-black/50 hover:border-accent/30"
               >
                 {t("ceoSection.lihatLeadership")}
-                <ArrowRight className="h-3 w-3 text-[#D4785C]" />
+                <ArrowRight className="h-3 w-3 text-accent" />
               </Link>
             </div>
           </motion.div>

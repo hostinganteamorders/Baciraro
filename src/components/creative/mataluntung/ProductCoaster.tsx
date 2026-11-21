@@ -20,7 +20,7 @@ export default function ProductCoaster() {
           transition={{ duration: 0.7, ease: springEase }}
           className="mb-16"
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#F87171]">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">
             PRODUCT 02
           </p>
           <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white whitespace-pre-line">
@@ -46,10 +46,10 @@ export default function ProductCoaster() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
             <div className="mt-4">
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#34D399]">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-accent">
                 {coaster.sequence[0]}
               </span>
             </div>
@@ -71,10 +71,10 @@ export default function ProductCoaster() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
             <div className="mt-4">
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#34D399]">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-accent">
                 {coaster.sequence[1]}
               </span>
             </div>
@@ -96,10 +96,10 @@ export default function ProductCoaster() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
             <div className="mt-4">
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#34D399]">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-accent">
                 {coaster.sequence[2]}
               </span>
             </div>
@@ -115,7 +115,7 @@ export default function ProductCoaster() {
           className="mt-12 max-w-[55ch]"
         >
           {coaster.body.split("\n\n").map((p, i) => (
-            <p key={i} className="text-base leading-8 text-[#9CA3A0] mb-4 last:mb-0">
+            <p key={i} className="text-base leading-8 text-mute mb-4 last:mb-0">
               {p}
             </p>
           ))}

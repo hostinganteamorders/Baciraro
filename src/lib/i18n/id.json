@@ -23,7 +23,9 @@
     "subtitle": "Pusat Ekosistem Circular Economy",
     "mobileCreativeStudio": "Creative Studio",
     "mobileProfilPoin": "Profil & Poin",
-    "brandName": "Baciraro"
+    "brandName": "Baciraro",
+    "themeToLight": "Ganti ke mode terang",
+    "themeToDark": "Ganti ke mode gelap"
   },
   "hero": {
     "ekosistem": "Ekosistem Circular Economy",
@@ -47,7 +49,10 @@
       "digital": "100% transparan",
       "creative": "40+ karya",
       "community": "80+ komunitas"
-    }
+    },
+    "photoAlt": "Peserta Dialog Budaya Minahasa berfoto bersama narasumber",
+    "photoEyebrow": "Rekap kegiatan · 1 Agustus 2026",
+    "photoTitle": "Dialog Budaya Minahasa 2026"
   },
   "ecosystem": {
     "label": "EKOSISTEM SIRKULAR",
@@ -391,7 +396,7 @@
       "isiSemua": "Semua Produk",
       "isiKurasi": "Koleksi Pilihan",
       "jumlah": "{count} produk dalam katalog ini",
-      "previewNote": "Pratinjau halaman A4 — tekan tombol cetak lalu pilih \u201cSimpan sebagai PDF\u201d.",
+      "previewNote": "Pratinjau halaman A4 — tekan tombol cetak lalu pilih “Simpan sebagai PDF”.",
       "tutupJudul": "Bicarakan kebutuhanmu",
       "tutupDesc": "Suvenir CSR, piala event, produk custom, atau sekadar bertanya harga — tim Baciraro siap membantu lewat WhatsApp.",
       "scanDesc": "Pindai untuk tersambung ke WhatsApp",

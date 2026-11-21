@@ -19,7 +19,7 @@ export default function MaterialPalette() {
           transition={{ duration: 0.7, ease: springEase }}
           className="mb-16"
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9CA3A0]/70">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-mute/70">
             MATERIAL PALETTE
           </p>
           <h2 className="mt-3 font-serif text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] text-white">
@@ -46,9 +46,9 @@ export default function MaterialPalette() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5">
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]">
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground">
                 {materialPalette.groups[0].label}
               </span>
             </div>
@@ -74,9 +74,9 @@ export default function MaterialPalette() {
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050806]/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5">
-                  <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#F4F1EA]">
+                  <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground">
                     {group.label}
                   </span>
                 </div>

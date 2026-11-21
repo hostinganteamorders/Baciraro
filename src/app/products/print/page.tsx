@@ -138,7 +138,7 @@ export default function PrintCatalogPage() {
 	}, [scoped, scope, t]);
 
 	return (
-		<main className="relative min-h-screen text-[#fafafa]">
+		<main className="relative min-h-screen text-foreground">
 			<div aria-hidden="true" className="page-bg no-print" />
 			<div className="relative z-[1]">
 				<div className="pointer-events-none fixed inset-0 z-0 bg-noise opacity-[0.08] no-print" />

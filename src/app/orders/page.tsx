@@ -26,14 +26,13 @@ export default function OrdersPage() {
   const { t } = useLanguage();
   return (
     <main className="relative overflow-hidden text-white min-h-screen">
-      <div aria-hidden="true" className="page-bg" />
       <div className="relative z-[1]">
       <div className="bg-noise pointer-events-none fixed inset-0 opacity-[0.06] z-0" />
 
       <Header subtitle={t("orders.label")} />
 
       {/* GSAP Story Scroll Presentation */}
-      <FlowArt aria-label={t("orders.storyFlowLabel")}>
+      <FlowArt className="keep-dark" aria-label={t("orders.storyFlowLabel")}>
         
         {/* Slide 01: Hero / Who We Are */}
         <FlowSection aria-label={t("orders.heroLabel")} style={{ backgroundColor: '#050805', color: '#fff' }}>
@@ -61,7 +60,7 @@ export default function OrdersPage() {
               
               <div className="flex-1 flex justify-center lg:justify-end">
                 <div className="relative w-full max-w-[340px] sm:max-w-[400px] aspect-square overflow-hidden rounded-[2.5rem] border border-white/5 bg-white p-6 shadow-2xl">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.08),_transparent_70%)] pointer-events-none" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgb(var(--accent-rgb)/0.08),_transparent_70%)] pointer-events-none" />
                   <Image
                     src="/Orders.png"
                     alt={t("orders.logoAlt")}

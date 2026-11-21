@@ -60,7 +60,7 @@ const categoryAccent: Record<string, string> = {
   organic: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
   craft: "bg-amber-500/10 text-amber-400 border-amber-500/20",
   digital: "bg-purple-500/10 text-purple-400 border-purple-500/20",
-  art: "bg-[#f2d479]/10 text-[#f2d479] border-[#f2d479]/20",
+  art: "bg-accent-2/10 text-accent-2 border-accent-2/20",
   "3dprint": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
 };
 
@@ -133,8 +133,7 @@ export default function ProductDetailPage() {
 
   if (loading) {
     return (
-      <main className="relative min-h-screen text-[#fafafa] overflow-hidden">
-        <div aria-hidden="true" className="page-bg" />
+      <main className="relative min-h-screen text-foreground overflow-hidden">
         <div className="relative z-[1]">
         <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
         <Header subtitle={t("products.title")} />
@@ -147,8 +146,7 @@ export default function ProductDetailPage() {
 
   if (notFound || !product) {
     return (
-      <main className="relative min-h-screen text-[#fafafa] overflow-hidden">
-        <div aria-hidden="true" className="page-bg" />
+      <main className="relative min-h-screen text-foreground overflow-hidden">
         <div className="relative z-[1]">
         <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
         <Header subtitle={t("products.title")} />
@@ -191,8 +189,7 @@ export default function ProductDetailPage() {
   const displayMinutes = activeVariant?.minutes ?? product.print_time_min;
 
   return (
-    <main className="relative min-h-screen text-[#fafafa] overflow-hidden">
-      <div aria-hidden="true" className="page-bg" />
+    <main className="relative min-h-screen text-foreground overflow-hidden">
       <div className="relative z-[1]">
       <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
       <Header subtitle={t("products.title")} />
@@ -438,7 +435,7 @@ export default function ProductDetailPage() {
                   <div className="min-w-0">
                     <h3 className="font-serif text-[20px] text-white">{artist.name}</h3>
                     {artist.role && (
-                      <span className="mt-1 inline-block rounded-full border border-[#f2d479]/20 bg-[#f2d479]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f2d479]">
+                      <span className="mt-1 inline-block rounded-full border border-accent-2/20 bg-accent-2/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-accent-2">
                         {artist.role}
                       </span>
                     )}
@@ -496,8 +493,8 @@ export default function ProductDetailPage() {
                 </div>
                 {product.total_plastic_kg > 0 && (
                   <div className="text-right">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#f87171]">{t("products.plastikDialihkan")}</p>
-                    <p className="font-serif text-[28px] text-[#f87171] mt-1">{product.total_plastic_kg} <span className="text-sm text-zinc-500 font-sans">{t("products.unitKg")}</span></p>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent">{t("products.plastikDialihkan")}</p>
+                    <p className="font-serif text-[28px] text-accent mt-1">{product.total_plastic_kg} <span className="text-sm text-zinc-500 font-sans">{t("products.unitKg")}</span></p>
                   </div>
                 )}
               </div>
@@ -543,7 +540,7 @@ export default function ProductDetailPage() {
                 <div key={i} className="rounded-[1.5rem] border border-white/[0.07] bg-white/[0.02] backdrop-blur p-6">
                   <div className="flex items-center gap-1 mb-3">
                     {[1,2,3,4,5].map((s) => (
-                      <Star key={s} className="h-3.5 w-3.5" fill={s <= r.review_rating ? "#fbbf24" : "none"} stroke={s <= r.review_rating ? "#fbbf24" : "#52525b"} />
+                      <Star key={s} className="h-3.5 w-3.5" fill={s <= r.review_rating ? "var(--accent-2)" : "none"} stroke={s <= r.review_rating ? "var(--accent-2)" : "#52525b"} />
                     ))}
                   </div>
                   <p className="text-sm text-zinc-300 mb-3 leading-relaxed">&ldquo;{r.review_text}&rdquo;</p>

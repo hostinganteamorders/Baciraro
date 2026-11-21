@@ -46,9 +46,9 @@ const emptyForm = {
 };
 
 const inputCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white placeholder:text-white/25 focus:border-[#D97A2B] outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white placeholder:text-white/25 focus:border-accent-2 outline-none transition";
 const selectCls =
-  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-[#0d0d0d] text-white focus:border-[#D97A2B] outline-none transition";
+  "w-full px-4 py-2.5 rounded-lg border border-white/10 bg-surface text-white focus:border-accent-2 outline-none transition";
 
 export default function MeetingsClient({ notes, attendees, actionItems, members, projects, isAdmin }: Props) {
   const router = useRouter();
@@ -219,7 +219,7 @@ export default function MeetingsClient({ notes, attendees, actionItems, members,
         {isAdmin && (
           <button
             onClick={() => (showForm ? setShowForm(false) : openCreate())}
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-[#C44A3A] to-[#D97A2B] text-white text-sm font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-accent to-accent-2 text-white text-sm font-semibold shadow-lg shadow-orange-500/20 hover:opacity-90 transition"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -237,7 +237,7 @@ export default function MeetingsClient({ notes, attendees, actionItems, members,
       )}
 
       {showForm && isAdmin && (
-        <form onSubmit={save} className="bg-[#151515] rounded-xl border border-white/10 p-6 mb-6 space-y-4">
+        <form onSubmit={save} className="bg-surface-2 rounded-xl border border-white/10 p-6 mb-6 space-y-4">
           <h2 className="font-semibold text-white">{editingId ? "Ubah Catatan Rapat" : "Buat Catatan Rapat"}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -285,7 +285,7 @@ export default function MeetingsClient({ notes, attendees, actionItems, members,
                             : form.attendees.filter((x) => x !== m.id),
                         })
                       }
-                      className="w-4 h-4 accent-[#D97A2B]"
+                      className="w-4 h-4 accent-accent-2"
                     />
                     {m.name} · {m.role}
                   </label>
@@ -295,7 +295,7 @@ export default function MeetingsClient({ notes, attendees, actionItems, members,
           </div>
           <div className="flex gap-3">
             <button type="submit" disabled={saving}
-              className="px-5 py-2.5 rounded-lg bg-[#D97A2B] text-white font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2">
+              className="px-5 py-2.5 rounded-lg bg-accent-2 text-white font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center gap-2">
               {saving && (
                 <svg className="w-4 h-4 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12a8 8 0 018-8v0a8 8 0 018 8" />
@@ -312,7 +312,7 @@ export default function MeetingsClient({ notes, attendees, actionItems, members,
       )}
 
       {rows.length === 0 ? (
-        <div className="bg-[#151515] rounded-xl border border-dashed border-white/20 p-16 text-center text-white/40">
+        <div className="bg-surface-2 rounded-xl border border-dashed border-white/20 p-16 text-center text-white/40">
           <p className="text-lg font-medium mb-1">Belum ada catatan rapat</p>
           <p className="text-sm">Buat catatan rapat dan pantau tindak lanjutnya.</p>
         </div>
@@ -324,9 +324,9 @@ export default function MeetingsClient({ notes, attendees, actionItems, members,
             const open = !!expanded[n.id];
             const project = n.project_id ? projectMap.get(n.project_id) : null;
             return (
-              <div key={n.id} className="bg-[#151515] rounded-xl border border-white/10">
+              <div key={n.id} className="bg-surface-2 rounded-xl border border-white/10">
                 <div className="flex items-center gap-4 p-4">
-                  <button onClick={() => toggleExpand(n.id)} className="p-1.5 text-white/30 hover:text-[#E9A64E] transition" aria-label="Rincian">
+                  <button onClick={() => toggleExpand(n.id)} className="p-1.5 text-white/30 hover:text-accent-2 transition" aria-label="Rincian">
                     <svg className={`w-5 h-5 transition-transform ${open ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -347,7 +347,7 @@ export default function MeetingsClient({ notes, attendees, actionItems, members,
                     )}
                     {isAdmin && (
                       <>
-                        <button onClick={() => openEdit(n)} className="p-1.5 text-white/30 hover:text-[#E9A64E] transition" aria-label="Ubah">
+                        <button onClick={() => openEdit(n)} className="p-1.5 text-white/30 hover:text-accent-2 transition" aria-label="Ubah">
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                           </svg>
@@ -384,8 +384,8 @@ export default function MeetingsClient({ notes, attendees, actionItems, members,
                           const m = memberMap.get(memberId);
                           if (!m) return null;
                           return (
-                            <span key={memberId} className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#D97A2B]/10 text-orange-400 text-xs font-medium">
-                              <span className="w-4 h-4 rounded-full bg-[#D97A2B]/20 text-[#E9A64E] flex items-center justify-center text-[9px] font-bold">
+                            <span key={memberId} className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-2/10 text-orange-400 text-xs font-medium">
+                              <span className="w-4 h-4 rounded-full bg-accent-2/20 text-accent-2 flex items-center justify-center text-[9px] font-bold">
                                 {m.name.slice(0, 1).toUpperCase()}
                               </span>
                               {m.name}
@@ -451,7 +451,7 @@ export default function MeetingsClient({ notes, attendees, actionItems, members,
                           <input type="date" value={itemForm.due_date} onChange={(e) => setItemForm({ ...itemForm, due_date: e.target.value })}
                             className={inputCls + " text-sm"} />
                           <button onClick={() => addItem(n.id)}
-                            className="px-4 py-2 rounded-lg bg-[#D97A2B] text-white text-sm font-semibold hover:opacity-90 transition">
+                            className="px-4 py-2 rounded-lg bg-accent-2 text-white text-sm font-semibold hover:opacity-90 transition">
                             Tambah
                           </button>
                         </div>

@@ -55,7 +55,6 @@ export default function PensilRecapClient() {
 
   return (
     <main className="relative min-h-screen overflow-hidden text-primary-text">
-      <div aria-hidden="true" className="page-bg" />
       <div className="relative z-[1]">
         <motion.div
           className="fixed left-0 right-0 top-0 z-50 h-0.5 origin-left bg-brand-orange"
@@ -82,7 +81,7 @@ export default function PensilRecapClient() {
           ref={heroRef}
           className="relative overflow-hidden border-b border-white/5"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_10%,rgba(217,122,43,0.12),transparent_55%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_10%,rgb(var(--accent2-rgb)/0.12),transparent_55%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_85%_80%,rgba(111,175,79,0.08),transparent_50%)]" />
 
           <motion.div
@@ -155,7 +154,7 @@ export default function PensilRecapClient() {
               transition={{ duration: 0.8, delay: 0.2, ease: springEase }}
               className="relative mx-auto w-full max-w-md lg:max-w-none"
             >
-              <div className="absolute -inset-6 rounded-[2.5rem] bg-[radial-gradient(ellipse_at_center,rgba(217,122,43,0.14),transparent_65%)] blur-2xl" />
+              <div className="absolute -inset-6 rounded-[2.5rem] bg-[radial-gradient(ellipse_at_center,rgb(var(--accent2-rgb)/0.14),transparent_65%)] blur-2xl" />
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-white/10 bg-black/40">
                 <Image
                   src={projectImages.handover}
@@ -265,7 +264,7 @@ export default function PensilRecapClient() {
 
         {/* ───── PROCESS ───── */}
         <section id="proses" className="relative scroll-mt-20 border-t border-white/5 py-20 sm:py-24">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(242,212,121,0.04),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgb(var(--accent2-rgb)/0.04),transparent_60%)]" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -395,7 +394,7 @@ export default function PensilRecapClient() {
 
         {/* ───── CLOSING ───── */}
         <section className="relative overflow-hidden border-t border-white/5">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(217,122,43,0.1),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgb(var(--accent2-rgb)/0.1),transparent_60%)]" />
           <div className="relative mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-28">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

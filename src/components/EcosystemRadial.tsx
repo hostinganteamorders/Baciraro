@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Leaf, Recycle, Sprout, Cpu } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 
-const TERRACOTTA = "#D4785C";
+const TERRACOTTA = "var(--accent)";
 const GOLD = "#C9B48A";
 
 const ENTITIES = [
@@ -96,13 +96,13 @@ function DesktopCard({ entity }: { entity: (typeof ENTITIES)[number] }) {
         animate={{ y: hovered ? -4 : 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
         className={`relative rounded-2xl border p-4 backdrop-blur-sm transition-all duration-300
-          ${hovered ? "border-[#D4785C]/40 bg-white/5 shadow-lg shadow-[#D4785C]/5" : "border-white/5 bg-black/30"}`}
+          ${hovered ? "border-accent/40 bg-white/5 shadow-lg shadow-accent/5" : "border-white/5 bg-black/30"}`}
       >
         <div className="flex items-start gap-3">
           <div
             className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border transition-all duration-300 ${
               entity.needsWhiteBg
-                ? "bg-white border-white/10"
+                ? "bg-[#f4f4f5] border-white/10"
                 : "bg-black/40 border-white/5"
             } ${hovered ? "scale-110" : ""}`}
           >
@@ -117,7 +117,7 @@ function DesktopCard({ entity }: { entity: (typeof ENTITIES)[number] }) {
           <div className="min-w-0 flex-1">
             <h3
               className={`text-sm font-semibold leading-tight transition-colors duration-300 ${
-                hovered ? "text-[#D4785C]" : "text-white"
+                hovered ? "text-accent" : "text-white"
               }`}
             >
               {entity.name}
@@ -138,7 +138,7 @@ function DesktopCard({ entity }: { entity: (typeof ENTITIES)[number] }) {
               key={i}
               className={`rounded-full px-2 py-0.5 text-[8px] font-semibold uppercase tracking-wider transition-all duration-300 ${
                 hovered
-                  ? "bg-[#D4785C]/10 text-[#D4785C]"
+                  ? "bg-accent/10 text-accent"
                   : "bg-white/5 text-zinc-500"
               }`}
             >
@@ -149,7 +149,7 @@ function DesktopCard({ entity }: { entity: (typeof ENTITIES)[number] }) {
 
         <div
           className={`mt-3 flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider transition-all duration-300 ${
-            hovered ? "text-[#D4785C] opacity-100" : "text-zinc-600 opacity-0"
+            hovered ? "text-accent opacity-100" : "text-zinc-600 opacity-0"
           }`}
         >
           {t("ecosystemRadial.learnMore")}
@@ -172,7 +172,7 @@ function MobileCard({ entity, index }: { entity: (typeof ENTITIES)[number]; inde
     >
       <Link
         href={entity.href}
-        className="group relative flex gap-4 rounded-2xl border border-white/5 bg-black/30 p-4 backdrop-blur-sm transition-all duration-300 hover:border-[#D4785C]/30 hover:bg-white/5"
+        className="group relative flex gap-4 rounded-2xl border border-white/5 bg-black/30 p-4 backdrop-blur-sm transition-all duration-300 hover:border-accent/30 hover:bg-white/5"
       >
         <div className="flex flex-col items-center gap-2">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-black/40">
@@ -184,10 +184,10 @@ function MobileCard({ entity, index }: { entity: (typeof ENTITIES)[number]; inde
               className="object-contain"
             />
           </div>
-          <div className="h-full w-px bg-gradient-to-b from-[#D4785C]/30 to-transparent" />
+          <div className="h-full w-px bg-gradient-to-b from-accent/30 to-transparent" />
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-semibold text-white group-hover:text-[#D4785C] transition-colors">
+          <h3 className="text-sm font-semibold text-white group-hover:text-accent transition-colors">
             {entity.name}
           </h3>
           <p className="text-[10px] text-zinc-500 mt-0.5">{t("ecosystemRadial.entities." + entity.id + ".tagline")}</p>
@@ -204,7 +204,7 @@ function MobileCard({ entity, index }: { entity: (typeof ENTITIES)[number]; inde
               </span>
             ))}
           </div>
-          <div className="mt-2 flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider text-zinc-600 group-hover:text-[#D4785C] transition-colors">
+          <div className="mt-2 flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider text-zinc-600 group-hover:text-accent transition-colors">
             {t("ecosystemRadial.learnMore")}
             <ArrowRight className="h-3 w-3" />
           </div>
@@ -226,7 +226,7 @@ export default function EcosystemRadial() {
 
   return (
     <section id="ecosystem" className="relative overflow-hidden py-20 lg:py-28">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_30%,rgba(212,120,92,0.04),transparent_65%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_30%,rgb(var(--accent-rgb)/0.04),transparent_65%)]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
@@ -237,7 +237,7 @@ export default function EcosystemRadial() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-zinc-400 backdrop-blur shadow-lg"
           >
-            <span className="h-2 w-2 rounded-full bg-[#D4785C] animate-pulse" />
+            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
             {t("ecosystemRadial.label")}
           </motion.p>
 
@@ -249,7 +249,7 @@ export default function EcosystemRadial() {
             className="mt-5 text-4xl font-normal leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
             {t("ecosystemRadial.title")}
-            <span className="font-serif italic text-[#D4785C]">{t("ecosystemRadial.titleItalic")}</span>
+            <span className="font-serif italic text-accent">{t("ecosystemRadial.titleItalic")}</span>
           </motion.h2>
 
           <motion.p
@@ -283,7 +283,7 @@ export default function EcosystemRadial() {
             <svg
               viewBox="0 0 100 100"
               className="absolute inset-0 h-full w-full"
-              style={{ filter: "drop-shadow(0 0 4px rgba(212,120,92,0.15))" }}
+              style={{ filter: "drop-shadow(0 0 4px rgb(var(--accent-rgb)/0.15))" }}
             >
               <defs>
                 <linearGradient id={`${uid}-line-gradient`} x1="0%" y1="0%" x2="100%" y2="100%">
@@ -387,7 +387,7 @@ export default function EcosystemRadial() {
                 <div className="absolute inset-3 rounded-full border border-white/[0.04] bg-black/60 backdrop-blur-md" />
 
                 {/* Inner glow */}
-                <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,rgba(212,120,92,0.08),transparent_70%)]" />
+                <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,rgb(var(--accent-rgb)/0.08),transparent_70%)]" />
 
                 {/* Content */}
                 <div className="relative flex flex-col items-center text-center px-6">
@@ -430,7 +430,7 @@ export default function EcosystemRadial() {
                     className={`rounded-2xl border p-4 backdrop-blur-sm transition-all duration-300
                       ${
                         hoveredId === entity.id
-                          ? "border-[#D4785C]/40 bg-white/5 shadow-lg shadow-[#D4785C]/5"
+                          ? "border-accent/40 bg-white/5 shadow-lg shadow-accent/5"
                           : "border-white/5 bg-black/30"
                       }`}
                   >
@@ -438,7 +438,7 @@ export default function EcosystemRadial() {
                       <div
                         className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border transition-all duration-300 ${
                           entity.needsWhiteBg
-                            ? "bg-white border-white/10"
+                            ? "bg-[#f4f4f5] border-white/10"
                             : "bg-black/40 border-white/5"
                         } ${hoveredId === entity.id ? "scale-110" : ""}`}
                       >
@@ -454,7 +454,7 @@ export default function EcosystemRadial() {
                         <h3
                           className={`text-sm font-semibold leading-tight transition-colors duration-300 ${
                             hoveredId === entity.id
-                              ? "text-[#D4785C]"
+                              ? "text-accent"
                               : "text-white"
                           }`}
                         >
@@ -476,7 +476,7 @@ export default function EcosystemRadial() {
                           key={i}
                           className={`rounded-full px-2 py-0.5 text-[8px] font-semibold uppercase tracking-wider transition-all duration-300 ${
                             hoveredId === entity.id
-                              ? "bg-[#D4785C]/10 text-[#D4785C]"
+                              ? "bg-accent/10 text-accent"
                               : "bg-white/5 text-zinc-500"
                           }`}
                         >
@@ -491,7 +491,7 @@ export default function EcosystemRadial() {
                         y: hoveredId === entity.id ? 0 : 4,
                       }}
                       transition={{ duration: 0.2 }}
-                      className="mt-3 flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider text-[#D4785C]"
+                      className="mt-3 flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider text-accent"
                     >
                       {t("ecosystemRadial.learnMore")}
                       <ArrowRight className="h-3 w-3" />
@@ -530,7 +530,7 @@ export default function EcosystemRadial() {
 
           {/* Divider */}
           <div className="flex justify-center">
-            <div className="h-8 w-px bg-gradient-to-b from-[#D4785C]/30 to-transparent" />
+            <div className="h-8 w-px bg-gradient-to-b from-accent/30 to-transparent" />
           </div>
 
           {/* Mobile Entity Cards */}

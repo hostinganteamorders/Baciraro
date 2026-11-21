@@ -15,10 +15,10 @@ export default function ScanFab() {
           onClick={() => setOpen(true)}
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.92 }}
-          className="relative h-14 w-14 rounded-full bg-emerald-500 shadow-[0_0_24px_rgba(16,185,129,0.4)] flex items-center justify-center text-black transition-colors hover:bg-emerald-400"
+          className="relative h-14 w-14 rounded-full bg-emerald-500 shadow-[0_0_24px_rgb(var(--accent-rgb)/0.4)] flex items-center justify-center text-black transition-colors hover:bg-emerald-400"
         >
           <Scan className="h-6 w-6" />
-          <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-[#f87171] animate-pulse" />
+          <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-accent animate-pulse" />
         </motion.button>
       </div>
 

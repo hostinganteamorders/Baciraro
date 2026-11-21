@@ -44,8 +44,7 @@ export default function QRDashboardPage() {
   }, []);
 
   if (loading) return (
-    <main className="min-h-screen bg-black text-[#fafafa]">
-      <div className="page-bg" />
+    <main className="min-h-screen bg-black text-foreground">
       <Header subtitle={t("dashboard.qr.title")} />
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center text-zinc-500 text-sm">{t("dashboard.qr.loading")}</div>
       <Footer />
@@ -53,7 +52,7 @@ export default function QRDashboardPage() {
   );
 
   if (!authed) return (
-    <main className="min-h-screen bg-black text-[#fafafa] flex items-center justify-center">
+    <main className="min-h-screen bg-black text-foreground flex items-center justify-center">
       <div className="text-center max-w-md px-6">
         <p className="text-zinc-400 text-lg mb-4">{t("dashboard.qr.unauthTitle")}</p>
         <p className="text-sm text-zinc-600 mb-6">{t("dashboard.qr.unauthDesc")}</p>
@@ -68,8 +67,7 @@ export default function QRDashboardPage() {
   const reviewed = codes.filter((c) => c.review_text);
 
   return (
-    <main className="relative min-h-screen text-[#fafafa] overflow-hidden">
-      <div aria-hidden="true" className="page-bg" />
+    <main className="relative min-h-screen text-foreground overflow-hidden">
       <div className="relative z-[1]">
         <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] bg-noise" />
         <Header subtitle={t("dashboard.qr.title")} />

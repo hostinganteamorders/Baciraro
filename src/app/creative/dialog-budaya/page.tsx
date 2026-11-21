@@ -181,7 +181,6 @@ export default function DialogBudayaPage() {
 
   return (
     <main className="relative overflow-hidden text-primary-text min-h-screen">
-      <div aria-hidden="true" className="page-bg" />
       <div className="relative z-[1]">
 
         {/* ───── PROGRESS BAR ───── */}
@@ -308,7 +307,7 @@ export default function DialogBudayaPage() {
 
         {/* ───── FOTO BERSAMA ───── */}
         <section className="relative border-t border-white/5 py-20 sm:py-28">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(242,212,121,0.04),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgb(var(--accent2-rgb)/0.04),transparent_60%)]" />
 
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
             <motion.div

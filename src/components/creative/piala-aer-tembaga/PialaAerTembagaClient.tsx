@@ -60,14 +60,13 @@ export default function PialaAerTembagaClient() {
   return (
     <main
       ref={pageRef}
-      className="relative overflow-hidden text-[#F4F1EA] min-h-screen"
+      className="relative overflow-hidden text-foreground min-h-screen"
     >
-      <div aria-hidden="true" className="page-bg" />
       <div className="bg-noise pointer-events-none fixed inset-0 z-0 opacity-[0.08]" />
       <div className="relative z-[1]">
         {/* Progress bar */}
         <motion.div
-          className="fixed top-0 left-0 right-0 z-50 h-0.5 bg-gradient-to-r from-[#F87171] to-[#34D399] origin-left"
+          className="fixed top-0 left-0 right-0 z-50 h-0.5 bg-gradient-to-r from-accent to-accent origin-left"
           style={{ scaleX: pageProgress }}
         />
 
@@ -80,7 +79,7 @@ export default function PialaAerTembagaClient() {
         >
           <Link
             href="/creative"
-            className="flex items-center gap-2 rounded-full border border-white/10 bg-[#050806]/80 px-3.5 py-2 text-xs text-[#9CA3A0] backdrop-blur-xl transition-all hover:border-white/20 hover:text-white"
+            className="flex items-center gap-2 rounded-full border border-white/10 bg-background/80 px-3.5 py-2 text-xs text-mute backdrop-blur-xl transition-all hover:border-white/20 hover:text-white"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
             <span className="hidden sm:inline">Kembali</span>
@@ -101,10 +100,10 @@ export default function PialaAerTembagaClient() {
                 onClick={() => scrollTo(item.id)}
                 className="flex items-center gap-3 cursor-pointer group"
               >
-                <span className={`text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${isActive ? "text-[#34D399]" : "text-[#9CA3A0]/50 group-hover:text-white/70"}`}>
+                <span className={`text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${isActive ? "text-accent" : "text-mute/50 group-hover:text-white/70"}`}>
                   {item.label}
                 </span>
-                <div className={`w-1.5 h-1.5 rounded-full transition-colors ${isActive ? "bg-[#34D399]" : "bg-[#9CA3A0]/30"}`} />
+                <div className={`w-1.5 h-1.5 rounded-full transition-colors ${isActive ? "bg-accent" : "bg-mute/30"}`} />
               </motion.button>
             );
           })}

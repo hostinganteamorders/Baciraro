@@ -36,7 +36,7 @@ export function ImpactEvidenceSection() {
 
   return (
     <section className="relative py-24 px-6 lg:px-8">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(16,185,129,0.06),_transparent_50%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgb(var(--accent-rgb)/0.06),_transparent_50%)]" />
 
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
