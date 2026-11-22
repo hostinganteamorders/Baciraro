@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useLanguage } from "@/lib/i18n/context";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Medal, Crown, Award } from "lucide-react";
+import { ArrowRight, QrCode } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
 
 interface Customer {
   id: number;
@@ -12,11 +13,10 @@ interface Customer {
   total_points: number;
 }
 
-const RANK_COLORS = ["#FFD700", "#C0C0C0", "#CD7F32"];
-const RANK_ICONS = [Crown, Medal, Award];
+const RANK_COLORS = ["var(--orange)", "var(--green)", "var(--ink)"];
 
 export default function PointsDashboard() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [leaderboard, setLeaderboard] = useState<Customer[]>([]);
   const [totalPoints, setTotalPoints] = useState(0);
 
@@ -31,99 +31,56 @@ export default function PointsDashboard() {
   }, []);
 
   return (
-    <section className="relative z-10 py-20 lg:py-24 overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.04),transparent_60%)]" />
-
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto max-w-3xl text-center"
-        >
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-zinc-400 backdrop-blur shadow-lg">
-            <span className="h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
-            {t("points.label")}
-          </p>
-          <h2 className="mt-5 text-4xl font-normal leading-[1.15] tracking-tight text-white sm:text-5xl">
-            {t("points.title")}{" "}
-            <span className="font-serif italic text-amber-300">{t("points.titleItalic")}</span>
+    <section id="poin" className="bc-section scroll-mt-20 border-t border-[color:var(--line)]">
+      <div className="bc-wrap bc-split">
+        <div className="bc-sticky">
+          <span className="bc-label"><b>05</b>{t("points.label")}</span>
+          <h2 className="bc-t-title mt-[var(--s2)]" data-a="orange">
+            {t("points.title")} <em>{t("points.titleItalic")}</em>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-zinc-400">
-            {t("points.subtitle", { poin: totalPoints.toLocaleString() })}
-          </p>
-        </motion.div>
+          <p className="bc-t-sub mt-[var(--s2)]">{t("points.subtitle", { poin: totalPoints.toLocaleString() })}</p>
+          <Link href="/account#points" className="bc-btn bc-btn--orange mt-[var(--s3)]">
+            <QrCode className="h-4 w-4" />
+            {lang === "id" ? "Scan & kumpulkan poin" : "Scan & collect points"}
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
 
-        <div className="mt-12 mx-auto max-w-2xl">
+        <div>
           {leaderboard.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-zinc-500 text-sm">{t("points.loading")}</p>
-            </div>
+            <p className="bc-t-desc border-t border-[color:var(--line)] py-[var(--s3)]">{t("points.loading")}</p>
           ) : (
-            <div className="space-y-3">
+            <ol>
               {leaderboard.map((customer, i) => {
                 const rank = i + 1;
-                const isPodium = rank <= 3;
-                const RankIcon = RANK_ICONS[i] || null;
-                const initials = customer.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")
-                  .toUpperCase()
-                  .slice(0, 2);
-
+                const initials = customer.name.split(" ").map((n) => n[0]).join("").toUpperCase().slice(0, 2);
                 return (
-                  <motion.div
+                  <motion.li
                     key={customer.id}
                     initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
-                    className={`rounded-2xl border flex items-center gap-4 px-5 py-4 transition-all ${
-                      isPodium
-                        ? "border-amber-500/20 bg-amber-500/5"
-                        : "border-white/5 bg-white/[0.02]"
-                    }`}
+                    transition={{ delay: i * 0.04 }}
+                    className="flex items-center gap-[var(--s2)] border-t border-[color:var(--line)] py-[var(--s2)] last:border-b"
                   >
-                    <div className="flex items-center justify-center w-8 h-8 flex-shrink-0">
-                      {isPodium ? (
-                        <RankIcon
-                          className="h-6 w-6"
-                          style={{ color: RANK_COLORS[i] }}
-                        />
-                      ) : (
-                        <span className="text-sm font-bold text-zinc-600">{rank}</span>
-                      )}
-                    </div>
-
+                    <span className="bc-t-sub bc-t-num w-12 shrink-0" style={{ color: RANK_COLORS[i] ?? "var(--ink-3)" }}>
+                      {String(rank).padStart(2, "0")}
+                    </span>
                     {customer.photo_url ? (
-                      <img
-                        src={customer.photo_url}
-                        alt=""
-                        className="h-10 w-10 rounded-full object-cover flex-shrink-0"
-                      />
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={customer.photo_url} alt="" className="h-11 w-11 shrink-0 rounded-full object-cover" />
                     ) : (
-                      <div className="h-10 w-10 rounded-full bg-emerald-500 flex items-center justify-center text-sm font-bold text-black flex-shrink-0">
-                        {initials}
-                      </div>
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[color:var(--orange-50)] text-sm font-bold text-[color:var(--orange-ink)]">{initials}</span>
                     )}
-
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold text-white truncate">
-                        {customer.name}
-                      </p>
-                    </div>
-
-                    <div className="text-right flex-shrink-0">
-                      <p className="text-lg font-bold text-amber-400 tabular-nums">
-                        {customer.total_points}
-                      </p>
-                      <p className="text-[9px] text-zinc-600 uppercase tracking-wider">{t("points.poin")}</p>
-                    </div>
-                  </motion.div>
+                    <span className="min-w-0 flex-1 truncate text-[length:var(--f0)] font-bold">{customer.name}</span>
+                    <span className="text-right">
+                      <span className="bc-t-sub bc-t-num block !text-[color:var(--ink)]">{customer.total_points}</span>
+                      <span className="bc-t-cap uppercase tracking-wider">{t("points.poin")}</span>
+                    </span>
+                  </motion.li>
                 );
               })}
-            </div>
+            </ol>
           )}
         </div>
       </div>

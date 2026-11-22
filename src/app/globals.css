@@ -2,33 +2,30 @@
 @import "../styles/fonts.css";
 @import "../styles/theme.css";
 @import "tailwindcss";
-
-:root {
-  --background: #000000;
-  --foreground: #fafafa;
-  --muted: #1f1f1f;
-  --primary: #f87171;
-  --brand-terracotta: #C44A3A;
-  --brand-orange: #D97A2B;
-  --brand-gold: #F2D479;
-  --brand-green: #6FAF4F;
-  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
-}
+@import "../styles/redesign.css";
+@import "../styles/site.css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-primary: var(--primary);
-  --color-primary-text: var(--foreground);
-  --color-brand-terracotta: var(--brand-terracotta);
-  --color-brand-orange: var(--brand-orange);
-  --color-brand-gold: var(--brand-gold);
-  --color-brand-green: var(--brand-green);
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-muted: var(--surface2);
+  --color-primary: var(--accent);
+  --color-primary-text: var(--fg);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface2);
+  --color-mute: var(--fg3);
+  --color-brand-terracotta: var(--accent);
+  --color-brand-orange: var(--accent-2);
+  --color-brand-gold: var(--accent-2);
+  --color-brand-green: var(--accent);
 }
 
+
+
 * {
-  font-family: "Almarai", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+  font-family: var(--font-body, "Almarai"), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", sans-serif;
 }
 
@@ -36,28 +33,6 @@ body {
   color: var(--foreground);
 }
 
-.page-bg {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image: url("/background.png");
-  background-repeat: repeat;
-  background-size: 850px auto;
-  filter: brightness(2);
-}
-
-@media (max-width: 1024px) {
-  .page-bg {
-    background-size: 700px auto;
-  }
-}
-
-@media (max-width: 640px) {
-  .page-bg {
-    background-size: 520px auto;
-  }
-}
 
 .font-serif {
   font-family: "Instrument Serif", serif;
